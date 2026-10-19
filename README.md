@@ -24,7 +24,7 @@ The production output in `dist/` can be served by any static web server. Phaser 
 
 Click the floor to walk. Choose **Look at**, **Talk to**, **Pick up** or **Use**, then click a person or object. Click a pocket item to use it with a scene target. Keys 1–5 select verbs, H toggles hotspots, and Escape closes a conversation. The expandable object list provides keyboard-accessible alternatives to canvas hotspots.
 
-Save/Load uses this browser's local storage. Reset starts a fresh room without erasing the saved game. Sound toggles a quiet synthesized tone bed; no external recording is used.
+Save/Load uses this browser's local storage. Reset starts a fresh room without erasing the saved game. Sound enables ElevenLabs-generated tavern ambience, footsteps, action effects and voiced dialogue. Audio starts only after clicking Sound off; subtitles always remain visible. Voices are Alice for Nell, Matilda for Mara, and Bill for Orin. Dialogue ducks the ambience; mute and hiding the tab stop playback.
 
 <details><summary>Test puzzle walkthrough</summary>
 
@@ -41,6 +41,19 @@ Talk to Mara about the sea chest. Pick up the brass tankard on the window table.
 
 Run `npx playwright install chromium` once, then `npm test`. To use an installed Chromium instead, set `CHROMIUM_PATH=/path/to/chromium`.
 
-This is a development slice: one room, static character poses with tweened movement, a rectangular foreground walking area, and a chest tint plus narrative feedback for the solved puzzle. There are no walk-cycle sprites, obstacle navigation, additional rooms or recorded voice acting yet.
+This is a development slice: one room, static character poses with tweened movement, a rectangular foreground walking area, and a chest tint plus narrative feedback for the solved puzzle. There are no walk-cycle sprites, obstacle navigation, additional rooms or animated chest opening yet.
 
 Code is covered by the repository's GPLv3 license. Phaser retains its MIT license. Generated asset provenance is recorded separately in `ASSETS.md`.
+
+## Regenerate audio
+
+Copy `.env.example` to `.env` and set `ELEVENLABS_API_KEY` locally. `.env` and its variants are ignored by Git. Never use a `VITE_` prefix for a secret: Vite exposes those variables to the client.
+
+```sh
+npm run audio:plan      # Show clip count without generating
+npm run audio:generate  # Uses ElevenLabs account credits for missing/changed clips
+```
+
+Generation runs in Node, not the browser. `scripts/audio-plan.mjs` contains the voice IDs, delivery settings, NPC lines and sound prompts. Literal narration is extracted from `src/main.ts`; keep NPC conversation lines in the plan synchronized when changing dialogue. Hashed audio filenames cache text, voice and settings; rerunning resumes missing clips without regenerating existing ones. No automatic retry occurs after a failed API request.
+
+`public/audio/provenance.json` records generation inputs and voice settings; `src/audio-manifest.json` maps speech and effects to the shipped MP3 files. API credentials are used only as authentication to api.elevenlabs.io and are never stored in these manifests or client assets. Changing a voice in the plan and regenerating creates a new asset rather than overwriting the old one. The key needs text-to-speech and sound-generation permissions; listing voices is unnecessary.

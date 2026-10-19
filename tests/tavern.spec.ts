@@ -37,3 +37,38 @@ test('reject corrupt saves without losing current inventory',async({page})=>{
  await page.evaluate(()=>localStorage.setItem('monkey-buisness-save','{"version":1,"state":{"inventory":["bogus"]}}'));
  await page.getByRole('button',{name:'Load',exact:true}).click();await expect(page.locator('#caption')).toContainText('could not be loaded');await expect(page.getByRole('button',{name:'Use Brass tankard',exact:true})).toBeVisible();
 });
+
+test('audio toggle, voice sequencing, effects and mute',async({page})=>{
+ await page.addInitScript(()=>{
+   const events:{src:string;action:string}[]=[];
+   (window as any).__audioEvents=events;
+   HTMLMediaElement.prototype.play=function(){events.push({src:this.src,action:'play'});if(!this.loop)setTimeout(()=>this.dispatchEvent(new Event('ended')),30);return Promise.resolve();};
+   HTMLMediaElement.prototype.pause=function(){events.push({src:this.src,action:'pause'});};
+ });
+ await page.goto('/');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');
+ expect(await page.evaluate(()=>(window as any).__audioEvents.filter((e:any)=>e.action==='play').length)).toBe(0);
+ await page.getByRole('button',{name:'Sound off',exact:true}).click();
+ await expect(page.locator('#sound')).toHaveAttribute('aria-pressed','true');
+ await page.locator('summary').click();await page.getByRole('button',{name:'Talk to'}).click();await page.locator('[data-target="keeper"]').click();
+ await page.getByRole('button',{name:'What’s in the sea chest?'}).click();
+ await expect.poll(async()=>page.evaluate(()=>(window as any).__audioEvents.filter((e:any)=>e.action==='play').map((e:any)=>e.src.split('/').pop()).slice(-2).map((s:string)=>s.split('-')[0]).join(','))).toBe('nell,mara');
+ await page.getByRole('button',{name:'Close conversation'}).click();await page.getByRole('button',{name:'Pick up'}).click();await page.locator('[data-target="mug"]').click();
+ expect(await page.evaluate(()=>(window as any).__audioEvents.some((e:any)=>e.action==='play'&&e.src.includes('pickup-')))).toBe(true);
+ await page.getByRole('button',{name:'Sound on',exact:true}).click();await expect(page.locator('#sound')).toHaveAttribute('aria-pressed','false');
+ const count=await page.evaluate(()=>(window as any).__audioEvents.filter((e:any)=>e.action==='play').length);
+ await page.getByRole('button',{name:'Talk to'}).click();await page.locator('[data-target="navigator"]').click();await page.waitForTimeout(100);
+ expect(await page.evaluate(()=>(window as any).__audioEvents.filter((e:any)=>e.action==='play').length)).toBe(count);
+});
+
+test('all shipped audio files decode in the browser',async({page})=>{
+ const {readFile}=await import('node:fs/promises');
+ const manifest=JSON.parse(await readFile('src/audio-manifest.json','utf8'));
+ const files=Object.values({...manifest.speech,...manifest.effects}) as string[];
+ await page.goto('/');
+ const decoded=await page.evaluate(async(files)=>{
+   const context=new AudioContext();const results=[];
+   for(const file of files){const response=await fetch(`/audio/${file}`);if(!response.ok)throw Error(`Missing audio ${file}`);const decoded=await context.decodeAudioData(await response.arrayBuffer());results.push(decoded.duration);}
+   await context.close();return results;
+ },files);
+ expect(decoded).toHaveLength(files.length);expect(decoded.every(n=>n>0.2&&Number.isFinite(n))).toBe(true);
+});

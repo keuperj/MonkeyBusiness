@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import './style.css';
+import { tavernAudio } from './audio';
 
 type Verb = 'walk'|'look'|'talk'|'take'|'use';
 type Item = 'mug'|'key';
@@ -20,24 +21,24 @@ const targets:Target[] = [
 let state = fresh(), verb:Verb='walk', selected:Item|null=null, scene:Tavern;
 const itemNames = {mug:'Brass tankard',key:'Brass key'};
 const icons:Partial<Record<Item,string>> = {};
-function say(text:string,who='NELL'){ $('caption').innerHTML='';const b=document.createElement('b');b.textContent=who;const span=document.createElement('span');span.textContent=text;$('caption').append(b,span); }
+function say(text:string,who='NELL'){ $('caption').innerHTML='';const b=document.createElement('b');b.textContent=who;const span=document.createElement('span');span.textContent=text;$('caption').append(b,span); tavernAudio.speak(text,who); }
 function command(target?:string){$('command').textContent = selected ? `Use ${itemNames[selected]}${target ? ' with '+target : ' with…'}` : `${{walk:'Walk to',look:'Look at',talk:'Talk to',take:'Pick up',use:'Use'}[verb]} ${target || '…'}`;}
 function setVerb(next:Verb){verb=next;selected=null;document.querySelectorAll<HTMLButtonElement>('[data-verb]').forEach(b=>b.classList.toggle('active',b.dataset.verb===verb));renderInventory();command();}
 function renderInventory(){const el=$('inventory');el.replaceChildren();$('inventory-count').textContent=`${state.inventory.length} ITEMS`;if(!state.inventory.length){const span=document.createElement('span');span.className='empty';span.textContent='A little lint. A lot of possibility.';el.append(span);}for(const item of state.inventory){const b=document.createElement('button');b.classList.toggle('active',selected===item);b.setAttribute('aria-label',`Use ${itemNames[item]}`);const img=document.createElement('img');img.src=icons[item]||'';img.alt='';b.append(img,document.createTextNode(itemNames[item]));b.onclick=()=>{setVerb('use');selected=item;renderInventory();command();};el.append(b);}}
-function closeDialogue(){$('dialogue').hidden=true;}
+function closeDialogue(){$('dialogue').hidden=true;tavernAudio.stopSpeech();}
 function talk(id:string){const keeper=id==='keeper';$('speaker').textContent=keeper?'MARA · TAVERN KEEPER':'ORIN · NAVIGATOR';$('speech').textContent=keeper?'If you came for a room, the roof only leaks on the expensive side.':'I haven’t lost my ship. I know exactly which ocean it’s in.';$('choices').replaceChildren();const choices=keeper?[
 ['What’s in the sea chest?',()=>{ $('speech').textContent=state.returned?'You have the key. Consider it payment for services to tidiness.':'An old chart. Bring back my brass tankard from the window table and you can have the key.';}],
 ['Any advice for a new arrival?',()=>{$('speech').textContent='Look before you pick things up. Then pick them up anyway. That seems to be how adventurers work.';}]
 ]:[
 ['Where should I start?',()=>{$('speech').textContent=state.opened?'That chart marks Bellweather Shoal. Bring a boat. I’ve tried walking.':'Mara keeps a chart in that chest. She might part with the key if you help clear up.';}],
 ['How did you become a navigator?',()=>{$('speech').textContent='I got lost professionally until someone started paying me.';}]
-];for(const [label,action] of choices){const b=document.createElement('button');b.textContent=label as string;b.onclick=action as ()=>void;$('choices').append(b);}const bye=document.createElement('button');bye.textContent='I’ll let you get back to it.';bye.onclick=closeDialogue;$('choices').append(bye);$('dialogue').hidden=false;}
+];for(const [label,action] of choices){const b=document.createElement('button');b.textContent=label as string;b.onclick=()=>{(action as ()=>void)();void tavernAudio.sequence([{who:'NELL',text:label as string},{who:keeper?'MARA':'ORIN',text:$('speech').textContent||''}]);};$('choices').append(b);}const bye=document.createElement('button');bye.textContent='I’ll let you get back to it.';bye.onclick=()=>{closeDialogue();tavernAudio.speak(bye.textContent||'');};$('choices').append(bye);$('dialogue').hidden=false;tavernAudio.speak($('speech').textContent||'',keeper?'MARA':'ORIN');}
 function interact(id:string){const t=targets.find(t=>t.id===id)!;if(id==='mug'&&(state.returned||state.inventory.includes('mug'))){say('The tankard is already taken care of.');return;}closeDialogue();if(verb==='look'){say(id==='chest'&&state.opened?'Inside: a chart to Bellweather Shoal. Our next destination.':t.look);return;}
 if(verb==='walk'){scene.walk(t.x,Math.max(715,t.y+100));return;}
 if(verb==='talk'){if(id==='keeper'||id==='navigator')talk(id);else say('It is keeping its thoughts to itself.');return;}
-if(verb==='take'){if(id==='mug'){state.inventory.push('mug');scene.sync();renderInventory();say('One tankard acquired. My career in piracy begins modestly.');}else say(id==='chest'?'Too heavy. Perhaps I should try opening it.':'Best leave that where it is.');return;}
-if(selected==='mug'&&id==='keeper'){state.inventory=state.inventory.filter(i=>i!=='mug');state.inventory.push('key');state.returned=true;selected=null;say('My tankard! Here, take the chest key. The chart inside deserves some fresh air.','MARA');}
-else if(selected==='key'&&id==='chest'){if(state.opened)say('It is already unlocked. Bellweather Shoal awaits.');else{state.opened=true;say('A chart to Bellweather Shoal! Finally, a plan with a suspicious dotted line.');}}
+if(verb==='take'){if(id==='mug'){tavernAudio.effectSound('pickup');state.inventory.push('mug');scene.sync();renderInventory();say('One tankard acquired. My career in piracy begins modestly.');}else say(id==='chest'?'Too heavy. Perhaps I should try opening it.':'Best leave that where it is.');return;}
+if(selected==='mug'&&id==='keeper'){state.inventory=state.inventory.filter(i=>i!=='mug');state.inventory.push('key');state.returned=true;selected=null;tavernAudio.effectSound('exchange');say('My tankard! Here, take the chest key. The chart inside deserves some fresh air.','MARA');}
+else if(selected==='key'&&id==='chest'){if(state.opened)say('It is already unlocked. Bellweather Shoal awaits.');else{state.opened=true;tavernAudio.effectSound('unlock');say('A chart to Bellweather Shoal! Finally, a plan with a suspicious dotted line.');}}
 else if(selected)say('An inspired combination. Unfortunately, the universe disagrees.');
 else if(id==='chest')say(state.opened?'The chart points to Bellweather Shoal. Our adventure starts here.':'Locked. Perhaps Mara knows where the key is.');
 else if(id==='door')say('Beyond this door lies the next chapter. For now, this is our development room.');
@@ -62,7 +63,7 @@ class Tavern extends Phaser.Scene {
  for(const t of targets){const zone=this.add.zone(t.x,t.y-t.h/2,t.w,t.h).setInteractive({useHandCursor:true});zone.on('pointerover',()=>command(t.name));zone.on('pointerout',()=>command());zone.on('pointerdown',()=>{if($('dialogue').hidden)interact(t.id);});const rect=this.add.rectangle(t.x,t.y-t.h/2,t.w,t.h,0xe1bb73,.08).setStrokeStyle(2,0xe1bb73,.8).setVisible(false);const label=this.add.text(t.x,t.y-t.h-7,t.name,{fontFamily:'monospace',fontSize:'18px',color:'#ffe5ac',backgroundColor:'#142027',padding:{x:5,y:4}}).setOrigin(.5,1).setVisible(false);this.marks.push(rect,label);}
  document.querySelectorAll<HTMLButtonElement>('button').forEach(b=>b.disabled=false);this.sync();renderInventory();$('game').dataset.ready='true';
  }
- walk(x:number,y:number){closeDialogue();this.move?.stop();x=Phaser.Math.Clamp(x,95,1440);y=Phaser.Math.Clamp(y,740,950);this.hero.setFlipX(x<this.hero.x);const distance=Phaser.Math.Distance.Between(this.hero.x,this.hero.y,x,y);this.move=this.tweens.add({targets:this.hero,x,y,duration:distance/0.32,ease:'Linear',onUpdate:()=>{state.x=this.hero.x;state.y=this.hero.y;},onComplete:()=>{state.x=x;state.y=y;}});command('the tavern floor');}
+ walk(x:number,y:number){closeDialogue();this.move?.stop();x=Phaser.Math.Clamp(x,95,1440);y=Phaser.Math.Clamp(y,740,950);this.hero.setFlipX(x<this.hero.x);const distance=Phaser.Math.Distance.Between(this.hero.x,this.hero.y,x,y);tavernAudio.walk(distance>0);this.move=this.tweens.add({targets:this.hero,x,y,duration:distance/0.32,ease:'Linear',onUpdate:()=>{state.x=this.hero.x;state.y=this.hero.y;},onComplete:()=>{state.x=x;state.y=y;tavernAudio.walk(false);}});command('the tavern floor');}
  sync(){this.mug.setVisible(!state.returned&&!state.inventory.includes('mug'));this.chest.setTint(state.opened?0xffe6a0:0xffffff);this.hero.setPosition(state.x,state.y);const b=document.querySelector<HTMLButtonElement>('[data-target="mug"]');if(b)b.disabled=state.returned||state.inventory.includes('mug');}
  toggleMarks(){this.showMarks=!this.showMarks;for(const m of this.marks)(m as Phaser.GameObjects.Rectangle).setVisible(this.showMarks);$('hotspots').setAttribute('aria-pressed',String(this.showMarks));}
 }
@@ -71,11 +72,24 @@ document.querySelectorAll<HTMLButtonElement>('[data-verb]').forEach(b=>b.onclick
 for(const t of targets){const b=document.createElement('button');b.textContent=t.name;b.dataset.target=t.id;b.onclick=()=>interact(t.id);$('targets').append(b);}
 $('close-dialogue').onclick=closeDialogue;$('hotspots').onclick=()=>scene?.toggleMarks();
 $('save').onclick=()=>{try{localStorage.setItem('monkey-buisness-save',JSON.stringify({version:1,state}));say('Progress saved. Even adventurers deserve a safety net.');}catch{say('Saving is unavailable in this browser. Your current room is still playable.');}};
-$('load').onclick=()=>{try{const raw=localStorage.getItem('monkey-buisness-save');if(!raw){say('No saved game yet.');return;}const saved=JSON.parse(raw);const s=saved.state as State;if(saved.version!==1||!s||!Array.isArray(s.inventory)||s.inventory.some(i=>!['mug','key'].includes(i))||new Set(s.inventory).size!==s.inventory.length||typeof s.returned!=='boolean'||typeof s.opened!=='boolean'||!Number.isFinite(s.x)||!Number.isFinite(s.y)||s.x<95||s.x>1440||s.y<740||s.y>950||(s.returned&&s.inventory.includes('mug'))||(s.opened&&!s.returned))throw Error('Invalid save');scene.move?.stop();state=s;closeDialogue();setVerb('walk');scene.sync();say('Back where we left off. The tankards have missed you.');}catch{say('That save could not be loaded. Your current game has been kept.');}};
-$('reset').onclick=()=>{scene.move?.stop();state=fresh();closeDialogue();setVerb('walk');scene.sync();say('A fresh start. Same suspiciously welcoming tavern.');};
+$('load').onclick=()=>{try{const raw=localStorage.getItem('monkey-buisness-save');if(!raw){say('No saved game yet.');return;}const saved=JSON.parse(raw);const s=saved.state as State;if(saved.version!==1||!s||!Array.isArray(s.inventory)||s.inventory.some(i=>!['mug','key'].includes(i))||new Set(s.inventory).size!==s.inventory.length||typeof s.returned!=='boolean'||typeof s.opened!=='boolean'||!Number.isFinite(s.x)||!Number.isFinite(s.y)||s.x<95||s.x>1440||s.y<740||s.y>950||(s.returned&&s.inventory.includes('mug'))||(s.opened&&!s.returned))throw Error('Invalid save');scene.move?.stop();tavernAudio.walk(false);state=s;closeDialogue();setVerb('walk');scene.sync();say('Back where we left off. The tankards have missed you.');}catch{say('That save could not be loaded. Your current game has been kept.');}};
+$('reset').onclick=()=>{scene.move?.stop();tavernAudio.walk(false);state=fresh();closeDialogue();setVerb('walk');scene.sync();say('A fresh start. Same suspiciously welcoming tavern.');};
 window.addEventListener('keydown',e=>{if(e.target instanceof HTMLButtonElement||e.target instanceof HTMLInputElement||e.ctrlKey||e.metaKey||e.altKey)return;if(e.key==='Escape'){closeDialogue();setVerb('walk');}if(e.key.toLowerCase()==='h')scene?.toggleMarks();const verbs:Verb[]=['walk','look','talk','take','use'];if(/^[1-5]$/.test(e.key))setVerb(verbs[Number(e.key)-1]);});
-// Optional quiet synthesized harbour ambience: no external recordings.
-let audio:AudioContext|undefined;let sound=false;
-$('sound').onclick=async()=>{try{if(!audio){audio=new AudioContext();const gain=audio.createGain();gain.gain.value=.018;gain.connect(audio.destination);for(const f of [110,164.81,220]){const osc=audio.createOscillator();osc.type='sine';osc.frequency.value=f;osc.connect(gain);osc.start();}}sound=!sound;await (sound?audio.resume():audio.suspend());$('sound').textContent=sound?'Sound on':'Sound off';$('sound').setAttribute('aria-pressed',String(sound));}catch{say('Audio is unavailable in this browser.');}};
+// Audio starts only after this explicit user gesture; subtitles remain available when muted.
+$('sound').onclick=()=>{
+ const enabled=!tavernAudio.enabled;
+ tavernAudio.setEnabled(enabled);
+ $('sound').textContent=enabled?'Sound on':'Sound off';
+ $('sound').setAttribute('aria-pressed',String(enabled));
+ if(enabled){
+  const inDialogue=!$('dialogue').hidden;
+  const text=inDialogue?$('speech').textContent:$('caption').querySelector('span')?.textContent;
+  const who=inDialogue?($('speaker').textContent?.startsWith('MARA')?'MARA':'ORIN'):($('caption').querySelector('b')?.textContent||'NELL');
+  if(text)tavernAudio.speak(text,who);
+ }
+};
+document.addEventListener('audio-unavailable',()=>{
+ $('sound').title='Some audio could not play. Subtitles and game controls remain available.';
+});
 
 document.querySelectorAll<HTMLButtonElement>('button').forEach(b=>b.disabled=true);

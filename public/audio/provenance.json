@@ -1,0 +1,708 @@
+{
+  "provider": "ElevenLabs",
+  "generated": "2026-10-19",
+  "cast": {
+    "NELL": {
+      "name": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "direction": "Clear, lively young adventurer; curious and dryly amused.",
+      "settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    "MARA": {
+      "name": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "direction": "Warm, grounded tavern keeper; measured delivery and dry humour.",
+      "settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    "ORIN": {
+      "name": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "direction": "Low, seasoned older navigator; unhurried storyteller.",
+      "settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    }
+  },
+  "records": [
+    {
+      "file": "mara-17d8bd0577cd2f96.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "If you came for a room, the roof only leaks on the expensive side.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "mara-12a8b4a225585377.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "You have the key. Consider it payment for services to tidiness.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "mara-f5ee4285e5b5faaf.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "An old chart. Bring back my brass tankard from the window table and you can have the key.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "mara-1a03ec6f47a2a345.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Look before you pick things up. Then pick them up anyway. That seems to be how adventurers work.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "mara-d012b8670f7b0c70.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "My tankard! Here, take the chest key. The chart inside deserves some fresh air.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "orin-23b68f2b42a083d0.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I haven’t lost my ship. I know exactly which ocean it’s in.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "orin-3f5f4f49b7022e70.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "That chart marks Bellweather Shoal. Bring a boat. I’ve tried walking.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "orin-4d483674d02a36d2.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Mara keeps a chart in that chest. She might part with the key if you help clear up.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "orin-47092351414cf581.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I got lost professionally until someone started paying me.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "nell-799301a574a1739a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A warm fire. A cold harbour. And absolutely no plan.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-a88b092e07bcefc5.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What’s in the sea chest?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-f0105939680a10aa.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Any advice for a new arrival?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-12ede28e9a8f1090.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Where should I start?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-f690f4316646a93c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "How did you become a navigator?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-327b3e1b6c5910d5.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I’ll let you get back to it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-b5accc3aad2eb0b4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Mara runs a tight ship. Particularly impressive for a building.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-edbb178dbf4323fc.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A navigator who has misplaced his ship. Promising.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-84d09cc00615cc04.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A fine brass tankard. Someone has engraved “PROPERTY OF MARA” underneath.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-ea31658275e6fd33.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A sturdy sea chest. Its lock has survived more voyages than I have.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-a01701f4f5e58e98.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "WANTED: ship’s cook. Must distinguish salt from gunpowder. Previous cook need not apply.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-271771e1659d2765.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Out there: a thousand possible adventures. In here: substantially better heating.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-34ba6a5da6c46322.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The only member of this establishment with a reliable work ethic.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-98fab971404255f3.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The harbour can wait. There is still a perfectly good mystery indoors.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-efbc0b610b1beecb.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Look at",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-5cb2c306d81687f4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The tankard is already taken care of.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-a69cc0a938ed2df7.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Inside: a chart to Bellweather Shoal. Our next destination.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-ba9f63fa3b0768a7.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "It is keeping its thoughts to itself.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-459b203648fbfd47.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "One tankard acquired. My career in piracy begins modestly.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-62343a8d541c9b55.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Too heavy. Perhaps I should try opening it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-797bebc9ab7009fb.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Best leave that where it is.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-5b227c626ff7eee8.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "It is already unlocked. Bellweather Shoal awaits.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-5f3ac56a20946ead.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A chart to Bellweather Shoal! Finally, a plan with a suspicious dotted line.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-cd1c9696696a07e1.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An inspired combination. Unfortunately, the universe disagrees.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-73fa37130428f6d5.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The chart points to Bellweather Shoal. Our adventure starts here.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-80ef50d6d470bac0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Locked. Perhaps Mara knows where the key is.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-9e03cdf30de00cba.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Beyond this door lies the next chapter. For now, this is our development room.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-213c91fa65709fec.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Select something from your pockets, then click what you want to use it with.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-40115af57c97bd91.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An image could not be loaded. Please reload the page.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-6306a87d05a4017e.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Progress saved. Even adventurers deserve a safety net.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-cdb34216b17478c0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Saving is unavailable in this browser. Your current room is still playable.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-195642d6ab8e9874.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "No saved game yet.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-089bed31efbc2c77.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Back where we left off. The tankards have missed you.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-4008824670a82d86.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "That save could not be loaded. Your current game has been kept.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-ef5d0821b2bd6bfd.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A fresh start. Same suspiciously welcoming tavern.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-c8494174b02bdf4f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Audio is unavailable in this browser.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "tavern-ambience-e81304ead73c15ec.mp3",
+      "text": "Quiet interior of a small wooden seaside tavern at night. Gentle close fireplace crackle, distant soft harbour waves and occasional low timber creaks. Calm warm intimate atmosphere, no music, no speech, no loud events. Seamless background loop.",
+      "duration_seconds": 20,
+      "loop": true,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    },
+    {
+      "file": "footsteps-fd46e35bc605f3e6.mp3",
+      "text": "Steady unhurried footsteps of one person in soft leather boots walking on old wooden tavern floorboards. Quiet rhythmic hollow footfalls and subtle wood creaks, close dry recording, no voices or music. Seamless loop.",
+      "duration_seconds": 4,
+      "loop": true,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    },
+    {
+      "file": "pickup-074f4d6b51bdc45e.mp3",
+      "text": "Single brass tankard lifted from a wooden table, short light metallic clink and faint scrape. Close dry game sound effect, no voices or music.",
+      "duration_seconds": 1.2,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    },
+    {
+      "file": "exchange-af8b84fc0859e890.mp3",
+      "text": "Brass tankard set gently on a wooden counter, followed by a small brass key jingling into a palm. Two delicate metallic clinks. Close dry game sound effect, no speech, no music.",
+      "duration_seconds": 2,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    },
+    {
+      "file": "unlock-9d084d036b84db49.mp3",
+      "text": "A small brass key turns in an old lock with a satisfying click, then a wooden sea chest lid creaks open softly. Close dry game sound effect, no voices or music.",
+      "duration_seconds": 2.5,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    }
+  ]
+}

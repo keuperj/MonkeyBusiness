@@ -18,3 +18,11 @@ Use case: stylized-concept. Asset type: transparent sprite atlas for an original
 ## Final chroma-key edit prompt
 
 Edit this sprite sheet: replace all backdrop and glows with a perfectly flat solid pure magenta RGB(255,0,255) chroma-key background. No gradients, no shadows. Keep the three people and tankard, key and chest identical. Six isolated crisp pixel art sprites. Keep all positions unchanged. The space between legs and inside tankard handle must also be flat pure magenta. This is a technical game sprite atlas for chroma key rendering.
+
+## Generated audio
+
+50 MP3 assets were generated with the ElevenLabs API on 2026-10-19: 45 speech clips and five effects (20-second looping tavern ambience, looping footsteps, tankard pickup, tankard/key exchange, and chest unlocking). Character casting: Nell uses Alice, Mara uses Matilda, and Orin uses Bill. These are stock synthetic voices, not cloned performances of the original game's actors.
+
+Exact text, prompts, model IDs, voice IDs and settings are recorded in `public/audio/provenance.json`. The room serves the saved audio as static files; it makes no runtime ElevenLabs calls.
+
+Audio is generated through ElevenLabs and remains subject to the applicable account/voice/service terms. The code's GPLv3 license is not a claim that ElevenLabs audio is independently cleared for unrestricted redistribution. Account-tier distribution rights have not been verified.
