@@ -36,6 +36,11 @@ class TavernAudio {
     this.play(this.ambience);
     if (this.walking) this.play(this.steps);
   }
+  setAmbience(name: Effect) {
+    this.ambience.pause();
+    this.ambience.src = url(manifest.effects[name]);
+    this.resumeBeds();
+  }
   setEnabled(enabled: boolean) {
     this.enabled = enabled;
     if (enabled) this.resumeBeds();
@@ -68,13 +73,14 @@ class TavernAudio {
     this.play(this.effect);
   }
   speak(text: string, who = 'NELL') { void this.sequence([{text, who}]); }
-  async sequence(lines: Line[]) {
+  async sequence(lines: Line[], onLine?: (line: Line) => void) {
     this.stopSpeech();
     if (!this.enabled || document.hidden) return;
     const generation = this.generation;
     this.ambience.volume = .09;
     for (const {who, text} of lines) {
       if (generation !== this.generation) return;
+      onLine?.({who, text});
       const file = speechFiles[`${who}:${text}`];
       if (!file) continue; // New ungenerated lines still have their written subtitles.
       await new Promise<void>(resolve => {

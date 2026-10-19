@@ -1,0 +1,24 @@
+{
+ "intro":[
+  {"who":"QUIBBLE","text":"Halt! Captain Quibble owns this bridge. Passage costs three bruises to my ego."},
+  {"who":"FINE PRINT","text":"I keep score. Conflict of interest? I prefer confluence of income."},
+  {"who":"NELL","text":"A toll booth with swords. Finally, honest advertising."}
+ ],
+ "rounds":[
+  {"who":"QUIBBLE","insult":"My fearsome reputation always precedes me!","answers":["Then I'll fight your reputation while you catch up.","Mine travels by carriage.","Your hat is smaller than advertised."],"correct":0,"retort":"Blast. Even my reputation has left me waiting.","hint":"He has sent his reputation ahead. Challenge that instead of him."},
+  {"who":"FINE PRINT","insult":"Squawk! Bridge toll: one gold coin per foot. Wings cost extra!","answers":["I demand a receipt with feathers.","Put it on your bill. You've already got one.","What if I cross on my elbows?"],"correct":1,"retort":"My bill? That's outrageous! It's already full of crackers!","hint":"A bird has a bill. So does someone charging a toll."},
+  {"who":"QUIBBLE","insult":"I can tie an enemy in seventeen different knots!","answers":["I can count to eighteen.","Your shoelaces disagree.","Wonderful. I've been looking for a bow tie with ambition."],"correct":2,"retort":"I am a terror of the seas, not formal wear!","hint":"Turn his terrifying talent into a very ordinary job."},
+  {"who":"FINE PRINT","insult":"Every word spoken on this bridge belongs to me. Pay the royalties!","answers":["Then these unpaid taxes belong to you too.","I shall speak exclusively in soup.","Polly wants a lawyer."],"correct":0,"retort":"Taxes? I resign! This bird is now a non-prophet organisation!","hint":"If he claims every word, give him words he won't want to own."},
+  {"who":"QUIBBLE","insult":"Nobody crosses my bridge until I have the last word!","answers":["Last word! There, I've stolen it.","Say welcome. You get the last word; I get across.","I'll build a taller bridge."],"correct":1,"retort":"Welcome. Wait. That felt suspiciously like cooperation.","hint":"Find a word that lets him win his argument and lets you cross."}
+ ],
+ "miss":{"who":"QUIBBLE","text":"A fine sentence. Shame it arrived without a point."},
+ "win":[
+  {"who":"QUIBBLE","text":"My ego is thoroughly perforated. The bridge is yours to cross."},
+  {"who":"FINE PRINT","text":"Squawk! We lost the duel, but retained the merchandising rights!"},
+  {"who":"NELL","text":"Keep them. I only wanted the right of way."}
+ ],
+ "lose":[
+  {"who":"QUIBBLE","text":"Three dents in your composure. Come back with a sharper argument."},
+  {"who":"NELL","text":"Right. Less swordplay, more wordplay. Let's try that again."}
+ ]
+}

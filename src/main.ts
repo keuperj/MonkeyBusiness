@@ -34,6 +34,7 @@ function talk(id:string){const keeper=id==='keeper';$('speaker').textContent=kee
 ['How did you become a navigator?',()=>{$('speech').textContent='I got lost professionally until someone started paying me.';}]
 ];for(const [label,action] of choices){const b=document.createElement('button');b.textContent=label as string;b.onclick=()=>{(action as ()=>void)();void tavernAudio.sequence([{who:'NELL',text:label as string},{who:keeper?'MARA':'ORIN',text:$('speech').textContent||''}]);};$('choices').append(b);}const bye=document.createElement('button');bye.textContent='I’ll let you get back to it.';bye.onclick=()=>{closeDialogue();tavernAudio.speak(bye.textContent||'');};$('choices').append(bye);$('dialogue').hidden=false;tavernAudio.speak($('speech').textContent||'',keeper?'MARA':'ORIN');}
 function interact(id:string){const t=targets.find(t=>t.id===id)!;if(id==='mug'&&(state.returned||state.inventory.includes('mug'))){say('The tankard is already taken care of.');return;}closeDialogue();if(verb==='look'){say(id==='chest'&&state.opened?'Inside: a chart to Bellweather Shoal. Our next destination.':t.look);return;}
+if(id==='door'&&(verb==='walk'||verb==='use')){travelToBridge();return;}
 if(verb==='walk'){scene.walk(t.x,Math.max(715,t.y+100));return;}
 if(verb==='talk'){if(id==='keeper'||id==='navigator')talk(id);else say('It is keeping its thoughts to itself.');return;}
 if(verb==='take'){if(id==='mug'){tavernAudio.effectSound('pickup');state.inventory.push('mug');scene.sync();renderInventory();say('One tankard acquired. My career in piracy begins modestly.');}else say(id==='chest'?'Too heavy. Perhaps I should try opening it.':'Best leave that where it is.');return;}
@@ -93,3 +94,15 @@ document.addEventListener('audio-unavailable',()=>{
 });
 
 document.querySelectorAll<HTMLButtonElement>('button').forEach(b=>b.disabled=true);
+
+function travelToBridge(){
+ try{sessionStorage.setItem('monkey-buisness-travel',JSON.stringify(state));}catch{}
+ window.location.href='./bridge.html';
+}
+$('bridge-link').onclick=e=>{e.preventDefault();travelToBridge();};
+try{
+ const raw=sessionStorage.getItem('monkey-buisness-travel');
+ if(raw){const s=JSON.parse(raw) as State;
+ if(Array.isArray(s.inventory)&&s.inventory.every(i=>i==='mug'||i==='key')&&new Set(s.inventory).size===s.inventory.length&&typeof s.returned==='boolean'&&typeof s.opened==='boolean'&&Number.isFinite(s.x)&&Number.isFinite(s.y)&&s.x>=95&&s.x<=1440&&s.y>=740&&s.y<=950&&!(s.returned&&s.inventory.includes('mug'))&&!(s.opened&&!s.returned))state=s;
+ sessionStorage.removeItem('monkey-buisness-travel');}
+}catch{}

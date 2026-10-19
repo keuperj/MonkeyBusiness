@@ -1,5 +1,48 @@
 # Generated artwork
 
+
+## Story map
+
+- File: `public/assets/story-map.png` (1536 × 1024).
+- Generated on 2026-10-19 with the built-in image-generation tool.
+- Original concept geography based on `docs/STORY_PLAN.md`; not to scale. Labels cover the nine principal story locations. The underground Tide Ledger is illustrated as a cutaway.
+
+### Generation prompt
+
+Use case: stylized-concept.
+Asset type: illustrated world map for the original point-and-click adventure "Monkey Buisness".
+Create a richly detailed landscape 1536x1024 pixel-art game map, an oblique bird's-eye illustrated coastal chart, readable and beautifully composed. Match a classic early-1990s graphical adventure aesthetic: deliberately visible crisp square pixel clusters, deep midnight indigo and teal sea, purple cliffs, amber lanterns and golden parchment labels. Charming crooked maritime buildings, warm windows, tiny sailing boats, rocky shoals, wave marks and a decorative compass rose. Original geography and artwork, no existing franchise imagery.
+Title in a tasteful parchment cartouche across the top: "MONKEY BUISNESS"; smaller subtitle "Brindle Quay & Bellweather Shoal".
+GEOGRAPHY: One connected mainland coastal town occupies the left 60 percent, winding around a sheltered harbour inlet. A small wooden footbridge spans a narrow inner watercourse connecting the tavern quarter to the working docks. Cobblestone paths visibly connect the mainland landmarks. Upper-left hills hold an eccentric inventor's manor. A secluded maintenance inlet behind a flood barrier contains a stranded small ship. Farther right across the open harbour water lies a SMALL rocky shoal island with ruined harbour arches, a lighthouse, tide gates and caretaker shed. Keep the island visibly separated from mainland by navigable water. A winding dotted gold sailing route goes from town docks through signal buoys to the shoal. Show secondary faint dashed service channel through reefs. Three little brass signal stations around the harbour and shoal suggest a connected tidal system. Not a giant continent, this is one compact local adventure region.
+LABELS: Use neat highly legible light parchment plaques with dark lettering, attached to the relevant landmark, never overlapping one another. Include exactly these nine location labels spelled correctly:
+"The Crooked Compass" next to a cozy harbour tavern lower-left;
+"Quibble's Crossing" next to the small wooden footbridge;
+"Pip's Newspaper" next to a small press shop in the town;
+"Rook's House" next to the eccentric hilltop manor upper-left;
+"Fair Passage Company" next to an imposing merchant building and private pier toward the town's eastern waterfront;
+"Repair Yards" next to cranes and boats on slips along the inner harbour;
+"Maintenance Inlet" next to the hidden ship and flood barrier on the north coast;
+"Bellweather Shoal" next to the offshore rocky island on the right;
+"The Tide Ledger" beside a SMALL tasteful illustrated cutaway below the shoal, showing an underground brass control station linked by a stairway to the island above. Make it clear this is below ground, not a second island.
+In an open patch of sea at the bottom, small caption: "Nell's working chart — not to scale".
+Add tiny whimsical details: a monkey-shaped merchant weather vane, a little parrot on the bridge's signpost, an absurdly complicated rooftop telescope. No characters in close-up, no UI buttons, no speech bubbles, no photorealism, no modern map pins, no franchise logos. Prioritize readable cartographic composition and coherent paths over overcrowding.
+
+## Harbour bridge artwork and audio
+
+Generated using the built-in image-generation tool on 2026-10-19:
+- `public/assets/bridge.png`: original moonlit bridge background.
+- `public/assets/duel-sprites.png`: Nell, Captain Quibble and Fine Print on a magenta chroma-key atlas decoded at runtime. Swords are separate Phaser graphics for pivoting animation.
+
+Background prompt:
+
+Original 1990s pixel-art adventure game background, landscape 1536x1024. A small wooden footbridge across a narrow seaside harbor inlet at blue twilight. Side-on theatrical view for a funny fencing duel. Wide clear horizontal plank bridge deck fills lower middle from x0 to1536 at y720 to880, solid walking platform, no holes. Low rope railing behind combatants at y650, foreground edge y890. Warm amber lanterns on posts at extreme left and right, moored little fishing boats, indigo water, distant crooked coastal town and tavern windows, crescent moon. Crisp visible pixel clusters, detailed hand-crafted retro adventure atmosphere, deep teal and purple with amber accents. Clear empty space for three characters across center. No people no birds no text no UI no weapons. Original layout, not a recreation of any existing game screen.
+
+Sprite prompt:
+
+Original retro adventure game pixel-art sprite atlas, 1536x1024. EXACTLY THREE isolated sprites, one per equal 512-pixel-wide column. Perfectly flat solid pure magenta RGB255,0,255 background including all gaps. No gradients no shadows no labels. Left column: full-body young woman sailor with short dark curly hair, teal waistcoat over cream shirt, rust trousers and brown boots; facing RIGHT in an energetic fencing guard stance, right forearm extended horizontally forward with closed hand ready to hold a separate sword, no weapon drawn. Middle column: full-body comically pompous elderly pirate captain facing LEFT, big silver moustache, bald head with burgundy bandana, worn plum tailcoat, cream shirt, striped trousers, sea boots, similarly extended fencing hand with no weapon. Right column: single cheeky emerald and coral red parrot with golden beak, facing left, wings partly spread, no perch. All sprites fit fully within their columns with wide margins. Both humans same height filling y150 to900. Parrot centered x1280 y500 medium sized. Crisp chunky pixel clusters, dark outlines, warm amber side lighting, consistent limited palette. No copied characters from any franchise.
+
+The bridge adds 34 ElevenLabs speech clips, harbour ambience and a fencing parry. All player answers, opponent challenges, retorts and endings have generated voice clips. The parrot uses the Charlie stock voice at a faster delivery speed; no voice cloning is used. See `public/audio/provenance.json` for exact generation settings and `src/duel.json` for the original script.
+
 Generated for Monkey Buisness on 2026-10-19 using the built-in image-generation tool. No original game assets or reference screenshots were supplied. These are original generated development assets; no exclusive copyright or trademark clearance is asserted. Distributed with this project under its GPLv3 terms to the extent applicable. Third-party dependency licenses remain separate.
 
 ## Files

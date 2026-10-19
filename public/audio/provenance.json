@@ -2,6 +2,28 @@
   "provider": "ElevenLabs",
   "generated": "2026-10-19",
   "cast": {
+    "QUIBBLE": {
+      "name": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "direction": "Old pompous pirate captain, gravelly theatrical boasts.",
+      "settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    "FINE PRINT": {
+      "name": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "direction": "Quick, mischievous parrot, bright emphatic comic delivery.",
+      "settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
     "NELL": {
       "name": "Alice",
       "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
@@ -239,6 +261,482 @@
       "voice": "Alice",
       "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
       "text": "I’ll let you get back to it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-bd9a8014fd215706.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Halt! Captain Quibble owns this bridge. Passage costs three bruises to my ego.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "fine-print-071f5497cb201cb2.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "I keep score. Conflict of interest? I prefer confluence of income.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "nell-8ad3952bc68b5d5f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A toll booth with swords. Finally, honest advertising.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-18820e0384de1614.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "A fine sentence. Shame it arrived without a point.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "quibble-3ad4ecd3ab0f6c53.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "My ego is thoroughly perforated. The bridge is yours to cross.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "fine-print-b8565d22bf6bfed8.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "Squawk! We lost the duel, but retained the merchandising rights!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "nell-b62dfa82a0991879.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Keep them. I only wanted the right of way.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-4103c6ed655c6edd.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Three dents in your composure. Come back with a sharper argument.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-c9125927cc158f24.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Right. Less swordplay, more wordplay. Let's try that again.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-01f4ad25d86f0a99.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "My fearsome reputation always precedes me!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "quibble-19d19d6a6b75a777.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Blast. Even my reputation has left me waiting.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-e72ae505fdae5249.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Then I'll fight your reputation while you catch up.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-aa073618b8a45ad7.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Mine travels by carriage.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-17b4faea9453079d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Your hat is smaller than advertised.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "fine-print-6fbd386071e3a05a.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "Squawk! Bridge toll: one gold coin per foot. Wings cost extra!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "fine-print-d5e5816694b6066f.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "My bill? That's outrageous! It's already full of crackers!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "nell-56181613bfc43e70.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I demand a receipt with feathers.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-1267df6cc8c6a9b9.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Put it on your bill. You've already got one.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-9744536b1b3f0643.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What if I cross on my elbows?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-1310a08d6c5a8350.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I can tie an enemy in seventeen different knots!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "quibble-02b686f61d87fd66.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I am a terror of the seas, not formal wear!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-4e6ff97c087e6d9f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I can count to eighteen.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-c49115791cdeacbd.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Your shoelaces disagree.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-7c30a96a146859b4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Wonderful. I've been looking for a bow tie with ambition.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "fine-print-da5284526efe1856.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "Every word spoken on this bridge belongs to me. Pay the royalties!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "fine-print-9ffb32adfb77657e.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "Taxes? I resign! This bird is now a non-prophet organisation!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "nell-fe0bf169db88a04f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Then these unpaid taxes belong to you too.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-72903f8f67a1cbd5.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I shall speak exclusively in soup.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-95d5b91c3d812174.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Polly wants a lawyer.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-870f41ee5bd611a9.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Nobody crosses my bridge until I have the last word!",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "quibble-deaadd3fe2200a68.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Welcome. Wait. That felt suspiciously like cooperation.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-136e85d17e3f2e81.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Last word! There, I've stolen it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-b3319a5f91742d9e.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Say welcome. You get the last word; I get across.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-ed1035de81ec8f4a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I'll build a taller bridge.",
       "model_id": "eleven_multilingual_v2",
       "voice_settings": {
         "stability": 0.45,
@@ -654,18 +1152,19 @@
       }
     },
     {
-      "file": "nell-c8494174b02bdf4f.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "Audio is unavailable in this browser.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
+      "file": "bridge-ambience-3a2e3db4a24b3ca5.mp3",
+      "text": "Quiet small wooden footbridge over a seaside harbour at night, gentle water lapping against pilings, faint rigging tapping and sea breeze. No music, no speech, no loud events. Seamless loop.",
+      "duration_seconds": 20,
+      "loop": true,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    },
+    {
+      "file": "parry-33d66d4d0e06b308.mp3",
+      "text": "Two light fencing swords meet with a crisp metallic clink and a brief swish. Playful theatrical practice duel. No voices or music.",
+      "duration_seconds": 1,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
     },
     {
       "file": "tavern-ambience-e81304ead73c15ec.mp3",

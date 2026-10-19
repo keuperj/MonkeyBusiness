@@ -1,4 +1,6 @@
 export const cast = {
+ QUIBBLE: {name:'Bill',voice_id:'pqHfZKP75CvOlQylNhV4',direction:'Old pompous pirate captain, gravelly theatrical boasts.',settings:{stability:.4,similarity_boost:.75,style:.65,speed:.95}},
+ 'FINE PRINT': {name:'Charlie',voice_id:'IKne3meq5aSn9XLyUdCD',direction:'Quick, mischievous parrot, bright emphatic comic delivery.',settings:{stability:.35,similarity_boost:.7,style:.7,speed:1.18}},
  NELL: { name:'Alice', voice_id:'Xb7hH8MSUJpSbSDYk0k2', direction:'Clear, lively young adventurer; curious and dryly amused.', settings:{stability:.45,similarity_boost:.75,style:.3,speed:1.04} },
  MARA: { name:'Matilda', voice_id:'XrExE9yKIg1WjnnlVkGX', direction:'Warm, grounded tavern keeper; measured delivery and dry humour.', settings:{stability:.55,similarity_boost:.75,style:.25,speed:.94} },
  ORIN: { name:'Bill', voice_id:'pqHfZKP75CvOlQylNhV4', direction:'Low, seasoned older navigator; unhurried storyteller.', settings:{stability:.6,similarity_boost:.75,style:.25,speed:.9} }
@@ -24,6 +26,8 @@ export const conversations = {
  ]
 };
 export const effects = {
+ 'bridge-ambience':{text:'Quiet small wooden footbridge over a seaside harbour at night, gentle water lapping against pilings, faint rigging tapping and sea breeze. No music, no speech, no loud events. Seamless loop.',duration_seconds:20,loop:true},
+ parry:{text:'Two light fencing swords meet with a crisp metallic clink and a brief swish. Playful theatrical practice duel. No voices or music.',duration_seconds:1},
  'tavern-ambience':{text:'Quiet interior of a small wooden seaside tavern at night. Gentle close fireplace crackle, distant soft harbour waves and occasional low timber creaks. Calm warm intimate atmosphere, no music, no speech, no loud events. Seamless background loop.',duration_seconds:20,loop:true},
  footsteps:{text:'Steady unhurried footsteps of one person in soft leather boots walking on old wooden tavern floorboards. Quiet rhythmic hollow footfalls and subtle wood creaks, close dry recording, no voices or music. Seamless loop.',duration_seconds:4,loop:true},
  pickup:{text:'Single brass tankard lifted from a wooden table, short light metallic clink and faint scrape. Close dry game sound effect, no voices or music.',duration_seconds:1.2},

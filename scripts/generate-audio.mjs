@@ -8,6 +8,9 @@ const root='public/audio'; await mkdir(root,{recursive:true});
 const transcript=new Map();
 const add=(who,text)=>transcript.set(`${who}:${text}`,{who,text});
 for(const [who,lines] of Object.entries(conversations))for(const text of lines)add(who,text);
+const duel=JSON.parse(await readFile('src/duel.json','utf8'));
+for(const line of [...duel.intro,duel.miss,...duel.win,...duel.lose])add(line.who,line.text);
+for(const round of duel.rounds){add(round.who,round.insult);add(round.who,round.retort);for(const answer of round.answers)add('NELL',answer);}
 // Include all literal narration and room descriptions, including conditional branches.
 const ast=ts.createSourceFile('main.ts',await readFile('src/main.ts','utf8'),ts.ScriptTarget.Latest,true);
 function literals(node){if(!node)return [];if(ts.isStringLiteral(node))return [node.text];if(ts.isConditionalExpression(node))return [...literals(node.whenTrue),...literals(node.whenFalse)];return [];}
@@ -19,7 +22,7 @@ function visit(node){
 const manifest={provider:'ElevenLabs',speech:{},effects:{}};
 const records=[];
 const jobs=[];
-for(const [key,{who,text}] of transcript){const voice=cast[who];if(!voice)throw Error('Unknown character');const body={text,model_id:'eleven_multilingual_v2',voice_settings:voice.settings};const hash=createHash('sha256').update(JSON.stringify({voice_id:voice.voice_id,...body})).digest('hex').slice(0,16);const file=`${who.toLowerCase()}-${hash}.mp3`;manifest.speech[key]=file;records.push({file,character:who,voice:voice.name,voice_id:voice.voice_id,...body});jobs.push({file,path:`text-to-speech/${voice.voice_id}?output_format=mp3_44100_128`,body,seed: text===conversations.MARA[0]?'mara-greeting.mp3':undefined});}
+for(const [key,{who,text}] of transcript){const voice=cast[who];if(!voice)throw Error('Unknown character');const body={text,model_id:'eleven_multilingual_v2',voice_settings:voice.settings};const hash=createHash('sha256').update(JSON.stringify({voice_id:voice.voice_id,...body})).digest('hex').slice(0,16);const file=`${who.toLowerCase().replaceAll(" ","-")}-${hash}.mp3`;manifest.speech[key]=file;records.push({file,character:who,voice:voice.name,voice_id:voice.voice_id,...body});jobs.push({file,path:`text-to-speech/${voice.voice_id}?output_format=mp3_44100_128`,body,seed: text===conversations.MARA[0]?'mara-greeting.mp3':undefined});}
 for(const [id,effect] of Object.entries(effects)){const body={...effect,model_id:'eleven_text_to_sound_v2',prompt_influence:.45};const hash=createHash('sha256').update(JSON.stringify(body)).digest('hex').slice(0,16);const file=`${id}-${hash}.mp3`;manifest.effects[id]=file;records.push({file,...body});jobs.push({file,path:'sound-generation?output_format=mp3_44100_128',body,seed:id==='tavern-ambience'?'tavern-ambience.mp3':undefined});}
 console.log(`Audio plan: ${transcript.size} speech clips, ${Object.keys(effects).length} effects. Existing hashed assets are reused.`);
 if(process.argv.includes('--plan'))process.exit(0);
