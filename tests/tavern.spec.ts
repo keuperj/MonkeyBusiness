@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('complete the room puzzle, save, reset and restore',async({page})=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('/');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await expect(page.locator('canvas')).toBeVisible();
+ await page.goto('/tavern-test.html');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await expect(page.locator('canvas')).toBeVisible();
  await page.locator('summary').click();
  await page.getByRole('button',{name:'Talk to'}).click();
  await page.locator('[data-target="keeper"]').click();
@@ -23,7 +23,7 @@ test('complete the room puzzle, save, reset and restore',async({page})=>{
 });
 
 test('canvas hotspots, walking and mobile layout',async({page})=>{
- await page.setViewportSize({width:1200,height:1100});await page.goto('/');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');const canvas=page.locator('canvas');await expect(canvas).toBeVisible();
+ await page.setViewportSize({width:1200,height:1100});await page.goto('/tavern-test.html');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');const canvas=page.locator('canvas');await expect(canvas).toBeVisible();
  await page.getByRole('button',{name:'Look at'}).click();const box=(await canvas.boundingBox())!;
  await canvas.click({position:{x:830/1536*box.width,y:300/1024*box.height}});await expect(page.locator('#caption')).toContainText('thousand possible adventures');
  await page.getByRole('button',{name:'Walk to'}).click();await canvas.click({position:{x:1100/1536*box.width,y:900/1024*box.height}});await page.waitForTimeout(1800);
@@ -33,7 +33,7 @@ test('canvas hotspots, walking and mobile layout',async({page})=>{
 });
 
 test('reject corrupt saves without losing current inventory',async({page})=>{
- await page.goto('/');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await expect(page.locator('canvas')).toBeVisible();await page.locator('summary').click();await page.getByRole('button',{name:'Pick up'}).click();await page.locator('[data-target="mug"]').click();
+ await page.goto('/tavern-test.html');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await expect(page.locator('canvas')).toBeVisible();await page.locator('summary').click();await page.getByRole('button',{name:'Pick up'}).click();await page.locator('[data-target="mug"]').click();
  await page.evaluate(()=>localStorage.setItem('monkey-buisness-save','{"version":1,"state":{"inventory":["bogus"]}}'));
  await page.getByRole('button',{name:'Load',exact:true}).click();await expect(page.locator('#caption')).toContainText('could not be loaded');await expect(page.getByRole('button',{name:'Use Brass tankard',exact:true})).toBeVisible();
 });
@@ -45,7 +45,7 @@ test('audio toggle, voice sequencing, effects and mute',async({page})=>{
    HTMLMediaElement.prototype.play=function(){events.push({src:this.src,action:'play'});if(!this.loop)setTimeout(()=>this.dispatchEvent(new Event('ended')),30);return Promise.resolve();};
    HTMLMediaElement.prototype.pause=function(){events.push({src:this.src,action:'pause'});};
  });
- await page.goto('/');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');
+ await page.goto('/tavern-test.html');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');
  expect(await page.evaluate(()=>(window as any).__audioEvents.filter((e:any)=>e.action==='play').length)).toBe(0);
  await page.getByRole('button',{name:'Sound off',exact:true}).click();
  await expect(page.locator('#sound')).toHaveAttribute('aria-pressed','true');
@@ -61,10 +61,11 @@ test('audio toggle, voice sequencing, effects and mute',async({page})=>{
 });
 
 test('all shipped audio files decode in the browser',async({page})=>{
+ test.setTimeout(90000);
  const {readFile}=await import('node:fs/promises');
  const manifest=JSON.parse(await readFile('src/audio-manifest.json','utf8'));
  const files=Object.values({...manifest.speech,...manifest.effects}) as string[];
- await page.goto('/');
+ await page.goto('/tavern-test.html');
  const decoded=await page.evaluate(async(files)=>{
    const context=new AudioContext();const results=[];
    for(const file of files){const response=await fetch(`/audio/${file}`);if(!response.ok)throw Error(`Missing audio ${file}`);const decoded=await context.decodeAudioData(await response.arrayBuffer());results.push(decoded.duration);}

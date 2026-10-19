@@ -1,15 +1,16 @@
-<!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10191e"><title>Monkey Buisness — The Crooked Compass</title></head><body>
-<main class="shell">
-  <header><a class="brand" href="./"><span class="brand-mark">✦</span> MONKEY BUISNESS</a><span class="edition">A POINT & CLICK ADVENTURE <i> / </i> ROOM 001</span><button id="sound" aria-pressed="false">Sound off</button></header>
-  <section class="room-heading"><div><p class="eyebrow">SOMEWHERE OFF THE CHARTS</p><h1>The Crooked Compass</h1></div><a id="bridge-link" class="location" href="./bridge.html">Visit the harbour bridge →</a></section>
-  <section class="game-frame" aria-label="Interactive tavern">
-    <div id="game" aria-label="Tavern scene. Click the floor to walk, or select an object below." tabindex="0"></div>
-    <div id="caption" role="status" aria-live="polite"><b>NELL</b><span>A warm fire. A cold harbour. And absolutely no plan.</span></div>
-    <div id="dialogue" hidden><div class="dialogue-heading"><span id="speaker"></span><button id="close-dialogue" aria-label="Close conversation">✕</button></div><p id="speech"></p><div id="choices"></div></div>
-    <div class="command"><span class="command-dot">◆</span><span id="command">Walk to the tavern floor</span><span class="hint">CLICK TO EXPLORE</span></div>
-    <div class="controls"><div class="verbs" aria-label="Actions"><button data-verb="walk" class="active">Walk to <kbd>1</kbd></button><button data-verb="look">Look at <kbd>2</kbd></button><button data-verb="talk">Talk to <kbd>3</kbd></button><button data-verb="take">Pick up <kbd>4</kbd></button><button data-verb="use">Use <kbd>5</kbd></button></div><div class="inventory-wrap"><div class="inventory-title">YOUR POCKETS <span id="inventory-count">0 ITEMS</span></div><div id="inventory"><span class="empty">A little lint. A lot of possibility.</span></div></div></div>
-  </section>
-  <footer><span><span class="gold">✧</span> A curious mind opens more doors than a key. Usually.</span><div><button id="hotspots" aria-pressed="false">Show hotspots <kbd>H</kbd></button><button id="save">Save</button><button id="load">Load</button><button id="reset">Reset room</button></div></footer>
-  <details><summary>Room objects & development notes</summary><p>Choose an action above, then select a target here or in the scene. Escape closes dialogue. Keys 1–5 select actions; H reveals hotspots. Walking uses the clear foreground floor.</p><div id="targets"></div><p>Development room · Original AI-generated art and dialogue · Phaser 3.90 · Static character poses with movement tweening.</p></details>
-</main><script type="module" src="/src/main.ts"></script></body></html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10191e"><title>Monkey Buisness — Act I</title></head><body>
+<main class="chapter-shell">
+<header><a class="brand" href="./"><span class="brand-mark">✦</span> MONKEY BUISNESS</a><span class="edition">ACT I · A JOB, A TANKARD AND A TOLL</span><button id="sound" aria-pressed="false">Sound off</button></header>
+<section class="chapter-heading"><div><p class="eyebrow">SOMEWHERE OFF THE CHARTS</p><h1 id="room-title">The Crooked Compass</h1></div><nav id="room-nav" aria-label="Travel destinations"></nav></section>
+<p id="goal" class="goal"></p>
+<section class="chapter-stage">
+<div class="scene-wrap"><div id="game" tabindex="0" aria-label="Point-and-click scene"></div><div id="caption" role="status" aria-live="polite"><b>NELL</b><span>Loading the harbour…</span></div><div class="command"><span>◆</span><span id="command">Walk to…</span><button id="hotspots" aria-pressed="false">Hotspots · H</button></div></div>
+<aside id="panel" aria-label="Conversations and actions"><p>Unfolding the chart…</p></aside>
+<div class="chapter-controls"><div id="verbs" aria-label="Actions"></div><div class="pockets"><span class="eyebrow">YOUR POCKETS & PAPERS</span><div id="inventory"></div></div></div>
+</section>
+<footer><span>Only pride gets hurt here.</span><div><button id="notebook">Notebook</button><button id="map">Map</button><button id="replay">Replay speech</button><button id="save">Save</button><button id="load">Load</button><button id="motion" aria-pressed="false">Reduced motion</button><button id="new-game">New adventure</button></div></footer>
+<p id="notice" role="status" aria-live="polite"></p>
+</main>
+<dialog id="book"><div class="modal-header"><h2 id="book-title">Nell’s notebook</h2><button id="close-book" aria-label="Close notebook">Close ✕</button></div><div id="book-content"></div></dialog>
+<dialog id="travel"><div class="modal-header"><div><p class="eyebrow">NELL’S WORKING CHART</p><h2 id="travel-title">Brindle Quay</h2></div><button id="travel-skip">Continue →</button></div><div class="map-art"><img src="/assets/story-map.png" alt="Map of Brindle Quay: tavern at southwest, bridge northeast of it, repair-yard landing farther northeast."><svg viewBox="0 0 1536 1024" aria-label="Red travel route"><path id="route-shadow"/><path id="route"/><circle id="traveller" r="10"/></svg></div><p id="travel-description"></p></dialog>
+<script type="module" src="/src/chapter.ts"></script></body></html>

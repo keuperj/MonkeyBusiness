@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10191e"><title>Monkey Buisness — Quibble's Crossing</title></head><body>
 <main class="shell">
-<header><a class="brand" href="./"><span class="brand-mark">✦</span> MONKEY BUISNESS</a><span class="edition">A POINT & CLICK ADVENTURE <i> / </i> ROOM 002</span><button id="sound" aria-pressed="false">Sound off</button></header>
-<section class="room-heading"><div><p class="eyebrow">SHARP WITS. BLUNT SWORDS.</p><h1>Quibble’s Crossing</h1></div><a class="back-link" href="./">← Back to the tavern</a></section>
+<header><a class="brand" href="./tavern-test.html"><span class="brand-mark">✦</span> MONKEY BUISNESS</a><span class="edition">A POINT & CLICK ADVENTURE <i> / </i> ROOM 002</span><button id="sound" aria-pressed="false">Sound off</button></header>
+<section class="room-heading"><div><p class="eyebrow">SHARP WITS. BLUNT SWORDS.</p><h1>Quibble’s Crossing</h1></div><a class="back-link" href="./tavern-test.html">← Back to the tavern</a></section>
 <section class="game-frame bridge-frame" aria-label="Harbour bridge word duel">
 <div id="game" aria-label="Nell faces Captain Quibble and his parrot on the bridge"></div>
 <div id="caption" role="status" aria-live="polite"><b>CAPTAIN QUIBBLE</b><span>Passage costs three bruises to my ego.</span></div>
@@ -10,7 +10,7 @@
 <div class="duel-panel">
 <div id="briefing"><p class="eyebrow">THE PEN IS MIGHTIER. BUT WE BROUGHT SWORDS.</p><h2>Talk your way across.</h2><p>Captain Quibble owns the bridge. Fine Print, his parrot, owns the small print. Win <strong>three of five exchanges</strong> by turning their words against them. No timing tricks: take as long as you like.</p><button id="begin" class="primary">En garde… grammatically.</button></div>
 <div id="exchange" hidden><p id="opponent" class="eyebrow"></p><h2 id="challenge"></h2><div id="answers" aria-label="Choose Nell’s comeback"></div><div id="feedback" hidden><p id="reply"></p><p id="retort"></p><p id="explanation"></p><button id="next" class="primary">Next exchange →</button></div></div>
-<div id="result" hidden><p class="eyebrow" id="result-label"></p><h2 id="result-title"></h2><div id="ending"></div><button id="retry" class="primary">Another round of wordplay</button> <a href="./" class="back-link">Return to the tavern</a></div>
+<div id="result" hidden><p class="eyebrow" id="result-label"></p><h2 id="result-title"></h2><div id="ending"></div><button id="retry" class="primary">Another round of wordplay</button> <a href="./tavern-test.html" class="back-link">Return to the tavern</a></div>
 </div></section>
 <footer><span><span class="gold">✧</span> Only pride gets hurt here.</span><div><button id="motion" aria-pressed="false">Reduced motion</button><button id="restart">Restart duel</button></div></footer>
 <details><summary>Development notes & controls</summary><p>Choose a comeback, then continue to the next exchange. Sound enables voiced characters and harbour ambience. Restart clears only this duel; returning to the tavern preserves your room progress for this tab. The duel is turn-based and has no timer. Animations use generated character art, independently pivoting swords, fencing lunges, parries, recoil and parrot swoops.</p></details>

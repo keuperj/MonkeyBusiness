@@ -30,7 +30,7 @@ test('wrong answers teach the joke and lead to a recoverable loss',async({page})
 });
 
 test('tavern travel keeps inventory and restart cancels an exchange',async({page})=>{
- await page.goto('/');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await page.locator('summary').click();await page.getByRole('button',{name:'Pick up'}).click();await page.locator('[data-target="mug"]').click();await page.locator('#bridge-link').click();
+ await page.goto('/tavern-test.html');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await page.locator('summary').click();await page.getByRole('button',{name:'Pick up'}).click();await page.locator('[data-target="mug"]').click();await page.locator('#bridge-link').click();
  await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await page.locator('#begin').click();await page.getByRole('button',{name:duel.rounds[0].answers[0],exact:true}).click();await page.locator('#restart').click();await page.waitForTimeout(1100);await expect(page.locator('#briefing')).toBeVisible();await expect(page.locator('#nell-score')).toHaveText('0');
  await page.getByRole('link',{name:'← Back to the tavern'}).click();await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await expect(page.getByRole('button',{name:'Use Brass tankard',exact:true})).toBeVisible();
 });

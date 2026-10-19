@@ -26,6 +26,9 @@ export const conversations = {
  ]
 };
 export const effects = {
+ 'landing-bell':{text:'Three clear evenly spaced brass buoy bell strokes over quiet open air. No speech, no music.',duration_seconds:3},
+ 'boat-pass':{text:'Small wooden harbour launch passes gently across calm water with a soft low engine putter and water ripples. No voices or music.',duration_seconds:5},
+ 'float-free':{text:'A wooden pole gently lifts a rope off a rusty bolt, a quiet creak followed by a small cork splashing into water. No voices or music.',duration_seconds:2},
  'bridge-ambience':{text:'Quiet small wooden footbridge over a seaside harbour at night, gentle water lapping against pilings, faint rigging tapping and sea breeze. No music, no speech, no loud events. Seamless loop.',duration_seconds:20,loop:true},
  parry:{text:'Two light fencing swords meet with a crisp metallic clink and a brief swish. Playful theatrical practice duel. No voices or music.',duration_seconds:1},
  'tavern-ambience':{text:'Quiet interior of a small wooden seaside tavern at night. Gentle close fireplace crackle, distant soft harbour waves and occasional low timber creaks. Calm warm intimate atmosphere, no music, no speech, no loud events. Seamless background loop.',duration_seconds:20,loop:true},

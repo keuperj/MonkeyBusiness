@@ -270,6 +270,748 @@
       }
     },
     {
+      "file": "nell-c7cb5fab18c25958.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I'm looking for surveying work.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-b5f4e18672c66a13.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Then you've come to a place with water and disagreements.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-eea92a1971827a4f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I brought a pencil.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-9500c30731a97742.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Good. Most applicants bring another disagreement.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-a3bb38fccfb7e991.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Does anyone need a chartmaker?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-36782dee7c7f718a.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Everyone needs an accurate chart. Paying for one remains a minority interest. There's an old survey in that chest.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-9933a2bbf7438bec.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What's in the sea chest?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-38b0d3cb429a0925.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Why don't you fetch the tankard?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-a3281edb4e1b2be3.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Because I have six customers' washing-up and one customer's ambition to encourage.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-a195f6fd764445d1.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can I keep the chart?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-8f3577a085ef8c6c.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "A chart ought to go somewhere. That one has mostly been under a blanket.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-869e665f3898c759.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The markers don't agree with it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-c615049824a169bb.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Then check which one has changed. Old doesn't always mean wrong.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-f56bc8eb6ae321fe.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Do you know who made it?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-000783208b89a957.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "People who knew this harbour before it acquired an advertising budget.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-459b203648fbfd47.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "One tankard acquired. My career in piracy begins modestly.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-80ef50d6d470bac0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Locked. Perhaps Mara knows where the key is.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-5f3ac56a20946ead.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A chart to Bellweather Shoal! Finally, a plan with a suspicious dotted line.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-8a284ecc6ba5e012.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "These aren't decorative arrows. Someone measured the ebb channel.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-e44375f4318c6fac.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "But the new marker outside points across it. Either this chart has aged badly, or somebody's improved the water.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-63be8915115b5d59.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The key can stay on its hook. One less mystery in my pockets.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-5cb2c306d81687f4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The tankard is already taken care of.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-a3a73892e7b489f9.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Wrong sort of tumbler.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-d5f35e86fb10d699.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Too heavy. I'd have to chart a route just to lift it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-72a8a28a532eea4e.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A dramatic edit. I'll try a pencil first.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-cd1c9696696a07e1.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An inspired combination. Unfortunately, the universe disagrees.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-797bebc9ab7009fb.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Best leave that where it is.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-ba9f63fa3b0768a7.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "It is keeping its thoughts to itself.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-266a3c1c4e4007f8.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A fine brass tankard. Someone has engraved property of Mara underneath.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-ea31658275e6fd33.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A sturdy sea chest. Its lock has survived more voyages than I have.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-eb1c8d6fa523f1c0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Shoreline observations wanted. Payment on verification. Below that: ship's cook wanted. Must distinguish salt from gunpowder.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-32015b475a5011fa.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A warehouse corner, a lighthouse, and some very new buoys. Out there: a thousand possible adventures. In here: better heating.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-34ba6a5da6c46322.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The only member of this establishment with a reliable work ethic.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-b5accc3aad2eb0b4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Mara runs a tight ship. Particularly impressive for a building.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-edbb178dbf4323fc.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A navigator who has misplaced his ship. Promising.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-ab68e13ebcb51d47.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Have you lost a ship?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "orin-174d20709554b2c5.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I haven't lost my ship. I know exactly which ocean it's in.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "nell-30aa52d76b99322a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Where did you last see it?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "orin-e0b2ce7a1fece3c6.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "At the berth indicated by an entirely official marker. It was a very reassuring marker.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "nell-3b83d6de48ec7d4a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can you read this chart?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "orin-b14e502c926a9bca.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Bellweather Shoal. And the old transit marks. Match those from the outer landing before you trust either set of buoys.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "nell-b50847039d0ae643.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What is a transit mark?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "orin-bc49a24d15e96a8f.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Two fixed marks. Line them up and you know where you're looking. Much less opinionated than a sailor.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "nell-83829420e1a8ed3b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Which way should the water run?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "orin-c425fa38fcc757fd.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Depends on the tide and the channel. Use the board at the landing. Don't mistake one swirl for a conspiracy.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "nell-99504533e1777c41.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Will you come with me?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "orin-94b4aca70371a5d4.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Find out whether the bridge is admitting pedestrians today. I'll keep an eye on the water from here.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "nell-b271ed1c8dc5fb7b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A work request headed Space Quest. One shelf. Six inches wider. Please. The bucket's been drawn as a rocket.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-2160fa05eb43ddaa.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A space quest?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-d72e344d2520fae7.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Six inches. The bucket's ambitious.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-b80ebb6360c0782d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Mission accomplished. No worlds saved. Considerably less tripping.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-e6feaf06c0744a05.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "That's how most useful jobs end.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "nell-4088efa80e6f0d58.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Still six inches. Still a frontier.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
       "file": "quibble-bd9a8014fd215706.mp3",
       "character": "QUIBBLE",
       "voice": "Bill",
@@ -281,6 +1023,874 @@
         "similarity_boost": 0.75,
         "style": 0.65,
         "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-bc32a3e0dec1aac5.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What are the rules?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-4f72dfdb4db29174.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Five exchanges. Win three and you cross. Nobody gets hurt. Take your time; I have a very small jurisdiction.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-4991eced7dc610d9.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I don't have a sword.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-a4af740bb05e5e6f.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "There's a practice blade on that peg. Blunt as an unpaid compliment. We provide all necessary equipment.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-b2df23282b80a993.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "This plaque says the bridge is public.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-76a2e359254c32b4.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "And the public has been very careless about defending it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-601de11c6d00c5fc.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What does the company want?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "fine-print-e12d5789175a0939.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "Apparently my toll is an unauthorised obstruction. Their toll is infrastructure.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "nell-d37951e171c3ae6d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "En garde... grammatically.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-5e32d568d045621d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I'll let you get back to it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-df919e7646c3babe.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A parrot with a ledger. Nature's warning against teaching birds arithmetic.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-39ee33be5752e1a3.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "He has enough reputation for a fleet, and just enough bridge for himself.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-6b828abe95597919.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "One glorious victory. Exact change appreciated. Behind it: Fair Passage Company, harbour access agreements under review.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-d812b454f1ada913.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "For the use of the harbour. I suppose the captain is technically using it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-2236047db8d6c0a0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A practice blade, thoughtfully blunted. Only pride gets hurt here.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "fine-print-95851416ef133ada.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "Expenses: ink, crackers, ink-flavoured crackers. These accounts are private, unlike this allegedly public bridge.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "quibble-3ed8abd83c0c0733.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "You've won. I still insist on the last word.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-da55168f025a980f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Then make it welcome. You keep the word. I keep walking.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "quibble-f90d92afd4c5edcb.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Welcome. Hm. That was almost civilised.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "fine-print-7905b7946a06ecc5.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "A temporary victory. The company's notice says it may replace all existing passage arrangements.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "nell-c20d4f5a1a0dab96.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Including yours?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "fine-print-2b75d8b3ea37e7a3.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "Especially mine. It uses the word all in a most aggressive manner.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "quibble-714486f5793d5ecb.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "The bridge is open to you. My dignity remains under repair.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "nell-9f86c68a54151ac0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An old survey, a new sign, and a harbour full of opinions. Time to make an observation.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-6cfde6adb3613aac.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The tide board says ebb. Its diagram shows the usual flow in this channel going left. The new company arrow points right.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-f23168a88ca3da1d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Warehouse corner. Lighthouse notch. Fixed marks, unlike those floating buoys.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-d0cf9a7d5b8b169c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Stand here. Align warehouse corner with lighthouse notch. Finally, instructions that don't demand a subscription.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-a4983555a9f41fd0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A current indicator, caught on that bolt. It tells me nothing while it's stuck.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-0a3820e3be92100c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Free of the bolt, still safely tethered. Now the water can speak for itself.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-9fa051ad7cb91d4a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A public boathook. Return to rack. A refreshingly uncomplicated contract.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-898af878cd11f0ea.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I can lift that snag with the boathook.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-eb53622e9ae2048b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Pulling tightens the snag. I need to lift it with the boathook.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-234fa7e31cbea9bc.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "This works better when it stays in the water.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-dbf8c17856f885ac.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Paper is an excellent current indicator exactly once.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-1b1c2b7a19ea2162.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A brass company signal buoy. Too far to reach. Close enough to watch.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-492bcb5cb8098709.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The monkey emblem of the Fair Passage Company. Their launch seems to know exactly where it's going.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-43dd43ad3ceea3a1.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I need the old chart from Mara's chest before I can make that comparison.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-67ab803ff99bdcd8.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I should read the tide board first. A direction without a tide phase isn't much of an argument.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-a7ba1c975a87f10a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I should identify the fixed marks first. The warehouse corner and lighthouse notch look promising.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-303481902227fe3a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "That's a floating marker. If it drifts, my whole argument drifts with it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-74db4ca2e5c1003f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The buildings haven't moved. Reassuring, if you're a building.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-3bcb5d6167c6dfd1.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "This is the right channel. Now let's see whether the water agrees with the sign.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-37add2a114514c8f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "First I need to compare the chart at the sighting cleat.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-76b6c402ea6b5147.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The float is still snagged. I need a working indicator before I watch the channel.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-81e3ec58b50c9209.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Ebb tide. The float settles to the left, just as the board predicts.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-9b2ce5551b68ee7c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Three amber flashes. Three bell strokes. That's a deliberate signal.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-d364b4d9422ccc2f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Now the float has swung right. Those leaves are going with it. The board still says ebb.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-dd048143ce3fdf4d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "And the company launch enters immediately, following the new arrow.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-deb78fb03a8a6c5c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A current can surprise a chart. That's why people like me get work.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-6819113071625bfc.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "But the bell knew first. And that boat was ready. Someone knows something the rest of the harbour doesn't.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-3ca70b7cade58518.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I have observed one channel, not interviewed an ocean. Let's keep to what I actually saw.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-adb2151f938e8d5a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The change was local and coordinated with company traffic. Find out who operates the signals and whether this has happened before.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-cc5350bb72f77841.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "If the harbour's doing tricks, somebody has already written a terrible headline.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-56e0fb819bd478e9.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Someone built that signal. Someone may remember how it's meant to work.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-f8b1fdae6f05d0da.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An official marker sent Orin to the wrong berth. I'd like to see which one.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-ade3933629cba409.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I came looking for a job. I appear to have found a question. Tomorrow, I'll find out who else is asking it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-3bc52a30722b982a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A company boat knew when the current would turn.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "mara-5e00a7f550ca5809.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Then write down what you saw. People argue less successfully with a date and a drawing.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "orin-c58c2d441c764203.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Then start with the signal, not with my reputation. One of those can still be repaired cheaply.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "quibble-b720b6a0c2be175e.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Of course. Their signs are larger. Are we investigating that, or something worse?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "fine-print-5d2b72e19afe1a89.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "The company wants me to sign its agreement before asking that question.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "nell-722c6985baecdfb7.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I should finish this observation before chasing another lead.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
       }
     },
     {
@@ -746,53 +2356,11 @@
       }
     },
     {
-      "file": "nell-b5accc3aad2eb0b4.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "Mara runs a tight ship. Particularly impressive for a building.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
-      "file": "nell-edbb178dbf4323fc.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "A navigator who has misplaced his ship. Promising.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
       "file": "nell-84d09cc00615cc04.mp3",
       "character": "NELL",
       "voice": "Alice",
       "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
       "text": "A fine brass tankard. Someone has engraved “PROPERTY OF MARA” underneath.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
-      "file": "nell-ea31658275e6fd33.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "A sturdy sea chest. Its lock has survived more voyages than I have.",
       "model_id": "eleven_multilingual_v2",
       "voice_settings": {
         "stability": 0.45,
@@ -830,20 +2398,6 @@
       }
     },
     {
-      "file": "nell-34ba6a5da6c46322.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "The only member of this establishment with a reliable work ethic.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
       "file": "nell-98fab971404255f3.mp3",
       "character": "NELL",
       "voice": "Alice",
@@ -872,53 +2426,11 @@
       }
     },
     {
-      "file": "nell-5cb2c306d81687f4.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "The tankard is already taken care of.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
       "file": "nell-a69cc0a938ed2df7.mp3",
       "character": "NELL",
       "voice": "Alice",
       "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
       "text": "Inside: a chart to Bellweather Shoal. Our next destination.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
-      "file": "nell-ba9f63fa3b0768a7.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "It is keeping its thoughts to itself.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
-      "file": "nell-459b203648fbfd47.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "One tankard acquired. My career in piracy begins modestly.",
       "model_id": "eleven_multilingual_v2",
       "voice_settings": {
         "stability": 0.45,
@@ -942,20 +2454,6 @@
       }
     },
     {
-      "file": "nell-797bebc9ab7009fb.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "Best leave that where it is.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
       "file": "nell-5b227c626ff7eee8.mp3",
       "character": "NELL",
       "voice": "Alice",
@@ -970,53 +2468,11 @@
       }
     },
     {
-      "file": "nell-5f3ac56a20946ead.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "A chart to Bellweather Shoal! Finally, a plan with a suspicious dotted line.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
-      "file": "nell-cd1c9696696a07e1.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "An inspired combination. Unfortunately, the universe disagrees.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
       "file": "nell-73fa37130428f6d5.mp3",
       "character": "NELL",
       "voice": "Alice",
       "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
       "text": "The chart points to Bellweather Shoal. Our adventure starts here.",
-      "model_id": "eleven_multilingual_v2",
-      "voice_settings": {
-        "stability": 0.45,
-        "similarity_boost": 0.75,
-        "style": 0.3,
-        "speed": 1.04
-      }
-    },
-    {
-      "file": "nell-80ef50d6d470bac0.mp3",
-      "character": "NELL",
-      "voice": "Alice",
-      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
-      "text": "Locked. Perhaps Mara knows where the key is.",
       "model_id": "eleven_multilingual_v2",
       "voice_settings": {
         "stability": 0.45,
@@ -1150,6 +2606,27 @@
         "style": 0.3,
         "speed": 1.04
       }
+    },
+    {
+      "file": "landing-bell-fb06440917d90fd0.mp3",
+      "text": "Three clear evenly spaced brass buoy bell strokes over quiet open air. No speech, no music.",
+      "duration_seconds": 3,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    },
+    {
+      "file": "boat-pass-e7a5b9a894493182.mp3",
+      "text": "Small wooden harbour launch passes gently across calm water with a soft low engine putter and water ripples. No voices or music.",
+      "duration_seconds": 5,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    },
+    {
+      "file": "float-free-bfde2a1329e33ce7.mp3",
+      "text": "A wooden pole gently lifts a rope off a rusty bolt, a quiet creak followed by a small cork splashing into water. No voices or music.",
+      "duration_seconds": 2,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
     },
     {
       "file": "bridge-ambience-3a2e3db4a24b3ca5.mp3",

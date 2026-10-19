@@ -1,10 +1,12 @@
 # Monkey Buisness
 
-An original open-source maritime point-and-click adventure, built with Phaser and TypeScript. This first development room is **The Crooked Compass**, a tavern with original characters, conversations and an inventory puzzle. No original Monkey Island artwork, dialogue, characters or music is included.
+An original open-source maritime point-and-click adventure, built with Phaser and TypeScript. The playable first chapter, **A Job, a Tankard and a Toll**, follows Nell through The Crooked Compass, Quibble’s Crossing and the Outer Landing. No original Monkey Island artwork, dialogue, characters or music is included.
 
 ## Story development
 
 The editable [story plan](docs/STORY_PLAN.md) outlines Nell’s adventure, the character arcs, five acts, puzzle principles and optional classic-adventure homages. It is a working proposal for the next room-planning pass.
+
+The [Act I room plan](docs/ACT_1_ROOM_PLAN.md) details the tavern, bridge and outer landing, including dialogue, objects, puzzle dependencies and an optional Space Quest Easter egg.
 
 ## Run locally
 
@@ -28,24 +30,40 @@ The production output in `dist/` can be served by any static web server. Phaser 
 
 Click the floor to walk. Choose **Look at**, **Talk to**, **Pick up** or **Use**, then click a person or object. Click a pocket item to use it with a scene target. Keys 1–5 select verbs, H toggles hotspots, and Escape closes a conversation. The expandable object list provides keyboard-accessible alternatives to canvas hotspots.
 
-Save/Load uses this browser's local storage. Reset starts a fresh room without erasing the saved game. Sound enables ElevenLabs-generated tavern ambience, footsteps, action effects and voiced dialogue. Audio starts only after clicking Sound off; subtitles always remain visible. Voices are Alice for Nell, Matilda for Mara, and Bill for Orin. Dialogue ducks the ambience; mute and hiding the tab stop playback.
+Progress autosaves in this browser across all three rooms, including the notebook and unfinished duels. **Save / Load** provides a separate explicit save slot. **New adventure** clears the current adventure while preserving that slot. **Notebook** keeps clues, conversations and replayable speech; **Hint** suggests the next puzzle step.
 
-<details><summary>Test puzzle walkthrough</summary>
+Choose a destination or use a scene exit to travel. The story map draws a red route with a moving marker from your current room to the destination. **Continue** skips travel; reduced motion shows the complete route until you press Continue. The outer landing opens after winning bridge passage.
 
-Talk to Mara about the sea chest. Pick up the brass tankard on the window table. Select it in your pockets, then click Mara to receive a key. Select the key and click the sea chest to discover the chart to Bellweather Shoal.
+Click **Sound off** to enable generated voices, ambient loops, footsteps and action effects. Subtitles are always available. Dialogue ducks the ambience; muting or hiding the tab stops playback. Character voices: Alice (Nell), Matilda (Mara), Bill (Orin and theatrical Quibble), and Charlie (Fine Print). Audio is served locally; playing requires no API key.
+
+<details><summary>Act I walkthrough — spoilers</summary>
+
+1. Pick up the brass tankard and use it on Mara. Use her key on the sea chest to obtain the old survey; Nell returns the key to its hook.
+2. Optional: Use the cleaning cupboard for the Space Quest maintenance joke.
+3. Travel to Quibble’s Crossing. Challenge the bridge keepers and win at least three of five word exchanges. You can retry without losing inventory or progress.
+4. At the Outer Landing, look at the tide board and fixed landmarks. Use the old survey on the sighting cleat; choose the warehouse corner and lighthouse notch.
+5. Use the boathook, then the tethered float. Watch the channel through four replayable observation steps, or read the complete observation immediately.
+6. Review the evidence: select the ebb reading, signal before the current change, and company launch using that route. Choose an investigation lead to finish Act I.
+
+The bridge can be solved before the tavern; landing clues remain recorded if you return later with the chart. Visit characters again after witnessing the current for their reactions.
 
 </details>
 
 ## Development
 
-- `src/main.ts`: room targets, dialogue, inventory, save validation, Phaser scene and runtime chroma-key atlas decoding.
-- `src/style.css`: responsive interface.
-- `public/assets/`: generated background and character/object atlas; see `ASSETS.md` for provenance and generation prompts.
-- `tests/tavern.spec.ts`: browser coverage for puzzle completion, persistence, bad saves, canvas interaction and mobile sizing.
+- `src/chapter.ts`: chapter interactions, conversations, puzzles, notebook and animated map travel.
+- `src/chapter-state.ts`: shared progress and save validation.
+- `src/chapter-scene.ts`: three Phaser rooms, hotspots and procedural animations.
+- `src/chapter-lines.json`: original chapter voice script; `src/duel.json`: duel script and answer keys.
+- `src/chapter.css`: responsive chapter interface.
+- `public/assets/`: generated backgrounds, sprite atlases, survey and map. See `ASSETS.md` for provenance and prompts.
+- `tests/chapter.spec.ts`: full walkthrough, alternate puzzle order, save restoration, mobile travel and voice coverage.
 
 Run `npx playwright install chromium` once, then `npm test`. To use an installed Chromium instead, set `CHROMIUM_PATH=/path/to/chromium`.
 
-The tavern is a development slice with static character poses, tweened movement, a rectangular foreground walking area, and a chest tint plus narrative feedback for the solved puzzle. There are no walk-cycle sprites, obstacle navigation or animated chest opening yet. The second room adds procedural fencing animation and a word duel; see below.
+Characters use generated static poses with tweened movement and procedural fencing; this version does not have frame-by-frame walk cycles or obstacle navigation. The landing adds a moving float, signal light and company launch. Act II destinations appear on the map as story context; the playable chapter ends with choosing an investigation lead.
+
+The original isolated test rooms remain available at `/tavern-test.html` and `/bridge.html`, with their original separate save behavior.
 
 Code is covered by the repository's GPLv3 license. Phaser retains its MIT license. Generated asset provenance is recorded separately in `ASSETS.md`.
 
@@ -58,13 +76,13 @@ npm run audio:plan      # Show clip count without generating
 npm run audio:generate  # Uses ElevenLabs account credits for missing/changed clips
 ```
 
-Generation runs in Node, not the browser. `scripts/audio-plan.mjs` contains the voice IDs, delivery settings, NPC lines and sound prompts. Literal narration is extracted from `src/main.ts`; keep NPC conversation lines in the plan synchronized when changing dialogue. Hashed audio filenames cache text, voice and settings; rerunning resumes missing clips without regenerating existing ones. No automatic retry occurs after a failed API request.
+Generation runs in Node, not the browser. `scripts/audio-plan.mjs` contains the voice IDs, delivery settings, NPC lines and sound prompts. Chapter dialogue is read from `src/chapter-lines.json`, and duel dialogue from `src/duel.json`. Legacy tavern narration is extracted from `src/main.ts`; keep its NPC lines in the audio plan synchronized when editing the isolated test room. Hashed audio filenames cache text, voice and settings; rerunning resumes missing clips without regenerating existing ones. No automatic retry occurs after a failed API request.
 
 `public/audio/provenance.json` records generation inputs and voice settings; `src/audio-manifest.json` maps speech and effects to the shipped MP3 files. API credentials are used only as authentication to api.elevenlabs.io and are never stored in these manifests or client assets. Changing a voice in the plan and regenerating creates a new asset rather than overwriting the old one. The key needs text-to-speech and sound-generation permissions; listing voices is unnecessary.
 
 ## Harbour bridge: Quibble’s Crossing
 
-Visit `/bridge.html`, use the tavern’s bridge link, or Walk to / Use the tavern door. This second development room pits Nell against Captain Quibble and his parrot Fine Print in five original word duels. Win at least three exchanges. Answers are shuffled, there is no timer, and misses give a hint explaining the wordplay. Both victory and defeat allow a fresh retry. Tavern progress is carried across room visits in this tab using session storage (explicit Save/Load remains separate).
+In the isolated test version, visit `/bridge.html`, use the link from `/tavern-test.html`, or Walk to / Use its tavern door. This second development room pits Nell against Captain Quibble and his parrot Fine Print in five original word duels. Win at least three exchanges. Answers are shuffled, there is no timer, and misses give a hint explaining the wordplay. Both victory and defeat allow a fresh retry. Tavern progress is carried across room visits in this tab using session storage (explicit Save/Load remains separate).
 
 Generated fencing-pose sprites animate with lunges, pivoting blades, parries and recoil; the parrot swoops during its exchanges. Reduced motion is detected from system preferences and can also be toggled. These are procedural animations of illustrated poses, not frame-by-frame walk or sword sprite sheets.
 

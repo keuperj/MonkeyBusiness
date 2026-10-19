@@ -1,0 +1,474 @@
+{
+  "intro1": {
+    "who": "NELL",
+    "text": "I'm looking for surveying work."
+  },
+  "intro2": {
+    "who": "MARA",
+    "text": "Then you've come to a place with water and disagreements."
+  },
+  "intro3": {
+    "who": "NELL",
+    "text": "I brought a pencil."
+  },
+  "intro4": {
+    "who": "MARA",
+    "text": "Good. Most applicants bring another disagreement."
+  },
+  "workQ": {
+    "who": "NELL",
+    "text": "Does anyone need a chartmaker?"
+  },
+  "workA": {
+    "who": "MARA",
+    "text": "Everyone needs an accurate chart. Paying for one remains a minority interest. There's an old survey in that chest."
+  },
+  "chestQ": {
+    "who": "NELL",
+    "text": "What's in the sea chest?"
+  },
+  "chestA": {
+    "who": "MARA",
+    "text": "An old chart. Bring back my brass tankard from the window table and you can have the key."
+  },
+  "fetchQ": {
+    "who": "NELL",
+    "text": "Why don't you fetch the tankard?"
+  },
+  "fetchA": {
+    "who": "MARA",
+    "text": "Because I have six customers' washing-up and one customer's ambition to encourage."
+  },
+  "keepQ": {
+    "who": "NELL",
+    "text": "Can I keep the chart?"
+  },
+  "keepA": {
+    "who": "MARA",
+    "text": "A chart ought to go somewhere. That one has mostly been under a blanket."
+  },
+  "markersQ": {
+    "who": "NELL",
+    "text": "The markers don't agree with it."
+  },
+  "markersA": {
+    "who": "MARA",
+    "text": "Then check which one has changed. Old doesn't always mean wrong."
+  },
+  "makerQ": {
+    "who": "NELL",
+    "text": "Do you know who made it?"
+  },
+  "makerA": {
+    "who": "MARA",
+    "text": "People who knew this harbour before it acquired an advertising budget."
+  },
+  "returnMug": {
+    "who": "MARA",
+    "text": "My tankard! Here, take the chest key. The chart inside deserves some fresh air."
+  },
+  "pickMug": {
+    "who": "NELL",
+    "text": "One tankard acquired. My career in piracy begins modestly."
+  },
+  "locked": {
+    "who": "NELL",
+    "text": "Locked. Perhaps Mara knows where the key is."
+  },
+  "chartFound": {
+    "who": "NELL",
+    "text": "A chart to Bellweather Shoal! Finally, a plan with a suspicious dotted line."
+  },
+  "chartDetail": {
+    "who": "NELL",
+    "text": "These aren't decorative arrows. Someone measured the ebb channel."
+  },
+  "chartQuestion": {
+    "who": "NELL",
+    "text": "But the new marker outside points across it. Either this chart has aged badly, or somebody's improved the water."
+  },
+  "keyHook": {
+    "who": "NELL",
+    "text": "The key can stay on its hook. One less mystery in my pockets."
+  },
+  "noMug": {
+    "who": "NELL",
+    "text": "The tankard is already taken care of."
+  },
+  "wrongTumbler": {
+    "who": "NELL",
+    "text": "Wrong sort of tumbler."
+  },
+  "heavy": {
+    "who": "NELL",
+    "text": "Too heavy. I'd have to chart a route just to lift it."
+  },
+  "noBurn": {
+    "who": "NELL",
+    "text": "A dramatic edit. I'll try a pencil first."
+  },
+  "generic": {
+    "who": "NELL",
+    "text": "An inspired combination. Unfortunately, the universe disagrees."
+  },
+  "leaveIt": {
+    "who": "NELL",
+    "text": "Best leave that where it is."
+  },
+  "inanimate": {
+    "who": "NELL",
+    "text": "It is keeping its thoughts to itself."
+  },
+  "mugLook": {
+    "who": "NELL",
+    "text": "A fine brass tankard. Someone has engraved property of Mara underneath."
+  },
+  "chestLook": {
+    "who": "NELL",
+    "text": "A sturdy sea chest. Its lock has survived more voyages than I have."
+  },
+  "noticeLook": {
+    "who": "NELL",
+    "text": "Shoreline observations wanted. Payment on verification. Below that: ship's cook wanted. Must distinguish salt from gunpowder."
+  },
+  "windowLook": {
+    "who": "NELL",
+    "text": "A warehouse corner, a lighthouse, and some very new buoys. Out there: a thousand possible adventures. In here: better heating."
+  },
+  "fireLook": {
+    "who": "NELL",
+    "text": "The only member of this establishment with a reliable work ethic."
+  },
+  "maraLook": {
+    "who": "NELL",
+    "text": "Mara runs a tight ship. Particularly impressive for a building."
+  },
+  "orinLook": {
+    "who": "NELL",
+    "text": "A navigator who has misplaced his ship. Promising."
+  },
+  "lostQ": {
+    "who": "NELL",
+    "text": "Have you lost a ship?"
+  },
+  "lostA": {
+    "who": "ORIN",
+    "text": "I haven't lost my ship. I know exactly which ocean it's in."
+  },
+  "lastQ": {
+    "who": "NELL",
+    "text": "Where did you last see it?"
+  },
+  "lastA": {
+    "who": "ORIN",
+    "text": "At the berth indicated by an entirely official marker. It was a very reassuring marker."
+  },
+  "readQ": {
+    "who": "NELL",
+    "text": "Can you read this chart?"
+  },
+  "readA": {
+    "who": "ORIN",
+    "text": "Bellweather Shoal. And the old transit marks. Match those from the outer landing before you trust either set of buoys."
+  },
+  "transitQ": {
+    "who": "NELL",
+    "text": "What is a transit mark?"
+  },
+  "transitA": {
+    "who": "ORIN",
+    "text": "Two fixed marks. Line them up and you know where you're looking. Much less opinionated than a sailor."
+  },
+  "flowQ": {
+    "who": "NELL",
+    "text": "Which way should the water run?"
+  },
+  "flowA": {
+    "who": "ORIN",
+    "text": "Depends on the tide and the channel. Use the board at the landing. Don't mistake one swirl for a conspiracy."
+  },
+  "comeQ": {
+    "who": "NELL",
+    "text": "Will you come with me?"
+  },
+  "comeA": {
+    "who": "ORIN",
+    "text": "Find out whether the bridge is admitting pedestrians today. I'll keep an eye on the water from here."
+  },
+  "eggLook": {
+    "who": "NELL",
+    "text": "A work request headed Space Quest. One shelf. Six inches wider. Please. The bucket's been drawn as a rocket."
+  },
+  "egg1": {
+    "who": "NELL",
+    "text": "A space quest?"
+  },
+  "egg2": {
+    "who": "MARA",
+    "text": "Six inches. The bucket's ambitious."
+  },
+  "egg3": {
+    "who": "NELL",
+    "text": "Mission accomplished. No worlds saved. Considerably less tripping."
+  },
+  "egg4": {
+    "who": "MARA",
+    "text": "That's how most useful jobs end."
+  },
+  "eggRepeat": {
+    "who": "NELL",
+    "text": "Still six inches. Still a frontier."
+  },
+  "bridgeEntry": {
+    "who": "QUIBBLE",
+    "text": "Halt! Captain Quibble owns this bridge. Passage costs three bruises to my ego."
+  },
+  "rulesQ": {
+    "who": "NELL",
+    "text": "What are the rules?"
+  },
+  "rulesA": {
+    "who": "QUIBBLE",
+    "text": "Five exchanges. Win three and you cross. Nobody gets hurt. Take your time; I have a very small jurisdiction."
+  },
+  "swordQ": {
+    "who": "NELL",
+    "text": "I don't have a sword."
+  },
+  "swordA": {
+    "who": "QUIBBLE",
+    "text": "There's a practice blade on that peg. Blunt as an unpaid compliment. We provide all necessary equipment."
+  },
+  "publicQ": {
+    "who": "NELL",
+    "text": "This plaque says the bridge is public."
+  },
+  "publicA": {
+    "who": "QUIBBLE",
+    "text": "And the public has been very careless about defending it."
+  },
+  "companyQ": {
+    "who": "NELL",
+    "text": "What does the company want?"
+  },
+  "companyA": {
+    "who": "FINE PRINT",
+    "text": "Apparently my toll is an unauthorised obstruction. Their toll is infrastructure."
+  },
+  "challengeQ": {
+    "who": "NELL",
+    "text": "En garde... grammatically."
+  },
+  "bye": {
+    "who": "NELL",
+    "text": "I'll let you get back to it."
+  },
+  "parrotLook": {
+    "who": "NELL",
+    "text": "A parrot with a ledger. Nature's warning against teaching birds arithmetic."
+  },
+  "quibbleLook": {
+    "who": "NELL",
+    "text": "He has enough reputation for a fleet, and just enough bridge for himself."
+  },
+  "signLook": {
+    "who": "NELL",
+    "text": "One glorious victory. Exact change appreciated. Behind it: Fair Passage Company, harbour access agreements under review."
+  },
+  "plaqueLook": {
+    "who": "NELL",
+    "text": "For the use of the harbour. I suppose the captain is technically using it."
+  },
+  "swordLook": {
+    "who": "NELL",
+    "text": "A practice blade, thoughtfully blunted. Only pride gets hurt here."
+  },
+  "ledgerLook": {
+    "who": "FINE PRINT",
+    "text": "Expenses: ink, crackers, ink-flavoured crackers. These accounts are private, unlike this allegedly public bridge."
+  },
+  "coda1": {
+    "who": "QUIBBLE",
+    "text": "You've won. I still insist on the last word."
+  },
+  "coda2": {
+    "who": "NELL",
+    "text": "Then make it welcome. You keep the word. I keep walking."
+  },
+  "coda3": {
+    "who": "QUIBBLE",
+    "text": "Welcome. Hm. That was almost civilised."
+  },
+  "post1": {
+    "who": "FINE PRINT",
+    "text": "A temporary victory. The company's notice says it may replace all existing passage arrangements."
+  },
+  "post2": {
+    "who": "NELL",
+    "text": "Including yours?"
+  },
+  "post3": {
+    "who": "FINE PRINT",
+    "text": "Especially mine. It uses the word all in a most aggressive manner."
+  },
+  "passed": {
+    "who": "QUIBBLE",
+    "text": "The bridge is open to you. My dignity remains under repair."
+  },
+  "landingEntry": {
+    "who": "NELL",
+    "text": "An old survey, a new sign, and a harbour full of opinions. Time to make an observation."
+  },
+  "boardLook": {
+    "who": "NELL",
+    "text": "The tide board says ebb. Its diagram shows the usual flow in this channel going left. The new company arrow points right."
+  },
+  "marksLook": {
+    "who": "NELL",
+    "text": "Warehouse corner. Lighthouse notch. Fixed marks, unlike those floating buoys."
+  },
+  "cleatLook": {
+    "who": "NELL",
+    "text": "Stand here. Align warehouse corner with lighthouse notch. Finally, instructions that don't demand a subscription."
+  },
+  "floatSnag": {
+    "who": "NELL",
+    "text": "A current indicator, caught on that bolt. It tells me nothing while it's stuck."
+  },
+  "floatFree": {
+    "who": "NELL",
+    "text": "Free of the bolt, still safely tethered. Now the water can speak for itself."
+  },
+  "hookLook": {
+    "who": "NELL",
+    "text": "A public boathook. Return to rack. A refreshingly uncomplicated contract."
+  },
+  "hookSelect": {
+    "who": "NELL",
+    "text": "I can lift that snag with the boathook."
+  },
+  "pullFloat": {
+    "who": "NELL",
+    "text": "Pulling tightens the snag. I need to lift it with the boathook."
+  },
+  "floatTake": {
+    "who": "NELL",
+    "text": "This works better when it stays in the water."
+  },
+  "paperFloat": {
+    "who": "NELL",
+    "text": "Paper is an excellent current indicator exactly once."
+  },
+  "buoyLook": {
+    "who": "NELL",
+    "text": "A brass company signal buoy. Too far to reach. Close enough to watch."
+  },
+  "boatLook": {
+    "who": "NELL",
+    "text": "The monkey emblem of the Fair Passage Company. Their launch seems to know exactly where it's going."
+  },
+  "needChart": {
+    "who": "NELL",
+    "text": "I need the old chart from Mara's chest before I can make that comparison."
+  },
+  "needBoard": {
+    "who": "NELL",
+    "text": "I should read the tide board first. A direction without a tide phase isn't much of an argument."
+  },
+  "needMarks": {
+    "who": "NELL",
+    "text": "I should identify the fixed marks first. The warehouse corner and lighthouse notch look promising."
+  },
+  "wrongMark": {
+    "who": "NELL",
+    "text": "That's a floating marker. If it drifts, my whole argument drifts with it."
+  },
+  "comparison1": {
+    "who": "NELL",
+    "text": "The buildings haven't moved. Reassuring, if you're a building."
+  },
+  "comparison2": {
+    "who": "NELL",
+    "text": "This is the right channel. Now let's see whether the water agrees with the sign."
+  },
+  "needCompare": {
+    "who": "NELL",
+    "text": "First I need to compare the chart at the sighting cleat."
+  },
+  "needFloat": {
+    "who": "NELL",
+    "text": "The float is still snagged. I need a working indicator before I watch the channel."
+  },
+  "observe0": {
+    "who": "NELL",
+    "text": "Ebb tide. The float settles to the left, just as the board predicts."
+  },
+  "observe1": {
+    "who": "NELL",
+    "text": "Three amber flashes. Three bell strokes. That's a deliberate signal."
+  },
+  "observe2": {
+    "who": "NELL",
+    "text": "Now the float has swung right. Those leaves are going with it. The board still says ebb."
+  },
+  "observe3": {
+    "who": "NELL",
+    "text": "And the company launch enters immediately, following the new arrow."
+  },
+  "conclusion1": {
+    "who": "NELL",
+    "text": "A current can surprise a chart. That's why people like me get work."
+  },
+  "conclusion2": {
+    "who": "NELL",
+    "text": "But the bell knew first. And that boat was ready. Someone knows something the rest of the harbour doesn't."
+  },
+  "wrongEvidence": {
+    "who": "NELL",
+    "text": "I have observed one channel, not interviewed an ocean. Let's keep to what I actually saw."
+  },
+  "evidenceDone": {
+    "who": "NELL",
+    "text": "The change was local and coordinated with company traffic. Find out who operates the signals and whether this has happened before."
+  },
+  "leadPip": {
+    "who": "NELL",
+    "text": "If the harbour's doing tricks, somebody has already written a terrible headline."
+  },
+  "leadHardware": {
+    "who": "NELL",
+    "text": "Someone built that signal. Someone may remember how it's meant to work."
+  },
+  "leadOrin": {
+    "who": "NELL",
+    "text": "An official marker sent Orin to the wrong berth. I'd like to see which one."
+  },
+  "end": {
+    "who": "NELL",
+    "text": "I came looking for a job. I appear to have found a question. Tomorrow, I'll find out who else is asking it."
+  },
+  "returnQ": {
+    "who": "NELL",
+    "text": "A company boat knew when the current would turn."
+  },
+  "returnMara": {
+    "who": "MARA",
+    "text": "Then write down what you saw. People argue less successfully with a date and a drawing."
+  },
+  "returnOrin": {
+    "who": "ORIN",
+    "text": "Then start with the signal, not with my reputation. One of those can still be repaired cheaply."
+  },
+  "returnQuibble": {
+    "who": "QUIBBLE",
+    "text": "Of course. Their signs are larger. Are we investigating that, or something worse?"
+  },
+  "returnParrot": {
+    "who": "FINE PRINT",
+    "text": "The company wants me to sign its agreement before asking that question."
+  },
+  "notYet": {
+    "who": "NELL",
+    "text": "I should finish this observation before chasing another lead."
+  }
+}

@@ -1,5 +1,37 @@
 # Generated artwork
 
+## Playable Act I additions
+
+Generated on 2026-10-19 using the built-in image-generation tool. All three images are 1536 × 1024. The chapter reuses the original tavern, bridge, characters and story map, with original new landing scenery, props and survey artwork. Red map routes, tide-board labels, fencing blades and signal effects are rendered in code.
+
+### Outer landing
+
+File: `public/assets/landing.png`.
+
+Generation prompt:
+
+Original early-1990s adventure-game pixel art, landscape 1536x1024. Background for a playable outer harbour landing at blue twilight, same visual language as a cozy pirate tavern and small wooden harbour bridge: crisp visible square pixel clusters, midnight blue and teal water, purple stone, warm amber lanterns. View from the public repair-yard quay across a narrow channel. Bottom 38 percent is a broad clear wooden plank platform for the player to walk. Left edge path back to town. Left rear a wooden tide noticeboard with blank parchment mounted on a post. Center rear edge of platform a brass survey sighting cleat with two notches pointing toward two unmistakable fixed landmarks across the water: a square warehouse corner at x650 and lighthouse at x1050. Right foreground a low observation rail and small rusty bolt above water, leave clear space for separate float and boathook props. Water occupies middle of composition with clear horizontal path for a passing small launch; right-middle distant signal buoy with brass lantern, unlit. Beyond, moored boats, repair cranes and crooked warehouses. No people, no foreground boat, no text, no UI, no labels. Strong readable composition, all required features visibly distinct, no photorealism. Original scene, not any existing franchise layout.
+
+### Chapter prop atlas
+
+File: `public/assets/chapter-props.png`.
+
+Generation prompt:
+
+Pixel-art game prop atlas, original maritime adventure, 1536x1024. Precisely SIX individual isolated props on perfectly flat solid pure magenta RGB255,0,255 chroma-key background with no shadows or glows. Three equal columns and two equal rows; every prop wholly within its 512x512 cell, generous padding. TOP LEFT: small shabby wooden cleaning cupboard with open door, gray bucket, mop leaning awkwardly, tiny plain paper work request pinned inside, front view. TOP MIDDLE: long brass-tipped wooden boathook, diagonal lower left to upper right. TOP RIGHT: small tan cork float with a dark ring, no rope. BOTTOM LEFT: side view of a small dark blue wooden company launch facing RIGHT, tiny cabin, brass monkey emblem on side, one anonymous silhouette deckhand, no water. BOTTOM MIDDLE: old brass key hanging from a tiny wooden hook plaque, front view. BOTTOM RIGHT: rolled parchment chart tied loosely with teal ribbon. Clear coarse pixel clusters, amber highlights and indigo shadows, dark outlines, 1990s adventure game aesthetic, no labels no UI. Six props distinct, no overlap. Solid magenta in all gaps.
+
+### Old survey
+
+File: `public/assets/survey-chart.png`.
+
+Generation prompt:
+
+Original pixel-art antique survey chart for a maritime point-and-click adventure, landscape 1536x1024. Flat overhead view of a single warm worn parchment sheet on dark teal wooden desk, filling nearly all frame. Bold crisp pixel clusters, limited sepia ink and muted teal, not photographic. Main drawing: a narrow harbour channel with shoreline on left, rocky shoal on right, a square warehouse symbol toward upper-left and a tall lighthouse symbol toward upper-right; a dashed straight survey sightline connecting the warehouse corner to lighthouse notch; a small brass sighting-cleat symbol near bottom center aligned toward both. Parallel small water arrows run leftward along channel. Small floating buoy symbols on water clearly unlike fixed buildings. Accurate clean diagram, generous spacing, not dense ornamental scribbles. Text title 'BELLWEATHER SHOAL' and subtitle 'Outer landing survey'. Label warehouse 'WAREHOUSE CORNER', lighthouse 'LIGHTHOUSE NOTCH', arrow legend 'EBB FLOW'. Add one subtle hand-drawn compass rose, aged fold marks, handwritten depth figures. This is a practical old survey, not a treasure map: no skulls, no X, no fantasy islands. Legible text and symbols. No modern UI.
+
+### Chapter voices and sounds
+
+The combined audio manifest now contains 182 speech clips and 10 effects, including retained test-room recordings. This chapter adds 104 new speech recordings and three effects: the landing bell, passing launch and freed float. All chapter-script dialogue is generated, including the optional cupboard joke, post-observation conversations and investigation leads. Exact inputs and stock-voice settings are in `public/audio/provenance.json`; the editable script is `src/chapter-lines.json`. No voice cloning or runtime API calls are used.
+
 
 ## Story map
 
