@@ -1,18 +1,22 @@
-# Pending follow-up
+# Follow-up status
 
-## Intro narration — waiting for ElevenLabs credits
+## Intro narration — completed 19 October 2026
 
-The user explicitly deferred audio generation until new credits are available. Do not retry API calls or poll quota until the user says credits have been replenished. Continue independently authorized work meanwhile.
+The user confirmed that ElevenLabs credits were replenished and authorized completion. All three Nell lines (`prologue1`, `prologue2`, `prologue3`) in [src/intro-lines.json](../src/intro-lines.json) are now generated using Nell’s existing Alice voice and configured delivery settings.
 
-Three Nell lines remain ungenerated: `prologue1`, `prologue2`, and `prologue3` in [src/intro-lines.json](../src/intro-lines.json). Use Nell’s existing Alice voice and the settings already configured in `scripts/audio-plan.mjs`. The last attempt returned `401 quota_exceeded` before generating these clips. Existing game audio remains functional; the intro currently uses subtitles and optional harbour ambience.
+`npm run audio:generate` generated only the three missing recordings and reused existing cached assets. The manifest and provenance now include 185 speech clips and 10 effects. No audio work remains pending.
 
-When credits are available:
+Verification completed:
 
-1. Run `npm run audio:generate`. The generator already includes the intro script and reuses cached recordings; do not regenerate existing assets unnecessarily. It reads the local ElevenLabs key without exposing it to the client.
-2. Verify that all three lines have entries in `src/audio-manifest.json`, MP3 files in `public/audio/`, and provenance records. Expected combined total: 185 speech clips and 10 effects if no other dialogue changes have been made.
-3. Run the build and relevant audio/intro browser tests. Check narration timing, pause/resume, sound toggle and Skip intro: skipping must stop narration before the tavern dialogue begins.
-4. Remove the pending-narration notices from README.md and ASSETS.md, and mark this follow-up complete.
+- Production build passed.
+- All 195 shipped audio files decoded in Chromium.
+- All three intro recordings played to completion during natural intro progression.
+- Pause/resume and sound toggling passed actual audio playback checks.
+- Skip intro stopped narration before tavern dialogue began.
+- API credentials remain excluded from Git and client output.
+
+README.md and ASSETS.md now describe the completed voiced intro. Enable Sound on the splash or start menu to hear it.
 
 ## Other requested updates
 
-Completed: painted splash, map-backed start/load menu, three-scene animated intro with skip and pause controls, and traced map travel routes. These changes have passed build and relevant browser checks. No other unimplemented task is currently assigned.
+Completed: painted splash, map-backed start/load menu, three-scene animated intro with skip and pause controls, and traced map travel routes. No other unimplemented task is currently assigned.

@@ -1,19 +1,24 @@
 import { test, expect } from '@playwright/test';
+import { readFileSync } from 'node:fs';
+const introLines=JSON.parse(readFileSync('src/intro-lines.json','utf8'));
+const manifest=JSON.parse(readFileSync('src/audio-manifest.json','utf8'));
+const introFiles=Object.values(introLines).map((l:any)=>manifest.speech[`${l.who}:${l.text}`]);
 import { routePoints, routePath } from '../src/map-routes';
 import { fresh, AUTO, SAVE } from '../src/chapter-state';
 
 test('splash, menu, animated intro, pause and natural finish',async({page})=>{
  test.setTimeout(65000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.addInitScript(()=>{(window as any).__ended=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){this.addEventListener('ended',()=>{(window as any).__ended.push(this.src.split('/').pop());},{once:true});return play.call(this);};});
  await page.goto('/');await expect(page.locator('#splash')).toBeVisible();await expect(page.locator('.chapter-shell')).toHaveAttribute('inert','');
  expect(await page.evaluate(k=>localStorage.getItem(k),AUTO)).toBeNull();await page.screenshot({path:'test-results/splash-desktop.png'});
  await page.locator('#splash-enter').click();await expect(page.locator('#start-menu')).toBeVisible();await page.screenshot({path:'test-results/start-menu.png'});
  await page.locator('#load-game').click();await expect(page.locator('#front-status')).toContainText('No saved adventure');await page.getByRole('button',{name:'Back',exact:true}).click();
- await page.locator('#start-game').click();await expect(page.locator('#intro')).toHaveAttribute('data-beat','0');
+ await page.locator('#front-sound').click();await page.locator('#start-game').click();await expect(page.locator('#intro')).toHaveAttribute('data-beat','0');
  const before=await page.locator('#intro-image').evaluate(el=>getComputedStyle(el).transform);await page.waitForTimeout(200);expect(await page.locator('#intro-image').evaluate(el=>getComputedStyle(el).transform)).not.toBe(before);
  await page.locator('#intro-pause').click();await page.waitForTimeout(100);const width=await page.locator('#intro-progress').evaluate(el=>el.style.width);await page.waitForTimeout(300);expect(await page.locator('#intro-progress').evaluate(el=>el.style.width)).toBe(width);await page.locator('#intro-pause').click();
  await page.screenshot({path:'test-results/intro-desktop.png'});
  await expect(page.locator('#intro')).toHaveAttribute('data-beat','1',{timeout:20000});await expect(page.locator('#intro')).toHaveAttribute('data-beat','2',{timeout:20000});await expect(page.locator('#front')).not.toBeVisible({timeout:20000});
- await expect(page.locator('#panel')).toContainText("I'm looking for surveying work.");expect(errors).toEqual([]);
+ await expect(page.locator('#panel')).toContainText("I'm looking for surveying work.");for(const file of introFiles)expect(await page.evaluate(()=>(window as any).__ended)).toContain(file);expect(errors).toEqual([]);
 });
 
 test('skip cancels the intro and preserves the manual save; load bypasses intro',async({page})=>{
@@ -35,4 +40,16 @@ test('mobile title flow, invalid save and reduced-motion intro',async({page})=>{
 test('travel routes trace lanes and bridge, and reverse along the same walkway',()=>{
  for(const [from,to] of [['tavern','bridge'],['bridge','landing'],['tavern','landing']] as const){const points=routePoints(from,to);expect(points.length).toBeGreaterThan(8);expect(routePoints(to,from)).toEqual([...points].reverse());const distance=points.slice(1).reduce((sum,p,i)=>sum+Math.hypot(p[0]-points[i][0],p[1]-points[i][1]),0);const [first,last]=[points[0],points[points.length-1]];expect(distance).toBeGreaterThan(Math.hypot(first[0]-last[0],first[1]-last[1])*1.1);}
  expect(routePath('tavern','landing')).toContain('L 337 583');expect(routePoints('tavern','tavern')).toEqual([]);
+});
+
+
+test('intro narration pauses, restarts, mutes and stops before tavern dialogue on skip',async({page})=>{
+ await page.addInitScript(()=>{(window as any).__media=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){if(!(window as any).__media.includes(this))(window as any).__media.push(this);return play.call(this);};});
+ const active=()=>page.evaluate(files=>(window as any).__media.filter((a:HTMLMediaElement)=>files.some((f:string)=>a.src.endsWith(f))&&!a.paused&&!a.ended&&a.currentTime>0).length,introFiles);
+ await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#front-sound').click();await page.locator('#start-game').click();await expect.poll(active).toBe(1);
+ await page.locator('#intro-pause').click();await expect.poll(active).toBe(0);await page.locator('#intro-pause').click();await expect.poll(active).toBe(1);
+ await page.locator('#front-sound').click();await expect.poll(active).toBe(0);await page.locator('#front-sound').click();await expect.poll(active).toBe(1);
+ await page.locator('#intro-next').click();await expect(page.locator('#intro')).toHaveAttribute('data-beat','1');await expect.poll(active).toBe(1);
+ await page.locator('#intro-skip').click();await expect(page.locator('#front')).not.toBeVisible();await expect.poll(active).toBe(0);
+ const opening=manifest.speech["NELL:I'm looking for surveying work."];await expect.poll(()=>page.evaluate(file=>(window as any).__media.some((a:HTMLMediaElement)=>a.src.endsWith(file)&&!a.paused&&a.currentTime>0),opening)).toBe(true);
 });

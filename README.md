@@ -28,11 +28,11 @@ The production output in `dist/` can be served by any static web server. Phaser 
 
 ## Opening sequence
 
-Deferred work and the audio resume procedure are recorded in [FOLLOW_UP.md](docs/FOLLOW_UP.md).
+Completed follow-up work is recorded in [FOLLOW_UP.md](docs/FOLLOW_UP.md).
 
 The game opens on an original painted splash cover, followed by a start menu over the story map. **Start game** begins a three-scene animated introduction to Nell; **Load game** offers the autosave and manual save separately and skips the intro. Starting again asks before replacing autosaved progress and preserves the manual save. **Main menu** returns to these options during play.
 
-The introduction has subtitles, **Pause / Resume**, **Next scene** and **Skip intro** controls. Escape also skips it. It pauses when the tab is hidden and respects reduced-motion preferences. The three new narration lines are prepared in `src/intro-lines.json`, but ElevenLabs returned `quota_exceeded` during generation: the intro currently plays with subtitles and optional existing harbour ambience. Once credits are available, `npm run audio:generate` adds those clips using Nell’s existing voice.
+The introduction has subtitles, **Pause / Resume**, **Next scene** and **Skip intro** controls. Escape also skips it. It pauses when the tab is hidden and respects reduced-motion preferences. All three intro scenes have generated narration using Nell’s existing Alice voice, alongside subtitles and harbour ambience. Enable **Sound** on the splash or start menu to hear it. The editable narration is in `src/intro-lines.json`.
 
 Map travel follows traced waypoints along the tavern lane, timber bridge and repair-yard quay. Return journeys follow the same paths in reverse.
 
@@ -88,7 +88,7 @@ npm run audio:plan      # Show clip count without generating
 npm run audio:generate  # Uses ElevenLabs account credits for missing/changed clips
 ```
 
-Generation runs in Node, not the browser. `scripts/audio-plan.mjs` contains the voice IDs, delivery settings, NPC lines and sound prompts. Chapter dialogue is read from `src/chapter-lines.json`, and duel dialogue from `src/duel.json`. Legacy tavern narration is extracted from `src/main.ts`; keep its NPC lines in the audio plan synchronized when editing the isolated test room. Hashed audio filenames cache text, voice and settings; rerunning resumes missing clips without regenerating existing ones. No automatic retry occurs after a failed API request.
+Generation runs in Node, not the browser. `scripts/audio-plan.mjs` contains the voice IDs, delivery settings, NPC lines and sound prompts. Chapter dialogue is read from `src/chapter-lines.json`, intro narration from `src/intro-lines.json`, and duel dialogue from `src/duel.json`. Legacy tavern narration is extracted from `src/main.ts`; keep its NPC lines in the audio plan synchronized when editing the isolated test room. Hashed audio filenames cache text, voice and settings; rerunning resumes missing clips without regenerating existing ones. No automatic retry occurs after a failed API request.
 
 `public/audio/provenance.json` records generation inputs and voice settings; `src/audio-manifest.json` maps speech and effects to the shipped MP3 files. API credentials are used only as authentication to api.elevenlabs.io and are never stored in these manifests or client assets. Changing a voice in the plan and regenerating creates a new asset rather than overwriting the old one. The key needs text-to-speech and sound-generation permissions; listing voices is unnecessary.
 

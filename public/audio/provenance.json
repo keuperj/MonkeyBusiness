@@ -1894,6 +1894,48 @@
       }
     },
     {
+      "file": "nell-b4428462370aab9a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "My family repaired pumps, patched sails, and got paid in promises. I learned to draw charts on delivery trips. At least a coastline usually keeps its word.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-f2301a5fe1f07984.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I came to Brindle Quay with a notebook, a pencil, and a plan: find surveying work, save for a boat, and stop drawing horizons I couldn't reach.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-1e54975cface1289.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "First, a job. Preferably one with supper. The Crooked Compass looked promising. I hadn't yet learned that, in this harbour, even the tide came with terms and conditions.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
       "file": "fine-print-071f5497cb201cb2.mp3",
       "character": "FINE PRINT",
       "voice": "Charlie",
