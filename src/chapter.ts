@@ -1,4 +1,6 @@
 import Phaser from 'phaser';
+import { Front } from './front';
+import { routePath } from './map-routes';
 import './chapter.css';
 import lines from './chapter-lines.json';
 import duel from './duel.json';
@@ -10,15 +12,15 @@ type LineId=keyof typeof lines;
 type Verb='walk'|'look'|'talk'|'take'|'use';
 type Item='mug'|'key'|'chart'|'hook';
 const $=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
+let playing=false;
 let state=fresh(),ready=false,verb:Verb='walk',selected:Item|null=null,busy=false,transition=false;
 let reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let lastSpeech:Line[]=[],evidenceChoice=new Set<number>();
 let mapFinish:(()=>void)|undefined;
 let audioRoom:Room|undefined;
 const panel=$('panel');
-try{const raw=localStorage.getItem(AUTO);if(raw)state=parseSave(raw);}catch{$('notice').textContent='A previous autosave could not be restored. Starting a fresh chapter.';}
 function notice(message:string){$('notice').textContent=message;}
-function persist(){try{localStorage.setItem(AUTO,JSON.stringify(state));}catch{notice('Autosave unavailable. Keep this tab open to retain current progress.');}}
+function persist(){if(!playing)return;try{localStorage.setItem(AUTO,JSON.stringify(state));}catch{notice('Autosave unavailable. Keep this tab open to retain current progress.');}}
 function record(text:string,who='NOTEBOOK'){if(!state.log.some(l=>l.text===text&&l.who===who))state.log.push({who,text});state.log=state.log.slice(-500);persist();}
 function caption(line:Line){$('caption').querySelector('b')!.textContent=line.who;$('caption').querySelector('span')!.textContent=line.text;}
 function speak(sequence:Line[]){lastSpeech=sequence;sequence.forEach(l=>record(l.text,l.who));if(sequence[0])caption(sequence[0]);void audio.sequence(sequence,caption);}
@@ -56,7 +58,7 @@ function conversation(person:'mara'|'orin'|'quibble'|'parrot'){
  const menu=()=>{const c=document.createElement('div');c.className='choices';panel.append(c);for(const [q,a] of pairs[person])button(lines[q].text,()=>display(ids(q,a),menu),c);if(person==='quibble'||person==='parrot')button(lines.challengeQ.text,startDuel,c,true);button('Back to the room',()=>{audio.stopSpeech();roomPanel();},c);};
  clearPanel(({mara:'Mara',orin:'Orin',quibble:'Captain Quibble',parrot:'Fine Print'})[person]);menu();
 }
-function interact(id:string){if(!ready||busy||transition||state.duel.active)return;
+function interact(id:string){if(!playing||!ready||busy||transition||state.duel.active)return;
  if(id==='exit'){travel(state.room==='tavern'?'bridge':'landing');return;}if(id==='back'){travel(state.room==='landing'?'bridge':'tavern');return;}
  if(verb==='talk'){if(['mara','orin','quibble','parrot'].includes(id))conversation(id as 'mara');else say('inanimate');return;}
  if(verb==='walk'&&['mara','orin','quibble','parrot'].includes(id)){conversation(id as 'mara');return;}
@@ -89,15 +91,13 @@ function interact(id:string){if(!ready||busy||transition||state.duel.active)retu
  }
 }
 
-// Every trip uses the same map coordinates, so reverse journeys follow the same route.
-const mapPoints:Record<Room,[number,number]>={tavern:[240,765],bridge:[405,595],landing:[595,505]};
 function travel(to:Room){if(!ready||busy||transition||to===state.room)return;if(to==='landing'&&!state.flags.passage){display(ids('bridgeEntry','rulesA'));return;}
  const from=state.room;audio.stopSpeech();scene.move?.stop();audio.walk(false);if(state.duel.active){state.duel={active:false,answers:[],feedback:false};}
- transition=true;updateUI();const d=$<HTMLDialogElement>('travel');$('travel-title').textContent=`${rooms[from]} → ${rooms[to]}`;$('travel-description').textContent='Follow Nell’s red route through Brindle Quay. Continue skips the travel animation.';$('travel-skip').textContent='Continue →';
- const index:Room[]=['tavern','bridge','landing'];const a=index.indexOf(from),b=index.indexOf(to);const routeRooms=a<b?index.slice(a,b+1):index.slice(b,a+1).reverse();const pts=routeRooms.map(r=>mapPoints[r]);const path=pts.map((p,i)=>`${i?'L':'M'} ${p[0]} ${p[1]}`).join(' ');
+ transition=true;updateUI();const d=$<HTMLDialogElement>('travel');$('travel-title').textContent=`${rooms[from]} → ${rooms[to]}`;$('travel-description').textContent='Along the tavern lane, over the timber bridge and around the repair-yard quay. Continue skips the journey.';$('travel-skip').textContent='Continue →';
+ const path=routePath(from,to);
  const route=document.getElementById('route') as unknown as SVGPathElement;const shadow=document.getElementById('route-shadow') as unknown as SVGPathElement;const dot=document.getElementById('traveller')!;route.setAttribute('d',path);shadow.setAttribute('d',path);d.showModal();const length=route.getTotalLength();route.style.strokeDasharray=String(length);route.style.strokeDashoffset=String(length);shadow.style.strokeDasharray=String(length);shadow.style.strokeDashoffset=String(length);let raf=0;const start=performance.now();let finished=false;
  const finish=()=>{if(finished)return;finished=true;cancelAnimationFrame(raf);mapFinish=undefined;d.close();transition=false;state.room=to;selected=null;verb='walk';draw();roomPanel();caption({who:'NELL',text:rooms[to]});if(to==='landing'&&!state.flags.witnessed)say('landingEntry');};mapFinish=finish;
- const frame=(now:number)=>{const t=reduced?1:Math.min(1,(now-start)/2200);route.style.strokeDashoffset=String(length*(1-t));shadow.style.strokeDashoffset=String(length*(1-t));const p=route.getPointAtLength(length*t);dot.setAttribute('cx',String(p.x));dot.setAttribute('cy',String(p.y));if(t<1)raf=requestAnimationFrame(frame);else if(!reduced)setTimeout(()=>{if(mapFinish===finish)finish();},450);};raf=requestAnimationFrame(frame);
+ const frame=(now:number)=>{const t=reduced?1:Math.min(1,(now-start)/Math.min(5000,Math.max(2600,length*5)));route.style.strokeDashoffset=String(length*(1-t));shadow.style.strokeDashoffset=String(length*(1-t));const p=route.getPointAtLength(length*t);dot.setAttribute('cx',String(p.x));dot.setAttribute('cy',String(p.y));if(t<1)raf=requestAnimationFrame(frame);else if(!reduced)setTimeout(()=>{if(mapFinish===finish)finish();},450);};raf=requestAnimationFrame(frame);
 }
 $('travel-skip').onclick=()=>mapFinish?.();$<HTMLDialogElement>('travel').addEventListener('cancel',e=>{e.preventDefault();mapFinish?.();});
 function showMap(){const d=$<HTMLDialogElement>('book');$('book-title').textContent='Nell’s working chart';$('book-content').replaceChildren();const img=document.createElement('img');img.src=`${import.meta.env.BASE_URL}assets/story-map.png`;img.alt='Story map of Brindle Quay and Bellweather Shoal';$('book-content').append(img);para('Act I explores the tavern, bridge and outer landing at the repair yards. Other destinations belong to later chapters.',$('book-content'));for(const room of Object.keys(rooms) as Room[])button(rooms[room],()=>{if(room!==state.room){d.close();travel(room);}},$('book-content'));d.showModal();}
@@ -144,17 +144,23 @@ function chooseLead(){if(!state.flags.evidence)return;clearPanel(state.flags.com
 }
 function hint(){if(!state.flags.chart)return 'Talk to Mara about the chest. Pick up the tankard on the window table, use it on Mara, then use the key on the chest.';if(!state.flags.passage)return 'Talk to Quibble. Turn his boasts against him; three correct replies win passage.';if(!state.flags.board||!state.flags.marks)return 'At the landing, look at the tide board and the warehouse/lighthouse landmarks.';if(!state.flags.compared)return 'Use the old survey on the sighting cleat. Choose the warehouse corner and lighthouse notch.';if(!state.flags.freed)return 'Use the boathook, then use it on the snagged float.';if(!state.flags.witnessed)return 'Watch the channel. Each step can be replayed or read as text.';return 'Record the three direct observations, then choose any next lead.';}
 
-const scene=new ChapterScene({ready:()=>{ready=true;draw();$('game').dataset.ready='true';document.querySelectorAll<HTMLButtonElement>('header button,footer button').forEach(b=>b.disabled=false);if(!state.flags.intro){state.flags.intro=true;persist();display(ids('intro1','intro2','intro3','intro4'));}else{caption({who:'NELL',text:rooms[state.room]});roomPanel();}},target:interact,hover:command,walk:(x,y)=>{state.positions[state.room]={x,y};},walking:active=>{audio.walk(active);if(!active&&ready)persist();},canWalk:()=>!busy&&!transition&&!state.duel.active});
-new Phaser.Game({type:Phaser.AUTO,parent:'game',width:1536,height:1024,pixelArt:true,backgroundColor:'#10191e',scene,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},audio:{noAudio:true}});
+const front=new Front((saved)=>{
+ audio.stopSpeech();busy=false;state=saved??fresh();selected=null;verb='walk';evidenceChoice.clear();playing=true;audioRoom=undefined;
+ game.scale.refresh();draw();$('sound').textContent=audio.enabled?'Sound on':'Sound off';$('sound').setAttribute('aria-pressed',String(audio.enabled));
+ if(!state.flags.intro){state.flags.intro=true;persist();display(ids('intro1','intro2','intro3','intro4'));}else{caption({who:'NELL',text:rooms[state.room]});roomPanel();}
+},()=>{persist();playing=false;scene.move?.stop();audio.walk(false);});
+const scene=new ChapterScene({ready:()=>{ready=true;draw();$('game').dataset.ready='true';document.querySelectorAll<HTMLButtonElement>('.chapter-shell header button,.chapter-shell footer button').forEach(b=>b.disabled=false);front.ready();},target:interact,hover:command,walk:(x,y)=>{state.positions[state.room]={x,y};},walking:active=>{audio.walk(active);if(!active&&ready)persist();},canWalk:()=>playing&&!busy&&!transition&&!state.duel.active});
+const game=new Phaser.Game({type:Phaser.AUTO,parent:'game',width:1536,height:1024,pixelArt:true,backgroundColor:'#10191e',scene,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},audio:{noAudio:true}});
 for(const [i,v] of (['walk','look','talk','take','use'] as Verb[]).entries()){const b=button(`${{walk:'Walk to',look:'Look at',talk:'Talk to',take:'Pick up',use:'Use'}[v]} · ${i+1}`,()=>setVerb(v),$('verbs'));b.dataset.verb=v;}
 $('hotspots').onclick=()=>{scene.toggleMarks();updateUI();};$('notebook').onclick=notebook;$('map').onclick=showMap;$('replay').onclick=()=>{if(lastSpeech.length)speak(lastSpeech);};
 $('sound').onclick=()=>{audio.setEnabled(!audio.enabled);$('sound').textContent=audio.enabled?'Sound on':'Sound off';$('sound').setAttribute('aria-pressed',String(audio.enabled));if(audio.enabled&&lastSpeech.length)speak(lastSpeech);};
 $('save').onclick=()=>{try{localStorage.setItem(SAVE,JSON.stringify(state));notice('Chapter saved: room, notebook, puzzle progress and duel.');}catch{notice('Saving is unavailable in this browser.');}};
 $('load').onclick=()=>{if(transition)return;try{const raw=localStorage.getItem(SAVE);if(!raw){notice('No chapter save yet.');return;}const restored=parseSave(raw);audio.stopSpeech();busy=false;state=restored;selected=null;evidenceChoice.clear();draw();roomPanel();notice('Chapter restored.');}catch{notice('That save is invalid. Your current progress has been kept.');}};
-$('motion').onclick=()=>{reduced=!reduced;if(!busy&&!transition)draw();else scene.reduced=reduced;updateUI();};
-$('new-game').onclick=()=>{if(transition)return;const d=$<HTMLDialogElement>('book');$('book-title').textContent='Start a new adventure?';$('book-content').replaceChildren();para('This replaces your autosaved chapter. Your explicit Save slot stays available.',$('book-content'));button('Start fresh',()=>{closeBook();audio.stopSpeech();busy=false;state=fresh();state.flags.intro=true;selected=null;evidenceChoice.clear();draw();display(ids('intro1','intro2','intro3','intro4'));},$('book-content'),true);button('Keep playing',closeBook,$('book-content'));d.showModal();};
+$('main-menu').onclick=()=>{if(!busy&&!transition)front.menu();};
+$('motion').onclick=()=>{reduced=!reduced;front.setReducedMotion(reduced);if(!busy&&!transition)draw();else scene.reduced=reduced;updateUI();};
+$('new-game').onclick=()=>{if(transition)return;const d=$<HTMLDialogElement>('book');$('book-title').textContent='Start a new adventure?';$('book-content').replaceChildren();para('This replaces your autosaved chapter. Your explicit Save slot stays available.',$('book-content'));button('Start fresh',()=>{closeBook();front.intro();},$('book-content'),true);button('Keep playing',closeBook,$('book-content'));d.showModal();};
 document.addEventListener('audio-unavailable',()=>notice('Some audio could not play. All dialogue remains available as text.'));
-window.addEventListener('keydown',e=>{if(!ready||e.ctrlKey||e.metaKey||e.altKey||$<HTMLDialogElement>('book').open||$<HTMLDialogElement>('travel').open||e.target instanceof HTMLInputElement||e.target instanceof HTMLButtonElement)return;if(/^[1-5]$/.test(e.key))setVerb((['walk','look','talk','take','use'] as Verb[])[Number(e.key)-1]);if(e.key.toLowerCase()==='h'){scene.toggleMarks();updateUI();}if(e.key.toLowerCase()==='n')notebook();if(e.key==='Escape'&&!busy&&!transition){audio.stopSpeech();roomPanel();}});
+window.addEventListener('keydown',e=>{if(!playing||!ready||e.ctrlKey||e.metaKey||e.altKey||$<HTMLDialogElement>('book').open||$<HTMLDialogElement>('travel').open||e.target instanceof HTMLInputElement||e.target instanceof HTMLButtonElement)return;if(/^[1-5]$/.test(e.key))setVerb((['walk','look','talk','take','use'] as Verb[])[Number(e.key)-1]);if(e.key.toLowerCase()==='h'){scene.toggleMarks();updateUI();}if(e.key.toLowerCase()==='n')notebook();if(e.key==='Escape'&&!busy&&!transition){audio.stopSpeech();roomPanel();}});
 window.addEventListener('pagehide',persist);
 const help=button('Hint',()=>notice(hint()),document.querySelector<HTMLElement>('footer>div')!);help.id='hint';
 document.querySelectorAll<HTMLButtonElement>('header button,footer button').forEach(b=>b.disabled=true);

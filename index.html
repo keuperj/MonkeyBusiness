@@ -1,5 +1,24 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10191e"><title>Monkey Buisness — Act I</title></head><body>
-<main class="chapter-shell">
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10191e"><title>Monkey Buisness — Act I</title></head><body class="at-title">
+<dialog id="front" aria-label="Monkey Buisness title and start menu">
+<section id="splash" class="front-view">
+<img class="splash-art" src="/assets/splash-cover.png" alt="Nell holds a chart above a moonlit harbour, with Mara, Captain Quibble and Fine Print.">
+<div class="cover-title"><p class="front-kicker">AN ADVENTURE SOMEWHERE OFF THE CHARTS</p><h1>Monkey <span>Buisness</span></h1><p class="cover-subtitle">The Sea Owes You Nothing</p></div>
+<div class="splash-bottom"><button id="splash-enter" class="front-primary">Enter Brindle Quay <span>→</span></button><p>An original point-and-click adventure</p></div>
+</section>
+<section id="start-menu" class="front-view" hidden>
+<img class="menu-map" src="/assets/story-map.png" alt="Illustrated map of Brindle Quay and Bellweather Shoal">
+<div class="menu-card"><span class="compass-ornament" aria-hidden="true">✧</span><p class="front-kicker">WELCOME TO BRINDLE QUAY</p><h1>Monkey Buisness</h1><p class="menu-subtitle">A job, a tankard and a toll.</p>
+<div id="menu-actions"><button id="start-game" class="front-primary" data-needs-ready disabled>Start game <span>→</span></button><button id="load-game" data-needs-ready disabled>Load game</button></div>
+<div id="front-saves" hidden></div><p id="front-status" role="status">Unfolding the charts…</p><p class="menu-footnote">ACT I · ONLY PRIDE GETS HURT HERE</p></div>
+</section>
+<section id="intro" class="front-view" hidden aria-label="Nell’s introduction">
+<div id="intro-stage"><img id="intro-image" alt=""><div class="intro-glow"></div><div class="intro-vignette"></div></div>
+<div class="intro-heading"><p class="front-kicker">BEFORE THE FIRST CHART</p><h2 id="intro-heading"></h2></div>
+<div class="intro-caption"><p class="front-kicker">NELL</p><p id="intro-text" aria-live="polite"></p><div class="intro-track"><span id="intro-progress"></span></div><div class="intro-bottom"><span id="intro-count"></span><div><button id="intro-pause">Pause</button><button id="intro-next">Next scene →</button><button id="intro-skip">Skip intro</button></div></div></div>
+</section>
+<button id="front-sound" aria-pressed="false">Sound off</button>
+</dialog>
+<main class="chapter-shell" inert>
 <header><a class="brand" href="./"><span class="brand-mark">✦</span> MONKEY BUISNESS</a><span class="edition">ACT I · A JOB, A TANKARD AND A TOLL</span><button id="sound" aria-pressed="false">Sound off</button></header>
 <section class="chapter-heading"><div><p class="eyebrow">SOMEWHERE OFF THE CHARTS</p><h1 id="room-title">The Crooked Compass</h1></div><nav id="room-nav" aria-label="Travel destinations"></nav></section>
 <p id="goal" class="goal"></p>
@@ -8,7 +27,7 @@
 <aside id="panel" aria-label="Conversations and actions"><p>Unfolding the chart…</p></aside>
 <div class="chapter-controls"><div id="verbs" aria-label="Actions"></div><div class="pockets"><span class="eyebrow">YOUR POCKETS & PAPERS</span><div id="inventory"></div></div></div>
 </section>
-<footer><span>Only pride gets hurt here.</span><div><button id="notebook">Notebook</button><button id="map">Map</button><button id="replay">Replay speech</button><button id="save">Save</button><button id="load">Load</button><button id="motion" aria-pressed="false">Reduced motion</button><button id="new-game">New adventure</button></div></footer>
+<footer><span>Only pride gets hurt here.</span><div><button id="notebook">Notebook</button><button id="map">Map</button><button id="replay">Replay speech</button><button id="save">Save</button><button id="load">Load</button><button id="motion" aria-pressed="false">Reduced motion</button><button id="new-game">New adventure</button><button id="main-menu">Main menu</button></div></footer>
 <p id="notice" role="status" aria-live="polite"></p>
 </main>
 <dialog id="book"><div class="modal-header"><h2 id="book-title">Nell’s notebook</h2><button id="close-book" aria-label="Close notebook">Close ✕</button></div><div id="book-content"></div></dialog>

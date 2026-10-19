@@ -10,6 +10,8 @@ const add=(who,text)=>transcript.set(`${who}:${text}`,{who,text});
 for(const [who,lines] of Object.entries(conversations))for(const text of lines)add(who,text);
 const chapter=JSON.parse(await readFile('src/chapter-lines.json','utf8'));
 for(const line of Object.values(chapter))add(line.who,line.text);
+const intro=JSON.parse(await readFile('src/intro-lines.json','utf8'));
+for(const line of Object.values(intro))add(line.who,line.text);
 const duel=JSON.parse(await readFile('src/duel.json','utf8'));
 for(const line of [...duel.intro,duel.miss,...duel.win,...duel.lose])add(line.who,line.text);
 for(const round of duel.rounds){add(round.who,round.insult);add(round.who,round.retort);for(const answer of round.answers)add('NELL',answer);}

@@ -26,6 +26,16 @@ npm run preview
 
 The production output in `dist/` can be served by any static web server. Phaser is pinned to 3.90.0 for its established API. No account or backend is required. Google Fonts is optional; system fonts are used when unavailable.
 
+## Opening sequence
+
+Deferred work and the audio resume procedure are recorded in [FOLLOW_UP.md](docs/FOLLOW_UP.md).
+
+The game opens on an original painted splash cover, followed by a start menu over the story map. **Start game** begins a three-scene animated introduction to Nell; **Load game** offers the autosave and manual save separately and skips the intro. Starting again asks before replacing autosaved progress and preserves the manual save. **Main menu** returns to these options during play.
+
+The introduction has subtitles, **Pause / Resume**, **Next scene** and **Skip intro** controls. Escape also skips it. It pauses when the tab is hidden and respects reduced-motion preferences. The three new narration lines are prepared in `src/intro-lines.json`, but ElevenLabs returned `quota_exceeded` during generation: the intro currently plays with subtitles and optional existing harbour ambience. Once credits are available, `npm run audio:generate` adds those clips using Nell’s existing voice.
+
+Map travel follows traced waypoints along the tavern lane, timber bridge and repair-yard quay. Return journeys follow the same paths in reverse.
+
 ## Controls
 
 Click the floor to walk. Choose **Look at**, **Talk to**, **Pick up** or **Use**, then click a person or object. Click a pocket item to use it with a scene target. Keys 1–5 select verbs, H toggles hotspots, and Escape closes a conversation. The expandable object list provides keyboard-accessible alternatives to canvas hotspots.
@@ -51,6 +61,8 @@ The bridge can be solved before the tavern; landing clues remain recorded if you
 
 ## Development
 
+- `src/front.ts` / `src/front.css`: splash, menu, save selection and cinematic intro.
+- `src/map-routes.ts`: traced walkable map routes.
 - `src/chapter.ts`: chapter interactions, conversations, puzzles, notebook and animated map travel.
 - `src/chapter-state.ts`: shared progress and save validation.
 - `src/chapter-scene.ts`: three Phaser rooms, hotspots and procedural animations.

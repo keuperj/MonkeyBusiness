@@ -1,5 +1,23 @@
 # Generated artwork
 
+## Title sequence additions
+
+Generated with the built-in image-generation tool on 2026-10-19. Both images are 1536 × 1024. The splash uses original characters and a new composition in the painted adventure-box tradition; title lettering and decorative UI are HTML/CSS. The prologue uses animated camera moves and light effects over the workshop, existing map and tavern art.
+
+### `public/assets/splash-cover.png`
+
+Prompt:
+
+Use case: illustration-story. Asset type: landscape 1536x1024 painted cover art for an original comedic pirate adventure game splash screen. Evoke the lavish hand-painted early-1990s adventure-game box art tradition: dramatic moonlight, rich brushwork, deep ultramarine and emerald, warm gold, romantic maritime mystery and playful character expressions. Completely original composition and characters. Center foreground: Nell, a young aspiring chartmaker with short dark curly hair, teal waistcoat, cream shirt, rust trousers, holding an unfurled nautical survey and a pencil like a heroic instrument; curious, wry, determined. A dramatic curling sea and crooked lantern-lit harbor surround her. In supporting vignettes at lower sides: a stocky tavern keeper in burgundy headscarf and apron; a pompous elderly pirate with silver moustache, plum coat and burgundy bandana accompanied by an emerald and coral parrot. Distant lighthouse and a small ship against moonlit cliffs. Brass compass and rolled parchment frame the lower foreground. Top quarter is dark atmospheric sky with generous calm negative space for a title overlaid in the game. Wide theatrical composition with main face below title area, full bleed, beautifully polished illustration. No text, no lettering, no logos, no skull-shaped island, no existing franchise characters, no copied cover composition. More painted illustrated box art than pixel sprites.
+
+### `public/assets/intro-workshop.png`
+
+Prompt:
+
+Use case: illustration-story. Original widescreen 1536x1024 early-1990s pixel-art adventure game cinematic background for Nell's backstory. Warm coastal repair workshop open to the sea at late afternoon, rich amber inside and indigo teal harbor outside, crisp visible painterly pixel clusters. Young adult woman Nell with short dark curly hair, teal waistcoat over cream shirt and rust trousers sits at a wooden workbench right of center, teaching herself chartmaking: sketching a shoreline map in a notebook with pencil, focused wry expression. Coils of rope, patched sail, disassembled brass pump and modest tools convey her family of coastal repairers. Left side wide open timber doorway frames coastline, small delivery sailboat and distant fishing village. Warm shaft of low sun, dust motes, quiet sense of ambition and humble origins. Scene is original and composition is open and cinematic, no text, no logos, no copied franchise characters. Leave lower quarter reasonably dark and uncluttered for subtitle overlay.
+
+The three new Nell narration lines are in `src/intro-lines.json` and included in `npm run audio:generate`. Generation was attempted but ElevenLabs returned `401 quota_exceeded`; no new narration files were produced. The intro is currently subtitled, with existing harbour ambience when sound is enabled. Existing character recordings are unchanged. Rerun generation after credits are available to enable the prepared narration automatically.
+
 ## Playable Act I additions
 
 Generated on 2026-10-19 using the built-in image-generation tool. All three images are 1536 × 1024. The chapter reuses the original tavern, bridge, characters and story map, with original new landing scenery, props and survey artwork. Red map routes, tide-board labels, fencing blades and signal effects are rendered in code.
