@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { RoomHeader, roomBadges, paintSound } from './room-header';
 import './style.css';
+import {decorateControls} from './control-icons';
 const roomHeader=new RoomHeader(document.getElementById('room-header')!);
 roomHeader.render('bridge',[
  {id:'tavern',badge:roomBadges.tavern,reachable:true,href:'./tavern-test.html',label:'← Back to the tavern'},
@@ -82,3 +83,5 @@ $('sound').onclick=()=>{audio.setEnabled(!audio.enabled);paintSound($('sound'),a
 $('motion').setAttribute('aria-pressed',String(reduced));$('motion').onclick=()=>{reduced=!reduced;$('motion').setAttribute('aria-pressed',String(reduced));if(busy)return;scene.resetActors();};
 document.addEventListener('audio-unavailable',()=>{$('sound').title='Some audio could not play. Written dialogue is always available.';});
 document.querySelectorAll<HTMLButtonElement>('button').forEach(b=>b.disabled=true);
+
+decorateControls();

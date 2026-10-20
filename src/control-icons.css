@@ -1,0 +1,22 @@
+.icon-control svg,.pocket-trinket svg{display:block;width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 1px #0006)}
+.icon-control,.pocket-trinket{position:relative;color:#ddbd7f}
+#verbs button.icon-control,.verbs button.icon-control,footer button.icon-control,#pocket-tools button.icon-control{display:inline-flex;align-items:center;justify-content:center;width:48px;min-width:44px;height:48px;padding:8px;border:1px solid #736044;border-radius:5px;background:linear-gradient(145deg,#26363a,#122027);font-size:0}
+#verbs button.icon-control.active,.verbs button.icon-control.active,footer button.icon-control[aria-pressed=true]{color:#ffe3a0;border-color:#e3b35e;background:#4b3d27;box-shadow:inset 0 0 10px #d5a65122}
+#verbs,.controls .verbs{display:flex;flex-wrap:wrap;align-content:start;gap:8px}
+.chapter-controls{align-items:start}#verbs{flex:0 1 180px}.pockets{min-width:0}
+.pocket-tray{display:flex;align-items:center;gap:10px;flex-wrap:wrap}#pocket-tools{display:flex;gap:7px;padding-right:10px;border-right:1px solid #48534b}
+#inventory{gap:8px;flex-wrap:wrap}#inventory .pocket-trinket{display:inline-flex;align-items:center;justify-content:center;width:40px;height:44px;color:#d4bd8b}#inventory .pocket-trinket[aria-label^=Lint]{color:#94a3a3}
+#inventory button{width:46px;height:46px;justify-content:center;padding:5px;border:1px solid #736044;background:#18272b}#inventory button img{width:34px;height:34px;object-fit:contain}
+footer>div{gap:8px;flex-wrap:wrap}.chapter-shell footer button.icon-control{padding:8px}.command button.icon-control{display:flex;align-items:center;justify-content:center;min-width:36px;height:30px;padding:3px}.command button.icon-control svg{width:24px;height:24px}
+[data-tooltip]:hover::after,[data-tooltip]:focus-visible::after{content:attr(data-tooltip);position:absolute;z-index:20;bottom:calc(100% + 7px);left:50%;transform:translateX(-50%);width:max-content;max-width:190px;white-space:normal;padding:6px 9px;border:1px solid #a78c58;border-radius:3px;background:#101c24;color:#f2dfb6;font:11px/1.5 'Space Mono',monospace;text-align:center;pointer-events:none}
+.pocket-trinket:focus-visible{outline:2px solid #e5be72;outline-offset:2px;border-radius:3px}footer [data-tooltip]:last-child::after{left:auto;right:0;transform:none}
+@media(max-width:700px){#verbs{flex:auto;width:100%;justify-content:space-between;gap:6px}.controls .verbs{justify-content:space-between}#verbs button.icon-control,.verbs button.icon-control{width:46px;height:46px}footer>div{gap:6px}footer button.icon-control{width:44px;height:44px}.pocket-tray{gap:8px}.chapter-controls .pockets{width:100%}[data-tooltip]::after{max-width:140px}#verbs button:first-child::after{left:0;transform:none}#verbs button:last-child::after{right:0;left:auto;transform:none}}
+
+/* Painted atlas replaces the original line drawings; keep touch targets generous. */
+svg.painted-icon{display:block;width:36px;height:36px;fill:none;stroke:none;filter:drop-shadow(0 2px 2px #0008)}
+#inventory svg.painted-icon{width:36px;height:36px}
+footer button.icon-control,.chapter-shell footer button.icon-control{width:36px;min-width:36px;height:36px;padding:4px}
+footer button.icon-control svg.painted-icon{width:27px;height:27px}
+.room-masthead #sound.sound-icon{padding:5px;display:flex;align-items:center;justify-content:center}
+.sound-icon svg.painted-icon{width:100%;height:100%}
+@media(pointer:coarse){footer button.icon-control,.chapter-shell footer button.icon-control{width:44px;min-width:44px;height:44px;padding:8px}}

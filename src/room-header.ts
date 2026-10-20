@@ -1,4 +1,5 @@
 import './room-header.css';
+import {icon} from './control-icons';
 const base=import.meta.env.BASE_URL;
 export type RoomBadge={name:string;art:string;frame:string;point:[number,number]};
 export const roomBadges:Record<string,RoomBadge>={
@@ -12,7 +13,7 @@ let cropId=0;
 function art(badge:RoomBadge){const svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox',badge.frame);svg.setAttribute('aria-hidden','true');const img=document.createElementNS(ns,'image');img.setAttribute('href',`${base}assets/${badge.art}`);img.setAttribute('width','1536');img.setAttribute('height','1024');const clip=document.createElementNS(ns,'clipPath');const id=`badge-crop-${++cropId}`;clip.id=id;const rect=document.createElementNS(ns,'rect');const [x,y,w,h]=badge.frame.split(' ');for(const [key,value] of Object.entries({x,y,width:w,height:h}))rect.setAttribute(key,value);clip.append(rect);const defs=document.createElementNS(ns,'defs');defs.append(clip);img.setAttribute('clip-path',`url(#${id})`);svg.append(defs,img);return svg;}
 export function paintSound(button:HTMLElement,enabled:boolean){
  button.setAttribute('aria-label',enabled?'Sound on':'Sound off');button.setAttribute('aria-pressed',String(enabled));button.title=enabled?'Mute sound':'Enable sound';button.classList.add('sound-icon');
- button.innerHTML=`<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12h6l7-6v20l-7-6H5z"/>${enabled?'<path class="sound-wave" d="M22 11q6 5 0 10M26 7q10 9 0 18"/>':'<path class="sound-wave" d="m23 12 7 8m0-8-7 8"/>'}</svg>`;
+ button.innerHTML=icon(enabled?'soundOn':'soundOff');
 }
 export class RoomHeader {
  private title:HTMLElement;

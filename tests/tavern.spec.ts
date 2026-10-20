@@ -15,6 +15,7 @@ test('complete the room puzzle, save, reset and restore',async({page})=>{
  await expect(page.getByRole('button',{name:'Use Brass key',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'Use Brass key',exact:true}).click();await page.locator('[data-target="chest"]').click();
  await expect(page.locator('#caption')).toContainText('Bellweather Shoal');
+ await expect(page.getByRole('button',{name:'Use Old survey',exact:true})).toHaveCount(0);await page.getByRole('button',{name:'Pick up',exact:true}).click();await page.locator('[data-target=survey]').click();await expect(page.getByRole('button',{name:'Use Old survey',exact:true})).toBeVisible();
  await page.getByRole('button',{name:'Save',exact:true}).click();
  await page.getByRole('button',{name:'Reset room'}).click();await expect(page.locator('#inventory-count')).toHaveText('0 ITEMS');
  await page.getByRole('button',{name:'Load',exact:true}).click();await expect(page.locator('#inventory-count')).toHaveText('1 ITEMS');

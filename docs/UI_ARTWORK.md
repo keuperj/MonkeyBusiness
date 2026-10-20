@@ -1,0 +1,23 @@
+# Painted UI artwork
+
+Generated using the built-in image generation tool and the imagegen skill. Asset: `public/assets/pirate-ui-atlas.png` (1254 × 1254 RGBA). Preserve transparency. The 5 × 5 atlas is consumed by `src/control-icons.ts`; cells are cropped in SVG viewports without duplicating the bitmap. All chapter and isolated-room controls share this artwork. In-world props retain their existing painted scene sprites.
+
+## Final generation prompt
+
+Use case: stylized-concept. Create ONE production game UI sprite atlas, square, exactly 5 columns by 5 rows of equally sized square cells. Transparent background. Each icon centered inside its cell with generous 18% clear margins, no overlap, no labels, no grid lines. Original hand-painted pixel-adventure pirate style: chunky readable silhouettes, warm brass highlights, rich mahogany and leather, teal shadows, textured painted pixels, charming 1990s adventure-game inventory art. Fully colored dimensional objects, NOT thin line icons, NOT modern flat vector symbols. Consistent lighting from upper left. Designed to be readable at 32px. Exact row-major subjects: row 1: worn pirate walking boot; ornate brass magnifying glass; two overlapping parchment speech bubbles; reaching leather-gloved hand; crossed pirate hand tools. Row 2: leather notebook with brass clasp; folded treasure map with red dotted route; short wooden graphite pencil; fluffy grey tangled pocket lint; brass circular replay arrow surrounding small speaking mouth. Row 3: closed treasure chest with bold DOWN arrow; open treasure chest with bold UP arrow; small sea turtle; fresh parchment scroll with green plus seal; three wooden menu planks. Row 4: glowing brass lantern; brass targeting reticle; circular brass restart arrow; brass speaking trumpet with sound waves; muted brass speaking trumpet with red X. Row 5: brass tankard; antique brass key; old rolled nautical survey chart; long wooden boathook diagonally positioned; tiny nautical compass. Keep every subject in exact specified cell. No text, no watermark. Actual alpha transparency around all objects.
+
+## Open sea chest
+
+Asset: `public/assets/chest-open.png`, generated with the built-in image generation tool. Style reference: `public/assets/sprites.png`. The survey uses the existing separately rendered chart sprite, so it disappears on pickup. Unlocking and collecting are separate saved states; older chapter saves migrate automatically. The key remains in the lock.
+
+Final prompt:
+
+Use case: stylized-concept. Production game sprite: ONE open wooden sea chest, matching the chest at bottom right of reference image (reference for style and object identity only). Original chunky pixel-art pirate adventure prop, brown timber, dark iron bands, golden brass lock, front and left side visible, warm upper-left tavern light. Lid raised fully showing an EMPTY dark interior. Antique brass key visibly inserted into the FRONT lock, ornate bow sticking outward to the right. No paper inside because the game overlays a removable survey sprite. Keep chest body same proportions and viewpoint as reference, base aligned horizontally. Entire isolated object centered and fully visible with 8% transparent margin. True transparent background, no ground or background, no other objects, no characters, no text. Sharp pixel-painted edges matching reference, not smooth photorealism.
+
+## Quibble at rest
+
+Asset: `public/assets/quibble-idle.png`, generated with the built-in image tool using `duel-sprites.png` as the identity/style reference. Used outside active duels; the original fencing sprite remains in use during combat.
+
+Final prompt:
+
+Create one production character sprite of Captain Quibble, the old pirate in the CENTER of reference. Reference is identity and pixel-art style reference. Preserve his large curled grey moustache, grey side hair, red bandana, gold hoop earring, plum purple long coat with gold trim and buttons, cream ruffled shirt, red sash, vertically striped charcoal and beige trousers, brown cuffed boots with gold buckles. CHANGE POSE to relaxed noncombat standing, both arms lowered comfortably with one hand resting on his belt and other at his side, feet naturally apart, upright with smug amused expression, facing three-quarter LEFT toward Nell. No outstretched arms, no clenched fighting fist, no fencing stance, NO sword or weapon, no parrot or other characters. Full body isolated centered, boots fully visible and level, very little transparent padding (5 percent), portrait composition. Match reference chunky crisp hand-painted pixel adventure sprite style and proportions, warm tavern/harbour lighting, rich colors, clear silhouette. True transparent background, no floor, no shadow backdrop, no text.

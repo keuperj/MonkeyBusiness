@@ -9,7 +9,9 @@
     "preview": "vite preview --host 127.0.0.1",
     "test": "playwright test",
     "audio:generate": "node scripts/generate-audio.mjs",
-    "audio:plan": "node scripts/generate-audio.mjs --plan"
+    "audio:plan": "node scripts/generate-audio.mjs --plan",
+    "predev": "node scripts/chapter-assets.mjs",
+    "prebuild": "node scripts/chapter-assets.mjs"
   },
   "dependencies": {
     "phaser": "3.90.0"

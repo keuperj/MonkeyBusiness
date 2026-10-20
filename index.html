@@ -16,17 +16,21 @@
 <div class="intro-heading"><p class="front-kicker">BEFORE THE FIRST CHART</p><h2 id="intro-heading"></h2></div>
 <div class="intro-caption"><p class="front-kicker">NELL</p><p id="intro-text" aria-live="polite"></p><div class="intro-track"><span id="intro-progress"></span></div><div class="intro-bottom"><span id="intro-count"></span><div><button id="intro-pause">Pause</button><button id="intro-next">Next scene →</button><button id="intro-skip">Skip intro</button></div></div></div>
 </section>
+<section id="chapter-loading" class="front-view" hidden aria-label="Downloading Act I">
+<img class="chapter-loading-art" src="/assets/splash-cover.png" alt="Nell and the pirates above the moonlit harbour of Act I">
+<div class="chapter-loading-card"><p class="front-kicker">PREPARING YOUR ADVENTURE</p><h2>Act I</h2><p>A Job, a Tankard and a Toll</p><div class="chapter-progress-wrap"><progress id="chapter-progress" max="100" value="0" aria-label="Chapter download progress"></progress><strong id="chapter-percent">0%</strong></div><p id="chapter-download-status" role="status">Preparing the chapter…</p><button id="chapter-retry" hidden>Retry download</button></div>
+</section>
 <button id="front-sound" aria-pressed="false">Sound off</button>
 </dialog>
 <main class="chapter-shell" inert>
 <div id="room-header"></div>
 <p id="goal" class="goal"></p>
 <section class="chapter-stage">
-<div class="scene-wrap"><div id="game" tabindex="0" aria-label="Point-and-click scene"></div><div id="caption" role="status" aria-live="polite"><b>NELL</b><span>Loading the harbour…</span></div><div class="command"><span>◆</span><span id="command">Walk to…</span><button id="hotspots" aria-pressed="false">Hotspots · H</button></div></div>
+<div class="scene-wrap"><div id="game" tabindex="0" aria-label="Point-and-click scene"></div><div id="caption" role="status" aria-live="polite"><b>NELL</b><span>Loading the harbour…</span></div><div id="duel-score" class="chapter-duel-score" role="status" aria-live="polite" aria-label="Duel score" hidden><span>NELL <strong id="nell-score">0</strong></span><span id="round-count"></span><span>QUIBBLE &amp; CO. <strong id="pirate-score">0</strong></span></div><div class="command"><span>◆</span><span id="command">Walk to…</span><button id="hotspots" aria-pressed="false">Hotspots · H</button></div></div>
 <aside id="panel" aria-label="Conversations and actions"><p>Unfolding the chart…</p></aside>
-<div class="chapter-controls"><div id="verbs" aria-label="Actions"></div><div class="pockets"><span class="eyebrow">YOUR POCKETS & PAPERS</span><div id="inventory"></div></div></div>
+<div class="chapter-controls"><div id="verbs" aria-label="Actions"></div><div class="pockets"><span class="eyebrow">YOUR POCKETS & PAPERS</span><div class="pocket-tray"><div id="pocket-tools"><button id="notebook">Notebook</button><button id="map">Map</button></div><div id="inventory"></div></div></div></div>
 </section>
-<footer><span>Only pride gets hurt here.</span><div><button id="notebook">Notebook</button><button id="map">Map</button><button id="replay">Replay speech</button><button id="save">Save</button><button id="load">Load</button><button id="motion" aria-pressed="false">Reduced motion</button><button id="new-game">New adventure</button><button id="main-menu">Main menu</button></div></footer>
+<footer><span>Only pride gets hurt here.</span><div><button id="replay">Replay speech</button><button id="save">Save</button><button id="load">Load</button><button id="motion" aria-pressed="false">Reduced motion</button><button id="new-game">New adventure</button><button id="main-menu">Main menu</button></div></footer>
 <p id="notice" role="status" aria-live="polite"></p>
 </main>
 <dialog id="book"><div class="modal-header"><h2 id="book-title">Nell’s notebook</h2><button id="close-book" aria-label="Close notebook">Close ✕</button></div><div id="book-content"></div></dialog>

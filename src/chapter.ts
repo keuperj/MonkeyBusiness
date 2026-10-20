@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { Front } from './front';
 import { routePath } from './map-routes';
 import './chapter.css';
+import {decorateControls,pocketTrinkets,icon} from './control-icons';
 import { RoomHeader, roomBadges, paintSound } from './room-header';
 import lines from './chapter-lines.json';
 import duel from './duel.json';
@@ -25,7 +26,9 @@ function notice(message:string){$('notice').textContent=message;}
 function persist(){if(!playing)return;try{localStorage.setItem(AUTO,JSON.stringify(state));}catch{notice('Autosave unavailable. Keep this tab open to retain current progress.');}}
 function record(text:string,who='NOTEBOOK'){if(!state.log.some(l=>l.text===text&&l.who===who))state.log.push({who,text});state.log=state.log.slice(-500);persist();}
 function caption(line:Line){$('caption').querySelector('b')!.textContent=line.who;$('caption').querySelector('span')!.textContent=line.text;}
-function speak(sequence:Line[]){lastSpeech=sequence;sequence.forEach(l=>record(l.text,l.who));if(sequence[0])caption(sequence[0]);void audio.sequence(sequence,caption);}
+let dialogueEpoch=0;
+function stopRoomDialogue(){dialogueEpoch++;audio.stopSpeech();lastSpeech=[];caption({who:'',text:''});clearPanel();}
+function speak(sequence:Line[]){if(transition)return;const epoch=dialogueEpoch;lastSpeech=sequence;sequence.forEach(l=>record(l.text,l.who));if(sequence[0])caption(sequence[0]);void audio.sequence(sequence,line=>{if(epoch===dialogueEpoch&&!transition)caption(line);});}
 function ids(...names:LineId[]){return names.map(k=>lines[k]);}
 function button(label:string,action:()=>void,parent:HTMLElement=panel,primary=false,id?:string){const b=document.createElement('button');b.textContent=label;b.className=primary?'primary':'';if(id)b.id=id;b.onclick=action;parent.append(b);return b;}
 function para(text:string,parent=panel,className=''){const p=document.createElement('p');p.textContent=text;p.className=className;parent.append(p);return p;}
@@ -34,11 +37,12 @@ function clearPanel(title?:string){panel.replaceChildren();if(title)heading(titl
 function display(sequence:Line[],after:()=>void=roomActions){clearPanel();for(const line of sequence)para(`${line.who}: ${line.text}`);speak(sequence);after();}
 function say(...names:LineId[]){display(ids(...names));}
 function goal(){const f=state.flags;if(f.complete)return 'Act I complete · Explore the harbour or review your notebook.';if(!f.chart)return 'Find surveying work · Mara’s old chart could be a start.';if(!f.passage)return 'Reach the outer landing · Talk your way past Quibble.';if(!f.compared)return 'Check the old chart · Read the tide board and identify the fixed marks.';if(!f.freed)return 'Make an independent observation · Free the tethered float.';if(!f.witnessed)return 'Watch the channel · You have a baseline and a working indicator.';if(!f.evidence)return 'Record what you can support · Separate observations from accusations.';return 'Choose your next lead · Who else knows about the changing current?';}
-function updateUI(){document.title=`Monkey Buisness — ${rooms[state.room]}`;$('goal').textContent=goal();$('game').dataset.room=state.room;
+function updateDuelScore(){const d=state.duel;const wins=d.answers.filter(Boolean).length;$('duel-score').hidden=state.room!=='bridge'||(!d.active&&d.answers.length!==duel.rounds.length);$('nell-score').textContent=String(wins);$('pirate-score').textContent=String(d.answers.length-wins);$('round-count').textContent=d.active?`EXCHANGE ${Math.min(duel.rounds.length,d.answers.length+(d.feedback?0:1))} / ${duel.rounds.length}`:'DUEL COMPLETE';}
+function updateUI(){updateDuelScore();document.title=`Monkey Buisness — ${rooms[state.room]}`;$('goal').textContent=goal();$('game').dataset.room=state.room;
  roomHeader.render(state.room,Object.keys(rooms).map(id=>({id,badge:roomBadges[id],reachable:id!=='landing'||state.flags.passage})),id=>travel(id as Room),busy||transition);
- $('inventory').replaceChildren();const inventory:Item[]=[];if(state.flags.mugTaken&&!state.flags.returned)inventory.push('mug');if(state.flags.returned&&!state.flags.chart)inventory.push('key');if(state.flags.chart)inventory.push('chart');
- if(!inventory.length)para('Lint. A pencil. Possibilities.',$('inventory'),'empty');for(const item of inventory){const label={mug:'Brass tankard',key:'Brass key',chart:'Old survey',hook:'Boathook'}[item];const b=button(label,()=>{setVerb('use');selected=item;updateUI();command();},$('inventory'));b.setAttribute('aria-label',`Use ${label}`);if(ready){const img=document.createElement('img');img.src=scene.icon(item);img.alt='';b.prepend(img);}b.classList.toggle('active',selected===item);}
- document.querySelectorAll<HTMLButtonElement>('[data-verb]').forEach(b=>b.classList.toggle('active',b.dataset.verb===verb));
+ $('inventory').replaceChildren();const inventory:Item[]=[];if(state.flags.mugTaken&&!state.flags.returned)inventory.push('mug');if(state.flags.returned&&!state.flags.chestOpen)inventory.push('key');if(state.flags.chart)inventory.push('chart');
+ pocketTrinkets($('inventory'));for(const item of inventory){const label={mug:'Brass tankard',key:'Brass key',chart:'Old survey',hook:'Boathook'}[item];const b=button(label,()=>{setVerb('use');selected=item;updateUI();command();},$('inventory'));b.setAttribute('aria-label',`Use ${label}`);if(ready){b.innerHTML=icon(item);b.title=label;b.dataset.tooltip=label;}b.classList.toggle('active',selected===item);}
+ document.querySelectorAll<HTMLButtonElement>('[data-verb]').forEach(b=>{b.classList.toggle('active',b.dataset.verb===verb);b.setAttribute('aria-pressed',String(b.dataset.verb===verb));});
  $('hotspots').setAttribute('aria-pressed',String(scene.showMarks));$('motion').setAttribute('aria-pressed',String(reduced));}
 function command(name='…'){const labels={walk:'Walk to',look:'Look at',talk:'Talk to',take:'Pick up',use:'Use'};$('command').textContent=selected?`Use ${selected==='chart'?'old survey':selected} with ${name}`:`${labels[verb]} ${name}`;}
 function setVerb(v:Verb){verb=v;selected=null;command();if(ready)updateUI();}
@@ -47,7 +51,7 @@ function roomActions(){const wrap=document.createElement('div');wrap.className='
  if(state.room==='bridge'){button('Talk to Captain Quibble',()=>conversation('quibble'),wrap);button('Talk to Fine Print',()=>conversation('parrot'),wrap);button(state.flags.passage?'Friendly rematch':'Challenge the bridge keepers',startDuel,wrap,true,'challenge-duel');if(state.flags.passage)button('Continue to the outer landing',()=>travel('landing'),wrap);}
  if(state.room==='landing'){button('Compare the old survey',compareChart,wrap);button('Watch the channel',startObservation,wrap,true,'watch-channel');if(state.flags.witnessed)button('Review the evidence',evidence,wrap);if(state.flags.evidence)button('Choose an investigation lead',chooseLead,wrap);}
  const d=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Scene objects · keyboard & touch';d.append(summary);const list=document.createElement('div');list.className='target-list';d.append(list);panel.append(d);
- for(const target of targets[state.room]){const b=button(target.name,()=>interact(target.id),list);b.dataset.target=target.id;}
+ for(const target of targets[state.room]){if(target.id==='survey'&&(!state.flags.chestOpen||state.flags.chart))continue;const b=button(target.name,()=>interact(target.id),list);b.dataset.target=target.id;}
 }
 function roomPanel(){if(state.duel.active){duelPanel();return;}clearPanel(state.flags.complete?'A question worth following':rooms[state.room]);para(goal());roomActions();}
 function draw(){if(audioRoom!==state.room){audio.setAmbience(state.room==='tavern'?'tavern-ambience':'bridge-ambience');audioRoom=state.room;}scene.reduced=reduced;scene.render(state);updateUI();command();persist();}
@@ -66,7 +70,9 @@ function interact(id:string){if(!playing||!ready||busy||transition||state.duel.a
  if(verb==='walk'&&['mara','orin','quibble','parrot'].includes(id)){conversation(id as 'mara');return;}
  if(state.room==='tavern'){
   if(verb==='use'&&selected==='mug'&&id==='mara'&&state.flags.mugTaken&&!state.flags.returned){state.flags.returned=true;selected=null;audio.effectSound('exchange');draw();say('returnMug');return;}
-  if(verb==='use'&&id==='chest'){if(state.flags.chart){openChart();return;}if(selected==='key'&&state.flags.returned){state.flags.chart=true;selected=null;audio.effectSound('unlock');record('Old survey acquired. Compare it with the fixed marks at the outer landing.');draw();say('chartFound','keyHook','chartDetail','chartQuestion');return;}say(selected==='mug'?'wrongTumbler':'locked');return;}
+  if(id==='survey'){if(!state.flags.chestOpen||state.flags.chart)return;if(verb==='take'){state.flags.chart=true;selected=null;audio.effectSound('pickup');record('Old survey acquired. Compare it with the fixed marks at the outer landing.');draw();say('chartFound','chartDetail','chartQuestion');}else say('chartDetail');return;}
+  if(verb==='use'&&id==='chest'){if(state.flags.chestOpen){notice(state.flags.chart?'The chest is empty. The key remains in its lock.':'The old survey is inside. Pick it up.');return;}if(selected==='key'&&state.flags.returned){state.flags.chestOpen=true;selected=null;audio.effectSound('unlock');record('Unlocked the sea chest. The key stays in the lock; the old survey is still inside.');draw();say('chartFound');return;}say(selected==='mug'?'wrongTumbler':'locked');return;}
+  if(id==='chest'&&verb==='look'&&state.flags.chestOpen){notice(state.flags.chart?'An empty sea chest, with the key in its lock.':'An old survey rests inside the open chest. The key is still in the lock.');return;}
   if(id==='mug'&&(verb==='take'||verb==='use')){if(state.flags.mugTaken){say('noMug');return;}state.flags.mugTaken=true;audio.effectSound('pickup');draw();say('pickMug');return;}
   if(id==='cupboard'&&verb==='use'){if(state.flags.egg){say('eggRepeat');return;}state.flags.egg=true;draw();if(scene.cupboard&&!reduced)scene.tweens.add({targets:scene.cupboard,angle:3,duration:150,yoyo:true,repeat:2});say('egg1','egg2','egg3','egg4');return;}
   if(selected==='chart'&&id==='window'){say('chartDetail','chartQuestion');return;}
@@ -94,7 +100,7 @@ function interact(id:string){if(!playing||!ready||busy||transition||state.duel.a
 }
 
 function travel(to:Room){if(!ready||busy||transition||to===state.room)return;if(to==='landing'&&!state.flags.passage){display(ids('bridgeEntry','rulesA'));return;}
- const from=state.room;audio.stopSpeech();scene.move?.stop();audio.walk(false);if(state.duel.active){state.duel={active:false,answers:[],feedback:false};}
+ const from=state.room;stopRoomDialogue();scene.move?.stop();audio.walk(false);if(state.duel.active){state.duel={active:false,answers:[],feedback:false};}
  transition=true;updateUI();const d=$<HTMLDialogElement>('travel');$('travel-title').textContent=`${rooms[from]} → ${rooms[to]}`;$('travel-description').textContent='Along the tavern lane, over the timber bridge and around the repair-yard quay. Continue skips the journey.';$('travel-skip').textContent='Continue →';
  const path=routePath(from,to);
  const route=document.getElementById('route') as unknown as SVGPathElement;const shadow=document.getElementById('route-shadow') as unknown as SVGPathElement;const dot=document.getElementById('traveller')!;route.setAttribute('d',path);shadow.setAttribute('d',path);d.showModal();const length=route.getTotalLength();route.style.strokeDasharray=String(length);route.style.strokeDashoffset=String(length);shadow.style.strokeDasharray=String(length);shadow.style.strokeDashoffset=String(length);let raf=0;const start=performance.now();let finished=false;
@@ -119,7 +125,7 @@ function closeBook(){$<HTMLDialogElement>('book').close();}
 $('close-book').onclick=closeBook;
 
 function startDuel(){if(busy||transition||state.room!=='bridge')return;state.duel={active:true,answers:[],feedback:false};draw();duelPanel();}
-function duelPanel(){const d=state.duel;if(!d.active){roomPanel();return;}
+function duelPanel(){updateDuelScore();const d=state.duel;if(!d.active){roomPanel();return;}
  const wins=d.answers.filter(Boolean).length;const current=d.feedback?d.answers.length-1:d.answers.length;
  if(current>=5){finishDuel();return;}const q=duel.rounds[current];clearPanel(`Exchange ${current+1} of 5`);para(`Nell ${wins} · Quibble & Co. ${d.answers.length-wins}`,panel,'score-line');heading(q.insult);
  if(d.feedback){const won=d.answers[current];para(won?q.retort:duel.miss.text);para(won?'Touché! A point for Nell.':`Their point. ${q.hint}`,panel,won?'success':'hint-box');button(current===4?'See the verdict':'Next exchange',()=>{if(busy)return;if(current===4)finishDuel();else{d.feedback=false;persist();duelPanel();}},panel,true,'duel-next');}
@@ -144,20 +150,22 @@ function chooseLead(){if(!state.flags.evidence)return;clearPanel(state.flags.com
  for(const [key,line,label] of leads)button(label,()=>{state.lead=key;state.flags.complete=true;record(`Next leads: Pip’s newspaper; signal hardware at the repair yards; Orin’s missing vessel. Current intention: ${key}.`);updateUI();display(ids(line,'end'),()=>{heading('End of Act I');para('A job, a tankard and a toll. You have completed the playable first chapter. Act II is the next part of Nell’s story.');button('Explore the harbour',roomPanel,panel,true);button('Review all investigation leads',chooseLead);button('Open notebook',notebook);});},panel,true);
  button('Revisit the harbour first',roomPanel);
 }
-function hint(){if(!state.flags.chart)return 'Talk to Mara about the chest. Pick up the tankard on the window table, use it on Mara, then use the key on the chest.';if(!state.flags.passage)return 'Talk to Quibble. Turn his boasts against him; three correct replies win passage.';if(!state.flags.board||!state.flags.marks)return 'At the landing, look at the tide board and the warehouse/lighthouse landmarks.';if(!state.flags.compared)return 'Use the old survey on the sighting cleat. Choose the warehouse corner and lighthouse notch.';if(!state.flags.freed)return 'Use the boathook, then use it on the snagged float.';if(!state.flags.witnessed)return 'Watch the channel. Each step can be replayed or read as text.';return 'Record the three direct observations, then choose any next lead.';}
+function hint(){if(state.flags.chestOpen&&!state.flags.chart)return 'The chest is open. Pick up the old survey inside it.';if(!state.flags.chart)return 'Talk to Mara about the chest. Pick up the tankard on the window table, use it on Mara, then use the key on the chest and pick up the survey inside.';if(!state.flags.passage)return 'Talk to Quibble. Turn his boasts against him; three correct replies win passage.';if(!state.flags.board||!state.flags.marks)return 'At the landing, look at the tide board and the warehouse/lighthouse landmarks.';if(!state.flags.compared)return 'Use the old survey on the sighting cleat. Choose the warehouse corner and lighthouse notch.';if(!state.flags.freed)return 'Use the boathook, then use it on the snagged float.';if(!state.flags.witnessed)return 'Watch the channel. Each step can be replayed or read as text.';return 'Record the three direct observations, then choose any next lead.';}
 
 const front=new Front((saved)=>{
- audio.stopSpeech();busy=false;state=saved??fresh();selected=null;verb='walk';evidenceChoice.clear();playing=true;audioRoom=undefined;
+ stopRoomDialogue();busy=false;state=saved??fresh();selected=null;verb='walk';evidenceChoice.clear();playing=true;audioRoom=undefined;
  game.scale.refresh();draw();paintSound($('sound'),audio.enabled);
  if(!state.flags.intro){state.flags.intro=true;persist();display(ids('intro1','intro2','intro3','intro4'));}else{caption({who:'NELL',text:rooms[state.room]});roomPanel();}
-},()=>{persist();playing=false;scene.move?.stop();audio.walk(false);});
-const scene=new ChapterScene({ready:()=>{ready=true;draw();$('game').dataset.ready='true';document.querySelectorAll<HTMLButtonElement>('.chapter-shell header button,.chapter-shell footer button').forEach(b=>b.disabled=false);front.ready();},target:interact,hover:command,walk:(x,y)=>{state.positions[state.room]={x,y};},walking:active=>{audio.walk(active);if(!active&&ready)persist();},canWalk:()=>playing&&!busy&&!transition&&!state.duel.active});
-const game=new Phaser.Game({type:Phaser.AUTO,parent:'game',width:1536,height:1024,pixelArt:true,backgroundColor:'#10191e',scene,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},audio:{noAudio:true}});
+},()=>{stopRoomDialogue();persist();playing=false;scene.move?.stop();audio.walk(false);},()=>prepareGame());
+const scene=new ChapterScene({ready:()=>{ready=true;draw();$('game').dataset.ready='true';document.querySelectorAll<HTMLButtonElement>('.chapter-shell header button,.chapter-shell footer button,#pocket-tools button').forEach(b=>b.disabled=false);resolveGame?.();},target:interact,hover:command,walk:(x,y)=>{state.positions[state.room]={x,y};},walking:active=>{audio.walk(active);if(!active&&ready)persist();},canWalk:()=>playing&&!busy&&!transition&&!state.duel.active});
+let game:Phaser.Game;let resolveGame:(()=>void)|undefined;
+function prepareGame(){return new Promise<void>(resolve=>{resolveGame=resolve;game=new Phaser.Game({type:Phaser.AUTO,parent:'game',width:1536,height:1024,pixelArt:true,backgroundColor:'#10191e',scene,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},audio:{noAudio:true}});});}
+front.ready();
 for(const [i,v] of (['walk','look','talk','take','use'] as Verb[]).entries()){const b=button(`${{walk:'Walk to',look:'Look at',talk:'Talk to',take:'Pick up',use:'Use'}[v]} · ${i+1}`,()=>setVerb(v),$('verbs'));b.dataset.verb=v;}
 $('hotspots').onclick=()=>{scene.toggleMarks();updateUI();};$('notebook').onclick=notebook;$('map').onclick=showMap;$('replay').onclick=()=>{if(lastSpeech.length)speak(lastSpeech);};
 $('sound').onclick=()=>{audio.setEnabled(!audio.enabled);paintSound($('sound'),audio.enabled);if(audio.enabled&&lastSpeech.length)speak(lastSpeech);};
 $('save').onclick=()=>{try{localStorage.setItem(SAVE,JSON.stringify(state));notice('Chapter saved: room, notebook, puzzle progress and duel.');}catch{notice('Saving is unavailable in this browser.');}};
-$('load').onclick=()=>{if(transition)return;try{const raw=localStorage.getItem(SAVE);if(!raw){notice('No chapter save yet.');return;}const restored=parseSave(raw);audio.stopSpeech();busy=false;state=restored;selected=null;evidenceChoice.clear();draw();roomPanel();notice('Chapter restored.');}catch{notice('That save is invalid. Your current progress has been kept.');}};
+$('load').onclick=()=>{if(transition)return;try{const raw=localStorage.getItem(SAVE);if(!raw){notice('No chapter save yet.');return;}const restored=parseSave(raw);stopRoomDialogue();busy=false;state=restored;selected=null;evidenceChoice.clear();draw();caption({who:'NELL',text:rooms[state.room]});roomPanel();notice('Chapter restored.');}catch{notice('That save is invalid. Your current progress has been kept.');}};
 $('main-menu').onclick=()=>{if(!busy&&!transition)front.menu();};
 $('motion').onclick=()=>{reduced=!reduced;front.setReducedMotion(reduced);if(!busy&&!transition)draw();else scene.reduced=reduced;updateUI();};
 $('new-game').onclick=()=>{if(transition)return;const d=$<HTMLDialogElement>('book');$('book-title').textContent='Start a new adventure?';$('book-content').replaceChildren();para('This replaces your autosaved chapter. Your explicit Save slot stays available.',$('book-content'));button('Start fresh',()=>{closeBook();front.intro();},$('book-content'),true);button('Keep playing',closeBook,$('book-content'));d.showModal();};
@@ -165,4 +173,5 @@ document.addEventListener('audio-unavailable',()=>notice('Some audio could not p
 window.addEventListener('keydown',e=>{if(!playing||!ready||e.ctrlKey||e.metaKey||e.altKey||$<HTMLDialogElement>('book').open||$<HTMLDialogElement>('travel').open||e.target instanceof HTMLInputElement||e.target instanceof HTMLButtonElement)return;if(/^[1-5]$/.test(e.key))setVerb((['walk','look','talk','take','use'] as Verb[])[Number(e.key)-1]);if(e.key.toLowerCase()==='h'){scene.toggleMarks();updateUI();}if(e.key.toLowerCase()==='n')notebook();if(e.key==='Escape'&&!busy&&!transition){audio.stopSpeech();roomPanel();}});
 window.addEventListener('pagehide',persist);
 const help=button('Hint',()=>notice(hint()),document.querySelector<HTMLElement>('footer>div')!);help.id='hint';
-document.querySelectorAll<HTMLButtonElement>('header button,footer button').forEach(b=>b.disabled=true);
+decorateControls();
+document.querySelectorAll<HTMLButtonElement>('header button,footer button,#pocket-tools button').forEach(b=>b.disabled=true);

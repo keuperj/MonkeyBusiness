@@ -2,6 +2,7 @@ import { tavernAudio as audio } from './audio';
 import lines from './intro-lines.json';
 import { AUTO, SAVE, parseSave, rooms, type ChapterState } from './chapter-state';
 import './front.css';
+import {cacheChapter} from './chapter-cache';
 
 const $ = <T extends HTMLElement = HTMLElement>(id:string) => document.getElementById(id) as T;
 const beats = [
@@ -20,8 +21,10 @@ export class Front {
  private voiceDone=true;
  private paused=false;
  private available=false;
+ private cached=false;
+ private loading=false;
  private reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
- constructor(private enter:(save?:ChapterState)=>void, private leave:()=>void) {
+ constructor(private enter:(save?:ChapterState)=>void, private leave:()=>void,private prepare:()=>Promise<void>) {
   this.dialog.showModal();$('splash-enter').focus();
   $('splash-enter').onclick=()=>this.menu();
   $('start-game').onclick=()=>this.start();
@@ -36,7 +39,7 @@ export class Front {
  }
  setReducedMotion(value:boolean){this.reduced=value;}
  ready(){this.available=true;this.dialog.querySelectorAll<HTMLButtonElement>('[data-needs-ready]').forEach(b=>b.disabled=false);$('front-status').textContent='';}
- private show(view:string){this.view=view;for(const id of ['splash','start-menu','intro'])$(id).hidden=id!==view;this.dialog.dataset.view=view;}
+ private show(view:string){this.view=view;for(const id of ['splash','start-menu','intro','chapter-loading'])$(id).hidden=id!==view;this.dialog.dataset.view=view;}
  private soundLabel(){$('front-sound').textContent=audio.enabled?'Sound on':'Sound off';$('front-sound').setAttribute('aria-pressed',String(audio.enabled));}
  menu(){
   this.stop();this.leave();document.body.classList.add('at-title');document.querySelector<HTMLElement>('.chapter-shell')!.inert=true;
@@ -64,7 +67,7 @@ export class Front {
   $('front-status').textContent=count?(invalid?'One save is invalid; the valid save is available below.':'Choose where to resume. The intro will be skipped.'):(invalid?'No valid save could be read. Start game to begin a new adventure.':'No saved adventure yet. Start game to begin Nell’s story.');
   this.action('Back',()=>this.menu());$('front-saves').querySelector<HTMLButtonElement>('button')?.focus();
  }
- intro(){
+ intro(){if(!this.cached){void this.prepareChapter(()=>this.intro());return;}
   if(!this.available)return;this.stop();this.leave();document.body.classList.add('at-title');document.querySelector<HTMLElement>('.chapter-shell')!.inert=true;
   if(!this.dialog.open)this.dialog.showModal();this.show('intro');this.index=0;this.paused=false;$('intro').classList.remove('paused');$('intro-pause').textContent='Pause';audio.setAmbience('bridge-ambience');this.soundLabel();this.beat();$('intro-skip').focus();
   this.previous=0;this.raf=requestAnimationFrame(this.frame);
@@ -87,5 +90,10 @@ export class Front {
  private next(){if(this.view!=='intro')return;if(this.index===beats.length-1)this.finish();else{this.index++;this.beat();}}
  private finish(){if(this.view==='intro')this.launch();}
  private stop(){cancelAnimationFrame(this.raf);this.token++;audio.stopSpeech();$('intro-image').getAnimations().forEach(a=>a.cancel());}
- private launch(save?:ChapterState){this.stop();this.view='game';this.dialog.close();document.body.classList.remove('at-title');document.querySelector<HTMLElement>('.chapter-shell')!.inert=false;this.enter(save);$('game').focus();}
+ private async prepareChapter(next:()=>void){
+  if(this.loading)return;this.loading=true;this.stop();this.leave();document.body.classList.add('at-title');document.querySelector<HTMLElement>('.chapter-shell')!.inert=true;if(!this.dialog.open)this.dialog.showModal();this.show('chapter-loading');$('chapter-retry').hidden=true;
+  try{await cacheChapter((value,detail)=>{$<HTMLProgressElement>('chapter-progress').value=value;$('chapter-percent').textContent=`${value}%`;$('chapter-download-status').textContent=detail;});await this.prepare();this.cached=true;this.loading=false;next();}
+  catch(error){this.loading=false;$('chapter-download-status').textContent=`${error instanceof Error?error.message:'Download interrupted.'} Completed downloads are kept. Retry to continue.`;$('chapter-retry').hidden=false;$('chapter-retry').onclick=()=>void this.prepareChapter(next);$('chapter-retry').focus();}
+ }
+ private launch(save?:ChapterState){if(!this.cached){void this.prepareChapter(()=>this.launch(save));return;}this.stop();this.view='game';this.dialog.close();document.body.classList.remove('at-title');document.querySelector<HTMLElement>('.chapter-shell')!.inert=false;this.enter(save);$('game').focus();}
 }

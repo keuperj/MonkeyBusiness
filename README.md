@@ -42,6 +42,8 @@ All rooms share one compact header row: game logo and current-room emblem on the
 
 ## Controls
 
+The action tray and footer use generated painted pirate icons with hover labels and accessible names. Notebook and Map are in the pockets tray; the pencil and lint are permanent personal effects, separate from puzzle inventory. Existing keyboard shortcuts still work. The lower-right controls use compact 27px artwork (with larger touch targets on touchscreens). The shared atlas is `public/assets/pirate-ui-atlas.png`; generation notes are in `docs/UI_ARTWORK.md`. Shared icon definitions and styling live in `src/control-icons.ts` and `src/control-icons.css`.
+
 Click the floor to walk. Choose **Look at**, **Talk to**, **Pick up** or **Use**, then click a person or object. Click a pocket item to use it with a scene target. Keys 1–5 select verbs, H toggles hotspots, and Escape closes a conversation. The expandable object list provides keyboard-accessible alternatives to canvas hotspots.
 
 Progress autosaves in this browser across all three rooms, including the notebook and unfinished duels. **Save / Load** provides a separate explicit save slot. **New adventure** clears the current adventure while preserving that slot. **Notebook** keeps clues, conversations and replayable speech; **Hint** suggests the next puzzle step.
@@ -103,3 +105,5 @@ In the isolated test version, visit `/bridge.html`, use the link from `/tavern-t
 Generated fencing-pose sprites animate with lunges, pivoting blades, parries and recoil; the parrot swoops during its exchanges. Reduced motion is detected from system preferences and can also be toggled. These are procedural animations of illustrated poses, not frame-by-frame walk or sword sprite sheets.
 
 `src/duel.json` is the single source for bridge dialogue and answer keys, shared by gameplay and audio generation. `src/bridge.ts` owns the encounter; `bridge.html` is the second Vite entry. Captain Quibble uses a theatrical Bill voice; Fine Print uses a quick Charlie voice; Nell retains Alice. Generated files and their exact settings are recorded in the shared audio provenance manifest.
+
+Chapter entry now downloads and verifies Act I’s artwork and audio before initializing the game. An illustrated loading screen shows byte-weighted progress; browser Cache Storage reuses unchanged files on later visits. Failed downloads offer Retry. HTTPS (or localhost) and browser storage are required. See [chapter cache documentation](docs/CHAPTER_CACHE.md) for deployment and asset-manifest regeneration.
