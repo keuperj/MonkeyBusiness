@@ -20,3 +20,11 @@ README.md and ASSETS.md now describe the completed voiced intro. Enable Sound on
 ## Other requested updates
 
 Completed: painted splash, map-backed start/load menu, three-scene animated intro with skip and pause controls, and traced map travel routes. No other unimplemented task is currently assigned.
+
+## Act II — implemented 20 October 2026
+
+Act II now has six new illustrated rooms, returning harbour locations, its investigation/puzzle chain, a deliberate survey handover, and a playable chapter ending. All 288 Act II speech clips and nine new effects have been generated; no ElevenLabs work remains pending. Built-in image generation produced twelve shipped artwork files including room-state variants, sprites, emblems and loading illustration.
+
+The newspaper pencil interaction adds a Zak McKracken-style situational Easter egg; the repaired household also includes an optional chair-reservation joke. Start-page act/room presets are editable in `public/debug-start.json` and can be disabled with `enabled: false`.
+
+Implementation, save keys and regeneration instructions: [ACT_2_IMPLEMENTATION.md](ACT_2_IMPLEMENTATION.md). Act III remains a future chapter; Act II ends with its title and allows continued exploration.

@@ -4,6 +4,8 @@ const cells={walk:0,look:1,talk:2,take:3,use:4,notebook:5,map:6,pencil:7,lint:8,
 export type IconName=keyof typeof cells;
 let iconId=0;
 export function icon(name:IconName){
+ if(name==='hook'){const id=`hook-crop-${++iconId}`;return `<svg class="painted-icon" viewBox="0 0 1254 1254" aria-hidden="true"><defs><clipPath id="${id}"><rect x="15" y="210" width="1225" height="190"/></clipPath></defs><g transform="translate(627 627) rotate(-40) translate(-627 -305)"><image clip-path="url(#${id})" href="${import.meta.env.BASE_URL}assets/harbour-tools.png" width="1254" height="1254"/></g></svg>`;}
+
  const cell=cells[name],size=1254/5,inset=16,x=(cell%5)*size+inset,y=Math.floor(cell/5)*size+inset,edge=size-inset*2,id=`painted-crop-${++iconId}`;
  return `<svg class="painted-icon" viewBox="${x} ${y} ${edge} ${edge}" aria-hidden="true" focusable="false"><defs><clipPath id="${id}"><rect x="${x}" y="${y}" width="${edge}" height="${edge}"/></clipPath></defs><image clip-path="url(#${id})" href="${import.meta.env.BASE_URL}assets/pirate-ui-atlas.png" width="1254" height="1254"/></svg>`;
 }

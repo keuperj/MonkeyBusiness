@@ -1,8 +1,10 @@
-import manifest from './audio-manifest.json';
+import originalManifest from './audio-manifest.json';
+import act2Manifest from './act2-audio-manifest.json';
+const manifest={speech:{...originalManifest.speech,...act2Manifest.speech},effects:{...originalManifest.effects,...act2Manifest.effects}};
 
 type Line = { who: string; text: string };
 const speechFiles: Record<string, string> = manifest.speech;
-type Effect = keyof typeof manifest.effects;
+type Effect = string;
 const url = (file: string) => `${import.meta.env.BASE_URL}audio/${file}`;
 
 /** Static audio only: API credentials and generation code never enter the browser. */
@@ -38,7 +40,7 @@ class TavernAudio {
   }
   setAmbience(name: Effect) {
     this.ambience.pause();
-    this.ambience.src = url(manifest.effects[name]);
+    this.ambience.src = url((manifest.effects as Record<string,string>)[name]||originalManifest.effects['bridge-ambience']);
     this.resumeBeds();
   }
   setEnabled(enabled: boolean) {
@@ -68,7 +70,7 @@ class TavernAudio {
   effectSound(name: Effect) {
     if (!this.enabled || document.hidden) return;
     this.effect?.pause();
-    this.effect = new Audio(url(manifest.effects[name]));
+    this.effect = new Audio(url((manifest.effects as Record<string,string>)[name]||originalManifest.effects['bridge-ambience']));
     this.effect.volume = .42;
     this.play(this.effect);
   }

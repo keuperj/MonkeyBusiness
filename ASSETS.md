@@ -131,3 +131,7 @@ Edit this sprite sheet: replace all backdrop and glows with a perfectly flat sol
 Exact text, prompts, model IDs, voice IDs and settings are recorded in `public/audio/provenance.json`. The room serves the saved audio as static files; it makes no runtime ElevenLabs calls.
 
 Audio is generated through ElevenLabs and remains subject to the applicable account/voice/service terms. The code's GPLv3 license is not a claim that ElevenLabs audio is independently cleared for unrestricted redistribution. Account-tier distribution rights have not been verified.
+
+## Act II
+
+Six new room backgrounds, two changed-state backgrounds, character/prop/emblem atlases and a chapter illustration are in `public/assets/act2/`. Generated with the built-in image tool; see [artwork record](docs/ACT_2_ARTWORK.md). Act II's 288 spoken lines and nine effects are mapped by `src/act2-audio-manifest.json`, with exact requests recorded in `public/audio/act2-provenance.json`. See [implementation and regeneration](docs/ACT_2_IMPLEMENTATION.md).

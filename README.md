@@ -107,3 +107,7 @@ Generated fencing-pose sprites animate with lunges, pivoting blades, parries and
 `src/duel.json` is the single source for bridge dialogue and answer keys, shared by gameplay and audio generation. `src/bridge.ts` owns the encounter; `bridge.html` is the second Vite entry. Captain Quibble uses a theatrical Bill voice; Fine Print uses a quick Charlie voice; Nell retains Alice. Generated files and their exact settings are recorded in the shared audio provenance manifest.
 
 Chapter entry now downloads and verifies Act I’s artwork and audio before initializing the game. An illustrated loading screen shows byte-weighted progress; browser Cache Storage reuses unchanged files on later visits. Failed downloads offer Retry. HTTPS (or localhost) and browser storage are required. See [chapter cache documentation](docs/CHAPTER_CACHE.md) for deployment and asset-manifest regeneration.
+
+### Act II — Respectable Nonsense
+
+Act II is playable from the Act I ending or the start menu's configurable **Debug start** selector. Choose act and room; `public/debug-start.json` controls the available presets and the `enabled` switch. Six new rooms, the returning harbour locations, voiced conversations, seven main puzzles, optional classic-adventure Easter eggs, chapter precaching and separate Act II saves are included. See [Act II implementation](docs/ACT_2_IMPLEMENTATION.md) for configuration and asset regeneration.
