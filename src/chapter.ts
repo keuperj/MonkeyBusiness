@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { Front } from './front';
 import { routePath } from './map-routes';
 import './chapter.css';
+import { RoomHeader, roomBadges, paintSound } from './room-header';
 import lines from './chapter-lines.json';
 import duel from './duel.json';
 import { tavernAudio as audio } from './audio';
@@ -19,6 +20,7 @@ let lastSpeech:Line[]=[],evidenceChoice=new Set<number>();
 let mapFinish:(()=>void)|undefined;
 let audioRoom:Room|undefined;
 const panel=$('panel');
+const roomHeader=new RoomHeader($('room-header'));
 function notice(message:string){$('notice').textContent=message;}
 function persist(){if(!playing)return;try{localStorage.setItem(AUTO,JSON.stringify(state));}catch{notice('Autosave unavailable. Keep this tab open to retain current progress.');}}
 function record(text:string,who='NOTEBOOK'){if(!state.log.some(l=>l.text===text&&l.who===who))state.log.push({who,text});state.log=state.log.slice(-500);persist();}
@@ -32,8 +34,8 @@ function clearPanel(title?:string){panel.replaceChildren();if(title)heading(titl
 function display(sequence:Line[],after:()=>void=roomActions){clearPanel();for(const line of sequence)para(`${line.who}: ${line.text}`);speak(sequence);after();}
 function say(...names:LineId[]){display(ids(...names));}
 function goal(){const f=state.flags;if(f.complete)return 'Act I complete · Explore the harbour or review your notebook.';if(!f.chart)return 'Find surveying work · Mara’s old chart could be a start.';if(!f.passage)return 'Reach the outer landing · Talk your way past Quibble.';if(!f.compared)return 'Check the old chart · Read the tide board and identify the fixed marks.';if(!f.freed)return 'Make an independent observation · Free the tethered float.';if(!f.witnessed)return 'Watch the channel · You have a baseline and a working indicator.';if(!f.evidence)return 'Record what you can support · Separate observations from accusations.';return 'Choose your next lead · Who else knows about the changing current?';}
-function updateUI(){document.title=`Monkey Buisness — ${rooms[state.room]}`;$('room-title').textContent=rooms[state.room];$('goal').textContent=goal();$('game').dataset.room=state.room;
- $('room-nav').replaceChildren();for(const room of Object.keys(rooms) as Room[]){const b=button(rooms[room],()=>travel(room),$('room-nav'));b.disabled=room===state.room||busy||transition;b.setAttribute('aria-current',String(room===state.room));}
+function updateUI(){document.title=`Monkey Buisness — ${rooms[state.room]}`;$('goal').textContent=goal();$('game').dataset.room=state.room;
+ roomHeader.render(state.room,Object.keys(rooms).map(id=>({id,badge:roomBadges[id],reachable:id!=='landing'||state.flags.passage})),id=>travel(id as Room),busy||transition);
  $('inventory').replaceChildren();const inventory:Item[]=[];if(state.flags.mugTaken&&!state.flags.returned)inventory.push('mug');if(state.flags.returned&&!state.flags.chart)inventory.push('key');if(state.flags.chart)inventory.push('chart');
  if(!inventory.length)para('Lint. A pencil. Possibilities.',$('inventory'),'empty');for(const item of inventory){const label={mug:'Brass tankard',key:'Brass key',chart:'Old survey',hook:'Boathook'}[item];const b=button(label,()=>{setVerb('use');selected=item;updateUI();command();},$('inventory'));b.setAttribute('aria-label',`Use ${label}`);if(ready){const img=document.createElement('img');img.src=scene.icon(item);img.alt='';b.prepend(img);}b.classList.toggle('active',selected===item);}
  document.querySelectorAll<HTMLButtonElement>('[data-verb]').forEach(b=>b.classList.toggle('active',b.dataset.verb===verb));
@@ -146,14 +148,14 @@ function hint(){if(!state.flags.chart)return 'Talk to Mara about the chest. Pick
 
 const front=new Front((saved)=>{
  audio.stopSpeech();busy=false;state=saved??fresh();selected=null;verb='walk';evidenceChoice.clear();playing=true;audioRoom=undefined;
- game.scale.refresh();draw();$('sound').textContent=audio.enabled?'Sound on':'Sound off';$('sound').setAttribute('aria-pressed',String(audio.enabled));
+ game.scale.refresh();draw();paintSound($('sound'),audio.enabled);
  if(!state.flags.intro){state.flags.intro=true;persist();display(ids('intro1','intro2','intro3','intro4'));}else{caption({who:'NELL',text:rooms[state.room]});roomPanel();}
 },()=>{persist();playing=false;scene.move?.stop();audio.walk(false);});
 const scene=new ChapterScene({ready:()=>{ready=true;draw();$('game').dataset.ready='true';document.querySelectorAll<HTMLButtonElement>('.chapter-shell header button,.chapter-shell footer button').forEach(b=>b.disabled=false);front.ready();},target:interact,hover:command,walk:(x,y)=>{state.positions[state.room]={x,y};},walking:active=>{audio.walk(active);if(!active&&ready)persist();},canWalk:()=>playing&&!busy&&!transition&&!state.duel.active});
 const game=new Phaser.Game({type:Phaser.AUTO,parent:'game',width:1536,height:1024,pixelArt:true,backgroundColor:'#10191e',scene,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},audio:{noAudio:true}});
 for(const [i,v] of (['walk','look','talk','take','use'] as Verb[]).entries()){const b=button(`${{walk:'Walk to',look:'Look at',talk:'Talk to',take:'Pick up',use:'Use'}[v]} · ${i+1}`,()=>setVerb(v),$('verbs'));b.dataset.verb=v;}
 $('hotspots').onclick=()=>{scene.toggleMarks();updateUI();};$('notebook').onclick=notebook;$('map').onclick=showMap;$('replay').onclick=()=>{if(lastSpeech.length)speak(lastSpeech);};
-$('sound').onclick=()=>{audio.setEnabled(!audio.enabled);$('sound').textContent=audio.enabled?'Sound on':'Sound off';$('sound').setAttribute('aria-pressed',String(audio.enabled));if(audio.enabled&&lastSpeech.length)speak(lastSpeech);};
+$('sound').onclick=()=>{audio.setEnabled(!audio.enabled);paintSound($('sound'),audio.enabled);if(audio.enabled&&lastSpeech.length)speak(lastSpeech);};
 $('save').onclick=()=>{try{localStorage.setItem(SAVE,JSON.stringify(state));notice('Chapter saved: room, notebook, puzzle progress and duel.');}catch{notice('Saving is unavailable in this browser.');}};
 $('load').onclick=()=>{if(transition)return;try{const raw=localStorage.getItem(SAVE);if(!raw){notice('No chapter save yet.');return;}const restored=parseSave(raw);audio.stopSpeech();busy=false;state=restored;selected=null;evidenceChoice.clear();draw();roomPanel();notice('Chapter restored.');}catch{notice('That save is invalid. Your current progress has been kept.');}};
 $('main-menu').onclick=()=>{if(!busy&&!transition)front.menu();};

@@ -1,5 +1,12 @@
 import Phaser from 'phaser';
+import { RoomHeader, roomBadges, paintSound } from './room-header';
 import './style.css';
+const roomHeader=new RoomHeader(document.getElementById('room-header')!);
+roomHeader.render('tavern',[
+ {id:'tavern',badge:roomBadges.tavern,reachable:true,href:'./tavern-test.html',label:'← Back to the tavern'},
+ {id:'bridge',badge:roomBadges.bridge,reachable:true,href:'./bridge.html',linkId:'bridge-link'}
+],()=>{});
+
 import { tavernAudio } from './audio';
 
 type Verb = 'walk'|'look'|'talk'|'take'|'use';
@@ -80,8 +87,7 @@ window.addEventListener('keydown',e=>{if(e.target instanceof HTMLButtonElement||
 $('sound').onclick=()=>{
  const enabled=!tavernAudio.enabled;
  tavernAudio.setEnabled(enabled);
- $('sound').textContent=enabled?'Sound on':'Sound off';
- $('sound').setAttribute('aria-pressed',String(enabled));
+ paintSound($('sound'),enabled);
  if(enabled){
   const inDialogue=!$('dialogue').hidden;
   const text=inDialogue?$('speech').textContent:$('caption').querySelector('span')?.textContent;

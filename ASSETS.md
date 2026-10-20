@@ -1,5 +1,17 @@
 # Generated artwork
 
+## Illustrated room headers — 20 October 2026
+
+Generated with the built-in image-generation tool. `public/assets/game-logo.png` is the shared game wordmark; `public/assets/room-emblems.png` contains the tavern, bridge and landing emblems. Both are 1536 × 1024 RGBA assets. The runtime clips atlas frames for room headings and miniature-map destinations. Sound glyphs are inline SVG; act lettering is live styled text so future acts can change without regenerating artwork.
+
+### Game logo prompt
+
+Create an original illustrated logo for the pirate comedy adventure game "Monkey Buisness". Exact lettering MONKEY BUISNESS, intentionally spelled B-U-I-S-N-E-S-S. Wide compact horizontal logo, 1536x1024 transparent canvas, artwork centered with generous clear margins. Bold large gold hand-carved pirate serif lettering in two tight lines, MONKEY above BUISNESS, readable at small sizes. A small mischievous monkey silhouette curls around a brass compass to the left, weathered teal wooden plaque behind lettering, subtle rope and parchment details. Warm gold, teal, ink navy. Lavish hand-painted early 1990s adventure box illustration, clean silhouette, no extra text, no background scene, no existing franchise insignia. Actual transparent background outside the emblem. Logo fills central 90 percent width and 70 percent height.
+
+### Room emblems prompt
+
+Original pirate adventure UI room-emblem atlas, 1536x1024 canvas, THREE equal 512-pixel-wide columns. Exactly one ornate compact illustrated sign per column, entirely within column, no overlapping, each centered vertically. Hand-painted classic adventure game style, warm gold parchment, carved dark teal wood, brass and rope, strong distinct silhouettes. LEFT emblem: cozy crooked tavern and a brass compass, parchment lettering exactly "The Crooked Compass". MIDDLE emblem: small wooden footbridge, crossed fencing swords and cheeky emerald parrot, parchment lettering exactly "Quibble’s Crossing". RIGHT emblem: small dock, lighthouse and brass sighting instrument, parchment lettering exactly "Outer Landing". All three names clearly readable at medium size. Art occupies x20..490, x532..1002, x1044..1514, y230..790. No other lettering. Same scale and consistent craft. Actual transparent background throughout empty canvas, no scenery behind signs, no shadows or glow outside signs. Original designs, no franchise logos.
+
 ## Title sequence additions
 
 Generated with the built-in image-generation tool on 2026-10-19. Both images are 1536 × 1024. The splash uses original characters and a new composition in the painted adventure-box tradition; title lettering and decorative UI are HTML/CSS. The prologue uses animated camera moves and light effects over the workshop, existing map and tavern art.

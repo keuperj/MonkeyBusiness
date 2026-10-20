@@ -1,5 +1,12 @@
 import Phaser from 'phaser';
+import { RoomHeader, roomBadges, paintSound } from './room-header';
 import './style.css';
+const roomHeader=new RoomHeader(document.getElementById('room-header')!);
+roomHeader.render('bridge',[
+ {id:'tavern',badge:roomBadges.tavern,reachable:true,href:'./tavern-test.html',label:'← Back to the tavern'},
+ {id:'bridge',badge:roomBadges.bridge,reachable:true,href:'./bridge.html',linkId:'bridge-link'}
+],()=>{});
+
 import './bridge.css';
 import duel from './duel.json';
 import { tavernAudio as audio } from './audio';
@@ -71,7 +78,7 @@ new Phaser.Game({type:Phaser.AUTO,parent:'game',width:1536,height:1024,pixelArt:
 $('begin').onclick=()=>challenge();
 $('next').onclick=()=>{if(busy||!answered)return;if(round===duel.rounds.length-1)finish();else{round++;challenge();}};
 $('retry').onclick=reset;$('restart').onclick=reset;
-$('sound').onclick=()=>{audio.setEnabled(!audio.enabled);$('sound').textContent=audio.enabled?'Sound on':'Sound off';$('sound').setAttribute('aria-pressed',String(audio.enabled));if(audio.enabled){if(phase==='intro')voice(duel.intro);else if(phase==='challenge')voice([{who:duel.rounds[round].who,text:duel.rounds[round].insult}]);else if(phase==='result')voice(wins>=3?duel.win:duel.lose);}};
+$('sound').onclick=()=>{audio.setEnabled(!audio.enabled);paintSound($('sound'),audio.enabled);if(audio.enabled){if(phase==='intro')voice(duel.intro);else if(phase==='challenge')voice([{who:duel.rounds[round].who,text:duel.rounds[round].insult}]);else if(phase==='result')voice(wins>=3?duel.win:duel.lose);}};
 $('motion').setAttribute('aria-pressed',String(reduced));$('motion').onclick=()=>{reduced=!reduced;$('motion').setAttribute('aria-pressed',String(reduced));if(busy)return;scene.resetActors();};
 document.addEventListener('audio-unavailable',()=>{$('sound').title='Some audio could not play. Written dialogue is always available.';});
 document.querySelectorAll<HTMLButtonElement>('button').forEach(b=>b.disabled=true);

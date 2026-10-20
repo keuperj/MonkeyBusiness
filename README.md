@@ -36,6 +36,10 @@ The introduction has subtitles, **Pause / Resume**, **Next scene** and **Skip in
 
 Map travel follows traced waypoints along the tavern lane, timber bridge and repair-yard quay. Return journeys follow the same paths in reverse.
 
+## Illustrated room headers
+
+All rooms share one compact header row: game logo and current-room emblem on the left, decorative act lettering, and reachable-room emblems beside the sound icon on the right. Click a destination emblem to travel; destinations appear as progress unlocks them. Hover or focus an emblem for its room name. Future-room integration is documented in [ROOM_HEADERS.md](docs/ROOM_HEADERS.md).
+
 ## Controls
 
 Click the floor to walk. Choose **Look at**, **Talk to**, **Pick up** or **Use**, then click a person or object. Click a pocket item to use it with a scene target. Keys 1–5 select verbs, H toggles hotspots, and Escape closes a conversation. The expandable object list provides keyboard-accessible alternatives to canvas hotspots.
