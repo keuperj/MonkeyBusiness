@@ -1,6 +1,12 @@
 {
   "provider": "ElevenLabs",
   "speech": {
+    "NELL:Repair Quay. My investigation starts among patched hulls and honest tools. Boats may leak, but at least they admit it.": "a2-nell-f7ae655e7b2f3659.mp3",
+    "NELL:The Quay Quill prints the local news. I need a reliable timeline. Preferably one written before the editor discovers how much more exciting tomorrow sounds.": "a2-nell-b94ceaa54609f30f.mp3",
+    "NELL:Rook House. Somewhere behind that respectable front door is the maker of our mysterious mechanism. I hope getting answers is simpler than getting breakfast.": "a2-nell-3234e100142bae65.mp3",
+    "NELL:Blind Inlet hides behind the cliffs. A good place to identify a suspicious ship, provided I can distinguish suspicious from merely expensive.": "a2-nell-f91ce6379a3916a6.mp3",
+    "NELL:The Fair Passage Survey Office. Where measurements become official. I intend to find out whether the truth still fits once they've put it on company stationery.": "a2-nell-d5e62ee2e353925e.mp3",
+    "NELL:Here I am at Repair Quay. Three leads, one pencil, and a harbour full of people who would rather I used neither.": "a2-nell-eaf4ec7b62a1fd24.mp3",
     "NELL:Who actually saw the current change?": "a2-nell-e156e4e371d46cda.mp3",
     "PIP:The ferry clerk saw her loose line turn. The fish seller saw the launch. The lantern tender heard two bells. None saw a ghost, which has inconvenienced my layout.": "a2-pip-031b1305e36c92ea.mp3",
     "NELL:Two bells?": "a2-nell-0e9292d8ea7c5206.mp3",

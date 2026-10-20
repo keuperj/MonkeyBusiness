@@ -20,6 +20,7 @@ class TavernAudio {
   private report = () => document.dispatchEvent(new CustomEvent('audio-unavailable'));
 
   constructor() {
+    try{this.enabled=sessionStorage.getItem('monkey-buisness-sound')==='true';}catch{}
     this.ambience.loop = this.steps.loop = true;
     this.ambience.preload = this.steps.preload = 'none';
     this.ambience.volume = .28;
@@ -45,6 +46,7 @@ class TavernAudio {
   }
   setEnabled(enabled: boolean) {
     this.enabled = enabled;
+    try{sessionStorage.setItem('monkey-buisness-sound',String(enabled));}catch{}
     if (enabled) this.resumeBeds();
     else this.pauseAll();
   }

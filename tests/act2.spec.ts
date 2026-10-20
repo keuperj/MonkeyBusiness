@@ -5,7 +5,7 @@ const config=JSON.parse(readFileSync('public/debug-start.json','utf8')) as {pres
 test('all Act II debug presets contain valid progression',()=>{for(const p of config.presets.filter(p=>p.act===2)){const s=fresh2(p.room as any);Object.assign(s.flags,p.flags);s.items=[...new Set([...s.items,...((p as any).items||[])])] as any;expect(()=>parse2(JSON.stringify(s))).not.toThrow();}const invalid=fresh2();invalid.flags.complete=true;expect(()=>parse2(JSON.stringify(invalid))).toThrow();});
 test('complete Act II without Pip; deliberate handover and persistent ending',async({page})=>{
  test.setTimeout(180000);const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('/act2.html?new=1');await expect(page.locator('#game')).toHaveAttribute('data-ready','true',{timeout:90000});
+ await page.goto('/act2.html?new=1');await page.locator('#arrival-skip').click({timeout:90000});await expect(page.locator('#game')).toHaveAttribute('data-ready','true',{timeout:90000});
  const click=async(name:string)=>page.getByRole('button',{name,exact:true}).click();
  const target=async(id:string)=>{const d=page.locator('#panel details');if(!await d.count()){await click('Back to the room');}if(!await page.locator('#panel details').evaluate((e:HTMLDetailsElement)=>e.open))await page.locator('#panel summary').click();await page.locator(`[data-target="${id}"]`).click();};
  const go=async(name:string)=>{await page.locator('#map').click();await page.locator('#book').getByRole('button',{name,exact:true}).click();await page.locator('#travel-skip').click();};

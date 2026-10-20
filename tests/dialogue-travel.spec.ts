@@ -5,7 +5,7 @@ test('leaving a room cancels voices, queued captions and replay state',async({pa
   HTMLMediaElement.prototype.play=function(){(window as any).__media.push({el:this,src:this.src,paused:false});return Promise.resolve();};
   HTMLMediaElement.prototype.pause=function(){for(const m of (window as any).__media)if(m.el===this)m.paused=true;};
  });
- await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#start-game').click();await page.locator('#intro-skip').click();await page.locator('#sound').click();
+ await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#start-game').click();await page.locator('#intro-skip').click();await page.locator('#arrival-skip').click();await page.locator('#sound').click();
  await expect(page.locator('#caption')).toContainText('surveying work');
  await page.locator('#room-nav').getByRole('button',{name:'Quibble’s Crossing',exact:true}).click();await expect(page.locator('#travel')).toBeVisible();await expect(page.locator('#caption')).toHaveText('');await expect(page.locator('#panel')).toHaveText('');
  expect(await page.evaluate(()=>(window as any).__media.some((m:any)=>/\/nell-/.test(m.src)))).toBe(true);

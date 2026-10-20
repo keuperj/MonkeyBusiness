@@ -1,0 +1,22 @@
+{
+ "1": {
+  "title":"Act I · A Job, a Tankard and a Toll", "arrival":"tavern", "known":[],
+  "venues":[
+   {"room":null,"name":"Welcome to Brindle Quay","who":"NELL","text":"Brindle Quay. A city built on trade, tides, and the firm belief that somebody else will pay for repairs. Somewhere in these crooked streets, there must be work for a chartmaker."},
+   {"room":"tavern","name":"The Crooked Compass","who":"NELL","text":"The Crooked Compass. Warm food, sailors with stories, and probably somebody who needs a map. An excellent place to start, particularly the warm food part."},
+   {"room":"bridge","name":"Quibble’s Crossing","who":"NELL","text":"Quibble's Crossing connects the tavern streets to the harbour. Apparently the toll collector accepts sharp wit. At last, a currency I haven't already spent."}
+  ],
+  "closing":{"who":"NELL","text":"Here I am, at the Crooked Compass. Time to put this city on my map, and some supper on my plate."}
+ },
+ "2": {
+  "title":"Act II · Respectable Nonsense", "arrival":"quay", "known":["tavern","bridge","landing"],
+  "venues":[
+   {"room":"quay","name":"Repair Quay","who":"NELL","text":"Repair Quay. My investigation starts among patched hulls and honest tools. Boats may leak, but at least they admit it."},
+   {"room":"press","name":"The Quay Quill","who":"NELL","text":"The Quay Quill prints the local news. I need a reliable timeline. Preferably one written before the editor discovers how much more exciting tomorrow sounds."},
+   {"room":"hall","name":"Rook House","who":"NELL","text":"Rook House. Somewhere behind that respectable front door is the maker of our mysterious mechanism. I hope getting answers is simpler than getting breakfast."},
+   {"room":"inlet","name":"Blind Inlet","who":"NELL","text":"Blind Inlet hides behind the cliffs. A good place to identify a suspicious ship, provided I can distinguish suspicious from merely expensive."},
+   {"room":"office","name":"Fair Passage Survey Office","who":"NELL","text":"The Fair Passage Survey Office. Where measurements become official. I intend to find out whether the truth still fits once they've put it on company stationery."}
+  ],
+  "closing":{"who":"NELL","text":"Here I am at Repair Quay. Three leads, one pencil, and a harbour full of people who would rather I used neither."}
+ }
+}

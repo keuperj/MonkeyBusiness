@@ -8,6 +8,7 @@ const root='public/audio'; await mkdir(root,{recursive:true});
 const transcript=new Map();
 const add=(who,text)=>transcript.set(`${who}:${text}`,{who,text});
 for(const [who,lines] of Object.entries(conversations))for(const text of lines)add(who,text);
+const arrival=JSON.parse(await readFile('src/act-arrivals.json','utf8'))['1'];for(const l of [...arrival.venues,arrival.closing])add(l.who,l.text);
 const chapter=JSON.parse(await readFile('src/chapter-lines.json','utf8'));
 for(const line of Object.values(chapter))add(line.who,line.text);
 const intro=JSON.parse(await readFile('src/intro-lines.json','utf8'));

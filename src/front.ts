@@ -1,3 +1,4 @@
+import {introduceAct} from './act-arrival';
 import { tavernAudio as audio } from './audio';
 import lines from './intro-lines.json';
 import { AUTO, SAVE, parseSave, fresh, rooms, type ChapterState } from './chapter-state';
@@ -76,7 +77,7 @@ export class Front {
  private beat(){
   this.elapsed=0;const beat=beats[this.index];const img=$<HTMLImageElement>('intro-image');img.src=`${import.meta.env.BASE_URL}assets/${beat.image}`;img.alt=beat.alt;
   $('intro-heading').textContent=beat.title;$('intro-text').textContent=beat.line.text;$('intro-count').textContent=`${this.index+1} / ${beats.length}`;
-  $('intro-next').textContent=this.index===beats.length-1?'Enter the tavern →':'Next scene →';$('intro').dataset.beat=String(this.index);
+  $('intro-next').textContent=this.index===beats.length-1?'Discover Brindle Quay →':'Next scene →';$('intro').dataset.beat=String(this.index);
   img.getAnimations().forEach(a=>a.cancel());if(!this.reduced)img.animate([{transform:'scale(1.02) translateX(-1%)',opacity:.5},{transform:'scale(1.08) translateX(1%)',opacity:1}],{duration:14000,fill:'forwards',easing:'ease-out'});
   this.narrate();
  }
@@ -89,7 +90,7 @@ export class Front {
   if(this.view==='intro')this.raf=requestAnimationFrame(this.frame);
  };
  private next(){if(this.view!=='intro')return;if(this.index===beats.length-1)this.finish();else{this.index++;this.beat();}}
- private finish(){if(this.view==='intro')this.launch();}
+ private async finish(){if(this.view!=='intro')return;this.stop();this.view='map-intro';this.dialog.close();await introduceAct(1,this.reduced);this.launch();}
  private stop(){cancelAnimationFrame(this.raf);this.token++;audio.stopSpeech();$('intro-image').getAnimations().forEach(a=>a.cancel());}
  private async prepareChapter(next:()=>void){
   if(this.loading)return;this.loading=true;this.stop();this.leave();document.body.classList.add('at-title');document.querySelector<HTMLElement>('.chapter-shell')!.inert=true;if(!this.dialog.open)this.dialog.showModal();this.show('chapter-loading');$('chapter-retry').hidden=true;

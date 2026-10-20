@@ -111,3 +111,9 @@ Chapter entry now downloads and verifies Act I’s artwork and audio before init
 ### Act II — Respectable Nonsense
 
 Act II is playable from the Act I ending or the start menu's configurable **Debug start** selector. Choose act and room; `public/debug-start.json` controls the available presets and the `enabled` switch. Six new rooms, the returning harbour locations, voiced conversations, seven main puzzles, optional classic-adventure Easter eggs, chapter precaching and separate Act II saves are included. See [Act II implementation](docs/ACT_2_IMPLEMENTATION.md) for configuration and asset regeneration.
+
+### Narrated chapter arrivals
+
+New adventures show Nell’s prologue followed by a map introduction to Brindle Quay and the initially accessible Act I venues. Entering Act II for the first time reveals its five new accessible venues over the already known harbour. Each reveal has Nell’s recorded narration and subtitles; the final marker identifies her arrival before the map dissolves into the room. Locked venues are introduced through gameplay instead. Loading a save or using a debug preset bypasses these introductions.
+
+Edit `src/act-arrivals.json` to change the venue order, introductions, known locations, or arrival point. `src/act-arrival.ts` supplies the shared reveal sequence, next/skip controls, sound control, hidden-tab pause, and reduced-motion support. The sound preference carries between acts for the browser session. Narration is included in the chapter pre-cache; regenerate changed lines with `node scripts/generate-audio.mjs` (Act I) and `node scripts/generate-act2-audio.mjs` (Act II), then rebuild the asset manifests with `npm run build`.

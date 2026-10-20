@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 
 test('icon controls retain actions, pocket tools and permanent pencil and lint',async({page})=>{
- await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#start-game').click();await page.locator('#intro-skip').click();
+ await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#start-game').click();await page.locator('#intro-skip').click();await page.locator('#arrival-skip').click();
  for(const verb of ['Walk to','Look at','Talk to','Pick up','Use']){const button=page.locator('#verbs').getByRole('button',{name:verb,exact:true});await expect(button.locator('svg')).toBeVisible();await expect(button).toHaveText('');}
  await expect(page.locator('footer #notebook,footer #map')).toHaveCount(0);await expect(page.locator('.pockets #notebook')).toBeVisible();await expect(page.locator('.pockets #map')).toBeVisible();
  await expect(page.getByRole('img',{name:/Pencil —/})).toBeVisible();await expect(page.getByRole('img',{name:/Lint —/})).toBeVisible();

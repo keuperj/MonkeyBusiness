@@ -270,6 +270,62 @@
       }
     },
     {
+      "file": "nell-8454e30c3fa8d771.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Brindle Quay. A city built on trade, tides, and the firm belief that somebody else will pay for repairs. Somewhere in these crooked streets, there must be work for a chartmaker.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-e5b4d77f6e6c6ba2.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The Crooked Compass. Warm food, sailors with stories, and probably somebody who needs a map. An excellent place to start, particularly the warm food part.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-c4c8f0ffb7ea0622.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Quibble's Crossing connects the tavern streets to the harbour. Apparently the toll collector accepts sharp wit. At last, a currency I haven't already spent.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-0d8951b8428d290e.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Here I am, at the Crooked Compass. Time to put this city on my map, and some supper on my plate.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
       "file": "nell-c7cb5fab18c25958.mp3",
       "character": "NELL",
       "voice": "Alice",
@@ -2412,6 +2468,20 @@
       }
     },
     {
+      "file": "nell-71762b8b7556d403.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An old survey of Bellweather Shoal.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
       "file": "nell-a01701f4f5e58e98.mp3",
       "character": "NELL",
       "voice": "Alice",
@@ -2459,6 +2529,20 @@
       "voice": "Alice",
       "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
       "text": "Look at",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "nell-6edc98a110090359.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An old survey rests inside the chest.",
       "model_id": "eleven_multilingual_v2",
       "voice_settings": {
         "stability": 0.45,
