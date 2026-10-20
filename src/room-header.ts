@@ -1,7 +1,7 @@
 import './room-header.css';
 import {icon} from './control-icons';
 const base=import.meta.env.BASE_URL;
-export type RoomBadge={name:string;art:string;frame:string;point:[number,number]};
+export type RoomBadge={name:string;art:string;frame:string;point:readonly [number,number]};
 export const roomBadges:Record<string,RoomBadge>={
  tavern:{name:'The Crooked Compass',art:'room-emblems.png',frame:'0 120 520 800',point:[188,799]},
  bridge:{name:'Quibble’s Crossing',art:'room-emblems.png',frame:'520 120 510 800',point:[337,583]},

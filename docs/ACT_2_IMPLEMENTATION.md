@@ -69,3 +69,9 @@ Both acts use `src/location-map.ts` for notebook maps, marking the current room 
 The quay, newspaper and workshop backgrounds were edited with built-in image generation to remove baked-in collectibles. Original atlas sprites are now rendered conditionally over the cleared surfaces. Exact prompts and paths: [COLLECTIBLE_ART_EDITS.md](COLLECTIBLE_ART_EDITS.md).
 
 Audit: Act I tankard, boathook and chest survey already used conditional sprites; collected tankard hit areas now also disappear. The isolated tavern test room disables collected-item hit areas and hides their hotspot labels. The chest key remains in the lock intentionally; the current indicator, recovered boat and fitted crank remain in their new world positions rather than being pocketed. Pencil/lint are starting inventory; the annotated copy and receipt are created/received documents, not loose background pickups.
+
+## Clickable map and walking routes
+
+Both acts now render all currently accessible rooms as numbered map buttons, with matching named buttons below the illustration. Markers support mouse, touch and keyboard activation. Nearby entrances are separated automatically at the current display size; dotted leader lines retain their true positions. The current room remains red. Act I hides the outer landing until passage is won; Act II hides the workshop until breakfast is repaired.
+
+`src/map-routes.ts` is the shared coordinate and pedestrian-route source for both acts. It traces the tavern lane, Quibble’s bridge, dock boards, the road past Pip’s newspaper, the winding uphill lane, the maintenance access above the inlet, and the company-office quay. Routes traverse this network and reverse exactly; they do not interpolate arbitrary bends between room centres. The inlet pin marks its land-side access, and the workshop has a separate entrance beside Rook’s hall. Future rooms need an entrance and a traced connection in this network as well as their act’s reachability rule.

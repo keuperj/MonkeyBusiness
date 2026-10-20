@@ -6,7 +6,7 @@
 <div class="splash-bottom"><button id="splash-enter" class="front-primary">Enter Brindle Quay <span>→</span></button><p>An original point-and-click adventure</p></div>
 </section>
 <section id="start-menu" class="front-view" hidden>
-<img class="menu-map" src="/assets/story-map.png" alt="Illustrated map of Brindle Quay and Bellweather Shoal">
+<img class="menu-map" src="/assets/story-map-walkways.png" alt="Illustrated map of Brindle Quay and Bellweather Shoal">
 <div class="menu-card"><span class="compass-ornament" aria-hidden="true">✧</span><p class="front-kicker">WELCOME TO BRINDLE QUAY</p><h1>Monkey Buisness</h1><p class="menu-subtitle">A job, a tankard and a toll.</p>
 <div id="menu-actions"><button id="start-game" class="front-primary" data-needs-ready disabled>Start game <span>→</span></button><button id="load-game" data-needs-ready disabled>Load game</button></div>
 <button id="act2-game" hidden>Continue Act II</button><details id="debug-start" hidden><summary>Debug · choose act and room</summary><label>Act <select id="debug-act" aria-label="Debug act"></select></label><label>Room / starting state <select id="debug-room" aria-label="Debug room"></select></label><button id="debug-launch">Start debug room</button><p>Uses a fresh preset and replaces that act’s autosave. Manual saves are kept.</p></details><div id="front-saves" hidden></div><p id="front-status" role="status">Unfolding the charts…</p><p class="menu-footnote">ACT I · ONLY PRIDE GETS HURT HERE</p></div>
@@ -34,5 +34,5 @@
 <p id="notice" role="status" aria-live="polite"></p>
 </main>
 <dialog id="book"><div class="modal-header"><h2 id="book-title">Nell’s notebook</h2><button id="close-book" aria-label="Close notebook">Close ✕</button></div><div id="book-content"></div></dialog>
-<dialog id="travel"><div class="modal-header"><div><p class="eyebrow">NELL’S WORKING CHART</p><h2 id="travel-title">Brindle Quay</h2></div><button id="travel-skip">Continue →</button></div><div class="map-art"><img src="/assets/story-map.png" alt="Map of Brindle Quay: tavern at southwest, bridge northeast of it, repair-yard landing farther northeast."><svg viewBox="0 0 1536 1024" aria-label="Red travel route"><path id="route-shadow"/><path id="route"/><circle id="traveller" r="10"/></svg></div><p id="travel-description"></p></dialog>
+<dialog id="travel"><div class="modal-header"><div><p class="eyebrow">NELL’S WORKING CHART</p><h2 id="travel-title">Brindle Quay</h2></div><button id="travel-skip">Continue →</button></div><div class="map-art"><img src="/assets/story-map-walkways.png" alt="Map of Brindle Quay: tavern at southwest, bridge northeast of it, repair-yard landing farther northeast."><svg viewBox="0 0 1536 1024" aria-label="Red travel route"><path id="route-shadow"/><path id="route"/><circle id="traveller" r="10"/></svg></div><p id="travel-description"></p></dialog>
 <script type="module" src="/src/chapter.ts"></script></body></html>

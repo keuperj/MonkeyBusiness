@@ -8,7 +8,7 @@ import {cacheChapter} from './chapter-cache';
 const $ = <T extends HTMLElement = HTMLElement>(id:string) => document.getElementById(id) as T;
 const beats = [
  {title:'A pencil, a coastline, a beginning.',image:'intro-workshop.png',alt:'Nell teaches herself chartmaking in her family’s coastal repair workshop.',line:lines.prologue1},
- {title:'One harbour. A thousand possibilities.',image:'story-map.png',alt:'The winding streets, bridges and quays of Brindle Quay.',line:lines.prologue2},
+ {title:'One harbour. A thousand possibilities.',image:'story-map-walkways.png',alt:'The winding streets, bridges and quays of Brindle Quay.',line:lines.prologue2},
  {title:'First things first: supper.',image:'tavern.png',alt:'The warm lantern-lit interior of the Crooked Compass tavern.',line:lines.prologue3},
 ];
 export class Front {

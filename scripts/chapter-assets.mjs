@@ -4,7 +4,7 @@ async function scan(dir){const result=[];for(const entry of await readdir(`publi
 const assets=(await Promise.all(['assets','audio'].map(scan))).flat().sort((a,b)=>a.path.localeCompare(b.path));
 const first=assets.filter(a=>!a.path.startsWith('assets/act2/')&&!/^audio\/(a2-|act2-)/.test(a.path));
 await writeFile('public/chapter-assets.json',JSON.stringify({chapter:'Act I — A Job, a Tankard and a Toll',assets:first}));
-const shared=new Set(['sprites','duel-sprites','quibble-idle','chest-open','chapter-props','tavern','bridge','landing','story-map','game-logo','room-badges','room-emblems','control-icons','harbour-tools','pirate-ui-atlas']);
+const shared=new Set(['sprites','duel-sprites','quibble-idle','chest-open','chapter-props','tavern','bridge','landing','story-map-walkways','game-logo','room-badges','room-emblems','control-icons','harbour-tools','pirate-ui-atlas']);
 const audio2=JSON.parse(await readFile('src/act2-audio-manifest.json','utf8'));
 const audio1=JSON.parse(await readFile('src/audio-manifest.json','utf8'));
 const requiredAudio=new Set([...Object.values(audio2.speech),...Object.values(audio2.effects),...['tavern-ambience','bridge-ambience','footsteps','pickup','float-free','boat-pass'].map(k=>audio1.effects[k])]);
