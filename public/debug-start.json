@@ -1,0 +1,131 @@
+{
+  "enabled": true,
+  "presets": [
+    {
+      "id": "act1-tavern",
+      "label": "The Crooked Compass",
+      "act": 1,
+      "room": "tavern",
+      "flags": {
+        "intro": true
+      }
+    },
+    {
+      "id": "act1-bridge",
+      "label": "Quibble\u2019s Crossing",
+      "act": 1,
+      "room": "bridge",
+      "flags": {
+        "intro": true
+      }
+    },
+    {
+      "id": "act1-landing",
+      "label": "Outer Landing",
+      "act": 1,
+      "room": "landing",
+      "flags": {
+        "intro": true,
+        "passage": true
+      }
+    },
+    {
+      "id": "act2-quay",
+      "label": "Repair Quay",
+      "act": 2,
+      "room": "quay",
+      "flags": {}
+    },
+    {
+      "id": "act2-press",
+      "label": "The Quay Quill",
+      "act": 2,
+      "room": "press",
+      "flags": {}
+    },
+    {
+      "id": "act2-hall",
+      "label": "Breakfast Hall",
+      "act": 2,
+      "room": "hall",
+      "flags": {}
+    },
+    {
+      "id": "act2-workshop",
+      "label": "Rook\u2019s Workshop",
+      "act": 2,
+      "room": "workshop",
+      "flags": {
+        "house": true
+      }
+    },
+    {
+      "id": "act2-inlet",
+      "label": "Blind Inlet",
+      "act": 2,
+      "room": "inlet",
+      "flags": {}
+    },
+    {
+      "id": "act2-office",
+      "label": "Survey Office",
+      "act": 2,
+      "room": "office",
+      "flags": {}
+    },
+    {
+      "id": "act2-tavern",
+      "label": "Tavern \u00b7 Act II",
+      "act": 2,
+      "room": "tavern",
+      "flags": {}
+    },
+    {
+      "id": "act2-bridge",
+      "label": "Crossing \u00b7 Act II",
+      "act": 2,
+      "room": "bridge",
+      "flags": {}
+    },
+    {
+      "id": "act2-landing",
+      "label": "Landing \u00b7 Act II",
+      "act": 2,
+      "room": "landing",
+      "flags": {}
+    },
+    {
+      "id": "act2-handover",
+      "label": "Survey Office \u00b7 ready to deliver",
+      "act": 2,
+      "room": "office",
+      "flags": {
+        "timeline": true,
+        "maker": true,
+        "house": true,
+        "drawing": true,
+        "description": true,
+        "details": true,
+        "identified": true,
+        "invited": true,
+        "inspect": true,
+        "equal": true,
+        "open": true,
+        "line": true,
+        "ropeAttached": true,
+        "secured": true,
+        "orinInvited": true,
+        "boat": true,
+        "drain": true,
+        "pillar": true,
+        "staff": true,
+        "measured": true,
+        "copy": true
+      },
+      "items": [
+        "drawing",
+        "copy"
+      ]
+    }
+  ]
+}

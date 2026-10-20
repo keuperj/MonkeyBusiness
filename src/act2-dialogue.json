@@ -1,0 +1,1102 @@
+{
+  "topics": [
+    {
+      "id": "PIP-02",
+      "question": "Who actually saw the current change?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "The ferry clerk saw her loose line turn. The fish seller saw the launch. The lantern tender heard two bells. None saw a ghost, which has inconvenienced my layout."
+        }
+      ]
+    },
+    {
+      "id": "PIP-03",
+      "question": "Two bells?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "One outside, one from the old return pipe. I called it an answer."
+        },
+        {
+          "who": "NELL",
+          "text": "To what question?"
+        },
+        {
+          "who": "PIP",
+          "text": "That was going to be tomorrow's edition."
+        }
+      ]
+    },
+    {
+      "id": "PIP-04",
+      "question": "Your headline says the lighthouse predicts yesterday.",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "An exclusive."
+        },
+        {
+          "who": "NELL",
+          "text": "Yesterday is unusually well covered."
+        },
+        {
+          "who": "PIP",
+          "text": "Yes. Competition has been brutal."
+        }
+      ]
+    },
+    {
+      "id": "PIP-05",
+      "question": "Do you know the name Rook?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Town lane, house with the weather vane that argues with the wind. Dr. Rook builds mechanisms. Her family built reasons not to discuss them."
+        }
+      ]
+    },
+    {
+      "id": "PIP-06",
+      "question": "Orin's ship is missing.",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Then I owe him a correction. I printed that it had retired."
+        },
+        {
+          "who": "NELL",
+          "text": "Did anyone see it?"
+        },
+        {
+          "who": "PIP",
+          "text": "A striped cabin behind the old yard screen. The witness could not see a name."
+        }
+      ]
+    },
+    {
+      "id": "PIP-07",
+      "question": "Will you print what I find?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "If I can show readers how you know it."
+        },
+        {
+          "who": "NELL",
+          "text": "Even if it's less exciting?"
+        },
+        {
+          "who": "PIP",
+          "text": "I have a very large typeface. I can make accuracy look alarming."
+        }
+      ]
+    },
+    {
+      "id": "PIP-08",
+      "question": "I need tracing paper.",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "The clean tray. Same public supply as the quay. Please don't take a headline; they're still wet."
+        }
+      ]
+    },
+    {
+      "id": "PIP-09",
+      "question": "Back to the harbour.",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Bring facts. I can provide the exclamation marks."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-02",
+      "question": "What is breakfast waiting for?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "The heater waits for the serving bell. The bell waits for the table. The table waits for the heater to finish. My grandfather called this perfect supervision."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-03",
+      "question": "Why not turn the whole thing off?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "The trolley brake releases under local control. Kill the supply and it stays across the workshop door, celebrating its final decision."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-04",
+      "question": "Could each part do its own job?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Yes. The labels explain how. I have been rather busy preventing the tea from entering a new state of matter."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-05",
+      "question": "Can I help?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Keep the heater warm, park the table, put the bell on hand control. Then release the trolley. In that order, if you value the cups."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-06",
+      "question": "Does the harbour work like your breakfast?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Not literally. I have never charged a ship for marmalade. Finish here and I will show you the distinction."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-07",
+      "question": "I'll look at the controls.",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Read the little words. My family spent generations engraving them and minutes following them."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-10",
+      "question": "Is this your relay?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Our pattern, replacement shutters. This number belongs to the repair-yard service inlet. Here is its drawing."
+        },
+        {
+          "who": "ROOK",
+          "text": "Bring a maker's name and relay number. The retired housing on the quay should still have its plate."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-11",
+      "question": "Why did nobody mention the service channel?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "It was for inspections, not through traffic. Commercial charts stopped printing it. Water is less attentive to revised editions."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-12",
+      "question": "How do I inspect the barrier safely?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Set the inlet to INSPECT. Open the equalising valve. Wait for the two marked levels to agree. Then turn the local crank. The interlock prevents you doing the dangerous version."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-13",
+      "question": "Can I borrow that crank?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Yes. It only fits this inspection socket. Please return it to its bracket when the barrier is latched."
+        },
+        {
+          "who": "ROOK",
+          "text": "Let me identify the mechanism first. ‘Approximately the right crank’ is a dangerous engineering tradition."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-14",
+      "question": "Can a local station disagree with the central controls?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "For inspection, yes. Larger coordination is another matter. This drawing covers one barrier, not the whole network."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-15",
+      "question": "Why are you reluctant to discuss your family?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "We put our name on systems before we understood everyone who would depend on them."
+        },
+        {
+          "who": "NELL",
+          "text": "And now?"
+        },
+        {
+          "who": "ROOK",
+          "text": "Now I read the little words."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-16",
+      "question": "Vane offered to pay for my measurements.",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Accurate measurements are useful. Ask what permission travels with them."
+        },
+        {
+          "who": "NELL",
+          "text": "Could she use them to make it safer?"
+        },
+        {
+          "who": "ROOK",
+          "text": "Yes. That is why the question matters."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-17",
+      "question": "I freed the ship.",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Then the inspection route did its job. Leave the barrier in its marked safe position."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-18",
+      "question": "I should get back to the quay.",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "If a mechanism surprises you, stop turning it. An unpopular but serviceable rule."
+        }
+      ]
+    },
+    {
+      "id": "MARA-01",
+      "question": "I'm following the signal equipment.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Then find who made it, who uses it, and who says those are the same person."
+        }
+      ]
+    },
+    {
+      "id": "MARA-02",
+      "question": "I borrowed your boathook.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Bring it back when it has finished being useful. It was wasted on the wall."
+        }
+      ]
+    },
+    {
+      "id": "MARA-03",
+      "question": "Vane says my work is worth paying for.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "It is. That doesn't tell you what she wants to buy."
+        }
+      ]
+    },
+    {
+      "id": "MARA-04",
+      "question": "Should I take the commission?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Read it. Keep your original. Ask what happens to the copy. The choice is yours."
+        }
+      ]
+    },
+    {
+      "id": "MARA-05",
+      "question": "I found Orin's ship.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Good. Perhaps he'll stop using my tables to demonstrate where it isn't."
+        }
+      ]
+    },
+    {
+      "id": "MARA-06",
+      "question": "Do you know anything about the old gates?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Enough to know their drawings deserve care. Bring me what you can actually establish."
+        }
+      ]
+    },
+    {
+      "id": "MARA-07",
+      "question": "I'll keep looking.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Eat something before you decide the fate of the harbour."
+        }
+      ]
+    },
+    {
+      "id": "ORIN-02",
+      "question": "Why didn't you look behind the screen?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "The notice said CLOSED CHANNEL. I interpreted it rather completely."
+        }
+      ]
+    },
+    {
+      "id": "ORIN-03",
+      "question": "I saw the stripes and the kettle.",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Then she is there."
+        },
+        {
+          "who": "NELL",
+          "text": "You sound surprised."
+        },
+        {
+          "who": "ORIN",
+          "text": "Relieved. I have been performing surprise to avoid that."
+        }
+      ]
+    },
+    {
+      "id": "ORIN-04",
+      "question": "Come to the inlet.",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Open the inspection access safely first. I can wait without making another navigational decision."
+        },
+        {
+          "who": "ORIN",
+          "text": "I'll meet you there. Bring a proper mooring line."
+        }
+      ]
+    },
+    {
+      "id": "ORIN-05",
+      "question": "Any advice on the old survey?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Trust fixed marks. Correct what you can measure. Leave a clear note where you can't."
+        }
+      ]
+    },
+    {
+      "id": "BRIDGE-01",
+      "question": "I'm investigating the company's trials.",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "At last. A rival with enough paperwork to deserve being called a trial."
+        },
+        {
+          "who": "FINE PRINT",
+          "text": "Record dates. Insults age poorly as evidence."
+        }
+      ]
+    },
+    {
+      "id": "BRIDGE-02",
+      "question": "What does ‘operational use of measurements’ mean?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "It means they may operate using the measurements. A sentence can be perfectly honest and still deserve your attention."
+        }
+      ]
+    },
+    {
+      "id": "BRIDGE-03",
+      "question": "Their licence allows public inspection.",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Then inspect publicly."
+        },
+        {
+          "who": "FINE PRINT",
+          "text": "Safely. He omits adverbs when excited."
+        }
+      ]
+    },
+    {
+      "id": "BRIDGE-04",
+      "question": "I found a way to recover Orin's ship.",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "A fine rescue. I once rescued a fleet."
+        },
+        {
+          "who": "FINE PRINT",
+          "text": "Of receipts. From a puddle."
+        }
+      ]
+    },
+    {
+      "id": "BRIDGE-05",
+      "question": "I need advice, not another duel.",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Then you may cross. I am experimenting with relevance."
+        }
+      ]
+    },
+    {
+      "id": "VANE-04",
+      "question": "What will you do with my copy?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Calibrate the service route and coordinate it with our marked passage. The commission says operational use."
+        }
+      ]
+    },
+    {
+      "id": "VANE-05",
+      "question": "Will other boats benefit?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "A dependable harbour benefits every operator. The terms of access will be published."
+        }
+      ]
+    },
+    {
+      "id": "VANE-06",
+      "question": "That is not the same as free access.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "No. Maintenance, crews and liability cost money. I do not propose to finance them with optimism."
+        }
+      ]
+    },
+    {
+      "id": "VANE-07",
+      "question": "My evidence doesn't prove you caused every change.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Correct. That distinction is one reason I am hiring you."
+        }
+      ]
+    },
+    {
+      "id": "VANE-08",
+      "question": "The trials hid Orin's ship.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "His vessel followed a trial marker into a service basin. We will correct the notice. I am paying for better measurements because imperfect arrangements have consequences."
+        }
+      ]
+    },
+    {
+      "id": "VANE-09",
+      "question": "I want public safety written into the purpose.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Agreed: ‘for safe local routing.’ The operating-policy clause remains."
+        }
+      ]
+    },
+    {
+      "id": "VANE-10",
+      "question": "I would like the credit to say independent surveyor.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Independent surveyor Nell. A precise description."
+        }
+      ]
+    },
+    {
+      "id": "VANE-11",
+      "question": "I need time to decide.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Take it. Precision is wasted if you sign without reading."
+        }
+      ]
+    },
+    {
+      "id": "VANE-12",
+      "question": "You knew what I wanted this to achieve.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "I knew you wanted accurate routes and paid work. You have provided the first and received the second."
+        }
+      ]
+    },
+    {
+      "id": "VANE-13",
+      "question": "Safety doesn't require owning every way through.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Someone must accept responsibility for coordinating them."
+        },
+        {
+          "who": "NELL",
+          "text": "Responsibility isn't the same as exclusive permission."
+        },
+        {
+          "who": "VANE",
+          "text": "We disagree about the practical difference."
+        }
+      ]
+    },
+    {
+      "id": "VANE-14",
+      "question": "Withdraw my name.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "I can record your objection. I cannot pretend the work was not yours."
+        }
+      ]
+    },
+    {
+      "id": "ORIN-06",
+      "question": "Can we leave now?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "She is ready. Finish your business ashore and speak to Mara. I will check the rigging; no voyage improves because someone skipped that."
+        }
+      ]
+    },
+    {
+      "id": "ORIN-07",
+      "question": "Do you mind if I question your route?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "I have named the ship Second Opinion. It would be poor seamanship to object."
+        }
+      ]
+    },
+    {
+      "id": "ORIN-08",
+      "question": "What did we prove?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "That the new marker diverted me, and a barrier hid the vessel. Not who gave the order. Keep those separate."
+        }
+      ]
+    },
+    {
+      "id": "PIP-12",
+      "question": "What do you make of the company announcement?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Your name is on their route sheet."
+        },
+        {
+          "who": "NELL",
+          "text": "So is the measurement I gave them."
+        },
+        {
+          "who": "PIP",
+          "text": "Then we print the distinction. A correction is not an erasure."
+        }
+      ]
+    },
+    {
+      "id": "ROOK-19",
+      "question": "What do you make of the company announcement?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "I told you to ask about permission."
+        },
+        {
+          "who": "NELL",
+          "text": "I asked. I wanted the answer to mean something kinder."
+        },
+        {
+          "who": "ROOK",
+          "text": "Then next time we must make the answer less optional."
+        }
+      ]
+    },
+    {
+      "id": "BRIDGE-06",
+      "question": "What do you make of the company announcement?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "Compulsory contracts. The word ‘all’ has found its teeth."
+        },
+        {
+          "who": "QUIBBLE",
+          "text": "Can we stop it?"
+        },
+        {
+          "who": "NELL",
+          "text": "Not by cutting something we don't understand."
+        }
+      ]
+    },
+    {
+      "id": "ORIN-09",
+      "question": "What do you make of the company announcement?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "The boat is ready."
+        },
+        {
+          "who": "NELL",
+          "text": "I have something to put right before we sail."
+        },
+        {
+          "who": "ORIN",
+          "text": "Then start with the person you need to tell."
+        }
+      ]
+    },
+    {
+      "id": "MARA-08",
+      "question": "What do you make of the company announcement?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "You look as though being right has gone badly."
+        },
+        {
+          "who": "NELL",
+          "text": "I need to tell you what I gave Vane."
+        },
+        {
+          "who": "MARA",
+          "text": "Then we'll make time."
+        }
+      ]
+    }
+  ],
+  "blocks": {
+    "A2-VANE-01": [
+      {
+        "who": "VANE",
+        "text": "Nell? Your drawing distinguishes a current from a rumour. That is rarer than you might think."
+      },
+      {
+        "who": "NELL",
+        "text": "You read my notes?"
+      },
+      {
+        "who": "VANE",
+        "text": "The public account. I would like to pay for a more complete survey."
+      },
+      {
+        "who": "NELL",
+        "text": "Of the channel, or of how much I know?"
+      },
+      {
+        "who": "VANE",
+        "text": "The first. The second appears to be increasing without my assistance."
+      }
+    ],
+    "A2-VANE-02": [
+      {
+        "who": "VANE",
+        "text": "Bring measurements, Miss Nell. I have cupboards full of assurances."
+      },
+      {
+        "who": "NELL",
+        "text": "For once, a qualification I possess."
+      }
+    ],
+    "A2-PIP-01": [
+      {
+        "who": "PIP",
+        "text": "Welcome to the Quay Quill. Are you news, a correction, or here about the roof?"
+      },
+      {
+        "who": "NELL",
+        "text": "The water changed direction after a company signal."
+      },
+      {
+        "who": "PIP",
+        "text": "News. Possibly a correction to several things I printed about the water."
+      },
+      {
+        "who": "NELL",
+        "text": "Can I see the original reports?"
+      },
+      {
+        "who": "PIP",
+        "text": "Certainly. The facts are underneath the adjectives."
+      }
+    ],
+    "A2-PIP-10": [
+      {
+        "who": "PIP",
+        "text": "Signal, current, launch. Three facts in order. I've had shorter careers in journalism."
+      },
+      {
+        "who": "NELL",
+        "text": "I compared the reports at the quay."
+      },
+      {
+        "who": "PIP",
+        "text": "Excellent. I shall describe this as our distributed newsroom."
+      }
+    ],
+    "A2-PIP-EGG": [
+      {
+        "who": "NELL",
+        "text": "I'll change ‘predicts’ to ‘repeats.’"
+      },
+      {
+        "who": "PIP",
+        "text": "You have reduced a supernatural exclusive to a plumbing complaint."
+      },
+      {
+        "who": "NELL",
+        "text": "Now people can fix it."
+      },
+      {
+        "who": "PIP",
+        "text": "A dangerous precedent for a newspaper."
+      }
+    ],
+    "A2-PIP-11": [
+      {
+        "who": "NELL",
+        "text": "The signal comes first. The clerk's line turns. Then the waiting launch moves."
+      },
+      {
+        "who": "PIP",
+        "text": "So our reliable claim is that somebody was prepared."
+      },
+      {
+        "who": "NELL",
+        "text": "Yes. Not that the sea joined the company."
+      },
+      {
+        "who": "PIP",
+        "text": "I will reluctantly withdraw its employee portrait."
+      }
+    ],
+    "A2-ROOK-01": [
+      {
+        "who": "ROOK",
+        "text": "Don't sit down. The table has not approved the chairs."
+      },
+      {
+        "who": "NELL",
+        "text": "Are the chairs applying separately?"
+      },
+      {
+        "who": "ROOK",
+        "text": "That is precisely the sort of question this house encourages."
+      },
+      {
+        "who": "NELL",
+        "text": "I'm following a signal relay with your family's name on it."
+      },
+      {
+        "who": "ROOK",
+        "text": "Then you have found a second system I would prefer to discuss while it is not boiling."
+      }
+    ],
+    "A2-ROOK-08": [
+      {
+        "who": "NELL",
+        "text": "Warm tea. Parked table. Bell waiting for a person. Astonishingly ordinary."
+      },
+      {
+        "who": "ROOK",
+        "text": "You have removed the management structure."
+      },
+      {
+        "who": "NELL",
+        "text": "It was obstructing the door."
+      },
+      {
+        "who": "ROOK",
+        "text": "Come into the workshop."
+      }
+    ],
+    "A2-ROOK-EGG": [
+      {
+        "who": "NELL",
+        "text": "The house is working. Are we allowed to sit?"
+      },
+      {
+        "who": "ROOK",
+        "text": "The chairs have formed a waiting list."
+      },
+      {
+        "who": "NELL",
+        "text": "At least they've found a standing arrangement."
+      },
+      {
+        "who": "NELL",
+        "text": "What does it make of pocket lint?"
+      },
+      {
+        "who": "ROOK",
+        "text": "An unlicensed nebula. Please keep it. The sorter charges by constellation."
+      }
+    ],
+    "A2-ROOK-09": [
+      {
+        "who": "ROOK",
+        "text": "My family made local routing gear. Gates, relays, things that should be boring when they work."
+      },
+      {
+        "who": "NELL",
+        "text": "The company signals before the current turns."
+      },
+      {
+        "who": "ROOK",
+        "text": "Then someone has put part of the network back into service."
+      },
+      {
+        "who": "NELL",
+        "text": "Can it control the tide?"
+      },
+      {
+        "who": "ROOK",
+        "text": "It can redirect water through connected channels. The moon remains regrettably independent."
+      }
+    ],
+    "A2-INLET-01": [
+      {
+        "who": "NELL",
+        "text": "A striped cabin behind a movable wall. Either Orin's ship is here, or architecture has taken up sailing."
+      }
+    ],
+    "A2-INLET-03": [
+      {
+        "who": "NELL",
+        "text": "Second Opinion. Present, afloat, and making a strong case against ‘vanished.’"
+      }
+    ],
+    "A2-ORIN-RECOVER": [
+      {
+        "who": "ORIN",
+        "text": "I followed the new marker. It led straight into the service inlet."
+      },
+      {
+        "who": "NELL",
+        "text": "And when the barrier closed?"
+      },
+      {
+        "who": "ORIN",
+        "text": "I called it fog. I was standing on land at the time."
+      },
+      {
+        "who": "NELL",
+        "text": "The marker was wrong for your journey. You can say that without claiming the ship evaporated."
+      },
+      {
+        "who": "ORIN",
+        "text": "I trusted the sign over what I knew. There. An unpleasantly navigable sentence."
+      },
+      {
+        "who": "NELL",
+        "text": "Can she reach Bellweather Shoal?"
+      },
+      {
+        "who": "ORIN",
+        "text": "With a current survey and someone willing to question the navigator."
+      },
+      {
+        "who": "NELL",
+        "text": "I have been practising."
+      }
+    ],
+    "A2-INLET-04": [
+      {
+        "who": "NELL",
+        "text": "The drain and pillar agree with the old drawing. The basin gives me the missing level."
+      },
+      {
+        "who": "NELL",
+        "text": "A short service channel. A small correction. I can finally put my name beside something useful."
+      }
+    ],
+    "A2-ORIN-01": [
+      {
+        "who": "ORIN",
+        "text": "Second Opinion. Cream cabin, three blue stripes, copper kettle for a weather vane."
+      },
+      {
+        "who": "NELL",
+        "text": "A kettle?"
+      },
+      {
+        "who": "ORIN",
+        "text": "It always points away from the weather. Better judgement than several instruments."
+      },
+      {
+        "who": "NELL",
+        "text": "Where did you last see her?"
+      },
+      {
+        "who": "ORIN",
+        "text": "By the new arrow behind the repair yards. I stepped ashore. When I returned, a timber screen occupied the view."
+      }
+    ],
+    "A2-VANE-03": [
+      {
+        "who": "VANE",
+        "text": "You have a boat and a correction. An unusually productive afternoon."
+      },
+      {
+        "who": "NELL",
+        "text": "The boat was already there. That was part of the correction."
+      },
+      {
+        "who": "VANE",
+        "text": "And the service measurement?"
+      },
+      {
+        "who": "NELL",
+        "text": "Checked against fixed marks, with the basin equalised."
+      },
+      {
+        "who": "VANE",
+        "text": "Then let us put your name on it."
+      }
+    ],
+    "A2-COPY-01": [
+      {
+        "who": "NELL",
+        "text": "Original retained. Working copy dated. Uncertainty labelled instead of wished away."
+      }
+    ],
+    "A2-VANE-HANDOVER": [
+      {
+        "who": "NELL",
+        "text": "Here is the copy. The correction is local. The limitations are on the page."
+      },
+      {
+        "who": "VANE",
+        "text": "And your name is on the commission. Twelve crowns, credited in full."
+      },
+      {
+        "who": "NELL",
+        "text": "Independent surveyor Nell."
+      },
+      {
+        "who": "VANE",
+        "text": "You have made the missing connection."
+      },
+      {
+        "who": "NELL",
+        "text": "I hope it helps people find their way."
+      },
+      {
+        "who": "VANE",
+        "text": "It will make the route dependable."
+      }
+    ],
+    "A2-ANNOUNCE-01": [
+      {
+        "who": "VANE",
+        "text": "At the next major tide, all commercial passage through the managed channels will operate under a Fair Passage contract."
+      },
+      {
+        "who": "NELL",
+        "text": "All passage?"
+      },
+      {
+        "who": "VANE",
+        "text": "Uncoordinated access makes coordinated safety impossible."
+      },
+      {
+        "who": "NELL",
+        "text": "You hired me to correct a route."
+      },
+      {
+        "who": "VANE",
+        "text": "And you did. Excellently."
+      }
+    ],
+    "A2-ANNOUNCE-02": [
+      {
+        "who": "NELL",
+        "text": "That's my correction. Not a forgery. Not a misunderstanding."
+      },
+      {
+        "who": "NELL",
+        "text": "I helped finish the route they mean to charge everyone for."
+      }
+    ],
+    "A2-END": [
+      {
+        "who": "NELL",
+        "text": "I wanted somebody important to say my work mattered."
+      },
+      {
+        "who": "NELL",
+        "text": "It matters. Now I have to decide what I do about that."
+      }
+    ],
+    "A2-INTRO": [
+      {
+        "who": "NELL",
+        "text": "Right, Nell. Take stock. You have a borrowed boathook, an old survey, and a pencil that has somehow become responsible for your career."
+      },
+      {
+        "who": "NELL",
+        "text": "At the landing, the signal came first. Then the local current changed. Then the company launch sailed through. That is a sequence, not proof that somebody has bought the ocean."
+      },
+      {
+        "who": "NELL",
+        "text": "I need other witnesses. Pip’s newspaper might have reports worth comparing, once I separate the facts from the exciting punctuation."
+      },
+      {
+        "who": "NELL",
+        "text": "Then there is the signal hardware at the repair quay. Find its maker, find out what it actually does. Preferably before touching anything labelled experimental."
+      },
+      {
+        "who": "NELL",
+        "text": "And Orin’s missing ship. Boats rarely disappear out of embarrassment, even when their navigators would like them to. I should ask him for a proper description."
+      },
+      {
+        "who": "NELL",
+        "text": "Check the witnesses. Follow the machinery. Find the boat. If I can explain this harbour, perhaps I can finally reach Bellweather Shoal. One well-supported mistake at a time."
+      }
+    ]
+  }
+}

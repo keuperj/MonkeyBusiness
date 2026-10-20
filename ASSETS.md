@@ -134,4 +134,4 @@ Audio is generated through ElevenLabs and remains subject to the applicable acco
 
 ## Act II
 
-Six new room backgrounds, two changed-state backgrounds, character/prop/emblem atlases and a chapter illustration are in `public/assets/act2/`. Generated with the built-in image tool; see [artwork record](docs/ACT_2_ARTWORK.md). Act II's 288 spoken lines and nine effects are mapped by `src/act2-audio-manifest.json`, with exact requests recorded in `public/audio/act2-provenance.json`. See [implementation and regeneration](docs/ACT_2_IMPLEMENTATION.md).
+Six new room backgrounds, two changed-state backgrounds, character/prop/emblem atlases and a chapter illustration are in `public/assets/act2/`. Generated with the built-in image tool; see [artwork record](docs/ACT_2_ARTWORK.md). Act II's 294 spoken lines and nine effects are mapped by `src/act2-audio-manifest.json`, with exact requests recorded in `public/audio/act2-provenance.json`. See [implementation and regeneration](docs/ACT_2_IMPLEMENTATION.md).

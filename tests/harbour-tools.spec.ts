@@ -1,0 +1,14 @@
+import {test,expect} from '@playwright/test';
+import {fresh,AUTO,parseSave} from '../src/chapter-state';
+test('old completed float saves retain the borrowed boathook',()=>{const s=fresh();s.flags.freed=true;delete (s.flags as any).hookTaken;expect(parseSave(JSON.stringify(s)).flags.hookTaken).toBe(true);});
+test('find the tavern hook, carry it to the landing and sail from the water',async({page})=>{
+ test.setTimeout(60000);const save=fresh();save.room='landing';for(const flag of ['intro','mugTaken','returned','chestOpen','chart','passage','board','marks','compared'] as const)save.flags[flag]=true;
+ await page.addInitScript(({save,key})=>{if(!localStorage.getItem(key))localStorage.setItem(key,JSON.stringify(save));},{save,key:AUTO});
+ const load=async()=>{await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#load-game').click();await page.locator(`[data-save="${AUTO}"]`).click();await expect(page.locator('#front')).toBeHidden();};
+ const target=async(id:string)=>{if(!await page.locator('#panel details').evaluate((el:HTMLDetailsElement)=>el.open))await page.locator('#panel summary').click();await page.locator(`[data-target=${id}]`).click();};
+ const travel=async(name:string)=>{await page.locator('#room-nav').getByRole('button',{name,exact:true}).click();await page.locator('#travel-skip').click();};
+ await load();await expect(page.getByRole('button',{name:'Use Boathook',exact:true})).toHaveCount(0);await expect(page.locator('[data-target=hook]')).toHaveCount(0);await page.locator('[data-verb=use]').click();await target('float');expect(await page.evaluate(k=>JSON.parse(localStorage.getItem(k)!).flags.freed,AUTO)).toBe(false);await page.screenshot({path:'test-results/landing-boat-at-rest.png',fullPage:true});
+ await travel('The Crooked Compass');await page.screenshot({path:'test-results/boathook-fireplace.png',fullPage:true});await page.locator('[data-verb=take]').click();const box=(await page.locator('canvas').boundingBox())!;await page.locator('canvas').click({position:{x:485/1536*box.width,y:399/1024*box.height}});await expect(page.getByRole('button',{name:'Use Boathook',exact:true})).toBeVisible();await expect(page.locator('[data-target=hook]')).toHaveCount(0);
+ await load();await expect(page.getByRole('button',{name:'Use Boathook',exact:true})).toBeVisible();await travel('Outer Landing');await page.getByRole('button',{name:'Use Boathook',exact:true}).click();await target('float');await expect.poll(()=>page.evaluate(k=>JSON.parse(localStorage.getItem(k)!).flags.freed,AUTO)).toBe(true);
+ await page.locator('#watch-channel').click();for(let i=0;i<3;i++)await page.locator('#observe-next').click();await page.waitForTimeout(2000);await page.screenshot({path:'test-results/landing-boat-sailing.png',fullPage:true});await page.waitForTimeout(3800);await page.screenshot({path:'test-results/landing-boat-departed.png',fullPage:true});
+});
