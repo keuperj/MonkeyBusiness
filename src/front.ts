@@ -40,7 +40,7 @@ export class Front {
   document.addEventListener('audio-unavailable',()=>{if(this.view==='intro')$('intro-count').textContent='Audio unavailable · subtitles remain visible';});
  }
  setReducedMotion(value:boolean){this.reduced=value;}
- ready(){const debug=new URLSearchParams(location.search).get('debug');if(debug)void loadDebugPreset(debug,1).then(p=>{if(p){const saved=fresh();saved.room=p.room as ChapterState['room'];Object.assign(saved.flags,p.flags||{});this.launch(parseSave(JSON.stringify(saved)));}}).catch(()=>{$('front-status').textContent='Invalid debug preset. Edit debug-start.json or choose another room.';});this.available=true;this.dialog.querySelectorAll<HTMLButtonElement>('[data-needs-ready]').forEach(b=>b.disabled=false);$('front-status').textContent='';}
+ ready(){const debug=new URLSearchParams(location.search).get('debug');if(debug)void loadDebugPreset(debug,1).then(p=>{if(p){if(p.intro){this.intro();return;}const saved=fresh();saved.room=p.room as ChapterState['room'];Object.assign(saved.flags,p.flags||{});this.launch(parseSave(JSON.stringify(saved)));}}).catch(()=>{$('front-status').textContent='Invalid debug preset. Edit debug-start.json or choose another room.';});this.available=true;this.dialog.querySelectorAll<HTMLButtonElement>('[data-needs-ready]').forEach(b=>b.disabled=false);$('front-status').textContent='';}
  private show(view:string){this.view=view;for(const id of ['splash','start-menu','intro','chapter-loading'])$(id).hidden=id!==view;this.dialog.dataset.view=view;}
  private soundLabel(){$('front-sound').textContent=audio.enabled?'Sound on':'Sound off';$('front-sound').setAttribute('aria-pressed',String(audio.enabled));}
  menu(){

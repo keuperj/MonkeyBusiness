@@ -2,6 +2,13 @@
   "enabled": true,
   "presets": [
     {
+      "id": "act1-intro",
+      "label": "Intro · Act 1",
+      "act": 1,
+      "room": "tavern",
+      "intro": true
+    },
+    {
       "id": "act1-tavern",
       "label": "The Crooked Compass",
       "act": 1,
@@ -12,7 +19,7 @@
     },
     {
       "id": "act1-bridge",
-      "label": "Quibble\u2019s Crossing",
+      "label": "Quibble’s Crossing",
       "act": 1,
       "room": "bridge",
       "flags": {
@@ -28,6 +35,13 @@
         "intro": true,
         "passage": true
       }
+    },
+    {
+      "id": "act2-intro",
+      "label": "Intro · Act 2",
+      "act": 2,
+      "room": "quay",
+      "intro": true
     },
     {
       "id": "act2-quay",
@@ -52,7 +66,7 @@
     },
     {
       "id": "act2-workshop",
-      "label": "Rook\u2019s Workshop",
+      "label": "Rook’s Workshop",
       "act": 2,
       "room": "workshop",
       "flags": {
@@ -75,28 +89,28 @@
     },
     {
       "id": "act2-tavern",
-      "label": "Tavern \u00b7 Act II",
+      "label": "Tavern · Act II",
       "act": 2,
       "room": "tavern",
       "flags": {}
     },
     {
       "id": "act2-bridge",
-      "label": "Crossing \u00b7 Act II",
+      "label": "Crossing · Act II",
       "act": 2,
       "room": "bridge",
       "flags": {}
     },
     {
       "id": "act2-landing",
-      "label": "Landing \u00b7 Act II",
+      "label": "Landing · Act II",
       "act": 2,
       "room": "landing",
       "flags": {}
     },
     {
       "id": "act2-handover",
-      "label": "Survey Office \u00b7 ready to deliver",
+      "label": "Survey Office · ready to deliver",
       "act": 2,
       "room": "office",
       "flags": {
@@ -125,6 +139,209 @@
       "items": [
         "drawing",
         "copy"
+      ]
+    },
+    {
+      "id": "act3-intro",
+      "label": "Intro · Act 3 · Nell and Mara’s confession",
+      "act": 3,
+      "room": "tavern",
+      "intro": true
+    },
+    {
+      "id": "act3-tavern",
+      "label": "The Crooked Compass",
+      "act": 3,
+      "room": "tavern",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-bridge",
+      "label": "Quibble’s Crossing",
+      "act": 3,
+      "room": "bridge",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-landing",
+      "label": "Outer Landing",
+      "act": 3,
+      "room": "landing",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-quay",
+      "label": "Repair Quay",
+      "act": 3,
+      "room": "quay",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-press",
+      "label": "The Quay Quill",
+      "act": 3,
+      "room": "press",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-hall",
+      "label": "Breakfast Hall",
+      "act": 3,
+      "room": "hall",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-workshop",
+      "label": "Rook’s Workshop",
+      "act": 3,
+      "room": "workshop",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-inlet",
+      "label": "Blind Inlet",
+      "act": 3,
+      "room": "inlet",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-office",
+      "label": "Survey Office",
+      "act": 3,
+      "room": "office",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-service",
+      "label": "Bellweather Service Landing",
+      "act": 3,
+      "room": "service",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true,
+        "watchAgreed": true,
+        "departureBoardSeen": true,
+        "departureMarksSeen": true,
+        "departureFlowSeen": true,
+        "routeChecked": true,
+        "shoalReached": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-gallery",
+      "label": "Caretaker’s Gallery",
+      "act": 3,
+      "room": "gallery",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true,
+        "watchAgreed": true,
+        "departureBoardSeen": true,
+        "departureMarksSeen": true,
+        "departureFlowSeen": true,
+        "routeChecked": true,
+        "shoalReached": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-recorder",
+      "label": "Recorder Room",
+      "act": 3,
+      "room": "recorder",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true,
+        "watchAgreed": true,
+        "departureBoardSeen": true,
+        "departureMarksSeen": true,
+        "departureFlowSeen": true,
+        "routeChecked": true,
+        "shoalReached": true,
+        "diagramRead": true
+      },
+      "items": [
+        "tracing"
+      ]
+    },
+    {
+      "id": "act3-overlook",
+      "label": "Chart-Drum Overlook",
+      "act": 3,
+      "room": "overlook",
+      "flags": {
+        "confessionHeard": true,
+        "tracingTaken": true,
+        "watchAgreed": true,
+        "departureBoardSeen": true,
+        "departureMarksSeen": true,
+        "departureFlowSeen": true,
+        "routeChecked": true,
+        "shoalReached": true,
+        "diagramRead": true,
+        "liveRiskUnderstood": true
+      },
+      "items": [
+        "tracing"
       ]
     }
   ]
