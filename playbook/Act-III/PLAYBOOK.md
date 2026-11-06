@@ -8,9 +8,9 @@ Sound was muted using the game control and reduced motion enabled for reproducib
 
 ## Controls and scope
 
-Open **Map** in the pocket tools and select the destination. Harbour walking shows a travel overlay; shoal room selections enter directly. For sea travel, use the departure/return action and confirm the voyage. Choose **Continue** on each travel overlay.
+Open **Map** in the pocket tools and select the destination. Both harbour and shoal walking show Nell following the route on an illustrated map. For sea travel, use the departure/return action and confirm the voyage. Choose **Continue** on each travel overlay.
 
-Select **Look at**, **Pick up** or an inventory item as directed; expand **Room objects · keyboard controls** and select the named target. **Back to the room** restores room actions after dialogue. Yellow outlines highlight the next control. Long dialogue and model forms may extend below the viewport; scroll to read every line and selector. All screenshots come from the same run.
+Select **Look at**, **Pick up** or an inventory item as directed; expand **Room objects · keyboard controls** and select the named target. **Back to the room** restores room actions after dialogue. Map captures show only the illustrated map and a highlighted target, without buttons. Other yellow outlines highlight the next control. Long dialogue and model forms may extend below the viewport; scroll to read every line and selector. All screenshots come from the same run.
 
 The walkthrough covers all five puzzles, one optional Easter egg, a mid-repair save/reload, cancellation of the final confirmation, safe completion and a completion reload. It is a solution route, not an exhaustive catalogue of optional conversations.
 
@@ -30,7 +30,7 @@ Select **Pick up**, expand **Room objects · keyboard controls**, and choose **S
 
 ### 03. Map → Quibble’s Crossing
 
-Open **Map** and select **Quibble’s Crossing**. If a travel overlay appears, choose **Continue**. The shoal map is a room list; it does not require a walking animation.
+Open **Map** and click **Quibble’s Crossing** at the highlighted destination. Watch Nell follow the route, or choose **Continue** to skip the animation.
 
 ![Map → Quibble’s Crossing](screenshots/map-route-03.png)
 
@@ -48,7 +48,7 @@ Both partners accept their responsibilities. This is the harbour watch, not prep
 
 ### 06. Map → Outer Landing
 
-Open **Map** and select **Outer Landing**. If a travel overlay appears, choose **Continue**. The shoal map is a room list; it does not require a walking animation.
+Open **Map** and click **Outer Landing** at the highlighted destination. Watch Nell follow the route, or choose **Continue** to skip the animation.
 
 ![Map → Outer Landing](screenshots/map-route-06.png)
 
@@ -78,7 +78,7 @@ Choose **West service approach / Warehouse corner–lighthouse notch / Today’s
 
 ### 11. Map → Blind Inlet
 
-Open **Map** and select **Blind Inlet**. If a travel overlay appears, choose **Continue**. The shoal map is a room list; it does not require a walking animation.
+Open **Map** and click **Blind Inlet** at the highlighted destination. Watch Nell follow the route, or choose **Continue** to skip the animation.
 
 ![Map → Blind Inlet](screenshots/map-route-11.png)
 
@@ -120,7 +120,7 @@ Look at **Maintenance notice**. Use the raised walkway and report to the caretak
 
 ### 18. Map → Caretaker’s Gallery
 
-Open **Map** and select **Caretaker’s Gallery**. If a travel overlay appears, choose **Continue**. The shoal map is a room list; it does not require a walking animation.
+Open **Map** and click **Caretaker’s Gallery** at the highlighted destination. Watch Nell follow the route, or choose **Continue** to skip the animation.
 
 ![Map → Caretaker’s Gallery](screenshots/map-route-18.png)
 
@@ -144,7 +144,7 @@ Look at **Historical incident binder**. The receiving level was unconfirmed; a c
 
 ### 22. Map → Recorder Room
 
-Open **Map** and select **Recorder Room**. If a travel overlay appears, choose **Continue**. The shoal map is a room list; it does not require a walking animation.
+Open **Map** and click **Recorder Room** at the highlighted destination. Watch Nell follow the route, or choose **Continue** to skip the animation.
 
 ![Map → Recorder Room](screenshots/map-route-22.png)
 
@@ -192,7 +192,7 @@ Read R17–R20. Select the first three claims: launch after command/acknowledgem
 
 ### 30. Map → Chart-Drum Overlook
 
-Open **Map** and select **Chart-Drum Overlook**. If a travel overlay appears, choose **Continue**. The shoal map is a room list; it does not require a walking animation.
+Open **Map** and click **Chart-Drum Overlook** at the highlighted destination. Watch Nell follow the route, or choose **Continue** to skip the animation.
 
 ![Map → Chart-Drum Overlook](screenshots/map-route-30.png)
 
@@ -246,7 +246,7 @@ The safe plan is recorded. Keep the original survey, witnessed operating copy an
 
 ### 39. Map → Bellweather Service Landing
 
-Open **Map** and select **Bellweather Service Landing**. If a travel overlay appears, choose **Continue**. The shoal map is a room list; it does not require a walking animation.
+Open **Map** and click **Bellweather Service Landing** at the highlighted destination. Watch Nell follow the route, or choose **Continue** to skip the animation.
 
 ![Map → Bellweather Service Landing](screenshots/map-route-39.png)
 

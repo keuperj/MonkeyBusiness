@@ -8,7 +8,7 @@ Sound was muted using the game control and reduced motion was enabled for reprod
 
 ## Controls and screenshots
 
-Use **Map** in the pocket tools to choose a destination. Travel screenshots show the selected map destination outlined in yellow. For named objects, choose the stated verb or inventory item, expand **Scene objects · keyboard & touch**, and click the object. Use **Back to the room** or **More questions** where needed. Other yellow outlines identify the next action.
+Use **Map** in the pocket tools to choose a destination. Travel screenshots show only the illustrated map with the destination highlighted, without buttons. For named objects, choose the stated verb or inventory item, expand **Scene objects · keyboard & touch**, and click the object. Use **Back to the room** or **More questions** where needed. Other yellow outlines identify the next action.
 
 All screenshots below come from this same fresh run. The earlier numbered captures are retained as historical files but are no longer used by this guide.
 
@@ -40,7 +40,7 @@ Select **Pick up** and take **Public mooring rope** and **Courtesy stationery** 
 
 ### 05. Map → Rook House · Breakfast Hall
 
-Open **Map**, select **Rook House · Breakfast Hall** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **Rook House · Breakfast Hall** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → Rook House · Breakfast Hall](screenshots/map-route-05.png)
 
@@ -52,7 +52,7 @@ Open **Examine breakfast controls**. Set **KEEP WARM / PARK / HAND**, then click
 
 ### 07. Map → Rook’s Workshop
 
-Open **Map**, select **Rook’s Workshop** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **Rook’s Workshop** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → Rook’s Workshop](screenshots/map-route-07.png)
 
@@ -70,7 +70,7 @@ With **Pick up** selected, choose **Inspection crank**. Keep it for the inlet me
 
 ### 10. Map → Repair Quay
 
-Open **Map**, select **Repair Quay** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **Repair Quay** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → Repair Quay](screenshots/map-route-10.png)
 
@@ -82,7 +82,7 @@ Vane visibly approaches Nell at the Repair Quay after two investigation facts. R
 
 ### 12. Map → Blind Inlet
 
-Open **Map**, select **Blind Inlet** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **Blind Inlet** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → Blind Inlet](screenshots/map-route-12.png)
 
@@ -112,7 +112,7 @@ Look at **Square drain**, **Split granite pillar**, and **Still-water staff**. O
 
 ### 17. Map → The Crooked Compass
 
-Open **Map**, select **The Crooked Compass** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **The Crooked Compass** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → The Crooked Compass](screenshots/map-route-17.png)
 
@@ -130,7 +130,7 @@ Choose the dialogue topic that asks Orin to meet you at the open inlet. He moves
 
 ### 20. Map → Blind Inlet
 
-Open **Map**, select **Blind Inlet** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **Blind Inlet** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → Blind Inlet](screenshots/map-route-20.png)
 
@@ -148,7 +148,7 @@ The boat is now safely alongside in the water, with Orin at the berth.
 
 ### 23. Map → Repair Quay
 
-Open **Map**, select **Repair Quay** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **Repair Quay** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → Repair Quay](screenshots/map-route-23.png)
 
@@ -160,7 +160,7 @@ Open **Prepare an annotated copy**. Check only the first three statements: fixed
 
 ### 25. Map → Fair Passage Survey Office
 
-Open **Map**, select **Fair Passage Survey Office** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **Fair Passage Survey Office** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → Fair Passage Survey Office](screenshots/map-route-25.png)
 
@@ -184,7 +184,7 @@ Vane accepts the working copy in her office. Nell retains the original and noteb
 
 ### 29. Map → Repair Quay
 
-Open **Map**, select **Repair Quay** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
+Open **Map** and click **Repair Quay** at the highlighted destination. Watch Nell travel along the route, or choose **Continue** to skip the animation.
 
 ![Map → Repair Quay](screenshots/map-route-29.png)
 
