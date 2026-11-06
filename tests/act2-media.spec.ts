@@ -18,3 +18,6 @@ test('all new audio decodes and room travel stops active narration',async({page}
  await page.locator('#sound').click();await page.getByRole('button',{name:'Use Pencil',exact:true}).click();await page.locator('#panel summary').click();await page.locator('[data-target=headline]').click();await expect.poll(()=>page.evaluate(()=>(window as any).__voices.some((a:HTMLAudioElement)=>a.currentTime>0&&!a.paused))).toBe(true);
  await page.locator('#room-nav').getByRole('button',{name:'Repair Quay',exact:true}).click();await expect.poll(()=>page.evaluate(()=>(window as any).__voices.every((a:HTMLAudioElement)=>a.paused))).toBe(true);await expect(page.locator('#caption span')).toBeEmpty();await page.locator('#travel-skip').click();await expect(page.locator('#caption')).not.toContainText('supernatural');
 });
+
+// These scenarios explicitly exercise enabling sound from a saved mute preference.
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(sessionStorage.getItem("monkey-buisness-sound")===null)sessionStorage.setItem("monkey-buisness-sound","false");});});

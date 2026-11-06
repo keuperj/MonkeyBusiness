@@ -60,3 +60,6 @@ test('canvas interaction, voiced dialogue, automatic travel and animated fencing
  await page.getByRole('button',{name:'Leave the duel',exact:true}).click();expect((await progress(page)).duel.active).toBe(false);
  await page.locator('#sound').click();await expect(page.locator('#sound')).toHaveAttribute('aria-pressed','false');expect(errors).toEqual([]);
 });
+
+// These scenarios explicitly exercise enabling sound from a saved mute preference.
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(sessionStorage.getItem("monkey-buisness-sound")===null)sessionStorage.setItem("monkey-buisness-sound","false");});});

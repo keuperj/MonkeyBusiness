@@ -27,7 +27,7 @@ export class Front {
  private loading=false;
  private reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  constructor(private enter:(save?:ChapterState)=>void, private leave:()=>void,private prepare:()=>Promise<void>) {
-  this.dialog.showModal();$('splash-enter').focus();void installDebugMenu();$('act2-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act2.html`);
+  this.dialog.showModal();this.soundLabel();$('splash-enter').focus();void installDebugMenu();$('act2-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act2.html`);
   $('splash-enter').onclick=()=>this.menu();
   $('start-game').onclick=()=>this.start();
   $('load-game').onclick=()=>this.loads();

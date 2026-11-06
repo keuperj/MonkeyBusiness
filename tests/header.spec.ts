@@ -22,3 +22,6 @@ test('shared header accepts future room artwork, acts and destinations without l
  });
  await expect(page.locator('.act-lettering')).toContainText('Act II');await expect(page.locator('#room-title')).toHaveText('Future Harbour');await expect(page.locator('#room-nav .room-destination')).toHaveCount(3);await page.getByRole('button',{name:'The Crooked Compass',exact:true}).click();expect(await page.evaluate(()=>(window as any).__destination)).toBe('tavern');expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
 });
+
+// These scenarios explicitly exercise enabling sound from a saved mute preference.
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(sessionStorage.getItem("monkey-buisness-sound")===null)sessionStorage.setItem("monkey-buisness-sound","false");});});

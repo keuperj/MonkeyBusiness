@@ -1,4 +1,5 @@
 import './room-header.css';
+import {tavernAudio as audio} from './audio';
 import {icon} from './control-icons';
 const base=import.meta.env.BASE_URL;
 export type RoomBadge={name:string;art:string;frame:string;point:readonly [number,number]};
@@ -22,7 +23,7 @@ export class RoomHeader {
   host.className='room-masthead';
   host.innerHTML=`<header class="art-topbar"><a class="game-brand" href="${base}" aria-label="Monkey Buisness — start menu"><img src="${base}assets/game-logo.png" alt="Monkey Buisness"></a><h1 id="room-title" class="room-emblem"></h1><div class="act-lettering"><span></span><small></small></div><nav id="room-nav" class="room-destinations" aria-label="Travel destinations"></nav><button id="sound" type="button"></button></header>`;
   host.querySelector('.act-lettering span')!.textContent=act;host.querySelector('.act-lettering small')!.textContent=subtitle;
-  this.title=host.querySelector('#room-title')!;this.nav=host.querySelector('#room-nav')!;paintSound(host.querySelector('#sound')!,false);
+  this.title=host.querySelector('#room-title')!;this.nav=host.querySelector('#room-nav')!;paintSound(host.querySelector('#sound')!,audio.enabled);
  }
  render(current:string,destinations:HeaderDestination[],travel:(id:string)=>void,busy=false){
   const active=destinations.find(d=>d.id===current);if(!active)throw Error('Current room needs header metadata');

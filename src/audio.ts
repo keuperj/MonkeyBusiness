@@ -9,7 +9,7 @@ const url = (file: string) => `${import.meta.env.BASE_URL}audio/${file}`;
 
 /** Static audio only: API credentials and generation code never enter the browser. */
 class TavernAudio {
-  enabled = false;
+  enabled = true;
   private ambience = new Audio(url(manifest.effects['tavern-ambience']));
   private steps = new Audio(url(manifest.effects.footsteps));
   private effect: HTMLAudioElement | null = null;
@@ -20,7 +20,7 @@ class TavernAudio {
   private report = () => document.dispatchEvent(new CustomEvent('audio-unavailable'));
 
   constructor() {
-    try{this.enabled=sessionStorage.getItem('monkey-buisness-sound')==='true';}catch{}
+    try{this.enabled=sessionStorage.getItem('monkey-buisness-sound')!=='false';}catch{}
     this.ambience.loop = this.steps.loop = true;
     this.ambience.preload = this.steps.preload = 'none';
     this.ambience.volume = .28;

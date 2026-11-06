@@ -74,3 +74,6 @@ test('all shipped audio files decode in the browser',async({page})=>{
  },files);
  expect(decoded).toHaveLength(files.length);expect(decoded.every(n=>n>0.2&&Number.isFinite(n))).toBe(true);
 });
+
+// These scenarios explicitly exercise enabling sound from a saved mute preference.
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(sessionStorage.getItem("monkey-buisness-sound")===null)sessionStorage.setItem("monkey-buisness-sound","false");});});

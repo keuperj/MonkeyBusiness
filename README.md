@@ -32,7 +32,7 @@ Completed follow-up work is recorded in [FOLLOW_UP.md](docs/FOLLOW_UP.md).
 
 The game opens on an original painted splash cover, followed by a start menu over the story map. **Start game** begins a three-scene animated introduction to Nell; **Load game** offers the autosave and manual save separately and skips the intro. Starting again asks before replacing autosaved progress and preserves the manual save. **Main menu** returns to these options during play.
 
-The introduction has subtitles, **Pause / Resume**, **Next scene** and **Skip intro** controls. Escape also skips it. It pauses when the tab is hidden and respects reduced-motion preferences. All three intro scenes have generated narration using Nell’s existing Alice voice, alongside subtitles and harbour ambience. Enable **Sound** on the splash or start menu to hear it. The editable narration is in `src/intro-lines.json`.
+The introduction has subtitles, **Pause / Resume**, **Next scene** and **Skip intro** controls. Escape also skips it. It pauses when the tab is hidden and respects reduced-motion preferences. All three intro scenes have generated narration using Nell’s existing Alice voice, alongside subtitles and harbour ambience. Sound is enabled by default; use **Sound** on the splash or start menu to mute it. The editable narration is in `src/intro-lines.json`.
 
 Map travel follows traced waypoints along the tavern lane, timber bridge and repair-yard quay. Return journeys follow the same paths in reverse.
 
@@ -50,7 +50,7 @@ Progress autosaves in this browser across all three rooms, including the noteboo
 
 Choose a destination or use a scene exit to travel. The story map draws a red route with a moving marker from your current room to the destination. **Continue** skips travel; reduced motion shows the complete route until you press Continue. The outer landing opens after winning bridge passage.
 
-Click **Sound off** to enable generated voices, ambient loops, footsteps and action effects. Subtitles are always available. Dialogue ducks the ambience; muting or hiding the tab stops playback. Character voices: Alice (Nell), Matilda (Mara), Bill (Orin and theatrical Quibble), and Charlie (Fine Print). Audio is served locally; playing requires no API key.
+Sound is on by default for new browser sessions, including generated voices, ambient loops, footsteps and action effects. Click **Sound on** to mute; your choice is retained across rooms and acts for the session. Browser playback restrictions may delay sound until your first interaction. Subtitles are always available. Dialogue ducks the ambience; muting or hiding the tab stops playback. Character voices: Alice (Nell), Matilda (Mara), Bill (Orin and theatrical Quibble), and Charlie (Fine Print). Audio is served locally; playing requires no API key.
 
 <details><summary>Act I walkthrough — spoilers</summary>
 

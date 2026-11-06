@@ -53,3 +53,6 @@ test('intro narration pauses, restarts, mutes and stops before tavern dialogue o
  await page.locator('#intro-skip').click();await page.locator('#arrival-skip').click();await expect(page.locator('#act-arrival')).toHaveCount(0,{timeout:15000});await expect(page.locator('#front')).not.toBeVisible();await expect.poll(active).toBe(0);
  const opening=manifest.speech["NELL:I'm looking for surveying work."];await expect.poll(()=>page.evaluate(file=>(window as any).__media.some((a:HTMLMediaElement)=>a.src.endsWith(file)&&!a.paused&&a.currentTime>0),opening)).toBe(true);
 });
+
+// These scenarios explicitly exercise enabling sound from a saved mute preference.
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(sessionStorage.getItem("monkey-buisness-sound")===null)sessionStorage.setItem("monkey-buisness-sound","false");});});

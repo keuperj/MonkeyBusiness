@@ -40,3 +40,5 @@ test('invalid manual Act II save is not offered as a recovery option',async({pag
 test('Act II recovery does not overwrite saves if the backup cannot be stored',async({page})=>{
  await page.addInitScript(({auto})=>{localStorage.setItem(auto,'broken');const original=Storage.prototype.setItem;Storage.prototype.setItem=function(key,value){if(key===`${auto}-recovery`)throw new DOMException('Storage full','QuotaExceededError');return original.call(this,key,value);};},{auto:AUTO2});await page.goto('/act2.html');await page.locator('#a2-start-fresh').click();await expect(page.locator('#a2-loading-status')).toContainText('Could not back up');expect(await page.evaluate(k=>localStorage.getItem(k),AUTO2)).toBe('broken');await expect(page.locator('#game')).not.toHaveAttribute('data-ready','true');
 });
+// These scenarios explicitly exercise enabling sound from a saved mute preference.
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(sessionStorage.getItem("monkey-buisness-sound")===null)sessionStorage.setItem("monkey-buisness-sound","false");});});

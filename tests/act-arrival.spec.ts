@@ -27,3 +27,6 @@ test('Act II reveals venues with real narration, cancels it on skip, and resumes
  await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await expect.poll(()=>page.evaluate(file=>(window as any).__voices.filter((a:HTMLAudioElement)=>a.src.endsWith(file)).every((a:HTMLAudioElement)=>a.paused),clip)).toBe(true);
  await expect(page.locator('#panel')).toContainText('Right, Nell. Take stock.');await page.goto('/act2.html');await expect(page.locator('#game')).toHaveAttribute('data-ready','true');await expect(intro).toHaveCount(0);
 });
+
+// These scenarios explicitly exercise enabling sound from a saved mute preference.
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(sessionStorage.getItem("monkey-buisness-sound")===null)sessionStorage.setItem("monkey-buisness-sound","false");});});

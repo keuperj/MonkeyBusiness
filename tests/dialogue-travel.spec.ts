@@ -17,3 +17,6 @@ test('leaving a room cancels voices, queued captions and replay state',async({pa
  await page.locator('#replay').click();await page.locator('#sound').click();await page.locator('#sound').click();await expect(page.locator('#caption')).toHaveText('NELLQuibble’s Crossing');
  await page.getByRole('button',{name:'Talk to Captain Quibble',exact:true}).click();const question=page.locator('#panel .choices button').first();await question.click();await expect(page.locator('#caption')).not.toHaveText('NELLQuibble’s Crossing');
 });
+
+// These scenarios explicitly exercise enabling sound from a saved mute preference.
+test.beforeEach(async({page})=>{await page.addInitScript(()=>{if(sessionStorage.getItem("monkey-buisness-sound")===null)sessionStorage.setItem("monkey-buisness-sound","false");});});
