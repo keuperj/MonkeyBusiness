@@ -1,6 +1,6 @@
 import {readdir,readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-async function scan(dir){const result=[];for(const entry of await readdir(`public/${dir}`,{withFileTypes:true})){const path=`${dir}/${entry.name}`;if(entry.isDirectory())result.push(...await scan(path));else if(/\.(png|mp3|webp|jpg|ogg)$/.test(path)){const bytes=await readFile(`public/${path}`);result.push({path,bytes:bytes.length,revision:createHash('sha256').update(bytes).digest('hex')});}}return result;}
+async function scan(dir){const result=[];for(const entry of await readdir(`public/${dir}`,{withFileTypes:true})){const path=`${dir}/${entry.name}`;if(entry.isDirectory())result.push(...await scan(path));else if(/\.(png|mp3|webp|jpg|ogg|svg)$/.test(path)){const bytes=await readFile(`public/${path}`);result.push({path,bytes:bytes.length,revision:createHash('sha256').update(bytes).digest('hex')});}}return result;}
 const assets=(await Promise.all(['assets','audio'].map(scan))).flat().sort((a,b)=>a.path.localeCompare(b.path));
 const first=assets.filter(a=>!/^assets\/act[23]\//.test(a.path)&&!/^audio\/(a[23]-|act[23]-)/.test(a.path));
 await writeFile('public/chapter-assets.json',JSON.stringify({chapter:'Act I — A Job, a Tankard and a Toll',assets:first}));

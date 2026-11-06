@@ -1,6 +1,14 @@
 # Clickable map and traced routes
 
-Both implemented acts use `src/location-map.ts` and `src/map-routes.ts`. All reachable rooms have keyboard/touch/clickable numbered markers and a matching named list. Locks follow act progression. Markers move apart on smaller displays, with leader lines to their actual entrances. Routes follow a shared pedestrian network and reverse exactly.
+All three playable acts use the illustrated map component in `/home/keuper/Projekte/MonkeyBusiness/src/location-map.ts`. Reachable rooms have keyboard/touch/clickable markers and a matching named list. Locks follow act progression. Markers move apart on smaller displays, with leader lines to their actual entrances. Harbour routes follow the shared pedestrian network in `/home/keuper/Projekte/MonkeyBusiness/src/map-routes.ts` and reverse exactly.
+
+Act III uses the same harbour artwork and animated travel as the earlier acts, rather than a replacement room-button list. On Bellweather it uses the illustrated dry inspection-route chart at `/home/keuper/Projekte/MonkeyBusiness/public/assets/act3/inspection-map.svg`, with routes through the gallery defined in `/home/keuper/Projekte/MonkeyBusiness/src/act3-map.ts`. The chart is a schematic, not a claim that the original harbour painting depicts each interior room. Sea crossings still require Orin's voyage confirmation; walking maps never connect across the sea.
+
+Clicking a destination shows Nell's moving location marker and the progressively drawn route, then enters the destination automatically. Continue skips the animation. Reduced motion shows the completed route and waits for Continue. Cancelling the travel dialog commits the same arrival exactly once.
+
+## Playbook captures
+
+The Act II and III opt-in capture tests click actual map markers. Travel illustrations capture just the map, with the target circled and named; button widgets and the destination list are omitted from these screenshots only. `/home/keuper/Projekte/MonkeyBusiness/tests/playbook-map.ts` restores all interactive controls immediately after capture. Gameplay retains keyboard-accessible controls; documentation styling never changes the live map.
 
 ## Artwork
 
