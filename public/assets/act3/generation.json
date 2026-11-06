@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-06",
+  "tool": "codex-imagegen-cli 0.2.0",
+  "style": "Painted 1990s nautical adventure; teal navy shadows, amber lantern light",
+  "jobs": {
+    "gallery": "Room background, narrow lived-in coastal stone caretaker workroom, coat and kettle, shelves, maintenance trolley left, wall system diagram with blank plates centre, open inspection doorways left and right, empty walkable foreground bottom third. No people.",
+    "recorder": "Room background, coastal stone recorder room. Separate small brass duplicate recording bench and dry service tray in foreground left, spare drawer centre, paper feed right. Glazed inaccessible large live shaft in background. Grand ornate cover over small collar, clear walkable bottom third. No people.",
+    "overlook": "Room background, coastal stone chart-drum overlook. Huge brass live chart drum below safety rail in background. Secured door right. Disconnected three-station miniature training board foreground left on desk, procedure diagram centre wall. Walkable stone foreground bottom third, no people.",
+    "loading": "Chapter voyage illustration, small cream cabin boat with three blue stripes and copper kettle weather vane sailing a safe service approach toward grand ruined coastal public works on rocky shoal, stone service arch and warm lights. Wide panoramic composition.",
+    "bram": "Single full body original character sprite, patient middle aged coastal caretaker Bram, weathered kind face, dark hair with grey, teal work coat, rolled sleeves, brass tools, brown boots. Facing left three quarter view, entire body including feet, isolated on truly transparent alpha background. No scenery no ground no shadow.",
+    "props": "Transparent sprite atlas, precisely 3 columns and 2 rows equally sized cells. Top row: folded parchment route tracing, small used circular brass gasket collar, replacement collar with two tabs and blue triangle. Bottom row: witnessed operating record paper, local procedure booklet, small disconnected model with three brass gates. Each isolated on transparent alpha no shadows, no text.",
+    "emblems": "Four painted brass framed nautical room badges in a precise 2 by 2 grid, equal cells: top left stone service landing, top right caretaker gallery and kettle, bottom left recording machine and paper, bottom right huge chart drum behind rail. Transparent background, no words.",
+    "departure": "Closeup painted navigation desk with old survey and translucent tracing, fixed warehouse corner and lighthouse notch sketched, west service approach, tide notes, pencil. No readable text, no people.",
+    "service-tray": "Closeup painted dry recorder repair bench, clearly separate isolated little duplicate mechanism, three spare collars in drawer, two tabs blue triangle on correct brass collar, used parts tray. No readable text no people.",
+    "training-board": "Closeup painted disconnected miniature brass training board, three distinct local station cards and gates, central isolation lever physically separate, no connection to real machinery, no people no readable text."
+  },
+  "postprocessing": "Magenta keyed to alpha for bram, props, emblems; cropped bram; emblems resized 1536x1024"
+}

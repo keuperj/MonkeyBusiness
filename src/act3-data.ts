@@ -1,0 +1,30 @@
+import {art2,spots,links,type Spot} from './act2-data';
+import {roomNames3,type Room3} from './act3-state';
+export const art3:Record<Room3,string>={...art2,hall:'act2/hall-fixed',inlet:'act2/inlet-open',service:'act3/service-landing',gallery:'act3/gallery',recorder:'act3/recorder',overlook:'act3/overlook'};
+const s=(id:string,name:string,x:number,y:number,look:string,person?:string):Spot=>({id,name,x,y,w:190,h:person?330:140,look,person});
+export const spots3:Record<Room3,Spot[]>={...spots,
+ tavern:[s('mara','Mara',1235,740,'She has made room at the bar. Not an escape route.','MARA'),s('tracing','Service-route tracing',850,600,'A maintenance entrance, a landing, and Mara’s initials. No treasure crosses.'),s('chest','Open sea chest',350,746,'The chart was in here. Its history wasn’t.')],
+ bridge:[...spots.bridge,s('watch','Watch slate',750,600,'Two names, one job. Quibble and Fine Print must both agree.')],
+ landing:[s('board','Departure tide board',400,600,'TODAY’S DEPARTURE WATCH: EBB. WEST SERVICE APPROACH. EAST ARM CLOSED FOR COMPANY TRIALS.'),s('marks','Warehouse corner and lighthouse notch',700,450,'The warehouse corner and lighthouse notch still form the outer transit.'),s('float','Tethered float',1310,550,'The float and the loose leaves both run west. This agrees with today’s board.'),s('departure','Sighting cleat',775,665,'Compare Mara’s tracing, the original survey and today’s observations.')],
+ inlet:[s('orin','Orin',820,780,'Second Opinion remains his boat. We sail with his consent.','ORIN'),s('boat','Second Opinion',1090,645,'Three blue stripes, copper kettle, safely afloat.'),s('departure','Departure table',450,680,'Old ink does not know today’s water.'),s('controls','Latched barrier',430,470,'Safely open, with its crank where it belongs. No need to repeat a solved problem.')],
+ service:[s('plate','Public-works plate',570,510,'TIDE LEDGER. LOCAL CHANNEL WORKS. INSPECTION AND MAINTENANCE ACCESS.'),s('notice','Maintenance notice',940,540,'INSPECTION GALLERY: RAISED WALKWAY. DO NOT ENTER THE WET STAIR. REPORT TO CARETAKER.'),s('wet','Wet stair',100,560,'Wet steps, no inspection marking. The dry path is already offering itself.'),s('orin','Orin',1050,900,'No unexplained departures. He will wait at the berth.','ORIN'),s('boat','Second Opinion',1250,750,'Transport isn’t a pocket-sized arrangement.')],
+ gallery:[s('bram','Bram',1100,830,'A caretaker, not a keeper of curses.','BRAM'),s('diagram','System diagram',700,450,'CENTRAL DRUM: COMMAND COORDINATION. LOCAL GATES: WATER ROUTING. RECORDER: COPY OF COMMANDS AND ACKNOWLEDGEMENTS. TRAINING BOARD: NO GATE CONNECTION.'),s('binder','Historical incident binder',350,530,'RELIEF RUN: receiving level unconfirmed; central change issued; service boat grounded until safe water returned; supplies delayed; no deaths recorded. The old operator is not Vane.'),s('kettle','Kettle',1250,500,'Unlike the household version, this one has no opinion about the table.')],
+ recorder:[s('label','Plain part label',350,450,'DUPLICATE RECORDER COLLAR. TWO TABS. BLUE TRIANGLE. SERVICE PART, NOT CONTROL EQUIPMENT.'),s('recorder','Duplicate recorder',500,650,'The copy path is separate from the live drive. SERVICE releases its dry tray.'),s('shaft','Glazed live shaft',1000,400,'That is connected to gates. This bench is not. The distinction is usefully large.'),s('recess','Unused display recess',1200,620,'An empty recess beneath the Crown of the Faithful Record. The catalogue is more useful.')],
+ overlook:[s('drum','Live chart drum',900,450,'A schedule turning into instructions. Not the source of the water. No live shutdown without local cover.'),s('procedure','Inspection bypass diagram',700,650,'LOCAL COVER → ACKNOWLEDGEMENTS → CENTRAL ISOLATION → LOCAL RUN. REVERSE ONLY BY DOCUMENTED HANDOVER.'),s('training','Disconnected training board',350,650,'DISCONNECTED MODEL. SAMPLE WATCH C. NOT VALID FOR LIVE OPERATIONS.'),s('door','Secured command-floor door',1300,550,'COMPANY OPERATION AREA. PUBLIC INSPECTION ABOVE. Access and readiness are different problems.')]
+};
+// Keep solved returning objects, but never respawn Act II collectibles or Orin.
+for(const r of ['quay','press','hall','workshop','office'] as Room3[])spots3[r]=spots3[r].filter(x=>!['paper','rope','crank','drawing'].includes(x.id)&&!(r==='hall'&&x.id==='rook'));
+spots3.quay=spots3.quay.filter(x=>x.id!=='reports');
+const returning:Record<string,string>={
+ 'quay:plate':'Rook’s name identified the mechanism. It didn’t identify every decision made with it.',
+ 'quay:notice':'My correction, their dispatch policy. Both still on the page.',
+ 'hall:controller':'Warm tea, parked table, a bell waiting for a person. A small working example.',
+ 'hall:table':'The trolley is safely parked. The workshop passage stays open.',
+ 'hall:chairs':'The occupants and reservations have reached a temporary understanding.',
+ 'office:licence':'Inspection remains public. Operating policy remains with the director. The gap between them is getting crowded.'
+};
+for(const [r,list] of Object.entries(spots3))for(const spot of list)if(returning[`${r}:${spot.id}`])spot.look=returning[`${r}:${spot.id}`];
+export const links3:Record<Room3,Room3[]>={...links,service:['gallery'],gallery:['service','recorder','overlook'],recorder:['gallery'],overlook:['gallery']};
+export const recordText='BL-CENTRAL · witnessed copy · revision 1\nR17: TRIAL WATCH · SIGNAL 3 · WEST GATES REDIRECTED · RETURN ACK RECEIVED · COMPANY LAUNCH RELEASED.\nR18: CALIBRATION · INLET 7 · SQUARE DRAIN / SPLIT GRANITE PILLAR · MIDDLE · SOURCE: NELL, COMMISSIONED COPY.\nR19: NEXT MAJOR TIDE · EXCLUSIVE CENTRAL DISPATCH · AUTHORISATION V. VANE · EXECUTION PENDING.\nR20: LOCAL COVER NOT ACKNOWLEDGED · INSPECTION BYPASS AVAILABLE · LIVE CHANGEOVER NOT AUTHORISED.';
+export const procedureText='TRAINING — NOT LIVE SETTINGS. Watch C: Outer Landing LOW, Repair Quay MIDDLE, Service Inlet MIDDLE. Every station LOCAL READY, then request acknowledgements, isolate MODEL CENTRAL, run coordinated model. Any edit cancels all acknowledgements. Live operations need new measurements and named attendants.';
+export {roomNames3};

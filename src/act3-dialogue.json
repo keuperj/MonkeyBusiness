@@ -1,0 +1,900 @@
+{
+  "blocks": {
+    "A3-MARA-OPEN": [
+      {
+        "who": "NELL",
+        "text": "I gave Vane a working copy. She paid me. Now my correction is on the route she means to sell back to everyone."
+      },
+      {
+        "who": "MARA",
+        "text": "Did she change your measurements?"
+      },
+      {
+        "who": "NELL",
+        "text": "No. I wanted the work to count. I didn't ask hard enough who it would count for."
+      },
+      {
+        "who": "MARA",
+        "text": "Then I owe you the part I left out."
+      },
+      {
+        "who": "NELL",
+        "text": "You recognised the chart."
+      },
+      {
+        "who": "MARA",
+        "text": "I helped maintain the Tide Ledger. That was one of our service surveys."
+      },
+      {
+        "who": "MARA",
+        "text": "Years ago, an operator tried to run more channels from the centre. We changed a gate before the receiving station had confirmed its level."
+      },
+      {
+        "who": "NELL",
+        "text": "What happened?"
+      },
+      {
+        "who": "MARA",
+        "text": "A relief boat sat on the mud until the next safe tide. Nobody died. People waiting for supplies still went without them."
+      },
+      {
+        "who": "MARA",
+        "text": "I had a doubtful reading. I let certainty outrank it. Afterwards I kept the chart where nobody could use it."
+      },
+      {
+        "who": "NELL",
+        "text": "Until you gave it to me without telling me why it mattered."
+      },
+      {
+        "who": "MARA",
+        "text": "I thought you would ask the questions I had stopped asking. I made that choice for you. I'm sorry."
+      },
+      {
+        "who": "NELL",
+        "text": "I should have read what I was agreeing to, not what I hoped it meant."
+      },
+      {
+        "who": "MARA",
+        "text": "Yes. And you should have had the history. Both things can be true."
+      },
+      {
+        "who": "NELL",
+        "text": "Then let's stop leaving parts out."
+      }
+    ],
+    "A3-MARA-ROUTE": [
+      {
+        "who": "MARA",
+        "text": "There is a service landing at Bellweather. I'll put the tracing here. Check today's water, and tell someone where you're going."
+      },
+      {
+        "who": "NELL",
+        "text": "A route, a check, and someone who knows to ask. That's a better beginning."
+      }
+    ],
+    "A3-TAKE-TRACING": [],
+    "A3-WATCH-OPEN": [
+      {
+        "who": "NELL",
+        "text": "We're going to the shoal. I need someone here who knows our route and will keep the landing clear."
+      },
+      {
+        "who": "QUIBBLE",
+        "text": "At last. A command appropriate to my stature."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "A request. With two names on the answer."
+      },
+      {
+        "who": "NELL",
+        "text": "Quibble and Fine Print. Harbour watch. Both responsible, both credited."
+      }
+    ],
+    "A3-ROUTE-OK": [
+      {
+        "who": "NELL",
+        "text": "West service approach. Fixed transit. Today's ebb, not yesterday's sheltered basin."
+      },
+      {
+        "who": "NELL",
+        "text": "Now the old route and the present water have had an introduction."
+      }
+    ],
+    "A3-VOYAGE": [
+      {
+        "who": "ORIN",
+        "text": "Transit steady. West service approach."
+      },
+      {
+        "who": "NELL",
+        "text": "That arch looks less like a treasure entrance from this side."
+      },
+      {
+        "who": "ORIN",
+        "text": "There is a sign."
+      },
+      {
+        "who": "NELL",
+        "text": "‘Caretakers: mind the second step.’"
+      },
+      {
+        "who": "ORIN",
+        "text": "An unusually considerate curse."
+      }
+    ],
+    "A3-SHOAL-ARRIVE": [
+      {
+        "who": "NELL",
+        "text": "Someone gave a public works station the manners of an ancient warning."
+      },
+      {
+        "who": "ORIN",
+        "text": "People read warnings more carefully when they look expensive."
+      },
+      {
+        "who": "NELL",
+        "text": "They left a dry walkway. I like the practical part."
+      }
+    ],
+    "A3-BRAM-OPEN": [
+      {
+        "who": "BRAM",
+        "text": "Visitor or replacement caretaker?"
+      },
+      {
+        "who": "NELL",
+        "text": "Visitor. Nell. Mara said I should ask what you need."
+      },
+      {
+        "who": "BRAM",
+        "text": "Someone to read the labels before touching the things beneath them."
+      },
+      {
+        "who": "NELL",
+        "text": "I can begin immediately."
+      },
+      {
+        "who": "BRAM",
+        "text": "Then you're already ahead of the last inspection."
+      },
+      {
+        "who": "NELL",
+        "text": "The company is using this station to make one paid route the dependable one. I need to know how to stop that without wrecking the harbour."
+      },
+      {
+        "who": "BRAM",
+        "text": "Good. Most people shorten that question in the dangerous place."
+      }
+    ],
+    "A3-INCIDENT-NOTE": [
+      {
+        "who": "NELL",
+        "text": "The relief boat was stranded after a change without a receiving acknowledgement. That supports Mara's account."
+      },
+      {
+        "who": "NELL",
+        "text": "It doesn't make the old operator and today's company the same people."
+      }
+    ],
+    "A3-RECORDER-SERVICE": [
+      {
+        "who": "NELL",
+        "text": "Two tabs. Blue triangle. A replaceable collar."
+      },
+      {
+        "who": "BRAM",
+        "text": "Six in a box. Seven, if the supplier has had a good morning."
+      },
+      {
+        "who": "NELL",
+        "text": "And the crown?"
+      },
+      {
+        "who": "BRAM",
+        "text": "The cover is old. The catalogue is more useful."
+      }
+    ],
+    "A3-RECORD-PRINT": [
+      {
+        "who": "BRAM",
+        "text": "Clear marks. Original untouched."
+      },
+      {
+        "who": "NELL",
+        "text": "A treasure I can leave here and still take with me."
+      }
+    ],
+    "A3-RECORD-VERIFIED": [
+      {
+        "who": "NELL",
+        "text": "A command, a calibration and a pending order. Enough to follow. Not permission to invent the rest."
+      }
+    ],
+    "A3-DRUM-OPEN": [
+      {
+        "who": "NELL",
+        "text": "If that stops sending orders, does everything stop safely?"
+      },
+      {
+        "who": "BRAM",
+        "text": "No. Water keeps arriving. Gates need a coordinated setting, not an absent supervisor."
+      },
+      {
+        "who": "NELL",
+        "text": "So breaking it would leave the problem in charge."
+      },
+      {
+        "who": "BRAM",
+        "text": "Now read the alternative."
+      }
+    ],
+    "A3-MODEL-SUCCESS": [
+      {
+        "who": "NELL",
+        "text": "Same watch. Each local level. Every station ready before the centre lets go."
+      },
+      {
+        "who": "BRAM",
+        "text": "The machine was built to be maintained by people who could talk to one another."
+      },
+      {
+        "who": "NELL",
+        "text": "We have been rather slow to service that part."
+      }
+    ],
+    "A3-EGG-CROWN": [
+      {
+        "who": "NELL",
+        "text": "Could this be the relic the pedestal deserves?"
+      },
+      {
+        "who": "BRAM",
+        "text": "Only if you write its part number."
+      },
+      {
+        "who": "NELL",
+        "text": "Lint. One pocket. Unverified antiquity."
+      },
+      {
+        "who": "BRAM",
+        "text": "Put it back. We've only just made the records legible."
+      }
+    ],
+    "A3-PLAN-READY": [
+      {
+        "who": "NELL",
+        "text": "We don't need a bigger way to break the centre. We need the local stations ready to stop depending on it."
+      },
+      {
+        "who": "BRAM",
+        "text": "And a record of why you're doing it."
+      },
+      {
+        "who": "NELL",
+        "text": "Current readings. Named people. The operating copy beside the access notices."
+      },
+      {
+        "who": "BRAM",
+        "text": "That sounds less like an adventure."
+      },
+      {
+        "who": "NELL",
+        "text": "It sounds like one we might bring everyone home from."
+      }
+    ],
+    "A3-END": [
+      {
+        "who": "ORIN",
+        "text": "What did you find?"
+      },
+      {
+        "who": "NELL",
+        "text": "Instructions. And the reason nobody should carry them alone."
+      },
+      {
+        "who": "ORIN",
+        "text": "Where first?"
+      },
+      {
+        "who": "NELL",
+        "text": "Home. We have people to ask, not orders to give."
+      }
+    ]
+  },
+  "topics": [
+    {
+      "id": "A3-MARA-01",
+      "who": "MARA",
+      "question": "What is the Tide Ledger?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Linked gates, local signals, a central chart drum. It moves water between connected channels. Sailors gave it the rest of the ocean in the telling."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-02",
+      "who": "MARA",
+      "question": "Was Vane there when the relief boat stranded?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Not in the work I saw. Don't put a familiar face into an old gap. The record should still say who signed what."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-03",
+      "who": "MARA",
+      "question": "Why keep the chart?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "First to keep it from another confident operator. Later because returning it meant explaining why I'd hidden it. The second reason lasted longer."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-04",
+      "who": "MARA",
+      "question": "How do we reach the installation?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "The service landing, not the company approach. Here is my tracing. Check it against today's board; old ink doesn't know today's water."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-05",
+      "who": "MARA",
+      "question": "Are you coming?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "I'll stay where stranded crews can find a door. You need someone to hear you when you return, not everyone in one boat."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-06",
+      "who": "MARA",
+      "question": "I'm angry with you.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "You may be. You don't have to make me comfortable before we do something useful."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-07",
+      "who": "MARA",
+      "question": "We'll need more than your account.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Yes. Ask the caretaker for the operating record. His name is Bram. Ask what he needs before deciding what he knows."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-08",
+      "who": "MARA",
+      "question": "I'll take the tracing.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "It's on the bar. Keep the original survey with it. One shows the entrance; the other gives you something to check."
+        }
+      ]
+    },
+    {
+      "id": "A3-WATCH-01",
+      "who": "QUIBBLE",
+      "question": "Will you keep watch together?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "I will keep this approach open."
+        },
+        {
+          "who": "FINE PRINT",
+          "text": "I will keep the departure entry and take messages. Partner, not equipment."
+        },
+        {
+          "who": "NELL",
+          "text": "Agreed."
+        }
+      ]
+    },
+    {
+      "id": "A3-WATCH-02",
+      "who": "QUIBBLE",
+      "question": "Can you stop the company?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Not by standing here more magnificently."
+        },
+        {
+          "who": "FINE PRINT",
+          "text": "But a clear landing and an accurate message are available within our budget."
+        }
+      ]
+    },
+    {
+      "id": "A3-WATCH-03",
+      "who": "QUIBBLE",
+      "question": "What if we're late?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "We tell Mara and keep the approach clear. We do not improvise a gate setting."
+        }
+      ]
+    },
+    {
+      "id": "A3-WATCH-04",
+      "who": "QUIBBLE",
+      "question": "Does their charter let them close everything?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "I'll read the whole charter before answering that. A clause without its neighbours is a dangerous pet."
+        }
+      ]
+    },
+    {
+      "id": "A3-WATCH-05",
+      "who": "QUIBBLE",
+      "question": "Another duel?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Not while you're asking for useful work. I am trying not to spoil the novelty."
+        }
+      ]
+    },
+    {
+      "id": "A3-ORIN-01",
+      "who": "ORIN",
+      "question": "Will you take me to Bellweather?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Yes. We have a service route to check, and people ashore to tell. I would prefer not to become a second unexplained absence."
+        }
+      ]
+    },
+    {
+      "id": "A3-ORIN-02",
+      "who": "ORIN",
+      "question": "Check my departure plan.",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Put today's board, the fixed marks and the tracing together. I'll check your conclusion, not supply it."
+        },
+        {
+          "who": "ORIN",
+          "text": "West approach, fixed transit, today's ebb. I agree with what you've checked."
+        }
+      ]
+    },
+    {
+      "id": "A3-ORIN-03",
+      "who": "ORIN",
+      "question": "Who owns the boat now?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "I do. You have my passage and my help. It is useful to say these things before someone starts naming the cabin."
+        }
+      ]
+    },
+    {
+      "id": "A3-ORIN-04",
+      "who": "ORIN",
+      "question": "Can we leave right now?",
+      "lines": []
+    },
+    {
+      "id": "A3-ORIN-05",
+      "who": "ORIN",
+      "question": "What will you do at the shoal?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Mind the berth and the return route. You investigate. If the instructions disagree with me, bring the instructions."
+        }
+      ]
+    },
+    {
+      "id": "A3-ORIN-06",
+      "who": "ORIN",
+      "question": "Will you wait here?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Yes. No unexplained departures. It is becoming a professional principle."
+        }
+      ]
+    },
+    {
+      "id": "A3-ORIN-07",
+      "who": "ORIN",
+      "question": "The centre can't simply be stopped.",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Then find out what takes its place."
+        },
+        {
+          "who": "ORIN",
+          "text": "A navigator likes a second route before the first disappears."
+        }
+      ]
+    },
+    {
+      "id": "A3-ORIN-08",
+      "who": "ORIN",
+      "question": "Take me back.",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Whenever you're ready. The service berth will still be here if we return."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-01",
+      "who": "BRAM",
+      "question": "What does the central drum actually do?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Times and coordinates gate commands. It doesn't contain the tide. The gates still need agreed instructions when the centre stops sending them."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-02",
+      "who": "BRAM",
+      "question": "Why not break it?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Because a stopped instruction isn't a safe instruction. Local stations must accept control together first."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-03",
+      "who": "BRAM",
+      "question": "Mara told me about the relief boat.",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "The incident binder is here. Read it beside what she remembers. An admission and a record should help each other, not replace each other."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-04",
+      "who": "BRAM",
+      "question": "Do you have the company's operating record?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Commands, acknowledgements and settings. The duplicate recorder's collar leaks; its copies blur. Its service tray is separate from the live drive. We can repair the copy path without touching a gate."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-05",
+      "who": "BRAM",
+      "question": "Who ordered the old relief-run change?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "The old duty sheet names its operator. It isn't a Vane order. Today's entries have their own authorisation marks. Keep the years apart."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-06",
+      "who": "BRAM",
+      "question": "Can the local stations take over?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "There is a documented procedure. Read it at the overlook, then try the disconnected board. If you understand the copy, we can discuss the original."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-07",
+      "who": "BRAM",
+      "question": "Can you do this for me?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "I can service the apparatus. I can't decide what your evidence proves, or prepare people I haven't spoken to."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-08",
+      "who": "BRAM",
+      "question": "Why did nobody listen?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "A machine that works looks as though nobody did anything. I have filed several very uneventful reports."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-09",
+      "who": "BRAM",
+      "question": "What should I take?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "A legible record, the procedure, and your questions. Leave the gates, the originals and my kettle."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-10",
+      "who": "BRAM",
+      "question": "I have a clear operating copy.",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Read what it records before deciding what it proves."
+        },
+        {
+          "who": "BRAM",
+          "text": "Keep the source marks attached. A useful page shouldn't lose its address."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-11",
+      "who": "BRAM",
+      "question": "The model worked.",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Good. The harbour still needs current measurements, working local controls and people who have agreed to use them."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-12",
+      "who": "BRAM",
+      "question": "Can you open the command floor?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Not under the present lock. The inspection bypass is reached by the service route, but using it safely requires local cover. Access and readiness are different problems."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-13",
+      "who": "BRAM",
+      "question": "Will you help when we return?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "I'll keep the record and service access in order. Tell me when the local stations are actually ready. Not when someone hopes they are."
+        }
+      ]
+    },
+    {
+      "id": "A3-BRAM-14",
+      "who": "BRAM",
+      "question": "What still needs proving?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Which settings changed, who could pass, and what they were charged. I can give you the first. The harbour must supply the others."
+        }
+      ]
+    },
+    {
+      "id": "A3-PIP-01",
+      "who": "PIP",
+      "question": "We're going to the shoal.",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "I can print a departure notice without predicting the return. That is an editorial improvement."
+        }
+      ]
+    },
+    {
+      "id": "A3-PIP-02",
+      "who": "PIP",
+      "question": "Don't call it a treasure hunt.",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "What should I call it?"
+        },
+        {
+          "who": "NELL",
+          "text": "An inspection."
+        },
+        {
+          "who": "PIP",
+          "text": "I shall need a larger typeface."
+        }
+      ]
+    },
+    {
+      "id": "A3-PIP-03",
+      "who": "PIP",
+      "question": "Can you publish Mara's account?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "With her agreement and the documents beside it. A confession isn't a licence to stop checking."
+        }
+      ]
+    },
+    {
+      "id": "A3-PIP-04",
+      "who": "PIP",
+      "question": "Here is a verified operating copy.",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "I'll keep the source with it. We still need the access notices and fees before the headline can claim the whole story."
+        }
+      ]
+    },
+    {
+      "id": "A3-ROOK-01",
+      "who": "ROOK",
+      "question": "Mara maintained your family's system.",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Then she knows where the drawings meet the weather. I should have asked her sooner."
+        }
+      ]
+    },
+    {
+      "id": "A3-ROOK-02",
+      "who": "ROOK",
+      "question": "How can local readings agree if their levels differ?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Agree on the watch and the map, not on being identical. Different basins can have different levels at the same time."
+        }
+      ]
+    },
+    {
+      "id": "A3-ROOK-03",
+      "who": "ROOK",
+      "question": "Can I reuse my middle inlet reading?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "As a dated observation, yes. As tomorrow's water, no. A measurement expires as an instruction before it expires as evidence."
+        }
+      ]
+    },
+    {
+      "id": "A3-ROOK-04",
+      "who": "ROOK",
+      "question": "The model shows local control can work.",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Then we prepare the real stations. A successful model is a reason to work carefully, not to stop checking."
+        }
+      ]
+    },
+    {
+      "id": "A3-VANE-01",
+      "who": "VANE",
+      "question": "I'm inspecting the shoal.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "The public inspection route remains available. The command floor does not. Bring your questions to the appropriate side of the rail."
+        }
+      ]
+    },
+    {
+      "id": "A3-VANE-02",
+      "who": "VANE",
+      "question": "Why secure the centre?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Because conflicting instructions do not become safer by being sincerely given."
+        },
+        {
+          "who": "NELL",
+          "text": "Neither does one instruction become right by being the only one allowed."
+        }
+      ]
+    },
+    {
+      "id": "A3-VANE-03",
+      "who": "VANE",
+      "question": "Your name is on the pending dispatch request.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Yes. I have been quite public about coordinated passage."
+        },
+        {
+          "who": "NELL",
+          "text": "Coordinated and exclusive aren't the same word."
+        },
+        {
+          "who": "VANE",
+          "text": "We continue to disagree about their practical separation."
+        }
+      ]
+    },
+    {
+      "id": "A3-VANE-04",
+      "who": "VANE",
+      "question": "Will you stop the order?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Not on the basis of an objection without a workable alternative."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-09",
+      "who": "MARA",
+      "question": "The historical record supports your account.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Keep it with the account. Neither needs to stand alone."
+        }
+      ]
+    },
+    {
+      "id": "A3-MARA-10",
+      "who": "MARA",
+      "question": "We must prepare the local stations.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Then tell us what is needed. This time we decide with the information on the table."
+        }
+      ]
+    },
+    {
+      "id": "A3-WATCH-06",
+      "who": "QUIBBLE",
+      "question": "We have the operating record.",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Keep the sequence numbers. I dislike documents that arrive without their neighbours."
+        },
+        {
+          "who": "QUIBBLE",
+          "text": "I will continue guarding the neighbours."
+        }
+      ]
+    }
+  ]
+}

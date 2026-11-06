@@ -1,0 +1,3219 @@
+{
+  "provider": "ElevenLabs",
+  "generated": "2026-11-06",
+  "cast": {
+    "QUIBBLE": {
+      "name": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "direction": "Old pompous pirate captain, gravelly theatrical boasts.",
+      "settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    "FINE PRINT": {
+      "name": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "direction": "Quick, mischievous parrot, bright emphatic comic delivery.",
+      "settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    "NELL": {
+      "name": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "direction": "Clear, lively young adventurer; curious and dryly amused.",
+      "settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    "MARA": {
+      "name": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "direction": "Warm, grounded tavern keeper; measured delivery and dry humour.",
+      "settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    "ORIN": {
+      "name": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "direction": "Low, seasoned older navigator; unhurried storyteller.",
+      "settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    "BRAM": {
+      "name": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    "PIP": {
+      "name": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "settings": {
+        "stability": 0.42,
+        "similarity_boost": 0.75,
+        "style": 0.38,
+        "speed": 1.08
+      }
+    },
+    "ROOK": {
+      "name": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0.2,
+        "speed": 1.05
+      }
+    },
+    "VANE": {
+      "name": "Rachel",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "settings": {
+        "stability": 0.7,
+        "similarity_boost": 0.8,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    }
+  },
+  "records": [
+    {
+      "file": "a3-nell-af448d9758aa275b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What is the Tide Ledger?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-70ef0338ef9fff16.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Linked gates, local signals, a central chart drum. It moves water between connected channels. Sailors gave it the rest of the ocean in the telling.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-b9008630b6d7172d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Was Vane there when the relief boat stranded?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-f1e1c17abe174e32.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Not in the work I saw. Don't put a familiar face into an old gap. The record should still say who signed what.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-1f36626992528fca.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Why keep the chart?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-54eeff48dfe064c0.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "First to keep it from another confident operator. Later because returning it meant explaining why I'd hidden it. The second reason lasted longer.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-6c50ed0a4a0d615f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "How do we reach the installation?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-f33efe8c2ed3634e.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "The service landing, not the company approach. Here is my tracing. Check it against today's board; old ink doesn't know today's water.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-12ffbb64ba0bb440.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Are you coming?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-70a6378caf9269a7.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "I'll stay where stranded crews can find a door. You need someone to hear you when you return, not everyone in one boat.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-0948166834a892df.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I'm angry with you.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-554713c7b0347917.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "You may be. You don't have to make me comfortable before we do something useful.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-04dc03f3936c1fdd.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "We'll need more than your account.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-b3c8804c4ada81a7.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Yes. Ask the caretaker for the operating record. His name is Bram. Ask what he needs before deciding what he knows.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-9fe7a4c6c1776a0b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I'll take the tracing.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-4657c4fba7ce8765.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "It's on the bar. Keep the original survey with it. One shows the entrance; the other gives you something to check.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-ddc3f23cce3efa37.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Will you keep watch together?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-quibble-7978d472858b27ff.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I will keep this approach open.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "a3-fine-print-b33b666cc74d4d95.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "I will keep the departure entry and take messages. Partner, not equipment.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "a3-nell-ec63ef326acffcb4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Agreed.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-6bf877dc31bf1077.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can you stop the company?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-quibble-cf3a911d5fe5f717.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Not by standing here more magnificently.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "a3-fine-print-be3492e6dc7d2376.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "But a clear landing and an accurate message are available within our budget.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "a3-nell-ff3c227b0119aa2d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What if we're late?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-fine-print-8b3eb7a0767dcd6a.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "We tell Mara and keep the approach clear. We do not improvise a gate setting.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "a3-nell-a81a3cee76f36fa2.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Does their charter let them close everything?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-fine-print-31e9dbc66d9751d6.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "I'll read the whole charter before answering that. A clause without its neighbours is a dangerous pet.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "a3-nell-9ff7cf753b55159c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Another duel?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-quibble-2768564589322025.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Not while you're asking for useful work. I am trying not to spoil the novelty.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "a3-nell-8e11b3593333c6cb.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Will you take me to Bellweather?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-08d39c40d4fa34e0.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Yes. We have a service route to check, and people ashore to tell. I would prefer not to become a second unexplained absence.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-3b0ca26669cc24a4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Check my departure plan.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-7af31a4e034a2feb.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Put today's board, the fixed marks and the tracing together. I'll check your conclusion, not supply it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-orin-a469a5cf735f28e8.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "West approach, fixed transit, today's ebb. I agree with what you've checked.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-91602f25b8cbd1da.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Who owns the boat now?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-1e883fef4670b70b.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I do. You have my passage and my help. It is useful to say these things before someone starts naming the cabin.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-0469b0ebfddbc7cf.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can we leave right now?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-9eae780d02f2a256.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What will you do at the shoal?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-1dae2bd5c73ac8a1.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Mind the berth and the return route. You investigate. If the instructions disagree with me, bring the instructions.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-b85d333d23965353.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Will you wait here?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-22e659e49790e806.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Yes. No unexplained departures. It is becoming a professional principle.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-ae3bab57aa3bdf76.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The centre can't simply be stopped.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-62073a614e5f384b.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Then find out what takes its place.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-orin-943959b51ef5a996.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "A navigator likes a second route before the first disappears.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-9ec587a18e42e8c5.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Take me back.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-b22649e07676c342.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Whenever you're ready. The service berth will still be here if we return.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-51ef592644a829e9.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What does the central drum actually do?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-ec69609870ca991b.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Times and coordinates gate commands. It doesn't contain the tide. The gates still need agreed instructions when the centre stops sending them.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-3cef783f24604be6.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Why not break it?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-044b653127b3b64f.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Because a stopped instruction isn't a safe instruction. Local stations must accept control together first.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-fa2b7641d5cc5fff.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Mara told me about the relief boat.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-855af575d2cce560.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "The incident binder is here. Read it beside what she remembers. An admission and a record should help each other, not replace each other.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-b5599c5fa63245e4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Do you have the company's operating record?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-fa56e4edd07160fb.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Commands, acknowledgements and settings. The duplicate recorder's collar leaks; its copies blur. Its service tray is separate from the live drive. We can repair the copy path without touching a gate.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-c971a4d6c1721b55.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Who ordered the old relief-run change?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-d77897b085bef8ac.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "The old duty sheet names its operator. It isn't a Vane order. Today's entries have their own authorisation marks. Keep the years apart.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-4afdfe1ec571c041.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can the local stations take over?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-978bc37188929c56.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "There is a documented procedure. Read it at the overlook, then try the disconnected board. If you understand the copy, we can discuss the original.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-6e707778ce8294b4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can you do this for me?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-ff45699eed73d480.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I can service the apparatus. I can't decide what your evidence proves, or prepare people I haven't spoken to.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-a4a6b0ebe2dca6fb.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Why did nobody listen?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-811e74df3a8a0305.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "A machine that works looks as though nobody did anything. I have filed several very uneventful reports.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-c6f1476746114e73.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What should I take?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-5d868aa936e9b56a.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "A legible record, the procedure, and your questions. Leave the gates, the originals and my kettle.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-4b03b47caa9f56e1.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I have a clear operating copy.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-41cd75f5a460856f.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Read what it records before deciding what it proves.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-bram-3d6b60945bf5b1f4.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Keep the source marks attached. A useful page shouldn't lose its address.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-2a7d7435bef28adc.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The model worked.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-5ff27832ff271ad9.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Good. The harbour still needs current measurements, working local controls and people who have agreed to use them.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-ccc84f0eb8adfca0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can you open the command floor?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-8228315cc7cb0629.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Not under the present lock. The inspection bypass is reached by the service route, but using it safely requires local cover. Access and readiness are different problems.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-32e6157d59fa957b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Will you help when we return?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-d523593470a1a37f.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I'll keep the record and service access in order. Tell me when the local stations are actually ready. Not when someone hopes they are.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-1334873e844c2782.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What still needs proving?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-faff9a53911e6c22.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Which settings changed, who could pass, and what they were charged. I can give you the first. The harbour must supply the others.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-e8631c9683e5fc57.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "We're going to the shoal.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-pip-f8d92439381a7cb2.mp3",
+      "character": "PIP",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "I can print a departure notice without predicting the return. That is an editorial improvement.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.42,
+        "similarity_boost": 0.75,
+        "style": 0.38,
+        "speed": 1.08
+      }
+    },
+    {
+      "file": "a3-nell-a88b9c61192de813.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Don't call it a treasure hunt.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-pip-e10d80bc425edc3a.mp3",
+      "character": "PIP",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "What should I call it?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.42,
+        "similarity_boost": 0.75,
+        "style": 0.38,
+        "speed": 1.08
+      }
+    },
+    {
+      "file": "a3-nell-d38d727d2012571f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An inspection.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-pip-0154bdd929a1f0ac.mp3",
+      "character": "PIP",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "I shall need a larger typeface.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.42,
+        "similarity_boost": 0.75,
+        "style": 0.38,
+        "speed": 1.08
+      }
+    },
+    {
+      "file": "a3-nell-302309ac455adb83.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can you publish Mara's account?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-pip-edc798f64476533e.mp3",
+      "character": "PIP",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "With her agreement and the documents beside it. A confession isn't a licence to stop checking.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.42,
+        "similarity_boost": 0.75,
+        "style": 0.38,
+        "speed": 1.08
+      }
+    },
+    {
+      "file": "a3-nell-dcd0345b29ce882d.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Here is a verified operating copy.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-pip-37be1f126a0c2f35.mp3",
+      "character": "PIP",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "I'll keep the source with it. We still need the access notices and fees before the headline can claim the whole story.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.42,
+        "similarity_boost": 0.75,
+        "style": 0.38,
+        "speed": 1.08
+      }
+    },
+    {
+      "file": "a3-nell-47e363016d6a9975.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Mara maintained your family's system.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-rook-63e65cdb62ace340.mp3",
+      "character": "ROOK",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Then she knows where the drawings meet the weather. I should have asked her sooner.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0.2,
+        "speed": 1.05
+      }
+    },
+    {
+      "file": "a3-nell-5ea36dfd0b557a31.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "How can local readings agree if their levels differ?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-rook-ff8575be4ddf1055.mp3",
+      "character": "ROOK",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Agree on the watch and the map, not on being identical. Different basins can have different levels at the same time.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0.2,
+        "speed": 1.05
+      }
+    },
+    {
+      "file": "a3-nell-457616bdda0f2d9b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Can I reuse my middle inlet reading?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-rook-999fd09841340017.mp3",
+      "character": "ROOK",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "As a dated observation, yes. As tomorrow's water, no. A measurement expires as an instruction before it expires as evidence.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0.2,
+        "speed": 1.05
+      }
+    },
+    {
+      "file": "a3-nell-fadceae66b54eda3.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The model shows local control can work.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-rook-ad13680af38f79c2.mp3",
+      "character": "ROOK",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Then we prepare the real stations. A successful model is a reason to work carefully, not to stop checking.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.65,
+        "similarity_boost": 0.8,
+        "style": 0.2,
+        "speed": 1.05
+      }
+    },
+    {
+      "file": "a3-nell-93f00be52a78291f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I'm inspecting the shoal.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-vane-da555f19d81309c1.mp3",
+      "character": "VANE",
+      "voice": "Rachel",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "text": "The public inspection route remains available. The command floor does not. Bring your questions to the appropriate side of the rail.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.7,
+        "similarity_boost": 0.8,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-955bf7c065e2675a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Why secure the centre?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-vane-287044874f12bec2.mp3",
+      "character": "VANE",
+      "voice": "Rachel",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "text": "Because conflicting instructions do not become safer by being sincerely given.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.7,
+        "similarity_boost": 0.8,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-08953a403b279bf3.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Neither does one instruction become right by being the only one allowed.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-ce2d12e0f6374f03.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Your name is on the pending dispatch request.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-vane-35bac8e6789724bf.mp3",
+      "character": "VANE",
+      "voice": "Rachel",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "text": "Yes. I have been quite public about coordinated passage.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.7,
+        "similarity_boost": 0.8,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-3f975352aeed8ea9.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Coordinated and exclusive aren't the same word.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-vane-a1f0162426bff1cd.mp3",
+      "character": "VANE",
+      "voice": "Rachel",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "text": "We continue to disagree about their practical separation.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.7,
+        "similarity_boost": 0.8,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-bfaff9e713bfca84.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Will you stop the order?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-vane-6b91149492fabd4f.mp3",
+      "character": "VANE",
+      "voice": "Rachel",
+      "voice_id": "21m00Tcm4TlvDq8ikWAM",
+      "text": "Not on the basis of an objection without a workable alternative.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.7,
+        "similarity_boost": 0.8,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-217b5b028e614a52.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The historical record supports your account.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-0e1fc21d6e5dcac3.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Keep it with the account. Neither needs to stand alone.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-65723e0240623fd0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "We must prepare the local stations.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-7378d3cecb2cd8ae.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Then tell us what is needed. This time we decide with the information on the table.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-8998125c60df1c2f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "We have the operating record.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-quibble-d094c1179c1c3b74.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Keep the sequence numbers. I dislike documents that arrive without their neighbours.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "a3-quibble-ad05e88f98531fae.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "I will continue guarding the neighbours.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "a3-nell-7be2b3a455a22214.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I gave Vane a working copy. She paid me. Now my correction is on the route she means to sell back to everyone.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-378d5a6b958eeaa9.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Did she change your measurements?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-ceb9b8f37f470bfb.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "No. I wanted the work to count. I didn't ask hard enough who it would count for.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-342b767c405ce647.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Then I owe you the part I left out.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-bf089ae09a9b1582.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "You recognised the chart.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-ef485718b6944f8b.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "I helped maintain the Tide Ledger. That was one of our service surveys.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-mara-1b663638b6048b20.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Years ago, an operator tried to run more channels from the centre. We changed a gate before the receiving station had confirmed its level.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-7578e7ae1cefa695.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "What happened?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-485f5446bcb4b019.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "A relief boat sat on the mud until the next safe tide. Nobody died. People waiting for supplies still went without them.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-mara-ce7d4f80be13c001.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "I had a doubtful reading. I let certainty outrank it. Afterwards I kept the chart where nobody could use it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-69de8a966b035c44.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Until you gave it to me without telling me why it mattered.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-836f30008feafcf2.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "I thought you would ask the questions I had stopped asking. I made that choice for you. I'm sorry.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-eb5c00c774484322.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I should have read what I was agreeing to, not what I hoped it meant.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-34300da4d75718da.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "Yes. And you should have had the history. Both things can be true.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-0279237b7bbff61a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Then let's stop leaving parts out.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-mara-72136a59d87e1eb2.mp3",
+      "character": "MARA",
+      "voice": "Matilda",
+      "voice_id": "XrExE9yKIg1WjnnlVkGX",
+      "text": "There is a service landing at Bellweather. I'll put the tracing here. Check today's water, and tell someone where you're going.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.55,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.94
+      }
+    },
+    {
+      "file": "a3-nell-fa40d2aacf6b0705.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A route, a check, and someone who knows to ask. That's a better beginning.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-352955fcf868eeef.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "We're going to the shoal. I need someone here who knows our route and will keep the landing clear.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-quibble-13e0945c4d331d0b.mp3",
+      "character": "QUIBBLE",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "At last. A command appropriate to my stature.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.4,
+        "similarity_boost": 0.75,
+        "style": 0.65,
+        "speed": 0.95
+      }
+    },
+    {
+      "file": "a3-fine-print-e7328f5c2ef77ce9.mp3",
+      "character": "FINE PRINT",
+      "voice": "Charlie",
+      "voice_id": "IKne3meq5aSn9XLyUdCD",
+      "text": "A request. With two names on the answer.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.35,
+        "similarity_boost": 0.7,
+        "style": 0.7,
+        "speed": 1.18
+      }
+    },
+    {
+      "file": "a3-nell-a419c4bd29e787e6.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Quibble and Fine Print. Harbour watch. Both responsible, both credited.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-78f4bcb0a72161ca.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "West service approach. Fixed transit. Today's ebb, not yesterday's sheltered basin.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-acb2836c42771413.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Now the old route and the present water have had an introduction.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-7605a94e8c8dcc6f.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Transit steady. West service approach.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-489cf1bb8820b45e.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "That arch looks less like a treasure entrance from this side.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-dc6d4923e289f86b.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "There is a sign.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-7c42c9a5224a3bd5.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "‘Caretakers: mind the second step.’",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-6e442c8ee3b89ea1.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "An unusually considerate curse.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-25f4984cb9035d0f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Someone gave a public works station the manners of an ancient warning.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-6767f72201a3d5e9.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "People read warnings more carefully when they look expensive.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-cf2eb06bc706138b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "They left a dry walkway. I like the practical part.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-9c2fd43d276bd218.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Visitor or replacement caretaker?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-4c689f20a72c3eff.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Visitor. Nell. Mara said I should ask what you need.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-471798293da2a7f1.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Someone to read the labels before touching the things beneath them.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-63edb194b334fc20.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "I can begin immediately.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-239e406ab827d2bb.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Then you're already ahead of the last inspection.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-414176a60f1d9cb8.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The company is using this station to make one paid route the dependable one. I need to know how to stop that without wrecking the harbour.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-115da5685f61514f.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Good. Most people shorten that question in the dangerous place.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-a6bab732e9188618.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The relief boat was stranded after a change without a receiving acknowledgement. That supports Mara's account.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-2a55fd3b2cbb8d18.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "It doesn't make the old operator and today's company the same people.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-75a24e09c4bedbc0.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Two tabs. Blue triangle. A replaceable collar.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-2a6c0211dd8e91f7.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Six in a box. Seven, if the supplier has had a good morning.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-d86baf943ad20469.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "And the crown?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-272c5c3c0d43ab65.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "The cover is old. The catalogue is more useful.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-bram-b28b0c7dc5b20bc5.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Clear marks. Original untouched.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-98de58c99d097e12.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A treasure I can leave here and still take with me.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-125ccda5afc4d622.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A command, a calibration and a pending order. Enough to follow. Not permission to invent the rest.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-ec0d1a9414e4ab84.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "If that stops sending orders, does everything stop safely?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-05d99805c0be17d0.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "No. Water keeps arriving. Gates need a coordinated setting, not an absent supervisor.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-f31457de8950fde4.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "So breaking it would leave the problem in charge.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-35f34c07554bb917.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Now read the alternative.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-8fb255bd8a989e33.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Same watch. Each local level. Every station ready before the centre lets go.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-bb94bba7fff39947.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "The machine was built to be maintained by people who could talk to one another.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-0effe872b79197c7.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "We have been rather slow to service that part.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-0189be58e0871199.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Could this be the relic the pedestal deserves?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-7b2daede51654bd2.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Only if you write its part number.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-7d5ec12476a99abd.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Lint. One pocket. Unverified antiquity.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-f98f995d1e6dbb90.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Put it back. We've only just made the records legible.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-9a3864e867f082fa.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "We don't need a bigger way to break the centre. We need the local stations ready to stop depending on it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-d6412a82d4db5df2.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "And a record of why you're doing it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-c5a16d03ad2ba076.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Current readings. Named people. The operating copy beside the access notices.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-bram-dcca0635ece5b023.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "That sounds less like an adventure.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-81c771a38309d4bf.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "It sounds like one we might bring everyone home from.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-00171484a6693651.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "What did you find?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-0260bd9dce8e754f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Instructions. And the reason nobody should carry them alone.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-3b356629c50a9885.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Where first?",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-nell-d168be66429450e9.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Home. We have people to ask, not orders to give.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-orin-e981c60a9f39bc29.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "West approach, fixed transit, today’s ebb. I agree with what you’ve checked.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-orin-14a81359fc6a78d8.mp3",
+      "character": "ORIN",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Put today’s board, the fixed marks and the tracing together. I’ll check your conclusion, not supply it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.25,
+        "speed": 0.9
+      }
+    },
+    {
+      "file": "a3-bram-74e063224bdb3d36.mp3",
+      "character": "BRAM",
+      "voice": "Bill",
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "text": "Keep the source marks attached. A useful page shouldn’t lose its address.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.72,
+        "similarity_boost": 0.8,
+        "style": 0.15,
+        "speed": 1.02
+      }
+    },
+    {
+      "file": "a3-nell-775746c083811c7a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The copy path needs a seal, not a weather system.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-b7c242ec64b3d00f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "That belongs with my evidence, not inside this mechanism.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-4dfd0771d035cbdb.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Mara’s tracing stays beside my original survey. Today’s water still needs checking.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-498cb2168740a73b.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The original stays here. I can keep the information in my notebook.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-db66bfefee54a7b8.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "No live changes. Use the marked inspection route and prepare local cover first.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-ce6e55d9152010ce.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The copy records commands, my calibration source and a pending order. It does not prove every accusation.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-c64b5cc24eea7f8a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "She has made room at the bar. Not an escape route.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-7253cdd6537a1676.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A maintenance entrance, a landing, and Mara’s initials. No treasure crosses.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-915821b08a142ae6.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The chart was in here. Its history wasn’t.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-9d59a922e058c855.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Two names, one job. Quibble and Fine Print must both agree.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-cdfcd01c9970e16c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "TODAY’S DEPARTURE WATCH: EBB. WEST SERVICE APPROACH. EAST ARM CLOSED FOR COMPANY TRIALS.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-c24f306f2c1ebe23.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The warehouse corner and lighthouse notch still form the outer transit.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-c04cb6068f723e56.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The float and the loose leaves both run west. This agrees with today’s board.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-93055d452ec35fc9.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Compare Mara’s tracing, the original survey and today’s observations.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-02c32aced0007e0a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Second Opinion remains his boat. We sail with his consent.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-7288957ee461a584.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Three blue stripes, copper kettle, safely afloat.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-597fa94ccf3ee7fc.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Old ink does not know today’s water.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-5a3d8b6eb0ddb3ac.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Safely open, with its crank where it belongs. No need to repeat a solved problem.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-ddcd607dfaee2c8f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "TIDE LEDGER. LOCAL CHANNEL WORKS. INSPECTION AND MAINTENANCE ACCESS.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-5c20434fafe5a444.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "INSPECTION GALLERY: RAISED WALKWAY. DO NOT ENTER THE WET STAIR. REPORT TO CARETAKER.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-435e09d71070df12.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Wet steps, no inspection marking. The dry path is already offering itself.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-f7023a2101a7afd8.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "No unexplained departures. He will wait at the berth.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-2d58112ee710f810.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Transport isn’t a pocket-sized arrangement.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-9c57af30bc0e3ea6.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A caretaker, not a keeper of curses.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-489beb396f30b952.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "CENTRAL DRUM: COMMAND COORDINATION. LOCAL GATES: WATER ROUTING. RECORDER: COPY OF COMMANDS AND ACKNOWLEDGEMENTS. TRAINING BOARD: NO GATE CONNECTION.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-9b1ecff10377439e.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "RELIEF RUN: receiving level unconfirmed; central change issued; service boat grounded until safe water returned; supplies delayed; no deaths recorded. The old operator is not Vane.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-e7071c8b74338448.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Unlike the household version, this one has no opinion about the table.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-2c6ac177e800ca96.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "DUPLICATE RECORDER COLLAR. TWO TABS. BLUE TRIANGLE. SERVICE PART, NOT CONTROL EQUIPMENT.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-0d3bf325c1f02191.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The copy path is separate from the live drive. SERVICE releases its dry tray.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-3942ec27b2c0e934.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "That is connected to gates. This bench is not. The distinction is usefully large.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-bf2ea9bb6249dbec.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "An empty recess beneath the Crown of the Faithful Record. The catalogue is more useful.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-aee31dc1bce5e2a1.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "A schedule turning into instructions. Not the source of the water. No live shutdown without local cover.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-dffddf75b796d1e1.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "LOCAL COVER → ACKNOWLEDGEMENTS → CENTRAL ISOLATION → LOCAL RUN. REVERSE ONLY BY DOCUMENTED HANDOVER.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-238116cc158da515.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "DISCONNECTED MODEL. SAMPLE WATCH C. NOT VALID FOR LIVE OPERATIONS.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-7c9b2f825c61eb5f.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "COMPANY OPERATION AREA. PUBLIC INSPECTION ABOVE. Access and readiness are different problems.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-465e4bd455ed866c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Rook’s name identified the mechanism. It didn’t identify every decision made with it.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-6f69ce816484388a.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "My correction, their dispatch policy. Both still on the page.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-9b8447a9de8a5ada.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Warm tea, parked table, a bell waiting for a person. A small working example.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-b0357909add613c6.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The trolley is safely parked. The workshop passage stays open.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-5084dea7628f65e2.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "The occupants and reservations have reached a temporary understanding.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "a3-nell-162a3be1afbed78c.mp3",
+      "character": "NELL",
+      "voice": "Alice",
+      "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+      "text": "Inspection remains public. Operating policy remains with the director. The gap between them is getting crowded.",
+      "model_id": "eleven_multilingual_v2",
+      "voice_settings": {
+        "stability": 0.45,
+        "similarity_boost": 0.75,
+        "style": 0.3,
+        "speed": 1.04
+      }
+    },
+    {
+      "file": "act3-shoal-4e366c1f92bc658e.mp3",
+      "text": "Quiet coastal public works station on a rocky shoal, gentle water lapping stone, distant soft brass clockwork and sea breeze. No voices no music. Seamless loop.",
+      "duration_seconds": 12,
+      "loop": true,
+      "model_id": "eleven_text_to_sound_v2",
+      "prompt_influence": 0.45
+    }
+  ]
+}
