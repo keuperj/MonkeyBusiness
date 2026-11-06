@@ -1,385 +1,219 @@
-# Act II playbook — verified route to the completion confirmation
+# Act II playbook — map-only route through the Act III handoff
 
-## Status: stopped — Act III is unavailable
+## Status: verified through Act III entry
 
-Played on 6 November 2026 using normal UI controls, with sound enabled. Started at the standard Act II entry page in a fresh browser session; no debug presets, injected saves, or progression edits were used. This run does not verify the Act I-to-II handoff or audio quality.
+Recaptured on 6 November 2026 from a fresh Act II game using normal UI controls. No debug presets, injected saves, or progression edits were used. All room changes used **Map → destination → Continue**, including the return after handover; neighboring-room emblems were not used.
 
-**Act III was not reached.** At the final confirmation, the game states: “This completes Act II. Act III is not yet available; you can continue exploring this harbour afterward.” Per the request to stop on gameplay problems, the final confirmation was not accepted. No earlier progression blocker was encountered.
+Sound was muted using the game control and reduced motion was enabled for reproducible capture. This verifies written dialogue and progression, not audio quality or the Act I-to-II handoff. Both Vane quay encounters are recaptured with her sprite present. The outdated Act III-unavailable stop report is superseded by the verified handoff below.
 
-## Controls and scope
+## Controls and screenshots
 
-This records the route actually played, including a few exploratory checks and return trips. Use the destination emblems at the top to travel; wait for travel to finish (or use Continue while it is available). For named scene objects, expand **Scene objects · keyboard & touch**, select the stated verb or inventory item, then click the named object. Dialogue results may take a few seconds to finish. Click **More questions** to return to dialogue choices, or **Back to the room** to leave them. Yellow boxes identify the action target; written instructions also specify prerequisite selections.
+Use **Map** in the pocket tools to choose a destination. Travel screenshots show the selected map destination outlined in yellow. For named objects, choose the stated verb or inventory item, expand **Scene objects · keyboard & touch**, and click the object. Use **Back to the room** or **More questions** where needed. Other yellow outlines identify the next action.
 
-Begin at Repair Quay after the Act II introduction; wait for it or click **Skip introduction**.
+All screenshots below come from this same fresh run. The earlier numbered captures are retained as historical files but are no longer used by this guide.
 
 ## Verified steps
 
 ### 01. Follow the leads
 
-At Repair Quay, read Nell’s recap, then click “Let’s follow those leads”.
+Start a fresh Act II game. Skip the map introduction or read through it. Read Nell’s recap, then choose **Let’s follow those leads**.
 
-![Step 01: Follow the leads](screenshots/01.png)
+![Follow the leads](screenshots/map-route-01.png)
 
-### 02. Compare witness reports
+### 02. Record the witness sequence
 
-Click “Compare witness reports” to inspect the evidence.
+Choose **Signal → Local current changes → Company launch departs** and **The launch was ready for a signalled local change**. Click **Record the supported sequence**.
 
-![Step 02: Compare witness reports](screenshots/02.png)
+![Record the witness sequence](screenshots/map-route-02.png)
 
-### 03. Record the supported sequence
+### 03. Trace the relay maker
 
-Choose Signal → Local current changes → Company launch departs. Supported claim: “The launch was ready for a signalled local change”. Click Record the supported sequence.
+Select **Look at**, expand **Scene objects · keyboard & touch**, and inspect **Signal housing and maker’s plate**.
 
-![Step 03: Record the supported sequence](screenshots/03.png)
+![Trace the relay maker](screenshots/map-route-03.png)
 
-### 04. Inspect the maker’s plate
+### 04. Collect the supplies
 
-Select Look at, expand Scene objects, and select Signal housing and maker’s plate.
+Select **Pick up** and take **Public mooring rope** and **Courtesy stationery** from the scene-object list. Both now appear in inventory.
 
-![Step 04: Inspect the maker’s plate](screenshots/04.png)
+![Collect the supplies](screenshots/map-route-04.png)
 
-### 05. Visit Rook House
+### 05. Map → Rook House · Breakfast Hall
 
-Click the Rook House · Breakfast Hall destination emblem.
+Open **Map**, select **Rook House · Breakfast Hall** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 05: Visit Rook House](screenshots/05.png)
+![Map → Rook House · Breakfast Hall](screenshots/map-route-05.png)
 
-### 06. Talk to Rook
+### 06. Release breakfast
 
-Click Talk to Dr. Tamsin Rook.
+Open **Examine breakfast controls**. Set **KEEP WARM / PARK / HAND**, then click **Release serving trolley**.
 
-![Step 06: Talk to Rook](screenshots/06.png)
+![Release breakfast](screenshots/map-route-06.png)
 
-### 07. Ask what breakfast needs
+### 07. Map → Rook’s Workshop
 
-Ask “What is breakfast waiting for?”
+Open **Map**, select **Rook’s Workshop** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 07: Ask what breakfast needs](screenshots/07.png)
+![Map → Rook’s Workshop](screenshots/map-route-07.png)
 
-### 08. Examine breakfast controls
+### 08. Take the service drawing
 
-Return to the room, then click Examine breakfast controls.
+Select **Pick up** and choose **Service drawing rack**. The maker’s plate and repaired breakfast allow Rook to provide the drawing.
 
-![Step 08: Examine breakfast controls](screenshots/08.png)
+![Take the service drawing](screenshots/map-route-08.png)
 
-### 09. Release breakfast
+### 09. Borrow the inspection crank
 
-Set Heater to KEEP WARM, Table to PARK, and Bell to HAND. Click Release serving trolley.
+With **Pick up** selected, choose **Inspection crank**. Keep it for the inlet mechanism.
 
-![Step 09: Release breakfast](screenshots/09.png)
+![Borrow the inspection crank](screenshots/map-route-09.png)
 
-### 10. Enter Rook’s Workshop
+### 10. Map → Repair Quay
 
-Click the newly available Rook’s Workshop emblem; use Continue on the travel screen.
+Open **Map**, select **Repair Quay** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 10: Enter Rook’s Workshop](screenshots/10.png)
+![Map → Repair Quay](screenshots/map-route-10.png)
 
-### 11. Ask about the relay network
+### 11. Vane’s invitation at the quay
 
-Talk to Dr. Tamsin Rook in the workshop.
+Vane visibly approaches Nell at the Repair Quay after two investigation facts. Read her invitation. **Discuss the commission** opens her topics; choose **Continue exploring** to finish this encounter.
 
-![Step 11: Ask about the relay network](screenshots/11.png)
+![Vane’s invitation at the quay](screenshots/map-route-11.png)
 
-### 12. Ask how to inspect safely
+### 12. Map → Blind Inlet
 
-Ask “How do I inspect the barrier safely?”
+Open **Map**, select **Blind Inlet** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 12: Ask how to inspect safely](screenshots/12.png)
+![Map → Blind Inlet](screenshots/map-route-12.png)
 
-### 13. Borrow the crank
+### 13. Inspect the hidden boat
 
-Ask “Can I borrow that crank?”
+Look at **Sighting slit**. Record the boat’s details; Orin will identify them later.
 
-![Step 13: Borrow the crank](screenshots/13.png)
+![Inspect the hidden boat](screenshots/map-route-13.png)
 
-### 14. Identify the relay
+### 14. Open the inspection barrier
 
-Ask “Is this your relay?”
+Open **Inspect barrier controls**, choose **Select INSPECT**, then **Open equalising valve**. With matching levels and the borrowed crank, operate the barrier.
 
-![Step 14: Identify the relay](screenshots/14.png)
+![Open the inspection barrier](screenshots/map-route-14.png)
 
-### 15. Collect the correct crank
+### 15. Secure the recovery line
 
-With the mechanism identified, ask “Can I borrow that crank?” again.
+Use **Boathook** on **Messenger line**, then **Mooring rope** on **Berth bollard**. The crank stays fitted in the safely latched barrier.
 
-![Step 15: Collect the correct crank](screenshots/15.png)
+![Secure the recovery line](screenshots/map-route-15.png)
 
-### 16. Return through Breakfast Hall
+### 16. Record the service measurement
 
-Click Breakfast Hall and wait for travel to finish.
+Look at **Square drain**, **Split granite pillar**, and **Still-water staff**. Open **Compare the service survey**, choose **Square drain / Split granite pillar / Middle**, then record.
 
-![Step 16: Return through Breakfast Hall](screenshots/16.png)
+![Record the service measurement](screenshots/map-route-16.png)
 
-### 17. Return to Repair Quay
+### 17. Map → The Crooked Compass
 
-Click Repair Quay and wait for travel to finish.
+Open **Map**, select **The Crooked Compass** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 17: Return to Repair Quay](screenshots/17.png)
+![Map → The Crooked Compass](screenshots/map-route-17.png)
 
-### 18. Visit Blind Inlet
+### 18. Identify Second Opinion
 
-Click Blind Inlet and wait for travel to finish.
+Talk to **Orin**, then ask **Describe your ship without describing your feelings.** His description matches the boat seen through the slit.
 
-![Step 18: Visit Blind Inlet](screenshots/18.png)
+![Identify Second Opinion](screenshots/map-route-18.png)
 
-### 19. Inspect the barrier controls
+### 19. Invite Orin to the inlet
 
-Click Inspect barrier controls.
+Choose the dialogue topic that asks Orin to meet you at the open inlet. He moves to the berth; there is no need to recover the boat without its owner.
 
-![Step 19: Inspect the barrier controls](screenshots/19.png)
+![Invite Orin to the inlet](screenshots/map-route-19.png)
 
-### 20. Select inspection mode
+### 20. Map → Blind Inlet
 
-Click Select INSPECT.
+Open **Map**, select **Blind Inlet** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 20: Select inspection mode](screenshots/20.png)
+![Map → Blind Inlet](screenshots/map-route-20.png)
 
-### 21. Equalise the levels
+### 21. Arrange safe recovery
 
-Click Open equalising valve.
+Open **Arrange safe boat recovery**. With the open barrier, secured line, identified boat and Orin present, choose **Bring Second Opinion alongside**.
 
-![Step 21: Equalise the levels](screenshots/21.png)
+![Arrange safe recovery](screenshots/map-route-21.png)
 
-### 22. Open and latch the barrier
+### 22. Second Opinion recovered
 
-Confirm Levels: MATCH, then click Fit crank, open and latch barrier.
+The boat is now safely alongside in the water, with Orin at the berth.
 
-![Step 22: Open and latch the barrier](screenshots/22.png)
+![Second Opinion recovered](screenshots/map-route-22.png)
 
-### 23. Compare the service survey
+### 23. Map → Repair Quay
 
-Click Compare the service survey.
+Open **Map**, select **Repair Quay** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 23: Compare the service survey](screenshots/23.png)
+![Map → Repair Quay](screenshots/map-route-23.png)
 
-### 24. Inspect Square drain
+### 24. Prepare the supported copy
 
-Select Look at, expand Scene objects, and click Square drain.
+Open **Prepare an annotated copy**. Check only the first three statements: fixed marks and level, dated signal/current/launch sequence, and local connected channels. Leave the entire-ocean claim unchecked. Finish the annotated copy.
 
-![Step 24: Inspect Square drain](screenshots/24.png)
+![Prepare the supported copy](screenshots/map-route-24.png)
 
-### 25. Inspect Split granite pillar
+### 25. Map → Fair Passage Survey Office
 
-Select Look at, expand Scene objects, and click Split granite pillar.
+Open **Map**, select **Fair Passage Survey Office** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 25: Inspect Split granite pillar](screenshots/25.png)
+![Map → Fair Passage Survey Office](screenshots/map-route-25.png)
 
-### 26. Inspect Still-water staff
+### 26. Review Vane’s commission
 
-Select Look at, expand Scene objects, and click Still-water staff.
+At the **Survey Office**, where Vane is present, click **Read the commission**. Nell keeps the original; the usable copy permits operational calibration and local routing.
 
-![Step 26: Inspect Still-water staff](screenshots/26.png)
+![Review Vane’s commission](screenshots/map-route-26.png)
 
-### 27. Compare the inspected marks
+### 27. Decide whether to deliver
 
-Click Compare the service survey again.
+Read the explicit consequence warning. Choose **Deliver the copy** to continue the story, or **Keep investigating** to cancel.
 
-![Step 27: Compare the inspected marks](screenshots/27.png)
+![Decide whether to deliver](screenshots/map-route-27.png)
 
-### 28. Record the service measurement
+### 28. Handover in the office
 
-Choose Square drain, Split granite pillar, and Middle. Click Record service measurement.
+Vane accepts the working copy in her office. Nell retains the original and notebook facsimile and receives the commission receipt. For the next step, use **Map**, not the return shortcut.
 
-![Step 28: Record the service measurement](screenshots/28.png)
+![Handover in the office](screenshots/map-route-28.png)
 
-### 29. Retrieve the messenger line
+### 29. Map → Repair Quay
 
-Select the Boathook in inventory, expand Scene objects, then click Messenger line.
+Open **Map**, select **Repair Quay** in the destination list, then choose **Continue** on the travel overlay. Do not use the neighboring-room emblems.
 
-![Step 29: Retrieve the messenger line](screenshots/29.png)
+![Map → Repair Quay](screenshots/map-route-29.png)
 
-### 30. Fetch a mooring rope
+### 30. Vane’s public announcement
 
-Return to Repair Quay using its emblem.
+Vane is visibly present at the Repair Quay beside the new company notice. Read the compulsory-contract announcement, then choose **Compare the company notice**.
 
-![Step 30: Fetch a mooring rope](screenshots/30.png)
+![Vane’s public announcement](screenshots/map-route-30.png)
 
-### 31. Pick up the public rope
+### 31. Recognise Nell’s annotation
 
-Select Pick up, expand Scene objects, and click Public mooring rope.
+Compare the retained facsimile with the published route. Choose **My service-channel level annotation matches exactly**: the measurements were accurate, but the access policy is the problem.
 
-![Step 31: Pick up the public rope](screenshots/31.png)
+![Recognise Nell’s annotation](screenshots/map-route-31.png)
 
-### 32. Return to the recovered line
+### 32. Confirm Act II completion
 
-Travel back to Blind Inlet.
+Choose **Tell Mara everything**, then read this confirmation. Act III is now available; accepting records Nell’s decision to tell Mara.
 
-![Step 32: Return to the recovered line](screenshots/32.png)
+![Confirm Act II completion](screenshots/map-route-32.png)
 
-### 33. Secure the boat
+### 33. Continue to Act III
 
-Use Mooring rope with Berth bollard.
+Act II is complete. Choose **Continue to Act III** to open the next chapter. **Continue exploring** remains available.
 
-![Step 33: Secure the boat](screenshots/33.png)
+![Continue to Act III](screenshots/map-route-33.png)
 
-### 34. Recover Second Opinion
+### 34. Verified Act III handoff
 
-Select Use, then click Second Opinion.
+The next chapter opens in the tavern with Nell and Mara’s confession. This capture verifies the handoff; the Act III walkthrough continues in its own playbook.
 
-![Step 34: Recover Second Opinion](screenshots/34.png)
-
-### 35. Return to the quay
-
-Travel to Repair Quay.
-
-![Step 35: Return to the quay](screenshots/35.png)
-
-### 36. Return to Outer Landing
-
-Travel to Outer Landing.
-
-![Step 36: Return to Outer Landing](screenshots/36.png)
-
-### 37. Cross back toward the tavern
-
-Travel to Quibble’s Crossing.
-
-![Step 37: Cross back toward the tavern](screenshots/37.png)
-
-### 38. Visit the Crooked Compass
-
-Travel to the tavern.
-
-![Step 38: Visit the Crooked Compass](screenshots/38.png)
-
-### 39. Ask Orin about his ship
-
-Click Talk to Orin.
-
-![Step 39: Ask Orin about his ship](screenshots/39.png)
-
-### 40. Get the identifying description
-
-Ask “Describe your ship without describing your feelings.”
-
-![Step 40: Get the identifying description](screenshots/40.png)
-
-### 41. Invite Orin to the inlet
-
-Tell Orin “Come to the inlet.”
-
-![Step 41: Invite Orin to the inlet](screenshots/41.png)
-
-### 42. Travel to Quibble’s Crossing
-
-Click the Quibble’s Crossing emblem and wait for travel to finish.
-
-![Step 42: Travel to Quibble’s Crossing](screenshots/42.png)
-
-### 43. Travel to Outer Landing
-
-Click the Outer Landing emblem and wait for travel to finish.
-
-![Step 43: Travel to Outer Landing](screenshots/43.png)
-
-### 44. Travel to Repair Quay
-
-Click the Repair Quay emblem and wait for travel to finish.
-
-![Step 44: Travel to Repair Quay](screenshots/44.png)
-
-### 45. Travel to Blind Inlet
-
-Click the Blind Inlet emblem and wait for travel to finish.
-
-![Step 45: Travel to Blind Inlet](screenshots/45.png)
-
-### 46. Match the sighting to Orin’s description
-
-Select Look at and inspect the Sighting slit.
-
-![Step 46: Match the sighting to Orin’s description](screenshots/46.png)
-
-### 47. Arrange safe recovery
-
-Click Arrange safe boat recovery.
-
-![Step 47: Arrange safe recovery](screenshots/47.png)
-
-### 48. Bring Second Opinion alongside
-
-Click Bring Second Opinion alongside.
-
-![Step 48: Bring Second Opinion alongside](screenshots/48.png)
-
-### 49. Return to prepare the copy
-
-Travel to Repair Quay.
-
-![Step 49: Return to prepare the copy](screenshots/49.png)
-
-### 50. Collect courtesy stationery
-
-Select Pick up and click Courtesy stationery.
-
-![Step 50: Collect courtesy stationery](screenshots/50.png)
-
-### 51. Prepare an annotated copy
-
-Click Prepare an annotated copy.
-
-![Step 51: Prepare an annotated copy](screenshots/51.png)
-
-### 52. Finish the supported copy
-
-Check only the first three statements: fixed marks and level; dated signal → current → launch; local connected channels only. Leave “The company controls every tide” unchecked. Click Finish annotated copy.
-
-![Step 52: Finish the supported copy](screenshots/52.png)
-
-### 53. Review Vane’s terms
-
-Travel to Fair Passage Survey Office.
-
-![Step 53: Review Vane’s terms](screenshots/53.png)
-
-### 54. Read the commission
-
-Click Read the commission.
-
-![Step 54: Read the commission](screenshots/54.png)
-
-### 55. Review the delivery decision
-
-Click Review delivery decision.
-
-![Step 55: Review the delivery decision](screenshots/55.png)
-
-### 56. Deliver the commissioned copy
-
-Choose Deliver the copy. Nell retains the original and notebook; this advances the story and changes the harbour.
-
-![Step 56: Deliver the commissioned copy](screenshots/56.png)
-
-### 57. Return for the announcement
-
-Click Return to the Repair Quay.
-
-![Step 57: Return for the announcement](screenshots/57.png)
-
-### 58. Compare the company notice
-
-Click Compare the company notice.
-
-![Step 58: Compare the company notice](screenshots/58.png)
-
-### 59. Recognise the matching annotation
-
-Choose “My service-channel level annotation matches exactly”.
-
-![Step 59: Recognise the matching annotation](screenshots/59.png)
-
-### 60. Tell Mara everything
-
-Click Tell Mara everything.
-
-![Step 60: Tell Mara everything](screenshots/60.png)
-
-## Stop report: Act III unavailable
-
-**Reproduction:** follow the route above, deliver the annotated copy, return for the company announcement, compare the company notice, choose the matching service-channel annotation, then click **Tell Mara everything**.
-
-**Observed:** the confirmation says Act III is not yet available and offers completion of Act II or continued exploration. This is an explicitly declared content limitation, not a verified crash or puzzle failure.
-
-**Expected for this request:** a playable transition into Act III. That cannot be verified in this build. The confirmation remains open; no further gameplay was performed.
-
-![Final confirmation: Act III is not yet available](screenshots/act-iii-unavailable.png)
+![Verified Act III handoff](screenshots/map-route-34.png)

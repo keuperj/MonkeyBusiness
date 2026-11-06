@@ -14,7 +14,7 @@ export const spots3:Record<Room3,Spot[]>={...spots,
 };
 // Keep solved returning objects, but never respawn Act II collectibles or Orin.
 for(const r of ['quay','press','hall','workshop','office'] as Room3[])spots3[r]=spots3[r].filter(x=>!['paper','rope','crank','drawing'].includes(x.id)&&!(r==='hall'&&x.id==='rook'));
-spots3.quay=spots3.quay.filter(x=>x.id!=='reports');
+spots3.quay=spots3.quay.filter(x=>x.id!=='reports'&&x.id!=='vane');
 const returning:Record<string,string>={
  'quay:plate':'Rook’s name identified the mechanism. It didn’t identify every decision made with it.',
  'quay:notice':'My correction, their dispatch policy. Both still on the page.',

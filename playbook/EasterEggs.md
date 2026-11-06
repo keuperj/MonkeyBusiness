@@ -1,12 +1,12 @@
 # Easter eggs and affectionate references
 
-**Spoilers for Acts I and II.** Audited and illustrated on 6 November 2026.
+**Spoilers for Acts I–III.** Acts I–II audited and illustrated on 6 November 2026; Act III entries checked against the implementation on the same date.
 
 ## What this report covers
 
-The implemented game contains **three explicitly flagged optional Easter-egg interactions**: the tavern cupboard, the newspaper correction, and the celestial sorter’s response to pocket lint. All three were triggered in the browser for this report. The sections below also explain the documented broader homages and distinguish them from references that exist only in the story plan.
+The implemented game contains **four explicitly flagged optional Easter-egg interactions**: the tavern cupboard, the newspaper correction, the celestial sorter’s response to pocket lint, and Act III’s recorder-room relic joke. The first three were triggered in the browser for the original report; the Act III addition is source-verified, without a new browser capture. The sections below also explain the documented broader homages, an unflagged Act III bonus response, and references that exist only in the story plan.
 
-This is an inventory of identifiable scripted Easter eggs and documented references in the current Acts I–II build, **not a claim that every decorative detail or ordinary joke is a franchise reference**. No additional implemented Easter-egg flags were found in the audited interaction handlers and state definitions. Unreleased story-plan material is not counted as playable content.
+This is an inventory of identifiable scripted Easter eggs and documented references in the current Acts I–III build, **not a claim that every decorative detail or ordinary joke is a franchise reference**. Unreleased story-plan material is not counted as playable content.
 
 **Screenshot method:** the six new captures use the game’s built-in debug room starts in a separate browser session, followed by normal Look at / Use controls. They illustrate the actual interactions, rather than a continuous playthrough. Yellow frames highlight the response panel. Sound was muted for capture; an audio-unavailable notice appeared during the Act I startup. These captures do not verify audio. The earlier Act II playthrough and its final confirmation were not used to advance progression for this report.
 
@@ -19,8 +19,12 @@ This is an inventory of identifiable scripted Easter eggs and documented referen
 | An unlicensed nebula | Act II, Rook House · Breakfast Hall | Use Pocket lint with Celestial refuse sorter | Explicit, state-tracked Easter egg; original cosmic/domestic joke |
 | Chairs awaiting their own reservations | Act II, Breakfast Hall | Look at Chair reservation cards; examine breakfast controls | Documented Maniac Mansion homage, not a separate discovery flag |
 | Verbal fencing at a pirate toll bridge | Act I, Quibble’s Crossing | Play the bridge duel | Documented Monkey Island-inspired adventure framework, not a hidden collectible |
+| A relic of unverified antiquity | Act III, Recorder Room | Look at Plain part label, then use Pocket lint with Unused display recess | Explicit, state-tracked Easter egg; adventure-film service-component homage |
+| A seal, not a weather system | Act III, Recorder Room | Use Pocket lint with Duplicate recorder | Optional wrong-item joke, not a separate discovery flag |
 
 For named objects, expand **Scene objects · keyboard & touch** in the right-hand panel. Select **Look at** or **Use** as instructed, or select the named inventory item first.
+
+In Act III the equivalent list is labelled **Room objects · keyboard controls**. After a response, choose **Back to the room** to reopen it.
 
 ## 1. Space Quest — six inches of frontier
 
@@ -109,6 +113,43 @@ Fine Print’s legal vocabulary adds original wordplay: *bill* means both a bird
 
 **Implementation:** `duel.json` contains the five exchanges and their outcomes. This screenshot is reused from the previously captured Act I guide, not presented as a new Easter-egg capture.
 
+## 6. The Crown of the Faithful Record — unverified antiquity
+
+**Where:** the **Unused display recess** in Act III’s **Recorder Room** at Bellweather Shoal.
+
+**Reveal it:**
+1. Select **Look at** and inspect the **Plain part label**. It identifies the duplicate recorder collar as a two-tab, blue-triangle service part, not control equipment.
+2. Choose **Back to the room**, then select **Pocket lint** from the inventory.
+3. Expand **Room objects · keyboard controls** and select **Unused display recess**.
+
+For a quick debug visit, choose **Debug · choose act and room → Act 3 → Recorder Room**. This starts after the confession with lint available, but you must still inspect the part label. As with other debug starts, it replaces the selected act’s autosave; manual saves remain intact.
+
+The exact exchange is:
+
+> **Nell:** “Could this be the relic the pedestal deserves?”
+>
+> **Bram:** “Only if you write its part number.”
+>
+> **Nell:** “Lint. One pocket. Unverified antiquity.”
+>
+> **Bram:** “Put it back. We've only just made the records legible.”
+
+**Meaning:** the grand “Crown of the Faithful Record” gives an ordinary replaceable component the status of a treasure. Nell’s proposed lint relic extends the joke: practical maintenance and accurate records matter more than an impressive artefact. This implements the service-component adventure-film homage proposed in the story plan’s **Raiders of the Lost Ark** reference, without copied dialogue, an idol-swap trap, or a live-machine override.
+
+**Implementation:** `A3-EGG-CROWN` plays only when pocket lint is used on the recess after `collarSpecRead`. It sets `eggCrown`, retains the lint, and changes no machinery or puzzle progress. Repeating the interaction replays the same exchange. It is entirely optional; a save without lint can still complete Act III.
+
+**Verification:** checked against the Act III interaction handler and dialogue block. No new screenshot or live Easter-egg playthrough is claimed for this addition.
+
+## 7. A seal, not a weather system
+
+**Where:** the **Duplicate recorder**, also in Act III’s Recorder Room.
+
+**Reveal it:** select **Pocket lint**, then click **Duplicate recorder** rather than the display recess. Reading the part label is not required for this response.
+
+> **Nell:** “The copy path needs a seal, not a weather system.”
+
+**Meaning and implementation:** this is an original wrong-item joke, not a separate franchise reference or discovery flag. It does not consume lint, fit a collar, or advance the recorder repair. It is source-verified alongside the crown interaction above.
+
 ## Planned references that are not implemented discoveries
 
 The story plan is a proposal, not an inventory of shipped rooms. These ideas must not be advertised as things the player can currently find:
@@ -116,7 +157,6 @@ The story plan is a proposal, not an inventory of shipped rooms. These ideas mus
 | Proposed reference | Intended meaning | Current audit result |
 | --- | --- | --- |
 | Space Quest: Bram’s maintenance cart and a “SELF-CLEANING / BY BRAM” cabinet | Grand technology depends on overlooked labour | Planned prop, not found in the current interaction data. The playable Space Quest reference is the tavern cupboard instead. |
-| Raiders of the Lost Ark: a grand “relic” that is really a service component | Maintenance knowledge matters more than a glamorous artefact | Proposed in section 9; no corresponding playable discovery was found in Acts I–II. |
 | Contradictory old company-mascot advertisements | Optional jokes exposing a changing corporate story | Proposed elsewhere in the plan; not found as implemented discoveries in this audit. |
 
 Ordinary names and puns—such as **Second Opinion**, **Fine Print**, and **Fair Passage**—support the story’s themes. Without explicit evidence, they should not be assigned to another franchise. Likewise, no claim is made here about hidden references in generated background pixels that have no supporting script or design note.
@@ -130,7 +170,11 @@ Repository root: `/home/keuper/Projekte/MonkeyBusiness`.
 - `/home/keuper/Projekte/MonkeyBusiness/src/act2.ts` — newspaper and lint interactions; notebook discovery label.
 - `/home/keuper/Projekte/MonkeyBusiness/src/act2-data.ts` — headline, chair, and sorter descriptions.
 - `/home/keuper/Projekte/MonkeyBusiness/src/act2-dialogue.json` — `A2-PIP-EGG` and Pip’s optional headline/bell topics.
+- `/home/keuper/Projekte/MonkeyBusiness/src/act3.ts` — lint/recess prerequisite, `eggCrown` flag and wrong-item recorder response.
+- `/home/keuper/Projekte/MonkeyBusiness/src/act3-dialogue.json` — exact `A3-EGG-CROWN` exchange.
+- `/home/keuper/Projekte/MonkeyBusiness/src/act3-data.ts` — Recorder Room object names and part-label description.
+- `/home/keuper/Projekte/MonkeyBusiness/docs/ACT_3_ROOM_PLAN.md`, section 10 — optional service-component homage and non-consumption rules.
 - `/home/keuper/Projekte/MonkeyBusiness/src/duel.json` — bridge dialogue and wordplay.
 - `/home/keuper/Projekte/MonkeyBusiness/docs/STORY_PLAN.md`, section 9 — explicit inspiration mapping and proposed-only boundaries.
 
-The three flagged interactions and the chair inspection were reproduced for the new screenshots. Reference meanings above are based on the repository’s own design notes and the displayed text; where a broader interpretation is offered, it is not presented as an additional confirmed crossover.
+The three Acts I–II flagged interactions and the chair inspection were reproduced for the original screenshots. The two Act III entries were checked against source; no additional screenshots were created for this update. Reference meanings above are based on the repository’s own design notes and the displayed text; where a broader interpretation is offered, it is not presented as an additional confirmed crossover.
