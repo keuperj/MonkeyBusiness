@@ -3,7 +3,7 @@ import {readFileSync} from 'node:fs';
 const duel=JSON.parse(readFileSync('src/duel.json','utf8'));
 const auto='monkey-buisness-act1-auto';
 async function progress(page:Page){return page.evaluate(k=>JSON.parse(localStorage.getItem(k)!),auto);}
-async function start(page:Page){await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#start-game').click();await page.locator('#intro-skip').click();await page.locator('#arrival-skip').click();await expect(page.locator('#game')).toHaveAttribute('data-ready','true');}
+async function start(page:Page){await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#start-game').click();await page.locator('#intro-skip').click();await page.locator('#arrival-skip').click();await expect(page.locator('#act-arrival')).toHaveCount(0,{timeout:15000});await expect(page.locator('.chapter-shell')).toHaveJSProperty('inert',false);await expect.poll(()=>progress(page)).not.toBeNull();await expect(page.locator('#game')).toHaveAttribute('data-ready','true');}
 async function resume(page:Page){await page.locator('#splash-enter').click();await page.locator('#load-game').click();await page.locator('[data-save="monkey-buisness-act1-auto"]').click();await expect(page.locator('#front')).not.toBeVisible();}
 async function target(page:Page,id:string){const details=page.locator('#panel details');if(!await details.getAttribute('open')){if(!await details.evaluate(el=>(el as HTMLDetailsElement).open))await details.locator('summary').click();}await page.locator(`[data-target="${id}"]`).click();}
 async function verb(page:Page,id:string){await page.locator(`[data-verb="${id}"]`).click();}

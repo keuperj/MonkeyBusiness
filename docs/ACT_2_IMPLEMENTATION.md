@@ -35,6 +35,10 @@ Selecting a debug preset replaces that act's autosave on entering the room. Manu
 
 Act II uses `monkey-buisness-act2-auto` and `monkey-buisness-act2-save`. Existing Act I notebook entries are carried into a fresh normal Act II start. `act2.html?new=1` starts a fresh Act II investigation.
 
+If an autosave is invalid, the loading screen offers a fresh investigation or a valid manual save. Both options first preserve the rejected autosave in `monkey-buisness-act2-auto-recovery`; the manual save is never replaced. Recovery stops if the backup cannot be stored. Download retries retain the chosen recovery mode rather than rereading the invalid autosave.
+
+Character hotspots respect the selected verb: Look describes, Talk opens topics, Walk approaches, and Use only performs suitable item interactions. Walking footsteps stop when movement ends or is interrupted by travel, notebook/map access, or a scene redraw. Reduced-motion walking is instantaneous; reduced-motion map travel displays “Journey complete” and waits for Continue.
+
 ## Artwork and audio
 
 Artwork was generated using the **built-in image generation tool** and the imagegen skill. All final files are under [`public/assets/act2/`](../public/assets/act2/). The artwork specifications and source-image identifiers are in [ACT_2_ARTWORK.md](ACT_2_ARTWORK.md).
