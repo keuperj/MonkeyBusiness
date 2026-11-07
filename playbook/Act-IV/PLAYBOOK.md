@@ -416,7 +416,7 @@ This is Vane’s launch, not Second Opinion. Choose **Continue** to record the a
 
 ### 65. Act IV complete
 
-Read the centralisation announcement and closing exchange. **Act V is not yet available.** Local drives remain disengaged, live authority remains CENTRAL, and Nell remains at Repair Quay.
+Read the centralisation announcement and closing exchange. Local drives remain disengaged, live authority remains CENTRAL, and Nell remains at Repair Quay. **Update, 7 November 2026:** Act V is now available through **Continue to Act V**; follow the [Act V playbook](../Act-V/PLAYBOOK.md). The screenshot below preserves the earlier capture, made before that continuation was implemented.
 
 ![Act IV complete](screenshots/step-65.png)
 

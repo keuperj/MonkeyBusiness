@@ -1,18 +1,20 @@
 # Easter eggs and affectionate references
 
-**Spoilers for Acts I–IV.** Acts I–II illustrated and Act III source-audited on 6 November 2026. Act IV's three discoveries are now illustrated from a complete normal-controls walkthrough on the same date.
+**Spoilers for Acts I–V.** Acts I–II illustrated and Act III source-audited on 6 November 2026. Act IV's three discoveries are illustrated from a complete normal-controls walkthrough on the same date. Act V's Exhibit Zero, boat callback and ending-credit jokes are illustrated from the normal-controls walkthrough on 7 November 2026.
 
 ## What this report covers
 
-The implemented game contains **seven explicitly flagged optional Easter-egg interactions**: the tavern cupboard, the newspaper correction, the celestial sorter’s response to pocket lint, Act III’s recorder-room relic joke, and Act IV’s mascot archive, appointment clock and maintenance credit. The Acts I–II entries were triggered in the browser for the original report; Act III remains source-verified without a new capture. All three Act IV discoveries were triggered during the illustrated Act IV playthrough and checked again after completion reload. The sections below also explain the documented broader homages, an unflagged Act III bonus response, and references that exist only in the story plan.
+The implemented game contains **eight explicitly flagged optional Easter-egg interactions**: the tavern cupboard, the newspaper correction, the celestial sorter’s response to pocket lint, Act III’s recorder-room relic joke, Act IV’s mascot archive, appointment clock and maintenance credit, and Act V’s Exhibit Zero. The Acts I–II entries were triggered in the browser for the original report; Act III remains source-verified without a new capture. All three Act IV discoveries and Act V's Exhibit Zero were triggered during their illustrated playthroughs and checked after completion reload. The sections below also explain broader homages, unflagged bonus responses, the Act V credits gag, and references that exist only in the story plan.
 
-This is an inventory of identifiable scripted Easter eggs and documented references in the current Acts I–IV build, **not a claim that every decorative detail or ordinary joke is a franchise reference**. Unreleased story-plan material is not counted as playable content.
+This is an inventory of identifiable scripted Easter eggs and documented references in the current Acts I–V build, **not a claim that every decorative detail or ordinary joke is a franchise reference**. Unimplemented story-plan material is not counted as playable content.
 
 **Acts I–II screenshot method:** the six original captures use the game’s built-in debug room starts in a separate browser session, followed by normal Look at / Use controls. They illustrate the actual interactions, rather than a continuous playthrough. Yellow frames highlight the response panel. Sound was muted for capture; an audio-unavailable notice appeared during the Act I startup. These captures do not verify audio. The earlier Act II playthrough and its final confirmation were not used to advance progression for this report.
 
 **Act IV screenshot method:** the three new captures come from one fresh, normal-controls session with no debug presets or injected progression. Sound was muted and reduced motion enabled. These verify written dialogue and discovery state, not audio quality. Each image is also included in the [Act IV playbook](Act-IV/PLAYBOOK.md). The capture starts with canonical prior-act inventory, including lint; imported saves without lint cannot trigger the appointment egg but can complete Act IV.
 
 ## At a glance
+
+**Act V screenshot method:** one fresh normal-controls session, no debug presets or injected progression, canonical completed-Act-IV inventory including lint. Sound was muted and reduced motion enabled. The [Act V playbook](Act-V/PLAYBOOK.md) includes the discovery, catalogue replay, boat callback and finale. Screenshots verify text and state, not audio quality or animation timing. Saves without lint can still complete the chapter.
 
 | Discovery | Where | How to reveal it | Classification |
 | --- | --- | --- | --- |
@@ -26,10 +28,13 @@ This is an inventory of identifiable scripted Easter eggs and documented referen
 | Appointment with yesterday | Act IV, Breakfast Hall | Use Pocket lint with Maintenance attendance clock | State-tracked broad time-bending household-adventure homage |
 | The maintenance credit | Act IV, Dry Station Chamber | Test telephone, then Ask Bram about the plan → Read the maintenance credit | State-tracked maintenance-labour homage |
 | A seal, not a weather system | Act III, Recorder Room | Use Pocket lint with Duplicate recorder | Optional wrong-item joke, not a separate discovery flag |
+| Exhibit Zero: claims awaiting evidence | Act V, Recorder Room | Look at Exhibit Zero display tray, then Use Pocket lint with it | State-tracked optional museum/provenance joke |
+| One historical specimen, privately carried | Act V, Repair Quay | After Exhibit Zero and publication, Inspect Still Deciding | Callback to the same discovery, not another flag |
+| The people who did not make this game | Act V, ending credits | Cast off with clearance, then Roll credits | Explicit satirical non-credits and space-opera presentation homage, not a hidden puzzle |
 
 For named objects, expand **Scene objects · keyboard & touch** in the right-hand panel. Select **Look at** or **Use** as instructed, or select the named inventory item first.
 
-In Acts III–IV the equivalent list is labelled **Room objects · keyboard controls**. After a response, choose **Back to the room** to reopen it.
+In Acts III–V the equivalent list is labelled **Room objects · keyboard controls**. After a response, choose **Back to the room** to reopen it.
 
 ## 1. Space Quest — six inches of frontier
 
@@ -206,6 +211,50 @@ Nell asks whether the system is self-cleaning. Bram answers, “I am the self.�
 
 **Implementation:** `A4-EGG-CREDIT` sets `eggMaintenanceCredit`. It needs the working messenger branch and tested telephone access, not station completion or a live override. The discovery changes no machinery and consumes no item.
 
+## 11. Act V — Exhibit Zero: claims awaiting evidence
+
+**Where:** Bellweather Shoal, Recorder Room. Available on the first visit after the checked voyage; no need to complete the handover, print the event copy or finish the chapter.
+
+**How to reveal it:**
+
+1. Select **Look at**, expand **Room objects · keyboard controls**, and choose **Exhibit Zero display tray**.
+2. Read the placard: **EXHIBIT ZERO — CLAIMS AWAITING EVIDENCE. CLEAN DISPLAY TRAY. NO MACHINE CONNECTION.**
+3. Choose **Back to the room**, select **Pocket lint** in the inventory, reopen the room-object list and choose **Exhibit Zero display tray** again.
+
+![Bram catalogues the pocket lint without consuming it](EasterEggs/10-act5-exhibit-zero.png)
+
+Nell gives the specimen's provenance as “pocket” and its further provenance as “uncertain.” Bram is perfectly happy to catalogue uncertainty; the trouble starts when somebody catalogues it as a crown. Its only alleged power is having kept Nell from throwing away an empty pocket for five chapters.
+
+The response ends with **EXHIBIT ZERO: POCKET LINT. CLAIMED POWERS: NONE VERIFIED. OWNER RETAINS SPECIMEN.** Back in the room, **Read Exhibit Zero’s catalogue** replays the conversation.
+
+**Meaning:** an original mock-museum/provenance joke and callback to Act III's dubious relic. Its insistence on evidence echoes Act V's main argument without becoming evidence for that argument. It is not a new magical inventory tool or a claim of another licensed crossover.
+
+**Implementation:** `A5-EGG-EXHIBIT-ZERO` sets `eggExhibitZero`. The placard must have been inspected first. Lint is never consumed, and the interaction changes no station token, authority, emergency check, charter finding or ending requirement. The shipped reward is dialogue and catalogue text; the room plan's proposed ornate spotlight/lint overlay is not claimed as implemented here.
+
+### Boat-inventory callback
+
+After publishing the public working chart, go to Repair Quay and choose **Inspect Still Deciding**. If Exhibit Zero was discovered, the agreement panel adds **Boat inventory: one historical specimen, privately carried.**
+
+![The optional historical specimen on the boat inventory](EasterEggs/11-act5-specimen-callback.png)
+
+This is a callback to the same flag, not a second collectible. Without the egg the line is simply absent: no empty slot, penalty, extra payment or blocked departure. The Act V capture verifies the discovery and retained lint again after completing the ending, saving and reloading.
+
+## 12. Act V — entirely uninvolved production credits
+
+**Where:** the full-screen finale after **Leave on the first survey → Cast off with clearance**. Advance the three scenes with **Next scene**, then **Roll credits**, or choose **Skip to credits**. Completed games can use **Replay the ending**.
+
+![The explicitly fictional celebrity non-credits in reduced-motion mode](EasterEggs/12-act5-non-credits.png)
+
+The gold perspective crawl over a star field is a deliberately space-opera / Star Wars-style presentation homage. Reduced-motion mode replaces the crawl with scrollable static text, as shown here. The introduction says the named people are entirely uninvolved and that no participation or endorsement is implied.
+
+Twelve asterisk-marked thanks acknowledge production jobs that famous people **did not do**: Steven Spielberg did not direct the seagulls, George Lucas did not supervise intergalactic harbour traffic, Hans Zimmer and John Williams did not score valves and receipts, Roger Deakins did not light the gallery, Thelma Schoonmaker did not edit tide tables, Hayao Miyazaki did not animate lint, and Hideo Kojima did not add a forty-minute pump explanation. Björk, Gordon Ramsay, David Attenborough and Dolly Parton receive similarly fictional costume, catering, narration and public-relations non-credits.
+
+Choose **Director card** for the final full-screen **Directed by Janis Keuper** card, followed by **\* actual work done by GPT-6 Astra**. With normal motion, the attribution fades in after a short hold; reduced motion displays it immediately.
+
+![The director card and final asterisk punchline](EasterEggs/13-act5-director-card.png)
+
+**Classification:** an explicit credits gag, not a state-tracked discovery or secret condition. The final attribution is requested comedic presentation text, not a verified model/provenance declaration. Actual artwork/audio provenance remains in the project asset records. These credits never imply that the celebrities participated. **Return to epilogue** or Escape closes the presentation; completion is already saved.
+
 ## Earlier proposals now implemented in Act IV
 
 The older Acts I–III audit listed the company-mascot advertisements and Bram's maintenance-labour joke as proposed-only content. Both now have playable Act IV discoveries, documented above. Follow the shipped triggers rather than the more elaborate inspection sequences in the design draft. Other story-plan ideas are not automatically implemented discoveries.
@@ -229,7 +278,12 @@ Repository root: `/home/keuper/Projekte/MonkeyBusiness`.
 - `/home/keuper/Projekte/MonkeyBusiness/src/act4-dialogue.json` — `A4-EGG-MASCOT`, `A4-EGG-CLOCK`, `A4-EGG-CREDIT`.
 - `/home/keuper/Projekte/MonkeyBusiness/docs/ACT_4_ROOM_PLAN.md`, section 9 — intended meanings; proposed triggers are distinguished from runtime above.
 - `/home/keuper/Projekte/MonkeyBusiness/tests/act4-playbook.spec.ts` — normal-controls capture and final reload assertions for all three flags and retained lint.
+- `/home/keuper/Projekte/MonkeyBusiness/src/act5.ts` — Exhibit Zero inspection/use trigger, catalogue replay and boat-inventory callback.
+- `/home/keuper/Projekte/MonkeyBusiness/src/act5-data.ts` and `/home/keuper/Projekte/MonkeyBusiness/src/act5-dialogue.json` — display-tray placard and `A5-EGG-EXHIBIT-ZERO` exchange.
+- `/home/keuper/Projekte/MonkeyBusiness/src/act5-ending.ts` — twelve fictional non-credits, crawl and final director-card text.
+- `/home/keuper/Projekte/MonkeyBusiness/docs/ACT_5_ROOM_PLAN.md`, section 8 — intended lint joke; proposed visual embellishments distinguished from shipped behaviour above.
+- `/home/keuper/Projekte/MonkeyBusiness/tests/act5-playbook.spec.ts` — normal-controls capture, catalogue replay, callback, ending and post-reload assertions.
 - `/home/keuper/Projekte/MonkeyBusiness/src/duel.json` — bridge dialogue and wordplay.
 - `/home/keuper/Projekte/MonkeyBusiness/docs/STORY_PLAN.md`, section 9 — explicit inspiration mapping and proposed-only boundaries.
 
-The three Acts I–II flagged interactions and the chair inspection were reproduced for the original screenshots. The two Act III entries were checked against source; no additional Act III screenshots were created. All three Act IV entries were captured during a full playthrough, with discovery flags and retained lint verified after reload. Reference meanings above are based on the repository’s own design notes and the displayed text; where a broader interpretation is offered, it is not presented as an additional confirmed crossover.
+The three Acts I–II flagged interactions and the chair inspection were reproduced for the original screenshots. The two Act III entries were checked against source; no additional Act III screenshots were created. All three Act IV entries and Act V's Exhibit Zero were captured during full playthroughs, with discovery flags and retained lint verified after reload. Act V's boat callback and credits also have screenshots, but are not counted as additional flagged discoveries. Reference meanings above are based on the repository’s own design notes and displayed text; broader interpretations are not presented as additional confirmed crossovers.

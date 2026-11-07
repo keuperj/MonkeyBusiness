@@ -64,7 +64,7 @@ The map extension uses room-art cutaways instead of regenerating established lan
 
 The cinematic has sound, pause/resume, next and skip controls, Escape dismissal, focus restoration and replay. Hidden tabs pause animation/progression. Reduced-motion mode removes camera moves/fades and substitutes scrollable static credits, with an explicit next button. Completion is saved before presentation starts, so skipping or reloading cannot undo the ending. Implementation: `/home/keuper/Projekte/MonkeyBusiness/src/act5-ending.ts` and `/home/keuper/Projekte/MonkeyBusiness/src/act5-ending.css`. Focused browser tests: `/home/keuper/Projekte/MonkeyBusiness/tests/act5-ending.spec.ts`.
 
-Browser decoding checks establish audio-file validity, not a full subjective listening review. No illustrated Act V playbook has been captured yet. The room plan's duration target is not a measured player time.
+Browser decoding checks establish audio-file validity, not a full subjective listening review. The illustrated normal-controls Act V playbook is now available at `/home/keuper/Projekte/MonkeyBusiness/playbook/Act-V/PLAYBOOK.md`, with 65 screenshots covering recovery, Exhibit Zero, the boat callback and the cinematic/credits ending. Reproduce it with `/home/keuper/Projekte/MonkeyBusiness/tests/act5-playbook.spec.ts` and `CAPTURE_ACT5_PLAYBOOK=1`. The capture passed completion/reload and retained-inventory assertions on 7 November 2026. Its canonical chapter entry does not independently verify an imported Act IV save. The room plan's duration target is not a measured player time.
 
 ## Validation coverage
 
