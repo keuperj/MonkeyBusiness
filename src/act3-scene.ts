@@ -1,3 +1,4 @@
+import {floorPoint} from './walkable-floor';
 import Phaser from 'phaser';
 import {art3,spots3} from './act3-data';
 import type {Spot} from './act2-data';
@@ -13,11 +14,11 @@ export class Act3Scene extends Phaser.Scene{
  if(state.room==='tavern'){this.add.image(350,746,'chest-open').setOrigin(.5,1).setDisplaySize(245,180);if(state.flags.confessionHeard&&!state.flags.tracingTaken)this.add.image(850,600,'act3/props','tracing').setDisplaySize(150,100);}
  if(state.room==='inlet'||state.room==='service'){this.add.image(state.room==='inlet'?1090:1250,state.room==='inlet'?645:750,'act2/props','boat').setDisplaySize(370,235).setOrigin(.5,1);if(state.room==='inlet')this.add.image(430,470,'act2/props','crank').setDisplaySize(70,110).setOrigin(.5,1);}
  if(state.room==='recorder'&&state.flags.collarFitted)this.add.image(650,650,'act3/props','used').setDisplaySize(90,70);
- this.hero=this.add.image(590,900,'a3-nell').setOrigin(.5,1).setDisplaySize(173,355);
+ const start=floorPoint(state.room,590,900,800);this.hero=this.add.image(start.x,start.y,'a3-nell').setOrigin(.5,1).setDisplaySize(173,355);
  for(const s of spots3[state.room]){if(!this.visible(s))continue;if(s.person){const key=['PIP','ROOK','VANE'].includes(s.person)?'act2/cast':s.person==='BRAM'?'act3/bram':s.person==='QUIBBLE'?'quibble-idle':s.person==='FINE PRINT'?'a3-parrot':`a3-${s.person.toLowerCase()}`;this.add.image(s.x,s.y,key,key==='act2/cast'?s.person:undefined).setOrigin(.5,1).setDisplaySize(s.person==='FINE PRINT'?122:200,s.person==='FINE PRINT'?154:345);}
  const z=this.add.zone(s.x,s.y-s.h/2,s.w,s.h).setInteractive({useHandCursor:true});z.on('pointerover',()=>this.callbacks.hover(s.name));z.on('pointerout',()=>this.callbacks.hover(''));z.on('pointerdown',()=>{if(this.callbacks.canWalk())this.callbacks.target(s);});this.marks.push(this.add.rectangle(s.x,s.y-s.h/2,s.w,s.h,0xeacb8d,.1).setStrokeStyle(2,0xeacb8d).setVisible(this.showMarks),this.add.text(s.x,s.y-s.h,s.name,{fontFamily:'monospace',fontSize:'16px',backgroundColor:'#142229',color:'#f9e2b6'}).setOrigin(.5,1).setVisible(this.showMarks));}
  }
  stopWalking(){this.walking?.stop();this.walking=undefined;this.callbacks.walking(false);}
- walk(x:number,y:number){this.stopWalking();x=Phaser.Math.Clamp(x,90,1430);y=Phaser.Math.Clamp(y,800,950);this.hero.setFlipX(x<this.hero.x);if(this.reduced){this.hero.setPosition(x,y);return;}this.callbacks.walking(true);this.walking=this.tweens.add({targets:this.hero,x,y,duration:650,onComplete:()=>this.callbacks.walking(false)});}
+ walk(x:number,y:number){this.stopWalking();({x,y}=floorPoint(this.state.room,x,y,800));this.hero.setFlipX(x<this.hero.x);if(this.reduced){this.hero.setPosition(x,y);return;}this.callbacks.walking(true);this.walking=this.tweens.add({targets:this.hero,x,y,duration:650,onComplete:()=>this.callbacks.walking(false)});}
  toggle(){this.showMarks=!this.showMarks;for(const m of this.marks)(m as Phaser.GameObjects.Rectangle).setVisible(this.showMarks);}
 }
