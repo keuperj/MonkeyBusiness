@@ -3,7 +3,7 @@ import Phaser from 'phaser';
 import { Front } from './front';
 import { routePath } from './map-routes';
 import './chapter.css';
-import {decorateControls,pocketTrinkets,icon} from './control-icons';
+import {decorateControls,paperIcon,pocketTrinkets,icon} from './control-icons';
 import { RoomHeader, roomBadges, paintSound } from './room-header';
 import lines from './chapter-lines.json';
 import duel from './duel.json';
@@ -42,7 +42,7 @@ function updateDuelScore(){const d=state.duel;const wins=d.answers.filter(Boolea
 function updateUI(){updateDuelScore();document.title=`Monkey Buisness — ${rooms[state.room]}`;$('goal').textContent=goal();$('game').dataset.room=state.room;
  roomHeader.render(state.room,Object.keys(rooms).map(id=>({id,badge:roomBadges[id],reachable:id!=='landing'||state.flags.passage})),id=>travel(id as Room),busy||transition);
  $('inventory').replaceChildren();const inventory:Item[]=[];if(state.flags.mugTaken&&!state.flags.returned)inventory.push('mug');if(state.flags.returned&&!state.flags.chestOpen)inventory.push('key');if(state.flags.chart)inventory.push('chart');if(state.flags.hookTaken)inventory.push('hook');
- pocketTrinkets($('inventory'));for(const item of inventory){const label={mug:'Brass tankard',key:'Brass key',chart:'Old survey',hook:'Boathook'}[item];const b=button(label,()=>{setVerb('use');selected=item;updateUI();command();},$('inventory'));b.setAttribute('aria-label',`Use ${label}`);if(ready){b.innerHTML=icon(item);b.title=label;b.dataset.tooltip=label;}b.classList.toggle('active',selected===item);}
+ pocketTrinkets($('inventory'));for(const item of inventory){const label={mug:'Brass tankard',key:'Brass key',chart:'Old survey',hook:'Boathook'}[item];const b=button(label,()=>{setVerb('use');selected=item;updateUI();command();},$('inventory'));b.setAttribute('aria-label',`Use ${label}`);if(ready){b.innerHTML=paperIcon(item,icon(item));b.title=label;b.dataset.tooltip=label;}b.classList.toggle('active',selected===item);}
  document.querySelectorAll<HTMLButtonElement>('[data-verb]').forEach(b=>{b.classList.toggle('active',b.dataset.verb===verb);b.setAttribute('aria-pressed',String(b.dataset.verb===verb));});
  $('hotspots').setAttribute('aria-pressed',String(scene.showMarks));$('motion').setAttribute('aria-pressed',String(reduced));}
 function command(name='…'){const labels={walk:'Walk to',look:'Look at',talk:'Talk to',take:'Pick up',use:'Use'};$('command').textContent=selected?`Use ${selected==='chart'?'old survey':selected} with ${name}`:`${labels[verb]} ${name}`;}

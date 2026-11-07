@@ -15,6 +15,8 @@ footer>div{gap:8px;flex-wrap:wrap}.chapter-shell footer button.icon-control{padd
 /* Painted atlas replaces the original line drawings; keep touch targets generous. */
 svg.painted-icon{display:block;width:36px;height:36px;fill:none;stroke:none;filter:drop-shadow(0 2px 2px #0008)}
 #inventory svg.painted-icon{width:36px;height:36px}
+.paper-icon{position:relative;display:block;flex:none;width:36px;height:36px;pointer-events:none}
+#inventory .paper-icon .paper-badge{position:absolute;right:-3px;bottom:-3px;display:block;width:23px;height:23px;box-sizing:border-box;padding:2px;border:1px solid #e3bd72;border-radius:5px;background:#14262e;fill:none;stroke:#ffe6a9;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #000a)}
 footer button.icon-control,.chapter-shell footer button.icon-control{width:36px;min-width:36px;height:36px;padding:4px}
 footer button.icon-control svg.painted-icon{width:27px;height:27px}
 .room-masthead #sound.sound-icon{padding:5px;display:flex;align-items:center;justify-content:center}
