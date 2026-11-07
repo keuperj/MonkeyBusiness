@@ -1,6 +1,21 @@
 import {test,expect} from '@playwright/test';
 import {floorPoint} from '../src/walkable-floor';
 
+test('departure notice is printed on the board and its visible face is clickable',async({page})=>{
+ test.setTimeout(120000);await page.setViewportSize({width:1440,height:1000});await page.emulateMedia({reducedMotion:'reduce'});
+ await page.addInitScript(()=>sessionStorage.setItem('monkey-buisness-sound','false'));
+ await page.route('**/src/act3-scene.ts',async route=>{const r=await route.fetch();await route.fulfill({response:r,body:await r.text()+`\nconst renderForTest=Act3Scene.prototype.render;Act3Scene.prototype.render=function(...args){const result=renderForTest.apply(this,args);window.__floorScene=this;return result;};`});});
+ await page.goto('/act3.html?debug=act3-bridge');await expect(page.locator('#game')).toHaveAttribute('data-ready','true',{timeout:90000});
+ await page.locator('#map').click();await page.locator('[data-map-room=landing]').click();await page.locator('#travel-skip').click();await page.locator('[data-verb=look]').click();
+ const notice=await page.evaluate(()=>{const scene=(window as any).__floorScene;const text=scene.children.getByName('departure-board-text');scene.toggle();return {text:text.text,x:text.x,y:text.y,width:text.width,height:text.height};});
+ expect(notice.text).toContain('WATCH: EBB');expect(notice.text).toContain('WEST SERVICE');expect(notice.x).toBeGreaterThanOrEqual(175);expect(notice.x+notice.width).toBeLessThanOrEqual(290);expect(notice.y+notice.height).toBeLessThanOrEqual(400);
+ const box=(await page.locator('canvas').boundingBox())!;
+ await page.mouse.click(box.x+230/1536*box.width,box.y+320/1024*box.height);
+ await expect(page.locator('#panel')).toContainText('TODAY’S DEPARTURE WATCH: EBB');
+ await expect.poll(()=>page.evaluate(()=>JSON.parse(localStorage.getItem('monkey-buisness-act3-auto')!).flags.departureBoardSeen)).toBe(true);
+ await page.screenshot({path:'test-results/departure-board-aligned.png',fullPage:true});
+});
+
 test('bridge feet stay on deck and other room floors retain their depth',()=>{
  for(const y of [0,700,745,855,900,1024])expect(floorPoint('bridge',590,y).y).toBeGreaterThanOrEqual(700);
  for(const y of [745,855,900,1024])expect(floorPoint('bridge',590,y).y).toBeLessThanOrEqual(750);

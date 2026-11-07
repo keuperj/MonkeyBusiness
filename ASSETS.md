@@ -65,6 +65,15 @@ The combined audio manifest now contains 182 speech clips and 10 effects, includ
 
 ## Story map
 
+### Bellweather Shoal inspection map
+
+- File: `public/assets/act3/inspection-map.png` (1536 × 1024).
+- Generated with the existing `codex-imagegen-cli 0.2.0` workflow, using the original `inspection-map.svg` rasterized as the layout reference and `story-map-walkways.png` as the style reference. The SVG is retained as the source layout, not the runtime map.
+- Used for both Act III destination selection and animated walking. Existing destination coordinates, routes, keyboard controls and the separate sea-voyage requirement are preserved.
+- Art direction: richly illustrated 1990s nautical adventure map; midnight indigo and teal sea, purple rocky cliffs, amber windows, golden parchment labels, service boat, caretaker gallery, recorder workshop and domed chart-drum overlook. Keep the four original destinations and dry walkway branches; no mainland geography, red route overlays or UI markers baked into the image.
+
+### Mainland story map
+
 - File: `public/assets/story-map.png` (1536 × 1024).
 - Generated on 2026-10-19 with the built-in image-generation tool.
 - Original concept geography based on `docs/STORY_PLAN.md`; not to scale. Labels cover the nine principal story locations. The underground Tide Ledger is illustrated as a cutaway.

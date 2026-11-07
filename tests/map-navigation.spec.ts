@@ -10,9 +10,15 @@ test('shoal routes reverse and never substitute walking for a sea voyage',()=>{
  for(const a of shoal)for(const b of shoal){const points=(path:string)=>path.match(/[ML] [\d.]+ [\d.]+/g)?.map(p=>p.slice(2))||[];expect(points(act3Route(a,b))).toEqual(points(act3Route(b,a)).reverse());}
  expect(()=>act3Route('inlet','service')).toThrow('Sea crossings');
 });
+test('generated shoal map loads at desktop and mobile sizes with accessible destinations',async({page})=>{
+ test.setTimeout(120000);await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/act3.html?debug=act3-service');await expect(page.locator('#game')).toHaveAttribute('data-ready','true',{timeout:90000});await page.locator('#map').click();
+ const image=page.locator('.map-picture img');await expect(image).toHaveAttribute('src',/act3\/inspection-map\.png$/);await expect.poll(()=>image.evaluate((el:HTMLImageElement)=>el.complete&&el.naturalWidth===1536&&el.naturalHeight===1024)).toBe(true);
+ for(const width of [1440,390]){await page.setViewportSize({width,height:1000});await expect(page.locator('[data-map-room]')).toHaveCount(4);for(const room of shoal)await expect(page.locator(`[data-map-room=${room}]`)).toBeVisible();await page.screenshot({path:`test-results/shoal-map-${width}.png`,fullPage:true});}
+ await page.locator('[data-map-room=overlook]').focus();await page.keyboard.press('Enter');await expect(page.locator('#travel img')).toHaveAttribute('src',/act3\/inspection-map\.png$/);await expect(page.locator('#route')).toHaveAttribute('d',act3Route('service','overlook'));await page.locator('#travel-skip').click();await expect(page.locator('#panel h2')).toHaveText('Chart-Drum Overlook');
+});
 test('Act III illustrated maps animate Nell and automatically arrive on both shores',async({page})=>{
  test.setTimeout(150000);await page.emulateMedia({reducedMotion:'no-preference'});
- for(const [preset,from,to,art] of [['act3-bridge','bridge','landing','story-map-walkways.png'],['act3-service','service','recorder','act3/inspection-map.svg']] as const){
+ for(const [preset,from,to,art] of [['act3-bridge','bridge','landing','story-map-walkways.png'],['act3-service','service','recorder','act3/inspection-map.png']] as const){
   await page.goto(`/act3.html?debug=${preset}`);await expect(page.locator('#game')).toHaveAttribute('data-ready','true',{timeout:90000});await page.locator('#map').click();await expect(page.locator('.map-picture img')).toHaveAttribute('src',new RegExp(art.replace('.','\\.')));await page.locator(`[data-map-room=${to}]`).click();await expect(page.locator('#travel')).toBeVisible();await expect(page.locator('#route')).toHaveAttribute('d',act3Route(from,to));
   await expect.poll(()=>page.locator('#traveller').getAttribute('cx')).not.toBeNull();const initial=await page.locator('#traveller').getAttribute('cx');await expect.poll(()=>page.locator('#traveller').getAttribute('cx')).not.toBe(initial);await expect(page.locator('#travel')).not.toBeVisible({timeout:10000});await expect.poll(()=>page.evaluate(()=>JSON.parse(localStorage.getItem('monkey-buisness-act3-auto')!).room)).toBe(to);
  }
