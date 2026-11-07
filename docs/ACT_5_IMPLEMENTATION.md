@@ -58,9 +58,11 @@ Voyages commit arrival after presentation; an interrupted voyage reloads its dep
 
 ## Design adaptations and limits
 
-The grand finale uses generated still illustrations, spoken exchanges, readable physical-state changes and animated map routes, not a bespoke frame-by-frame cinematic. Charter review and the relief roster use explicit transitions, not simulated committees or extra voiced crews. The survey boat appears in its inspection/ending illustration rather than as a new transparent room sprite.
+The grand finale now uses an intro-style full-screen cinematic: three painted-art scenes with slow camera moves, fades, existing recorded dialogue and readable subtitles. It proceeds to an 85-second gold perspective credits crawl on a star field, then a full-screen director card. It is not bespoke frame-by-frame character animation. Charter review and the relief roster use explicit transitions, not simulated committees or extra voiced crews. The survey boat appears in its inspection/ending illustration rather than as a new transparent room sprite.
 
-The map extension uses room-art cutaways instead of regenerating established landmark positions. New room badges use their room illustrations; returning rooms retain established emblems. The ending credits are a concise in-game credit panel.
+The map extension uses room-art cutaways instead of regenerating established landmark positions. New room badges use their room illustrations; returning rooms retain established emblems. The ending includes twelve explicitly fictional celebrity non-credits marked with asterisks. The final card reads “Directed by Janis Keuper”, then fades in the requested comedic attribution “* actual work done by GPT-6 Astra”. These are presentation copy, not production provenance; actual asset provenance remains in the project records.
+
+The cinematic has sound, pause/resume, next and skip controls, Escape dismissal, focus restoration and replay. Hidden tabs pause animation/progression. Reduced-motion mode removes camera moves/fades and substitutes scrollable static credits, with an explicit next button. Completion is saved before presentation starts, so skipping or reloading cannot undo the ending. Implementation: `/home/keuper/Projekte/MonkeyBusiness/src/act5-ending.ts` and `/home/keuper/Projekte/MonkeyBusiness/src/act5-ending.css`. Focused browser tests: `/home/keuper/Projekte/MonkeyBusiness/tests/act5-ending.spec.ts`.
 
 Browser decoding checks establish audio-file validity, not a full subjective listening review. No illustrated Act V playbook has been captured yet. The room plan's duration target is not a measured player time.
 
