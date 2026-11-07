@@ -1,4 +1,5 @@
-import {floorPoint} from './walkable-floor';
+import {floorPoint,floorSpawn} from './walkable-floor';
+import {sizeActor,placeActor,actorSpot} from './actor-layout';
 import {vaneAtQuay} from './act2-vane';
 import {collectibleAvailable} from './act2-collectibles';
 import Phaser from 'phaser';
@@ -17,14 +18,14 @@ export class Act2Scene extends Phaser.Scene{
  if(room==='inlet'&&f.open)this.add.image(430,470,'act2/props','crank').setOrigin(.5,1).setDisplaySize(70,110);
  if(room==='tavern')this.add.image(350,746,'chest-open').setOrigin(.5,1).setDisplaySize(245,180);
  for(const s of spots[room]){if(['rope','paper','drawing','crank'].includes(s.id)&&this.visible(s)){const sizes:Record<string,[number,number]>={rope:[180,150],paper:room==='quay'?[110,65]:[150,90],drawing:[190,280],crank:[90,170]};this.add.image(s.x,s.y,'act2/props',s.id).setOrigin(.5,1).setDisplaySize(...sizes[s.id]).setName(`pickup-${s.id}`);}}
- const start=floorPoint(room,590,855);this.hero=this.add.image(start.x,start.y,'nell').setOrigin(.5,1).setDisplaySize(173,355);
- for(const s of spots[room]){if(!this.visible(s))continue;if(s.person){if(['PIP','ROOK','VANE'].includes(s.person))this.add.image(s.x,s.y,'act2/cast',s.person).setName(`person-${s.person.toLowerCase()}`).setOrigin(.5,1).setDisplaySize(230,350);else if(s.person==='MARA'||s.person==='ORIN')this.add.image(s.x,s.y,s.person.toLowerCase()).setOrigin(.5,1).setDisplaySize(s.w,s.h);else if(s.person==='QUIBBLE')this.add.image(s.x,s.y+15,'quibble-idle').setOrigin(.5,1).setDisplaySize(230,345);else this.add.image(s.x,s.y,'parrot').setOrigin(.5,1).setDisplaySize(122,154);}
- const z=this.add.zone(s.x,s.y-s.h/2,s.w,s.h).setInteractive({useHandCursor:true});z.on('pointerover',()=>this.callbacks.hover(s.name));z.on('pointerout',()=>this.callbacks.hover(''));z.on('pointerdown',()=>this.callbacks.target(s));const box=this.add.rectangle(s.x,s.y-s.h/2,s.w,s.h,0xeacb8d,.1).setStrokeStyle(2,0xeacb8d).setVisible(this.showMarks);const label=this.add.text(s.x,s.y-s.h,s.name,{fontFamily:'monospace',fontSize:'16px',backgroundColor:'#142229',color:'#f9e2b6'}).setOrigin(.5,1).setVisible(this.showMarks);this.marks.push(box,label);}
+ const start=floorSpawn(room);this.hero=this.add.image(start.x,start.y,'nell').setOrigin(.5,1).setName('person-nell');sizeActor(this.hero,room);
+ for(let s of spots[room]){if(!this.visible(s))continue;if(s.person){const key=['PIP','ROOK','VANE'].includes(s.person)?'act2/cast':s.person==='QUIBBLE'?'quibble-idle':s.person==='FINE PRINT'?'parrot':s.person.toLowerCase();const actor=placeActor(this.add.image(s.x,s.y,key,key==='act2/cast'?s.person:undefined),room,s.person);s=actorSpot(s,actor);}
+ const z=this.add.zone(s.x,s.y-s.h/2,s.w,s.h).setDepth(2000).setInteractive({useHandCursor:true});z.on('pointerover',()=>this.callbacks.hover(s.name));z.on('pointerout',()=>this.callbacks.hover(''));z.on('pointerdown',()=>this.callbacks.target(s));const box=this.add.rectangle(s.x,s.y-s.h/2,s.w,s.h,0xeacb8d,.1).setStrokeStyle(2,0xeacb8d).setDepth(2100).setVisible(this.showMarks);const label=this.add.text(s.x,s.y-s.h,s.name,{fontFamily:'monospace',fontSize:'16px',backgroundColor:'#142229',color:'#f9e2b6'}).setOrigin(.5,1).setDepth(2100).setVisible(this.showMarks);this.marks.push(box,label);}
  if(room==='press'&&f.egg)this.add.text(700,445,'LIGHTHOUSE REPEATS\nYESTERDAY’S SIGNAL',{fontFamily:'monospace',fontSize:'15px',color:'#231a13',backgroundColor:'#e6ca95',padding:{x:8,y:6}});
  if(room==='quay'&&f.announced)this.add.text(125,240,'FAIR PASSAGE\nCOMPULSORY CONTRACTS\nNEXT MAJOR TIDE\nSurvey: Nell',{fontFamily:'monospace',fontSize:'16px',backgroundColor:'#ead2a1',color:'#251a11',padding:{x:10,y:12}});
  }
  stopWalking(){this.walking?.stop();this.walking=undefined;this.callbacks.walking(false);}
- walk(x:number,y:number){if(!this.callbacks.canWalk())return;this.stopWalking();({x,y}=floorPoint(this.state.room,x,y));this.hero.setFlipX(x<this.hero.x);if(this.reduced){this.hero.setPosition(x,y);return;}this.callbacks.walking(true);this.walking=this.tweens.add({targets:this.hero,x,y,duration:650,onComplete:()=>{this.walking=undefined;this.callbacks.walking(false);},onStop:()=>this.callbacks.walking(false)});}
- toggle(){this.showMarks=!this.showMarks;for(const m of this.marks)(m as Phaser.GameObjects.Rectangle).setVisible(this.showMarks);}
+ walk(x:number,y:number){if(!this.callbacks.canWalk())return;this.stopWalking();({x,y}=floorPoint(this.state.room,x,y));this.hero.setFlipX(x<this.hero.x);if(this.reduced){this.hero.setPosition(x,y);sizeActor(this.hero,this.state.room);return;}this.callbacks.walking(true);this.walking=this.tweens.add({targets:this.hero,x,y,duration:650,onUpdate:()=>sizeActor(this.hero,this.state.room),onComplete:()=>{this.walking=undefined;this.callbacks.walking(false);},onStop:()=>this.callbacks.walking(false)});}
+ toggle(){this.showMarks=!this.showMarks;for(const m of this.marks)(m as Phaser.GameObjects.Rectangle).setDepth(2100).setVisible(this.showMarks);}
  recover(done:()=>void){if(!this.boat){done();return;}const rope=this.mooring||this.add.graphics();this.tweens.add({targets:this.boat,x:1090,y:645,duration:this.reduced?0:2200,onUpdate:()=>{rope.clear();rope.lineStyle(4,0xd1b37d);rope.lineBetween(1340,790,this.boat!.x+100,this.boat!.y-40);},onComplete:done});}
 }

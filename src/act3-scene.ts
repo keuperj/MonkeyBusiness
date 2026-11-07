@@ -1,4 +1,5 @@
-import {floorPoint} from './walkable-floor';
+import {floorPoint,floorSpawn} from './walkable-floor';
+import {sizeActor,placeActor,actorSpot} from './actor-layout';
 import Phaser from 'phaser';
 import {art3,spots3} from './act3-data';
 import type {Spot} from './act2-data';
@@ -16,11 +17,11 @@ export class Act3Scene extends Phaser.Scene{
  if(state.room==='recorder'&&state.flags.collarFitted)this.add.image(650,650,'act3/props','used').setDisplaySize(90,70);
  // The landing artwork leaves the parchment blank; keep the notice inside its wooden frame.
  if(state.room==='landing')this.add.text(180,254,'DEPARTURE\nWATCH: EBB\n\nWEST SERVICE\nAPPROACH\n\nEAST ARM\nCLOSED FOR\nCOMPANY TRIALS',{fontFamily:'monospace',fontSize:'13px',fontStyle:'bold',color:'#382415',align:'center',fixedWidth:104,lineSpacing:1}).setName('departure-board-text');
- const start=floorPoint(state.room,590,900,800);this.hero=this.add.image(start.x,start.y,'a3-nell').setOrigin(.5,1).setDisplaySize(173,355);
- for(const s of spots3[state.room]){if(!this.visible(s))continue;if(s.person){const key=['PIP','ROOK','VANE'].includes(s.person)?'act2/cast':s.person==='BRAM'?'act3/bram':s.person==='QUIBBLE'?'quibble-idle':s.person==='FINE PRINT'?'a3-parrot':`a3-${s.person.toLowerCase()}`;this.add.image(s.x,s.y,key,key==='act2/cast'?s.person:undefined).setOrigin(.5,1).setDisplaySize(s.person==='FINE PRINT'?122:200,s.person==='FINE PRINT'?154:345);}
- const z=this.add.zone(s.x,s.y-s.h/2,s.w,s.h).setInteractive({useHandCursor:true});z.on('pointerover',()=>this.callbacks.hover(s.name));z.on('pointerout',()=>this.callbacks.hover(''));z.on('pointerdown',()=>{if(this.callbacks.canWalk())this.callbacks.target(s);});this.marks.push(this.add.rectangle(s.x,s.y-s.h/2,s.w,s.h,0xeacb8d,.1).setStrokeStyle(2,0xeacb8d).setVisible(this.showMarks),this.add.text(s.x,s.y-s.h,s.name,{fontFamily:'monospace',fontSize:'16px',backgroundColor:'#142229',color:'#f9e2b6'}).setOrigin(.5,1).setVisible(this.showMarks));}
+ const start=floorSpawn(state.room);this.hero=this.add.image(start.x,start.y,'a3-nell').setOrigin(.5,1).setName('person-nell');sizeActor(this.hero,state.room);
+ for(let s of spots3[state.room]){if(!this.visible(s))continue;if(s.person){const key=['PIP','ROOK','VANE'].includes(s.person)?'act2/cast':s.person==='BRAM'?'act3/bram':s.person==='QUIBBLE'?'quibble-idle':s.person==='FINE PRINT'?'a3-parrot':`a3-${s.person.toLowerCase()}`;const actor=placeActor(this.add.image(s.x,s.y,key,key==='act2/cast'?s.person:undefined),state.room,s.person);s=actorSpot(s,actor);}
+ const z=this.add.zone(s.x,s.y-s.h/2,s.w,s.h).setDepth(2000).setInteractive({useHandCursor:true});z.on('pointerover',()=>this.callbacks.hover(s.name));z.on('pointerout',()=>this.callbacks.hover(''));z.on('pointerdown',()=>{if(this.callbacks.canWalk())this.callbacks.target(s);});this.marks.push(this.add.rectangle(s.x,s.y-s.h/2,s.w,s.h,0xeacb8d,.1).setStrokeStyle(2,0xeacb8d).setDepth(2100).setVisible(this.showMarks),this.add.text(s.x,s.y-s.h,s.name,{fontFamily:'monospace',fontSize:'16px',backgroundColor:'#142229',color:'#f9e2b6'}).setOrigin(.5,1).setDepth(2100).setVisible(this.showMarks));}
  }
  stopWalking(){this.walking?.stop();this.walking=undefined;this.callbacks.walking(false);}
- walk(x:number,y:number){this.stopWalking();({x,y}=floorPoint(this.state.room,x,y,800));this.hero.setFlipX(x<this.hero.x);if(this.reduced){this.hero.setPosition(x,y);return;}this.callbacks.walking(true);this.walking=this.tweens.add({targets:this.hero,x,y,duration:650,onComplete:()=>this.callbacks.walking(false)});}
- toggle(){this.showMarks=!this.showMarks;for(const m of this.marks)(m as Phaser.GameObjects.Rectangle).setVisible(this.showMarks);}
+ walk(x:number,y:number){if(!this.callbacks.canWalk())return;this.stopWalking();({x,y}=floorPoint(this.state.room,x,y,800));this.hero.setFlipX(x<this.hero.x);if(this.reduced){this.hero.setPosition(x,y);sizeActor(this.hero,this.state.room);return;}this.callbacks.walking(true);this.walking=this.tweens.add({targets:this.hero,x,y,duration:650,onUpdate:()=>sizeActor(this.hero,this.state.room),onComplete:()=>this.callbacks.walking(false)});}
+ toggle(){this.showMarks=!this.showMarks;for(const m of this.marks)(m as Phaser.GameObjects.Rectangle).setDepth(2100).setVisible(this.showMarks);}
 }
