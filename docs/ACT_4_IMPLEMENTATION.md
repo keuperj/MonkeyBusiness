@@ -37,7 +37,7 @@ Tests are in `/home/keuper/Projekte/MonkeyBusiness/tests/act4.spec.ts` and `/hom
 
 The service kit is collected with one explicit consent-gated action as well as individual object pickups. Evidence documents and the roster use readable panel/notebook views instead of a drag-and-drop interface. Character moves use visible state changes and the ordinary travel map; no separate escort simulation is introduced. The publication is available in the press/notebook rather than requiring a delivery errand. The final departure illustration depicts Vane's launch, not Nell's boat.
 
-No illustrated Act IV playbook is claimed here; the room plan and automated walkthrough provide the solution reference until a dedicated capture is requested.
+The illustrated walkthrough is now available at `/home/keuper/Projekte/MonkeyBusiness/playbook/Act-IV/PLAYBOOK.md`, with 66 screenshots captured through normal controls, all three optional discoveries, and completion/reload verification. The opt-in capture is `/home/keuper/Projekte/MonkeyBusiness/tests/act4-playbook.spec.ts` (`CAPTURE_ACT4_PLAYBOOK=1`). Illustrated discovery instructions are also included in `/home/keuper/Projekte/MonkeyBusiness/playbook/EasterEggs.md`.
 
 ## Validation record
 

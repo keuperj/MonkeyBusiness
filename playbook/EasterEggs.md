@@ -1,26 +1,16 @@
 # Easter eggs and affectionate references
 
-## Act IV additions — 6 November 2026
-
-Act IV now implements three additional optional discoveries. These are separate from the historical Acts I–III audit below; no new illustrated Easter-egg walkthrough is claimed here.
-
-| Discovery | Where / trigger | Effect |
-| --- | --- | --- |
-| The monkey has always believed this | Quay Quill → **Compare the mascot promises** | Original corporate-advertisement joke; `eggMascot`; no evidence-puzzle shortcut |
-| Appointment with yesterday | Breakfast Hall → use **Pocket lint** on **Maintenance attendance clock** | Broad time-bending household-adventure homage; `eggAppointment`; lint retained |
-| The maintenance credit | Dry Station Chamber → repair messenger, test telephone, **Ask Bram about the plan → Read the maintenance credit** | Overlooked-maintenance-labour homage; `eggMaintenanceCredit`; no machinery changes |
-
-All three have generated illustrations and voice clips. Absence of lint cannot block the chapter. Runtime and dialogue sources: `/home/keuper/Projekte/MonkeyBusiness/src/act4.ts` and `/home/keuper/Projekte/MonkeyBusiness/src/act4-dialogue.json`.
-
-**Spoilers for Acts I–III.** Acts I–II audited and illustrated on 6 November 2026; Act III entries checked against the implementation on the same date.
+**Spoilers for Acts I–IV.** Acts I–II illustrated and Act III source-audited on 6 November 2026. Act IV's three discoveries are now illustrated from a complete normal-controls walkthrough on the same date.
 
 ## What this report covers
 
-The implemented game contains **four explicitly flagged optional Easter-egg interactions**: the tavern cupboard, the newspaper correction, the celestial sorter’s response to pocket lint, and Act III’s recorder-room relic joke. The first three were triggered in the browser for the original report; the Act III addition is source-verified, without a new browser capture. The sections below also explain the documented broader homages, an unflagged Act III bonus response, and references that exist only in the story plan.
+The implemented game contains **seven explicitly flagged optional Easter-egg interactions**: the tavern cupboard, the newspaper correction, the celestial sorter’s response to pocket lint, Act III’s recorder-room relic joke, and Act IV’s mascot archive, appointment clock and maintenance credit. The Acts I–II entries were triggered in the browser for the original report; Act III remains source-verified without a new capture. All three Act IV discoveries were triggered during the illustrated Act IV playthrough and checked again after completion reload. The sections below also explain the documented broader homages, an unflagged Act III bonus response, and references that exist only in the story plan.
 
-This is an inventory of identifiable scripted Easter eggs and documented references in the current Acts I–III build, **not a claim that every decorative detail or ordinary joke is a franchise reference**. Unreleased story-plan material is not counted as playable content.
+This is an inventory of identifiable scripted Easter eggs and documented references in the current Acts I–IV build, **not a claim that every decorative detail or ordinary joke is a franchise reference**. Unreleased story-plan material is not counted as playable content.
 
-**Screenshot method:** the six new captures use the game’s built-in debug room starts in a separate browser session, followed by normal Look at / Use controls. They illustrate the actual interactions, rather than a continuous playthrough. Yellow frames highlight the response panel. Sound was muted for capture; an audio-unavailable notice appeared during the Act I startup. These captures do not verify audio. The earlier Act II playthrough and its final confirmation were not used to advance progression for this report.
+**Acts I–II screenshot method:** the six original captures use the game’s built-in debug room starts in a separate browser session, followed by normal Look at / Use controls. They illustrate the actual interactions, rather than a continuous playthrough. Yellow frames highlight the response panel. Sound was muted for capture; an audio-unavailable notice appeared during the Act I startup. These captures do not verify audio. The earlier Act II playthrough and its final confirmation were not used to advance progression for this report.
+
+**Act IV screenshot method:** the three new captures come from one fresh, normal-controls session with no debug presets or injected progression. Sound was muted and reduced motion enabled. These verify written dialogue and discovery state, not audio quality. Each image is also included in the [Act IV playbook](Act-IV/PLAYBOOK.md). The capture starts with canonical prior-act inventory, including lint; imported saves without lint cannot trigger the appointment egg but can complete Act IV.
 
 ## At a glance
 
@@ -32,11 +22,14 @@ This is an inventory of identifiable scripted Easter eggs and documented referen
 | Chairs awaiting their own reservations | Act II, Breakfast Hall | Look at Chair reservation cards; examine breakfast controls | Documented Maniac Mansion homage, not a separate discovery flag |
 | Verbal fencing at a pirate toll bridge | Act I, Quibble’s Crossing | Play the bridge duel | Documented Monkey Island-inspired adventure framework, not a hidden collectible |
 | A relic of unverified antiquity | Act III, Recorder Room | Look at Plain part label, then use Pocket lint with Unused display recess | Explicit, state-tracked Easter egg; adventure-film service-component homage |
+| The monkey has always believed this | Act IV, Quay Quill | Choose Compare the mascot promises | State-tracked original corporate satire |
+| Appointment with yesterday | Act IV, Breakfast Hall | Use Pocket lint with Maintenance attendance clock | State-tracked broad time-bending household-adventure homage |
+| The maintenance credit | Act IV, Dry Station Chamber | Test telephone, then Ask Bram about the plan → Read the maintenance credit | State-tracked maintenance-labour homage |
 | A seal, not a weather system | Act III, Recorder Room | Use Pocket lint with Duplicate recorder | Optional wrong-item joke, not a separate discovery flag |
 
 For named objects, expand **Scene objects · keyboard & touch** in the right-hand panel. Select **Look at** or **Use** as instructed, or select the named inventory item first.
 
-In Act III the equivalent list is labelled **Room objects · keyboard controls**. After a response, choose **Back to the room** to reopen it.
+In Acts III–IV the equivalent list is labelled **Room objects · keyboard controls**. After a response, choose **Back to the room** to reopen it.
 
 ## 1. Space Quest — six inches of frontier
 
@@ -162,14 +155,60 @@ The exact exchange is:
 
 **Meaning and implementation:** this is an original wrong-item joke, not a separate franchise reference or discovery flag. It does not consume lint, fit a collar, or advance the recorder repair. It is source-verified alongside the crown interaction above.
 
-## Planned references that are not implemented discoveries
+## 8. The monkey has always believed this
 
-The story plan is a proposal, not an inventory of shipped rooms. These ideas must not be advertised as things the player can currently find:
+**Where:** The Quay Quill in Act IV.
 
-| Proposed reference | Intended meaning | Current audit result |
-| --- | --- | --- |
-| Space Quest: Bram’s maintenance cart and a “SELF-CLEANING / BY BRAM” cabinet | Grand technology depends on overlooked labour | Planned prop, not found in the current interaction data. The playable Space Quest reference is the tavern cupboard instead. |
-| Contradictory old company-mascot advertisements | Optional jokes exposing a changing corporate story | Proposed elsewhere in the plan; not found as implemented discoveries in this audit. |
+**Reveal it:** choose **Compare the mascot promises** in the room's action panel. You do not need to inspect three separate adverts first: that was a proposed design prerequisite, not the shipped trigger. **Look at → Mascot archive** provides the campaign slogans if desired.
+
+![Act IV mascot archive and Pip’s changing-company-story exchange](EasterEggs/07-act4-mascots.png)
+
+The same mascot accompanies promises of personal routes, orderly routes and account-controlled routes. Nell notices the contradiction; Pip explains that the advertising department has always believed the newest thing.
+
+**Meaning:** original corporate satire, not a confirmed franchise crossover. This pays off the previously proposed mascot archive. Advertisements do not replace the dispatch slips, operating record or tariff evidence required for publication.
+
+**Implementation:** `A4-EGG-MASCOT` sets `eggMascot` and records the exchange in the dialogue log. No object is consumed and no main-puzzle prerequisite changes. Repeat the room action to replay it.
+
+## 9. Appointment with yesterday
+
+**Where:** Rook House’s Breakfast Hall in Act IV.
+
+**Reveal it:**
+1. Optionally **Look at → Maintenance attendance clock** to read its impossible schedule.
+2. Select **Pocket lint** in inventory.
+3. Expand **Room objects · keyboard controls** and choose **Maintenance attendance clock**.
+4. Select **Look at** again before resuming ordinary inspections, to clear the selected item.
+
+![Nell offers pocket lint to the contradictory attendance clock](EasterEggs/08-act4-appointment.png)
+
+The appointment belongs to yesterday, inspection to tomorrow, and the lint is available now. There is no real-time wait, clock-setting puzzle or time travel to perform.
+
+**Meaning:** a broad, original homage to time-bending household-adventure absurdity. It is not a confirmed appearance by a named franchise character. The runtime accepts lint on the clock directly; reading it first is flavour, not a required flag.
+
+**Implementation:** selecting lint on `clock` plays `A4-EGG-CLOCK` and sets `eggAppointment`. **Lint remains in inventory**, and no station settings change. An imported save without lint can still complete the chapter and discover the other two eggs.
+
+## 10. The maintenance credit
+
+**Where:** the maintenance telephone in the Repair Quay dry station chamber, Act IV.
+
+**Reveal it:**
+1. Ask Mara to attend the quay station; inspect the exterior dry telltale and personnel warning, bring her to the door, and have her unlock it.
+2. Read Rook's service briefing and take the service kit.
+3. At the chamber, choose **Service messenger branch**: **SERVICE → Fit captive link → Test messenger loop → RUN**.
+4. Choose **Test maintenance telephone**. Select **Repair Quay maintenance** and **Watch D / revision 1**, then **Test line and read back**.
+5. Choose **Ask Bram about the plan → Read the maintenance credit**. After the initial test, this conversation remains accessible from the telephone panel.
+
+![Bram explains who makes the system self-cleaning](EasterEggs/09-act4-maintenance.png)
+
+Nell asks whether the system is self-cleaning. Bram answers, “I am the self.” His day off is mentioned in the larger manual.
+
+**Meaning:** a broad space-adventure janitorial/maintenance-labour homage: impressive machinery relies on overlooked work. It revisits the earlier Space Quest-inspired maintenance concept without introducing a copied character or a separate walkable maintenance cart. The implementation is a service-card illustration accompanying remote dialogue.
+
+**Implementation:** `A4-EGG-CREDIT` sets `eggMaintenanceCredit`. It needs the working messenger branch and tested telephone access, not station completion or a live override. The discovery changes no machinery and consumes no item.
+
+## Earlier proposals now implemented in Act IV
+
+The older Acts I–III audit listed the company-mascot advertisements and Bram's maintenance-labour joke as proposed-only content. Both now have playable Act IV discoveries, documented above. Follow the shipped triggers rather than the more elaborate inspection sequences in the design draft. Other story-plan ideas are not automatically implemented discoveries.
 
 Ordinary names and puns—such as **Second Opinion**, **Fine Print**, and **Fair Passage**—support the story’s themes. Without explicit evidence, they should not be assigned to another franchise. Likewise, no claim is made here about hidden references in generated background pixels that have no supporting script or design note.
 
@@ -186,7 +225,11 @@ Repository root: `/home/keuper/Projekte/MonkeyBusiness`.
 - `/home/keuper/Projekte/MonkeyBusiness/src/act3-dialogue.json` — exact `A3-EGG-CROWN` exchange.
 - `/home/keuper/Projekte/MonkeyBusiness/src/act3-data.ts` — Recorder Room object names and part-label description.
 - `/home/keuper/Projekte/MonkeyBusiness/docs/ACT_3_ROOM_PLAN.md`, section 10 — optional service-component homage and non-consumption rules.
+- `/home/keuper/Projekte/MonkeyBusiness/src/act4.ts` — actual optional triggers and telephone prerequisites.
+- `/home/keuper/Projekte/MonkeyBusiness/src/act4-dialogue.json` — `A4-EGG-MASCOT`, `A4-EGG-CLOCK`, `A4-EGG-CREDIT`.
+- `/home/keuper/Projekte/MonkeyBusiness/docs/ACT_4_ROOM_PLAN.md`, section 9 — intended meanings; proposed triggers are distinguished from runtime above.
+- `/home/keuper/Projekte/MonkeyBusiness/tests/act4-playbook.spec.ts` — normal-controls capture and final reload assertions for all three flags and retained lint.
 - `/home/keuper/Projekte/MonkeyBusiness/src/duel.json` — bridge dialogue and wordplay.
 - `/home/keuper/Projekte/MonkeyBusiness/docs/STORY_PLAN.md`, section 9 — explicit inspiration mapping and proposed-only boundaries.
 
-The three Acts I–II flagged interactions and the chair inspection were reproduced for the original screenshots. The two Act III entries were checked against source; no additional screenshots were created for this update. Reference meanings above are based on the repository’s own design notes and the displayed text; where a broader interpretation is offered, it is not presented as an additional confirmed crossover.
+The three Acts I–II flagged interactions and the chair inspection were reproduced for the original screenshots. The two Act III entries were checked against source; no additional Act III screenshots were created. All three Act IV entries were captured during a full playthrough, with discovery flags and retained lint verified after reload. Reference meanings above are based on the repository’s own design notes and the displayed text; where a broader interpretation is offered, it is not presented as an additional confirmed crossover.
