@@ -7,7 +7,7 @@ export async function cacheChapter(progress:(percent:number,detail:string)=>void
  await navigator.serviceWorker.register(`${base}chapter-cache-worker.js`,{scope:base});
  await navigator.serviceWorker.ready;
  if(!navigator.serviceWorker.controller)await new Promise<void>((resolve,reject)=>{const timer=setTimeout(()=>{navigator.serviceWorker.removeEventListener('controllerchange',changed);reject(Error('The download service could not start. Please retry.'));},15000);function changed(){clearTimeout(timer);resolve();}navigator.serviceWorker.addEventListener('controllerchange',changed,{once:true});if(navigator.serviceWorker.controller){navigator.serviceWorker.removeEventListener('controllerchange',changed);changed();}});
- const response=await fetch(`${base}${act===4?'act4-assets.json':act===3?'act3-assets.json':act===2?'act2-assets.json':'chapter-assets.json'}`,{cache:'no-store'});if(!response.ok)throw Error('The chapter download list is unavailable.');
+ const response=await fetch(`${base}${act===5?'act5-assets.json':act===4?'act4-assets.json':act===3?'act3-assets.json':act===2?'act2-assets.json':'chapter-assets.json'}`,{cache:'no-store'});if(!response.ok)throw Error('The chapter download list is unavailable.');
  const {assets}=await response.json() as {assets:Asset[]};const total=assets.reduce((n,a)=>n+a.bytes,0);const cache=await caches.open(CACHE);let completed=0,index=0,files=0;let failure:unknown;
  const report=()=>progress(Math.floor(completed/total*100),`${files} / ${assets.length} files · ${(completed/1048576).toFixed(1)} / ${(total/1048576).toFixed(1)} MB`);
  await Promise.all(Array.from({length:4},async()=>{while(index<assets.length&&!failure){const asset=assets[index++];const url=new URL(`${base}${asset.path}`,location.href).href;try{

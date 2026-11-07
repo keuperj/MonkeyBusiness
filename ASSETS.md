@@ -144,3 +144,10 @@ Audio is generated through ElevenLabs and remains subject to the applicable acco
 ## Act II
 
 Six new room backgrounds, two changed-state backgrounds, character/prop/emblem atlases and a chapter illustration are in `public/assets/act2/`. Generated with the built-in image tool; see [artwork record](docs/ACT_2_ARTWORK.md). Act II's 294 spoken lines and nine effects are mapped by `src/act2-audio-manifest.json`, with exact requests recorded in `public/audio/act2-provenance.json`. See [implementation and regeneration](docs/ACT_2_IMPLEMENTATION.md).
+
+
+## Act V — The Right of Way
+
+Eight original generated 1536 × 1024 illustrations are stored under `public/assets/act5/`: command, bypass, watch, coupling, passage, review, chart and ending. Generation used the existing codex-imagegen-cli 0.2.0 workflow; prompts are recorded in `public/assets/act5/generation.json`. The inspection-map PNG is a Pillow composition of the existing generated shoal chart, two new room cutaways and the dry walking route.
+
+The static ElevenLabs manifest contains 212 spoken entries and four sound assets, with per-file voice/settings provenance in `public/audio/act5-provenance.json`. Returning locations and cast reuse their existing artwork and speech. No runtime generation service or credentials are distributed. See the Act V implementation document for scope, reproduction scripts and presentation adaptations.

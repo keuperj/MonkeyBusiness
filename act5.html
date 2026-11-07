@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Monkey Buisness — Act V</title></head><body>
+<dialog id="act5-loading" class="act2-loading" aria-label="Loading Act V"><img src="/assets/act5/command.png" alt="Nell investigates the harbour in The Right of Way"><div><p class="eyebrow">MONKEY BUISNESS</p><h1>Act V</h1><h2>The Right of Way</h2><progress id="a5-progress" max="100" value="0" aria-label="Chapter download progress"></progress><p id="a5-loading-status" role="status">Preparing the harbour…</p><button id="a5-retry" hidden>Retry download</button><div id="a5-recovery" hidden></div><a href="./">Return to start menu</a></div></dialog>
+<main class="chapter-shell" inert>
+<div id="room-header"></div>
+<p id="goal" class="goal"></p>
+<section class="chapter-stage">
+<div class="scene-wrap"><div id="game" tabindex="0" aria-label="Point-and-click scene"></div><div id="caption" role="status" aria-live="polite"><b>NELL</b><span>Loading the harbour…</span></div><div id="duel-score" class="chapter-duel-score" role="status" aria-live="polite" aria-label="Duel score" hidden><span>NELL <strong id="nell-score">0</strong></span><span id="round-count"></span><span>QUIBBLE &amp; CO. <strong id="pirate-score">0</strong></span></div><div class="command"><span>◆</span><span id="command">Walk to…</span><button id="hotspots" aria-pressed="false">Hotspots · H</button></div></div>
+<aside id="panel" aria-label="Conversations and actions"><p>Unfolding the chart…</p></aside>
+<div class="chapter-controls"><div id="verbs" aria-label="Actions"></div><div class="pockets"><span class="eyebrow">YOUR POCKETS & PAPERS</span><div class="pocket-tray"><div id="pocket-tools"><button id="notebook">Notebook</button><button id="map">Map</button></div><div id="inventory"></div></div></div></div>
+</section>
+<footer><span>Only pride gets hurt here.</span><div><button id="replay">Replay speech</button><button id="save">Save</button><button id="load">Load</button><button id="motion" aria-pressed="false">Reduced motion</button><button id="hint">Hint</button><button id="main-menu">Main menu</button></div></footer>
+<p id="notice" role="status" aria-live="polite"></p>
+</main>
+<dialog id="book"><div class="modal-header"><h2 id="book-title">Nell’s notebook</h2><button id="close-book" aria-label="Close notebook">Close ✕</button></div><div id="book-content"></div></dialog>
+<dialog id="travel"><div class="modal-header"><div><p class="eyebrow">NELL’S WORKING CHART</p><h2 id="travel-title">Brindle Quay</h2></div><button id="travel-skip">Continue →</button></div><div class="map-art"><img src="/assets/story-map-walkways.png" alt="Map of Brindle Quay: tavern at southwest, bridge northeast of it, repair-yard landing farther northeast."><svg viewBox="0 0 1536 1024" aria-label="Red travel route"><path id="route-shadow"/><path id="route"/><circle id="traveller" r="10"/></svg></div><p id="travel-description"></p></dialog>
+<script type="module" src="/src/act5.ts"></script></body></html>

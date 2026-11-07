@@ -11,7 +11,9 @@ const paperMarks:Record<string,string>={
  receipt:'<circle cx="12" cy="12" r="9"/><path d="M15 7H10a3 3 0 0 0 0 6h4a2 2 0 0 1 0 4H8M12 5v14"/>',
  tracing:'<circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M5 16V8h7v10h7V8"/>',
  recordCopy:'<path d="M3 19h18M3 15h4l2-9 4 11 3-13 2 11h3"/>',
- procedure:'<path d="m3 6 2 2 3-4m-5 9 2 2 3-4m-5 9 2 2 3-4M12 6h9m-9 7h9m-9 7h9"/>'
+ procedure:'<path d="m3 6 2 2 3-4m-5 9 2 2 3-4m-5 9 2 2 3-4M12 6h9m-9 7h9m-9 7h9"/>',
+ eventCopy:'<path d="M5 3h14v14H5Z M8 7h8M8 10h5"/><circle cx="15" cy="17" r="4"/><path d="m13 21-1 2m5-2 1 2"/>',
+ publicChart:'<path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2Z M9 3v16M15 5v16M5 12l3 2 4-5 5 3 3-4"/>'
 };
 export function paperIcon(item:string,art=icon('chart')){
  const mark=Object.hasOwn(paperMarks,item)?paperMarks[item]:undefined;

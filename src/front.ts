@@ -27,7 +27,7 @@ export class Front {
  private loading=false;
  private reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
  constructor(private enter:(save?:ChapterState)=>void, private leave:()=>void,private prepare:()=>Promise<void>) {
-  this.dialog.showModal();this.soundLabel();$('splash-enter').focus();void installDebugMenu();$('act4-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act4.html`);$('act3-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act3.html`);$('act2-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act2.html`);
+  this.dialog.showModal();this.soundLabel();$('splash-enter').focus();void installDebugMenu();$('act5-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act5.html`);$('act4-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act4.html`);$('act3-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act3.html`);$('act2-game').onclick=()=>location.assign(`${import.meta.env.BASE_URL}act2.html`);
   $('splash-enter').onclick=()=>this.menu();
   $('start-game').onclick=()=>this.start();
   $('load-game').onclick=()=>this.loads();
@@ -45,7 +45,7 @@ export class Front {
  private soundLabel(){$('front-sound').textContent=audio.enabled?'Sound on':'Sound off';$('front-sound').setAttribute('aria-pressed',String(audio.enabled));}
  menu(){
   this.stop();this.leave();document.body.classList.add('at-title');document.querySelector<HTMLElement>('.chapter-shell')!.inert=true;
-  if(!this.dialog.open)this.dialog.showModal();this.show('start-menu');audio.setAmbience('bridge-ambience');this.soundLabel();
+  if(!this.dialog.open)this.dialog.showModal();this.show('start-menu');try{$('act5-game').hidden=!(localStorage.getItem('monkey-buisness-act5-auto')||JSON.parse(localStorage.getItem('monkey-buisness-act4-auto')||'null')?.flags?.complete);}catch{$('act5-game').hidden=true;}audio.setAmbience('bridge-ambience');this.soundLabel();
   try{$('act2-game').hidden=!(localStorage.getItem('monkey-buisness-act2-auto')||JSON.parse(localStorage.getItem(AUTO)||'null')?.flags?.complete);}catch{$('act2-game').hidden=true;}try{$('act3-game').hidden=!(localStorage.getItem('monkey-buisness-act3-auto')||JSON.parse(localStorage.getItem('monkey-buisness-act2-auto')||'null')?.flags?.complete);}catch{$('act3-game').hidden=true;}try{$('act4-game').hidden=!(localStorage.getItem('monkey-buisness-act4-auto')||JSON.parse(localStorage.getItem('monkey-buisness-act3-auto')||'null')?.flags?.complete);}catch{$('act4-game').hidden=true;}$('front-saves').hidden=true;$('menu-actions').hidden=false;$('front-status').textContent=this.available?'':'Unfolding the charts…';$('start-game').focus();
  }
  private action(text:string,run:()=>void){const b=document.createElement('button');b.textContent=text;b.onclick=run;$('front-saves').append(b);return b;}

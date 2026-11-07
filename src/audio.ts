@@ -2,7 +2,8 @@ import originalManifest from './audio-manifest.json';
 import act2Manifest from './act2-audio-manifest.json';
 import act3Manifest from './act3-audio-manifest.json';
 import act4Manifest from './act4-audio-manifest.json';
-const manifest={speech:{...originalManifest.speech,...act2Manifest.speech,...act3Manifest.speech,...act4Manifest.speech},effects:{...originalManifest.effects,...act2Manifest.effects,...act3Manifest.effects,...act4Manifest.effects}};
+import act5Manifest from './act5-audio-manifest.json';
+const manifest={speech:{...originalManifest.speech,...act2Manifest.speech,...act3Manifest.speech,...act4Manifest.speech,...act5Manifest.speech},effects:{...originalManifest.effects,...act2Manifest.effects,...act3Manifest.effects,...act4Manifest.effects,...act5Manifest.effects}};
 
 type Line = { who: string; text: string };
 const speechFiles: Record<string, string> = manifest.speech;

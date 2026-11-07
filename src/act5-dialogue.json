@@ -1,0 +1,887 @@
+{
+  "blocks": {
+    "A5-OPEN": [
+      {
+        "who": "ORIN",
+        "text": "Second Opinion is ready. I have not mistaken that for a weather report."
+      },
+      {
+        "who": "NELL",
+        "text": "The stations are prepared. I have not mistaken that for today's permission."
+      },
+      {
+        "who": "QUIBBLE",
+        "text": "Excellent. We are becoming extremely difficult to flatter into an accident."
+      },
+      {
+        "who": "ORIN",
+        "text": "Check the approach with me. Then we go."
+      }
+    ],
+    "A5-CHALLENGE-END": [
+      {
+        "who": "VANE",
+        "text": "You have made a very eloquent collection of dependencies."
+      },
+      {
+        "who": "NELL",
+        "text": "Yes. I finally wrote down their names."
+      },
+      {
+        "who": "BRAM",
+        "text": "The dry changeover procedure is available. No part of that sentence says it is complete."
+      },
+      {
+        "who": "VANE",
+        "text": "Emergency central authority. Local cover is unverified. Restore the central return."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "Public declaration received. Claim recorded exactly."
+      },
+      {
+        "who": "QUIBBLE",
+        "text": "Inlet relief is engaged and confirmed. I shall not improve that fact by shouting."
+      },
+      {
+        "who": "NELL",
+        "text": "Keep the warning open. Check what it says."
+      },
+      {
+        "who": "PIP",
+        "text": "If everyone can copy it, what are we paying you for?"
+      },
+      {
+        "who": "NELL",
+        "text": "Making it worth copying. And coming back when the water proves me wrong."
+      },
+      {
+        "who": "PIP",
+        "text": "Good. I can print those terms without making them smaller."
+      }
+    ],
+    "A5-LOCAL-ANSWERS": [
+      {
+        "who": "QUIBBLE",
+        "text": "Service Inlet. Relief open. Quibble, present and answering."
+      },
+      {
+        "who": "ROOK",
+        "text": "Outer Landing. Return established. Tamsin Rook. The numbers are agreeing without a family motto."
+      },
+      {
+        "who": "MARA",
+        "text": "Repair Quay. Balance confirmed. Mara. I am staying until someone properly relieves me."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "Three stations. Three names. One recorded watch."
+      },
+      {
+        "who": "NELL",
+        "text": "Now check the boat. Being right about the gates is not the whole job."
+      }
+    ],
+    "A5-PASSAGE": [
+      {
+        "who": "ORIN",
+        "text": "Lighter clear of the western transit. No account presented. No scrape heard."
+      },
+      {
+        "who": "VANE",
+        "text": "One passage does not maintain a harbour."
+      },
+      {
+        "who": "NELL",
+        "text": "No. Neither does one director."
+      },
+      {
+        "who": "NELL",
+        "text": "Your return gauge. What does it show?"
+      },
+      {
+        "who": "VANE",
+        "text": "Within the marked range."
+      },
+      {
+        "who": "BRAM",
+        "text": "Please put your name beside it."
+      }
+    ],
+    "A5-REVIEW": [
+      {
+        "who": "FINE PRINT",
+        "text": "Exclusive dispatch withdrawn. Maintenance obligations retained."
+      },
+      {
+        "who": "VANE",
+        "text": "You have removed the convenient part."
+      },
+      {
+        "who": "BRAM",
+        "text": "The convenient part for whom?"
+      },
+      {
+        "who": "PIP",
+        "text": "That question is going above the fold."
+      },
+      {
+        "who": "NELL",
+        "text": "Put the finding above it. People should be able to check the joke."
+      }
+    ],
+    "A5-EGG-EXHIBIT-ZERO": [
+      {
+        "who": "NELL",
+        "text": "At last. A place for the accumulated substance of my adventures."
+      },
+      {
+        "who": "BRAM",
+        "text": "Is that a specimen?"
+      },
+      {
+        "who": "NELL",
+        "text": "Pocket lint. Provenance: pocket. Further provenance: uncertain."
+      },
+      {
+        "who": "BRAM",
+        "text": "I can catalogue that."
+      },
+      {
+        "who": "NELL",
+        "text": "You can catalogue uncertainty?"
+      },
+      {
+        "who": "BRAM",
+        "text": "Certainly. The trouble starts when people catalogue it as a crown."
+      },
+      {
+        "who": "NELL",
+        "text": "Any special powers?"
+      },
+      {
+        "who": "BRAM",
+        "text": "It has kept you from throwing away an empty pocket for five chapters."
+      },
+      {
+        "who": "NELL",
+        "text": "Remarkable conservation work."
+      }
+    ],
+    "A5-FAREWELL-MARA": [
+      {
+        "who": "MARA",
+        "text": "Bread. Tea. Something in a jar that will remain useful longer than either of us expects."
+      },
+      {
+        "who": "NELL",
+        "text": "Advice?"
+      },
+      {
+        "who": "MARA",
+        "text": "Ask before you decide what someone else needs protecting from."
+      },
+      {
+        "who": "NELL",
+        "text": "You could come for the first stretch."
+      },
+      {
+        "who": "MARA",
+        "text": "Ask me tomorrow. I would like to answer without a crisis helping."
+      }
+    ],
+    "A5-FAREWELL-ORIN": [
+      {
+        "who": "ORIN",
+        "text": "Here. Beyond this point I don't know the bottom."
+      },
+      {
+        "who": "NELL",
+        "text": "You've left it blank."
+      },
+      {
+        "who": "ORIN",
+        "text": "A considerable improvement on what I used to do."
+      }
+    ],
+    "A5-FAREWELL-ROOK": [
+      {
+        "who": "ROOK",
+        "text": "A sounding reel. It measures depth, not worthiness."
+      },
+      {
+        "who": "NELL",
+        "text": "A narrow field for one of your family inventions."
+      },
+      {
+        "who": "ROOK",
+        "text": "I have removed three unnecessary ambitions from the handle."
+      }
+    ],
+    "A5-FAREWELL-QUIBBLE": [
+      {
+        "who": "QUIBBLE",
+        "text": "I declare this crossing open."
+      },
+      {
+        "who": "NELL",
+        "text": "It was open."
+      },
+      {
+        "who": "QUIBBLE",
+        "text": "Yes. I am practising declarations that describe something."
+      }
+    ],
+    "A5-FAREWELL-PIP": [
+      {
+        "who": "PIP",
+        "text": "A hundred copies. One correction address. No miraculous guarantees."
+      },
+      {
+        "who": "NELL",
+        "text": "Put my name on it."
+      },
+      {
+        "who": "PIP",
+        "text": "As owner of the water?"
+      },
+      {
+        "who": "NELL",
+        "text": "As the person to tell when the chart is wrong."
+      }
+    ],
+    "A5-FAREWELL-MAINTENANCE": [
+      {
+        "who": "VANE",
+        "text": "Your maintenance list has an unreasonable number of listeners."
+      },
+      {
+        "who": "BRAM",
+        "text": "Those are the people affected by the work."
+      },
+      {
+        "who": "VANE",
+        "text": "I had inferred that."
+      },
+      {
+        "who": "BRAM",
+        "text": "Good. Read the first name back."
+      }
+    ],
+    "A5-END": [
+      {
+        "who": "FINE PRINT",
+        "text": "I could represent your interests."
+      },
+      {
+        "who": "NELL",
+        "text": "Provided I get to tell you what they are."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "An unusually demanding client. What will you call the boat?"
+      },
+      {
+        "who": "NELL",
+        "text": "Still Deciding."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "Terrible name. Impossible to invoice."
+      },
+      {
+        "who": "NELL",
+        "text": "You will find a way."
+      }
+    ],
+    "A5-ARRIVAL": [
+      {
+        "who": "BRAM",
+        "text": "The dry route is open. The wet stair is still wet. I have resisted improving its description."
+      },
+      {
+        "who": "NELL",
+        "text": "We check the current cover before we touch the bypass."
+      },
+      {
+        "who": "BRAM",
+        "text": "Good. I have put the instructions where the dramatic machinery cannot hide them."
+      }
+    ],
+    "A5-CAPTURE": [
+      {
+        "who": "BRAM",
+        "text": "Watch D, revision two. Outer high. Quay middle. Inlet low."
+      },
+      {
+        "who": "NELL",
+        "text": "The quay has risen. Mara’s old A setting is no longer the answer."
+      },
+      {
+        "who": "BRAM",
+        "text": "The other settings still need new named replies. A familiar number is not a fresh observation."
+      }
+    ],
+    "A5-ADMISSION": [
+      {
+        "who": "VANE",
+        "text": "You may inspect. You may even object. Neither activity gives you a harbour."
+      },
+      {
+        "who": "NELL",
+        "text": "I brought a procedure, not a flag."
+      },
+      {
+        "who": "BRAM",
+        "text": "The dry changeover provision is posted. Its interlocks remain in force."
+      }
+    ],
+    "A5-EMERGENCY": [
+      {
+        "who": "VANE",
+        "text": "Emergency central authority. Local cover is unverified. Restore the central return."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "Public declaration received. Claim recorded exactly."
+      },
+      {
+        "who": "QUIBBLE",
+        "text": "Inlet relief is engaged and confirmed. I shall not improve that fact by shouting."
+      },
+      {
+        "who": "NELL",
+        "text": "Keep the warning open. Check what it says."
+      }
+    ],
+    "A5-ISOLATE": [
+      {
+        "who": "BRAM",
+        "text": "Command coupling open. Gate drive power retained. Public signals retained."
+      },
+      {
+        "who": "NELL",
+        "text": "The centre can speak. It cannot move a local pilot through that gap."
+      }
+    ],
+    "A5-ACK-OUTER": [
+      {
+        "who": "ROOK",
+        "text": "Outer Landing. Tamsin Rook. Watch D, revision two. High, B return. Disengaged test passed; named readback confirmed."
+      }
+    ],
+    "A5-ACK-QUAY": [
+      {
+        "who": "MARA",
+        "text": "Repair Quay. Mara. Watch D, revision two. Middle, B balance. The old A setting has been replaced and tested. I hold until the paths are confirmed."
+      }
+    ],
+    "A5-ACK-INLET": [
+      {
+        "who": "QUIBBLE",
+        "text": "Service Inlet. Quibble. Watch D, revision two. Low, C relief. Test passed. I shall be first because of the pipe, not my seniority."
+      }
+    ],
+    "A5-PUBLISH": [
+      {
+        "who": "PIP",
+        "text": "If everyone can copy it, what are we paying you for?"
+      },
+      {
+        "who": "NELL",
+        "text": "Making it worth copying. And coming back when the water proves me wrong."
+      },
+      {
+        "who": "PIP",
+        "text": "Good. I can print those terms without making them smaller."
+      }
+    ],
+    "A5-BOAT": [
+      {
+        "who": "ORIN",
+        "text": "A repaired hull, an itemised fitting bill, and work people actually need. That is a boat agreement, not a coronation."
+      },
+      {
+        "who": "NELL",
+        "text": "And Second Opinion?"
+      },
+      {
+        "who": "ORIN",
+        "text": "Still mine. I have had enough trouble finding her once."
+      }
+    ],
+    "A5-RECOVERY": [
+      {
+        "who": "BRAM",
+        "text": "Positions held. Disengage the active local pilots in reverse order. Reconnect only after every pilot answers disengaged."
+      },
+      {
+        "who": "NELL",
+        "text": "Keep the evidence. We are reversing the controls, not what happened."
+      }
+    ],
+    "A5-EVENT": [
+      {
+        "who": "BRAM",
+        "text": "Full sequence. Declaration, readbacks, independent passage observation. The original stays in the recorder."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "The shore transcript agrees. Including the sentences nobody wanted to hear again."
+      }
+    ]
+  },
+  "topics": [
+    {
+      "id": "A5-ORIN-01",
+      "who": "ORIN",
+      "question": "Why check again?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "A chart tells you where somebody measured. The current water tells you whether to sail."
+        }
+      ]
+    },
+    {
+      "id": "A5-ORIN-02",
+      "who": "ORIN",
+      "question": "Who owns Second Opinion?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "I do. Cooperation has not altered the registration."
+        }
+      ]
+    },
+    {
+      "id": "A5-ORIN-03",
+      "who": "ORIN",
+      "question": "Can we turn back?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Finish the handover or restore central hold. Then we check the approach together."
+        }
+      ]
+    },
+    {
+      "id": "A5-ORIN-04",
+      "who": "ORIN",
+      "question": "The blank patch?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Beyond the marked reach I do not know the bottom. I have finally put that on paper."
+        }
+      ]
+    },
+    {
+      "id": "A5-ORIN-05",
+      "who": "ORIN",
+      "question": "My own boat?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Useful work, sound planks, clear terms. Destiny is a poor caulking material."
+        }
+      ]
+    },
+    {
+      "id": "A5-BRAM-01",
+      "who": "BRAM",
+      "question": "What does the bypass bypass?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Central command transmission. Not power, not public signals, and certainly not the need to think."
+        }
+      ]
+    },
+    {
+      "id": "A5-BRAM-02",
+      "who": "BRAM",
+      "question": "Who permits inspection?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "The posted dry-maintenance provision. Named inspector, caretaker, current cover and seated holds. Not permission to do anything else."
+        }
+      ]
+    },
+    {
+      "id": "A5-BRAM-03",
+      "who": "BRAM",
+      "question": "Why this order?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Inlet relief first, outer return second, quay balance last. Balance needs both paths confirmed."
+        }
+      ]
+    },
+    {
+      "id": "A5-BRAM-04",
+      "who": "BRAM",
+      "question": "Can I undo it?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Hold positions. Disengage quay, outer, then inlet if active. Verify all pilots off before reconnecting central command."
+        }
+      ]
+    },
+    {
+      "id": "A5-BRAM-05",
+      "who": "BRAM",
+      "question": "Your name on the plate?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "A name is useful when somebody needs the next inspection. A wage is useful when the inspector needs supper."
+        }
+      ]
+    },
+    {
+      "id": "A5-BRAM-06",
+      "who": "BRAM",
+      "question": "Exhibit Zero?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "An empty display for something with a more impressive story than specification."
+        }
+      ]
+    },
+    {
+      "id": "A5-VANE-01",
+      "who": "VANE",
+      "question": "Do you deny the trial?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "No. I defend a common schedule. You dispute the account condition. Let us not pretend those are the same question."
+        }
+      ]
+    },
+    {
+      "id": "A5-VANE-02",
+      "who": "VANE",
+      "question": "What about my calibration?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Your work was accurate. That fact will survive your disagreement with me."
+        }
+      ]
+    },
+    {
+      "id": "A5-VANE-03",
+      "who": "VANE",
+      "question": "Why not shared schedules?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Because I have watched everyone assume somebody else was responsible. You will have to show me names."
+        }
+      ]
+    },
+    {
+      "id": "A5-VANE-04",
+      "who": "VANE",
+      "question": "What counts as an emergency?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "A stated hazard, publicly signalled. I expect you to take it seriously even when you dislike the speaker."
+        }
+      ]
+    },
+    {
+      "id": "A5-VANE-05",
+      "who": "VANE",
+      "question": "What work remains?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "The return gauge still needs reading. Your victory has not made the metal self-maintaining."
+        }
+      ]
+    },
+    {
+      "id": "A5-VANE-06",
+      "who": "VANE",
+      "question": "Do you forgive us?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "You have not asked for the kind of approval I can give. I suspect that is deliberate."
+        }
+      ]
+    },
+    {
+      "id": "A5-MARA-01",
+      "who": "MARA",
+      "question": "Revision two?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "The quay is middle now. B balance. I will not turn an old answer into a new promise."
+        }
+      ]
+    },
+    {
+      "id": "A5-MARA-02",
+      "who": "MARA",
+      "question": "Are you ready to hold?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Yes. And I can say hold when you would rather hear go."
+        }
+      ]
+    },
+    {
+      "id": "A5-MARA-03",
+      "who": "MARA",
+      "question": "The old relief run?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "My account remains mine. Do not improve the present case by moving somebody else into the past."
+        }
+      ]
+    },
+    {
+      "id": "A5-MARA-04",
+      "who": "MARA",
+      "question": "What changes now?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "The next person gets the instructions and the right to question them."
+        }
+      ]
+    },
+    {
+      "id": "A5-MARA-05",
+      "who": "MARA",
+      "question": "Provisions?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Bread, tea, and a jar that has survived worse plans than yours."
+        }
+      ]
+    },
+    {
+      "id": "A5-ROOK-01",
+      "who": "ROOK",
+      "question": "Why B at the quay?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Its middle-level route is B. My outer station uses C at middle. Read the card for the machine in front of you."
+        }
+      ]
+    },
+    {
+      "id": "A5-ROOK-02",
+      "who": "ROOK",
+      "question": "Does local mean simple?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "No. It means the people responsible can see and answer for the work."
+        }
+      ]
+    },
+    {
+      "id": "A5-ROOK-03",
+      "who": "ROOK",
+      "question": "Family credit?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Put the mistakes beside the drawings. Otherwise the next generation has to discover them again."
+        }
+      ]
+    },
+    {
+      "id": "A5-ROOK-04",
+      "who": "ROOK",
+      "question": "The sounding kit?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "It measures depth, not worthiness. I have removed three unnecessary ambitions from the handle."
+        }
+      ]
+    },
+    {
+      "id": "A5-QUIBBLE-01",
+      "who": "QUIBBLE",
+      "question": "Why do you go first?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Relief must precede return and balance. My splendid rank has been omitted from the diagram."
+        }
+      ]
+    },
+    {
+      "id": "A5-QUIBBLE-02",
+      "who": "QUIBBLE",
+      "question": "Can you wait?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "With distinction. Observe the flourish I am not making."
+        }
+      ]
+    },
+    {
+      "id": "A5-QUIBBLE-03",
+      "who": "QUIBBLE",
+      "question": "The bridge?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Open. A declaration that describes something is a surprisingly restful occupation."
+        }
+      ]
+    },
+    {
+      "id": "A5-QUIBBLE-04",
+      "who": "QUIBBLE",
+      "question": "One last duel?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Your argument has no legs!"
+        }
+      ]
+    },
+    {
+      "id": "A5-QUIBBLE-05",
+      "who": "QUIBBLE",
+      "question": "And my reply?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "Then we shall give it a sound footing. A draw. Public passage remains open."
+        }
+      ]
+    },
+    {
+      "id": "A5-FINEPRINT-01",
+      "who": "FINE PRINT",
+      "question": "Witness or judge?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "Witness. A transcript is not a verdict, even when beautifully punctuated."
+        }
+      ]
+    },
+    {
+      "id": "A5-FINEPRINT-02",
+      "who": "FINE PRINT",
+      "question": "Why repeat Vane’s claim?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "Because leaving it out would make our account less true."
+        }
+      ]
+    },
+    {
+      "id": "A5-FINEPRINT-03",
+      "who": "FINE PRINT",
+      "question": "Who pays for work?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "People may pay for surveying and itemised maintenance without buying permission to exist on the water."
+        }
+      ]
+    },
+    {
+      "id": "A5-FINEPRINT-04",
+      "who": "FINE PRINT",
+      "question": "Represent me?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "Subject to an agreement in which you are permitted to explain your own interests."
+        }
+      ]
+    },
+    {
+      "id": "A5-FINEPRINT-05",
+      "who": "FINE PRINT",
+      "question": "Boat name?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "Still Deciding. A formidable obstacle to invoicing."
+        }
+      ]
+    },
+    {
+      "id": "A5-PIP-01",
+      "who": "PIP",
+      "question": "Another headline?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "After the sources. Large type does not make a missing observation appear."
+        }
+      ]
+    },
+    {
+      "id": "A5-PIP-02",
+      "who": "PIP",
+      "question": "Print Vane’s answer?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Beside the records, with the date. Readers can do some of the work."
+        }
+      ]
+    },
+    {
+      "id": "A5-PIP-03",
+      "who": "PIP",
+      "question": "What did review decide?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Exclusive dispatch withdrawn. Maintenance obligations retained. History not rewritten."
+        }
+      ]
+    },
+    {
+      "id": "A5-PIP-04",
+      "who": "PIP",
+      "question": "Free chart, unpaid chartmaker?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Public reproduction and paid work are different terms. We can put both in the agreement."
+        }
+      ]
+    },
+    {
+      "id": "A5-PIP-05",
+      "who": "PIP",
+      "question": "Corrections?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "A dated edition, a contact address, and somebody willing to be wrong in print."
+        }
+      ]
+    }
+  ]
+}

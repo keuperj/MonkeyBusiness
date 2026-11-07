@@ -410,6 +410,165 @@
       "label": "Dry Station Chamber",
       "act": 4,
       "room": "station"
+    },
+    {
+      "id": "act5-intro",
+      "label": "Fresh Act V opening",
+      "act": 5,
+      "room": "inlet",
+      "intro": true
+    },
+    {
+      "id": "act5-quay",
+      "label": "Repair Quay",
+      "act": 5,
+      "room": "quay"
+    },
+    {
+      "id": "act5-press",
+      "label": "Quay Quill",
+      "act": 5,
+      "room": "press"
+    },
+    {
+      "id": "act5-bridge",
+      "label": "Quibble’s Crossing",
+      "act": 5,
+      "room": "bridge"
+    },
+    {
+      "id": "act5-tavern",
+      "label": "Crooked Compass",
+      "act": 5,
+      "room": "tavern"
+    },
+    {
+      "id": "act5-hall",
+      "label": "Breakfast Hall",
+      "act": 5,
+      "room": "hall"
+    },
+    {
+      "id": "act5-workshop",
+      "label": "Rook’s Workshop",
+      "act": 5,
+      "room": "workshop"
+    },
+    {
+      "id": "act5-landing",
+      "label": "Outer Landing",
+      "act": 5,
+      "room": "landing"
+    },
+    {
+      "id": "act5-inlet",
+      "label": "Blind Inlet",
+      "act": 5,
+      "room": "inlet"
+    },
+    {
+      "id": "act5-office",
+      "label": "Survey Office",
+      "act": 5,
+      "room": "office"
+    },
+    {
+      "id": "act5-station",
+      "label": "Dry Station Chamber",
+      "act": 5,
+      "room": "station"
+    },
+    {
+      "id": "act5-service",
+      "label": "Bellweather Service Landing",
+      "act": 5,
+      "room": "service"
+    },
+    {
+      "id": "act5-gallery",
+      "label": "Caretaker’s Gallery",
+      "act": 5,
+      "room": "gallery"
+    },
+    {
+      "id": "act5-recorder",
+      "label": "Recorder Room",
+      "act": 5,
+      "room": "recorder"
+    },
+    {
+      "id": "act5-overlook",
+      "label": "Chart-Drum Overlook",
+      "act": 5,
+      "room": "overlook"
+    },
+    {
+      "id": "act5-command",
+      "label": "Central Command Floor",
+      "act": 5,
+      "room": "command"
+    },
+    {
+      "id": "act5-bypass",
+      "label": "Inspection Bypass Gallery",
+      "act": 5,
+      "room": "bypass"
+    },
+    {
+      "id": "act5-duel",
+      "label": "Puzzle stage · duel",
+      "act": 5,
+      "room": "command",
+      "stage": "duel"
+    },
+    {
+      "id": "act5-isolated",
+      "label": "Puzzle stage · isolated",
+      "act": 5,
+      "room": "bypass",
+      "stage": "isolated"
+    },
+    {
+      "id": "act5-emergency",
+      "label": "Puzzle stage · emergency",
+      "act": 5,
+      "room": "bypass",
+      "stage": "emergency"
+    },
+    {
+      "id": "act5-local",
+      "label": "Puzzle stage · local",
+      "act": 5,
+      "room": "service",
+      "stage": "local"
+    },
+    {
+      "id": "act5-review",
+      "label": "Puzzle stage · review",
+      "act": 5,
+      "room": "quay",
+      "stage": "review"
+    },
+    {
+      "id": "act5-chart",
+      "label": "Puzzle stage · chart",
+      "act": 5,
+      "room": "press",
+      "stage": "chart"
+    },
+    {
+      "id": "act5-epilogue",
+      "label": "Puzzle stage · epilogue",
+      "act": 5,
+      "room": "quay",
+      "stage": "epilogue"
+    },
+    {
+      "id": "act5-complete",
+      "label": "Puzzle stage · complete",
+      "act": 5,
+      "room": "quay",
+      "stage": "complete"
     }
   ]
 }
