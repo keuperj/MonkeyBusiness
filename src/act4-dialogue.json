@@ -1,0 +1,871 @@
+{
+  "blocks": {
+    "A4-OPEN": [
+      {
+        "who": "NELL",
+        "text": "We know how to give the gates back to their stations."
+      },
+      {
+        "who": "MARA",
+        "text": "Who is standing at them?"
+      },
+      {
+        "who": "NELL",
+        "text": "At the moment? Three very convincing blanks."
+      },
+      {
+        "who": "MARA",
+        "text": "Then start with people. The machinery can wait to be impressed."
+      },
+      {
+        "who": "NELL",
+        "text": "And nobody changes anything until every station answers."
+      },
+      {
+        "who": "MARA",
+        "text": "Put that at the top. I'll be at the Compass when you're ready to ask."
+      }
+    ],
+    "A4-MARA-CONSENT": [
+      {
+        "who": "NELL",
+        "text": "Will you attend the quay station? I need someone who knows it and will say no if a reading is doubtful."
+      },
+      {
+        "who": "MARA",
+        "text": "Including when you want the answer to be yes?"
+      },
+      {
+        "who": "NELL",
+        "text": "Especially then."
+      },
+      {
+        "who": "MARA",
+        "text": "I'll open the dry access. We inspect it together. No promises about a machine I haven't seen in years."
+      },
+      {
+        "who": "NELL",
+        "text": "That's the promise I was asking for."
+      }
+    ],
+    "A4-ROOK-BRIEF": [
+      {
+        "who": "ROOK",
+        "text": "The local lever has a test path. With the drive disengaged, the indicator moves and the gate does not."
+      },
+      {
+        "who": "NELL",
+        "text": "So I can prove a station is ready without making it responsible for the harbour yet."
+      },
+      {
+        "who": "ROOK",
+        "text": "Exactly. I wish my grandfather had written that sentence before the paragraph about his genius."
+      },
+      {
+        "who": "NELL",
+        "text": "Will you take Outer Landing?"
+      },
+      {
+        "who": "ROOK",
+        "text": "After you inspect it with me. Give me the actual reading, not a flattering approximation."
+      }
+    ],
+    "A4-MARA-DOOR": [
+      {
+        "who": "MARA",
+        "text": "I locked this after the relief run. I told myself leaving it closed was the same as making it safe."
+      },
+      {
+        "who": "NELL",
+        "text": "We can leave it closed if the inspection fails."
+      },
+      {
+        "who": "MARA",
+        "text": "Yes. This time that will be a decision we can explain."
+      }
+    ],
+    "A4-VANE-REPLY": [
+      {
+        "who": "VANE",
+        "text": "The trials separated movements because predictable dispatch keeps the route clear. A common account gives me a common schedule. I will defend that policy before the harbour."
+      },
+      {
+        "who": "NELL",
+        "text": "The slips list the missing contract as the reason for the hold, not a hazard."
+      },
+      {
+        "who": "VANE",
+        "text": "Then print the slips beside my answer. I have no intention of pretending the arrangement is accidental."
+      }
+    ],
+    "A4-PIP-PUBLISH": [
+      {
+        "who": "PIP",
+        "text": "This one can survive somebody reading the second paragraph."
+      },
+      {
+        "who": "NELL",
+        "text": "Even the paragraph about me?"
+      },
+      {
+        "who": "PIP",
+        "text": "Especially that one. Otherwise it is an advertisement with grievances."
+      }
+    ],
+    "A4-VANE-OFFER": [
+      {
+        "who": "VANE",
+        "text": "A proper vessel. A salary. Your name above the survey office instead of below a correction."
+      },
+      {
+        "who": "NELL",
+        "text": "And the operational editions?"
+      },
+      {
+        "who": "VANE",
+        "text": "Remain with the company. A chart that can move traffic is a responsibility."
+      },
+      {
+        "who": "NELL",
+        "text": "So I choose where I go. You choose who can follow."
+      },
+      {
+        "who": "VANE",
+        "text": "You asked for independence. I am offering it."
+      },
+      {
+        "who": "NELL",
+        "text": "For one person."
+      }
+    ],
+    "A4-VANE-REFUSE": [
+      {
+        "who": "NELL",
+        "text": "I want the boat. I want the work. That is why I had to read the last condition twice."
+      },
+      {
+        "who": "VANE",
+        "text": "You would rather trust three separate stations?"
+      },
+      {
+        "who": "NELL",
+        "text": "Three named attendants, one observation revision, and an instruction each of them can question."
+      },
+      {
+        "who": "VANE",
+        "text": "You make agreement sound punctual."
+      },
+      {
+        "who": "NELL",
+        "text": "We rehearsed. You are welcome to inspect the record."
+      },
+      {
+        "who": "VANE",
+        "text": "Then we will both be judged on whether our arrangements work."
+      }
+    ],
+    "A4-BRAM-LINE": [
+      {
+        "who": "NELL",
+        "text": "Repair Quay maintenance. Watch D, revision one. Can you read me back?"
+      },
+      {
+        "who": "BRAM",
+        "text": "Bellweather maintenance. Repair Quay, Watch D, revision one. The line works. That is not yet a report about the gates."
+      },
+      {
+        "who": "NELL",
+        "text": "We are keeping those achievements separate."
+      },
+      {
+        "who": "BRAM",
+        "text": "Promising start."
+      }
+    ],
+    "A4-END-REVIEW": [
+      {
+        "who": "FINE PRINT",
+        "text": "Outer, quay, inlet. Same revision. Every answer has a name."
+      },
+      {
+        "who": "NELL",
+        "text": "And every name knows it can say hold."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "A surprisingly useful addition to command."
+      }
+    ],
+    "A4-VANE-ANNOUNCE": [
+      {
+        "who": "VANE",
+        "text": "Fair Passage announces the centralisation sequence for the next major tide. Existing controls remain in force until the dispatch change is issued."
+      },
+      {
+        "who": "FINE PRINT",
+        "text": "Announcement recorded. Not execution."
+      },
+      {
+        "who": "NELL",
+        "text": "Then no one jumps ahead of it. Hold the prepared settings."
+      }
+    ],
+    "A4-END": [
+      {
+        "who": "MARA",
+        "text": "Quay holds."
+      },
+      {
+        "who": "ROOK",
+        "text": "Outer holds."
+      },
+      {
+        "who": "QUIBBLE",
+        "text": "Inlet holds. With admirable restraint."
+      },
+      {
+        "who": "ORIN",
+        "text": "Second Opinion ready at Blind Inlet. Departure check when you arrive."
+      },
+      {
+        "who": "NELL",
+        "text": "We have a harbour that can answer back. Now I need to reach the place giving the orders."
+      }
+    ],
+    "A4-ACK-OUTER": [
+      {
+        "who": "ROOK",
+        "text": "Outer Landing. Watch D, revision one. High, detent B, local test passed. I hold for a verified handover; central control remains in charge."
+      }
+    ],
+    "A4-ACK-QUAY": [
+      {
+        "who": "MARA",
+        "text": "Repair Quay. Watch D, revision one. Low, detent A, local test passed. I'll hold. If the observation changes, this acknowledgement changes with it."
+      }
+    ],
+    "A4-ACK-INLET": [
+      {
+        "who": "QUIBBLE",
+        "text": "Service Inlet at Blind Inlet. Watch D, revision one. Low, detent C, test passed. Holding for handover."
+      },
+      {
+        "who": "NELL",
+        "text": "And no independent flourish?"
+      },
+      {
+        "who": "QUIBBLE",
+        "text": "I have isolated the flourish."
+      }
+    ],
+    "A4-EGG-MASCOT": [
+      {
+        "who": "NELL",
+        "text": "The monkey has changed its mind."
+      },
+      {
+        "who": "PIP",
+        "text": "The advertising department assures me it has always believed the newest thing."
+      },
+      {
+        "who": "NELL",
+        "text": "Can we ask the monkey?"
+      },
+      {
+        "who": "PIP",
+        "text": "Its spokesperson has declined to comment."
+      }
+    ],
+    "A4-EGG-CLOCK": [
+      {
+        "who": "NELL",
+        "text": "A visitor from the distant pocket."
+      },
+      {
+        "who": "NELL",
+        "text": "The appointment is yesterday, the inspection is tomorrow, and the lint is regrettably available now."
+      },
+      {
+        "who": "NELL",
+        "text": "I shall leave chronology to the breakfast department."
+      }
+    ],
+    "A4-EGG-CREDIT": [
+      {
+        "who": "NELL",
+        "text": "The system is self-cleaning?"
+      },
+      {
+        "who": "BRAM",
+        "text": "I am the self."
+      },
+      {
+        "who": "NELL",
+        "text": "Does the self get a day off?"
+      },
+      {
+        "who": "BRAM",
+        "text": "It is mentioned in the larger manual."
+      }
+    ],
+    "A4-ORIN-READY": [
+      {
+        "who": "ORIN",
+        "text": "Second Opinion stays ready at Blind Inlet. I will captain the next voyage. We check the departure water when you come aboard."
+      },
+      {
+        "who": "NELL",
+        "text": "Then the inlet attendant stays ashore, and the captain stays with the boat."
+      }
+    ]
+  },
+  "topics": [
+    {
+      "id": "A4-MARA-01",
+      "who": "MARA",
+      "question": "Do you want your old account printed?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Print the documents you can support. If my account belongs beside them, ask me about that page. Don't turn my apology into a headline without me."
+        }
+      ]
+    },
+    {
+      "id": "A4-MARA-02",
+      "who": "MARA",
+      "question": "Are you afraid to go back?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Yes. Fear is allowed on a watch. Unreported doubt isn't."
+        }
+      ]
+    },
+    {
+      "id": "A4-MARA-03",
+      "who": "MARA",
+      "question": "Will an apology put this right?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "No. It does let the next piece of work begin without a lie underneath it."
+        }
+      ]
+    },
+    {
+      "id": "A4-MARA-04",
+      "who": "MARA",
+      "question": "The chair still has your name.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Then write today's date beside it. The name isn't a current reading either."
+        }
+      ]
+    },
+    {
+      "id": "A4-MARA-05",
+      "who": "MARA",
+      "question": "What if my instruction sounds wrong?",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "I'll ask you to repeat it. Then I'll ask why. You specifically requested an inconvenient attendant."
+        }
+      ]
+    },
+    {
+      "id": "A4-MARA-06",
+      "who": "MARA",
+      "question": "Vane offered me a ship.",
+      "lines": [
+        {
+          "who": "MARA",
+          "text": "Was it a bad ship?"
+        },
+        {
+          "who": "NELL",
+          "text": "No."
+        },
+        {
+          "who": "MARA",
+          "text": "Good offers can still ask too much."
+        }
+      ]
+    },
+    {
+      "id": "A4-ORIN-01",
+      "who": "ORIN",
+      "question": "Will you correct your account for the paper?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Yes. I saw the marker and the barrier. I did not see who ordered them. My certainty had travelled farther than I had."
+        }
+      ]
+    },
+    {
+      "id": "A4-ORIN-02",
+      "who": "ORIN",
+      "question": "Can you attend the inlet station?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Not while taking you to the shoal. Choose someone who can remain ashore without acquiring a second body."
+        }
+      ]
+    },
+    {
+      "id": "A4-ORIN-03",
+      "who": "ORIN",
+      "question": "Will you take us back?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "With a checked departure window and the route in front of us. Second Opinion has no objection to repetition."
+        }
+      ]
+    },
+    {
+      "id": "A4-ORIN-04",
+      "who": "ORIN",
+      "question": "Is the old tracing enough?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Enough to know where to look. Not enough to know what the water is doing when we leave."
+        }
+      ]
+    },
+    {
+      "id": "A4-ORIN-05",
+      "who": "ORIN",
+      "question": "How is Quibble doing?",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "He has excellent volume. We are now working on content."
+        },
+        {
+          "who": "ORIN",
+          "text": "He repeats the station before the instruction. That is more useful than sounding certain."
+        }
+      ]
+    },
+    {
+      "id": "A4-ORIN-06",
+      "who": "ORIN",
+      "question": "I turned down the company vessel.",
+      "lines": [
+        {
+          "who": "ORIN",
+          "text": "Then we'll use mine for this trip. Ownership and having somewhere to go remain separate problems."
+        }
+      ]
+    },
+    {
+      "id": "A4-WATCH-01",
+      "who": "QUIBBLE",
+      "question": "Will you take different jobs?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "I can command the inlet."
+        },
+        {
+          "who": "FINE PRINT",
+          "text": "Attend it."
+        },
+        {
+          "who": "QUIBBLE",
+          "text": "A less dramatic verb."
+        },
+        {
+          "who": "NELL",
+          "text": "A more specific one. Fine Print, will you keep the readbacks?"
+        },
+        {
+          "who": "FINE PRINT",
+          "text": "If my name remains on the record."
+        }
+      ]
+    },
+    {
+      "id": "A4-WATCH-02",
+      "who": "QUIBBLE",
+      "question": "Does the last watch count as training?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "It counts as the last watch. We are resisting the temptation to let nouns qualify themselves."
+        }
+      ]
+    },
+    {
+      "id": "A4-WATCH-03",
+      "who": "QUIBBLE",
+      "question": "What keeps the crossing open?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "My proclamation."
+        },
+        {
+          "who": "FINE PRINT",
+          "text": "And the absence of a barrier. We have arranged both."
+        }
+      ]
+    },
+    {
+      "id": "A4-WATCH-04",
+      "who": "QUIBBLE",
+      "question": "What if the instruction names the wrong station?",
+      "lines": [
+        {
+          "who": "QUIBBLE",
+          "text": "I hold position, name mine, and request correction."
+        },
+        {
+          "who": "NELL",
+          "text": "Without challenging the message to a duel?"
+        },
+        {
+          "who": "QUIBBLE",
+          "text": "I shall struggle privately."
+        }
+      ]
+    },
+    {
+      "id": "A4-PRINT-01",
+      "who": "FINE PRINT",
+      "question": "Does the clause forbid all fees?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "No. Clause Seven is still present even when it is inconvenient to a headline."
+        }
+      ]
+    },
+    {
+      "id": "A4-PRINT-02",
+      "who": "FINE PRINT",
+      "question": "Can you cancel their charter?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "I can prepare a review record. The harbour must hear it. Meanwhile, water continues without waiting for jurisdiction."
+        }
+      ]
+    },
+    {
+      "id": "A4-PRINT-03",
+      "who": "FINE PRINT",
+      "question": "Could you carry the signal yourself?",
+      "lines": [
+        {
+          "who": "FINE PRINT",
+          "text": "I am your witness, not a substitute for testing the wire."
+        }
+      ]
+    },
+    {
+      "id": "A4-ROOK-01",
+      "who": "ROOK",
+      "question": "Why didn't your family share these instructions?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Somebody mistook being consulted for being indispensable. We inherited a great deal of filing."
+        }
+      ]
+    },
+    {
+      "id": "A4-ROOK-02",
+      "who": "ROOK",
+      "question": "Does TEST move the gate?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "No. Provided the drive is disengaged, as that very large label says. The test moves its own indicator."
+        }
+      ]
+    },
+    {
+      "id": "A4-ROOK-03",
+      "who": "ROOK",
+      "question": "Why not use Watch C?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Because Watch C was a lesson. The water has not agreed to repeat it for your convenience."
+        }
+      ]
+    },
+    {
+      "id": "A4-ROOK-04",
+      "who": "ROOK",
+      "question": "Do different readings mean disagreement?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Only if we disagree about which station they belong to. A map needs differences."
+        }
+      ]
+    },
+    {
+      "id": "A4-ROOK-05",
+      "who": "ROOK",
+      "question": "Will you share the supplement?",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Yes. With the revision number attached. I am attempting a family tradition in reverse."
+        }
+      ]
+    },
+    {
+      "id": "A4-ROOK-06",
+      "who": "ROOK",
+      "question": "Your breakfast room was simpler.",
+      "lines": [
+        {
+          "who": "ROOK",
+          "text": "Three controls, one shared assumption. You solved the assumption. Please do not now apply the breakfast settings to a sluice."
+        }
+      ]
+    },
+    {
+      "id": "A4-PIP-01",
+      "who": "PIP",
+      "question": "Is this enough to print?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Enough to investigate. Give each claim its own source."
+        },
+        {
+          "who": "PIP",
+          "text": "Enough for these claims. Not for the larger ones you crossed out."
+        }
+      ]
+    },
+    {
+      "id": "A4-PIP-02",
+      "who": "PIP",
+      "question": "Must my commission be in it?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "You accepted an operational commission. That does not make the measurements false. Leaving it out would make our account incomplete."
+        }
+      ]
+    },
+    {
+      "id": "A4-PIP-03",
+      "who": "PIP",
+      "question": "Why include Vane's answer?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Because we asked what she is defending. The documents can sit beside her defence without falling over."
+        }
+      ]
+    },
+    {
+      "id": "A4-PIP-04",
+      "who": "PIP",
+      "question": "What if people disagree?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Then they will have something precise to disagree about. I consider that an improvement in circulation."
+        }
+      ]
+    },
+    {
+      "id": "A4-PIP-05",
+      "who": "PIP",
+      "question": "Will publication stop the sequence?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Paper can make an order visible. You still need to deal with the order."
+        }
+      ]
+    },
+    {
+      "id": "A4-PIP-06",
+      "who": "PIP",
+      "question": "Can I have another copy?",
+      "lines": [
+        {
+          "who": "PIP",
+          "text": "Yes. The machine's one agreeable habit."
+        }
+      ]
+    },
+    {
+      "id": "A4-VANE-01",
+      "who": "VANE",
+      "question": "Did you falsify my survey?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "No. I commissioned accuracy and received it."
+        },
+        {
+          "who": "NELL",
+          "text": "Then our dispute is about what you require of everyone using it."
+        }
+      ]
+    },
+    {
+      "id": "A4-VANE-02",
+      "who": "VANE",
+      "question": "The record says pending.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Correct. I announce changes before making them."
+        }
+      ]
+    },
+    {
+      "id": "A4-VANE-03",
+      "who": "VANE",
+      "question": "Were you the old relief-run operator?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "No. If you intend to make an accusation, use a record that contains me."
+        }
+      ]
+    },
+    {
+      "id": "A4-VANE-04",
+      "who": "VANE",
+      "question": "The charter protects public passage.",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "And permits recorded safety restrictions. I expect your paper to print both sentences."
+        }
+      ]
+    },
+    {
+      "id": "A4-VANE-05",
+      "who": "VANE",
+      "question": "Why keep the command floor locked?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Because inspection and issuing instructions are not the same authority."
+        }
+      ]
+    },
+    {
+      "id": "A4-VANE-06",
+      "who": "VANE",
+      "question": "Could I publish working charts under your offer?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Through the company. Otherwise I would be buying coordination and funding its contradiction."
+        }
+      ]
+    },
+    {
+      "id": "A4-VANE-07",
+      "who": "VANE",
+      "question": "May I take time to decide?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "Certainly. The tide's schedule is not a negotiation, but this conversation need not imitate it."
+        }
+      ]
+    },
+    {
+      "id": "A4-VANE-08",
+      "who": "VANE",
+      "question": "I have declined. Will you withdraw the policy?",
+      "lines": [
+        {
+          "who": "VANE",
+          "text": "No. You have proposed an alternative. I have not accepted that it is better."
+        }
+      ]
+    },
+    {
+      "id": "A4-BRAM-01",
+      "who": "BRAM",
+      "question": "Is the inspection route open?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "The dry service route is. The command floor is secured. Come to the maintenance landing, not the company's rail."
+        }
+      ]
+    },
+    {
+      "id": "A4-BRAM-02",
+      "who": "BRAM",
+      "question": "Can you stop the centre now?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Not safely on your word that you intend to prepare the stations. I need their actual acknowledgements, and you need to be at the bypass."
+        }
+      ]
+    },
+    {
+      "id": "A4-BRAM-03",
+      "who": "BRAM",
+      "question": "We have tested the local paths.",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "Tell me which ones. A collective noun is not a test record."
+        },
+        {
+          "who": "BRAM",
+          "text": "Keep the settings staged and the drives disengaged. The live handover is separate work."
+        }
+      ]
+    },
+    {
+      "id": "A4-BRAM-04",
+      "who": "BRAM",
+      "question": "Does the emergency signal prove an emergency?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "It proves someone asserted emergency authority. The useful feature is that everybody receives the assertion."
+        }
+      ]
+    },
+    {
+      "id": "A4-BRAM-05",
+      "who": "BRAM",
+      "question": "Will you be waiting?",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "At maintenance access. I shall bring the instructions. It would be eccentric to stop now."
+        }
+      ]
+    },
+    {
+      "id": "A4-BRAM-06",
+      "who": "BRAM",
+      "question": "Your cabinet says self-cleaning.",
+      "lines": [
+        {
+          "who": "BRAM",
+          "text": "It says BY BRAM underneath. Read the small line. Apparently this is the chapter for it."
+        }
+      ]
+    }
+  ]
+}

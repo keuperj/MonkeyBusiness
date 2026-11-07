@@ -12,7 +12,7 @@ Implemented 6 November 2026. Entry: `/act3.html`, the completed Act II ending, o
 6. Read the overlook procedure. On the disconnected board choose Watch C everywhere, LOW / MIDDLE / MIDDLE, and LOCAL READY. Request acknowledgements, isolate MODEL CENTRAL and run. Editing any selector invalidates acknowledgements and isolation.
 7. Synthesize the first three supported actions. Return with the plan, confirm the voyage and continue through the safe return to Blind Inlet and walk to Repair Quay.
 
-Act IV is explicitly unavailable. Completing this act does not alter live gates, prepare remote stations or execute the pending dispatch order. Continued exploration is available.
+Act IV is now available through the completion action and start menu. Completing this act does not alter live gates, prepare remote stations or execute the pending dispatch order. Continued exploration is available.
 
 ## State and accessibility
 

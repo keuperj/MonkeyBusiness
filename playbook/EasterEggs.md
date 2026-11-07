@@ -1,5 +1,17 @@
 # Easter eggs and affectionate references
 
+## Act IV additions — 6 November 2026
+
+Act IV now implements three additional optional discoveries. These are separate from the historical Acts I–III audit below; no new illustrated Easter-egg walkthrough is claimed here.
+
+| Discovery | Where / trigger | Effect |
+| --- | --- | --- |
+| The monkey has always believed this | Quay Quill → **Compare the mascot promises** | Original corporate-advertisement joke; `eggMascot`; no evidence-puzzle shortcut |
+| Appointment with yesterday | Breakfast Hall → use **Pocket lint** on **Maintenance attendance clock** | Broad time-bending household-adventure homage; `eggAppointment`; lint retained |
+| The maintenance credit | Dry Station Chamber → repair messenger, test telephone, **Ask Bram about the plan → Read the maintenance credit** | Overlooked-maintenance-labour homage; `eggMaintenanceCredit`; no machinery changes |
+
+All three have generated illustrations and voice clips. Absence of lint cannot block the chapter. Runtime and dialogue sources: `/home/keuper/Projekte/MonkeyBusiness/src/act4.ts` and `/home/keuper/Projekte/MonkeyBusiness/src/act4-dialogue.json`.
+
 **Spoilers for Acts I–III.** Acts I–II audited and illustrated on 6 November 2026; Act III entries checked against the implementation on the same date.
 
 ## What this report covers

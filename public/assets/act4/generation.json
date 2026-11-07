@@ -1,0 +1,54 @@
+{
+  "provider": "codex-imagegen-cli native",
+  "date": "2026-11-06",
+  "jobs": [
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Walkable dry maintenance chamber under a harbour quay. Left dry personnel staircase and heavy door above water. Central waist-high brass local gate desk with disengaged clutch, separate test socket and gauge. Right sealed glass inspection window looks into wet culvert behind fixed rail. Messenger signal manifold and telephone on rear wall. Old chair. Broad empty foreground walking floor. Camera eye-level room view, not overhead.",
+      "out": "station.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Close-up newspaper evidence compositor on wooden desk, six separate parchment records, brass clips, ruled comparison columns, stamp and spectacles, blank paper areas for UI overlay.",
+      "out": "evidence.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Close-up brass signal-only messenger manifold on stone wall. Left service isolation lever, central empty three-stud square-notch socket with hinged safety cover, right mechanical test-return flag and separate porcelain telephone. Distinctively thin signal wires, not water pipes. No text.",
+      "out": "messenger.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Close-up local gate station cabinet, disconnected brass test handle socket, three pilot detent slots, sealed live drive clutch, water level gauge and paper watch card. Clear separation of test indicator and heavy live shaft. No text.",
+      "out": "local-panel.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Close-up harbour witness board, three station readback cards, square circle and triangle brass signal emblems, inset small mechanical bell, ledger with blank ruled rows. Handcrafted nautical instrument.",
+      "out": "signals.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Close-up elegant directors offer folio on dark polished desk, illustration of beautiful small survey sailing vessel on left page, blank formal parchment terms on right, brass pen and company ledger seal. Genuine tempting career offer, not sinister.",
+      "out": "offer.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Wide cinematic harbour dusk. A blue corporate steam launch departs a stone quay toward distant rocky Bellweather Shoal with brass-domed tidal installation. A composed dark-coated female director stands aboard. Not the small kettle-topped sailing boat. No text.",
+      "out": "departure.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Six isolated game props in exact 3 columns by 2 rows atlas, evenly spaced on pure solid magenta #ff00ff background. Row 1: three-stud square-notch brass messenger link; insulated brass test handle; rolled public observation sheet. Row 2: old personnel-door key; public witness ledger; small brass local station cabinet. Each wholly within its cell, no shadows beyond objects.",
+      "out": "props.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Single ornate nautical room emblem, dry stone maintenance chamber with brass desk and hanging lantern framed by a golden oval rope border. Centered isolated on flat pure magenta #ff00ff. No text.",
+      "out": "emblem.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Three vertical vintage nautical advertisement illustrations side by side on a newspaper desk. Same cheerful original monkey mascot holding ledger, pointing to open sea then orderly route then locked account book. Blank banner space above and below each, absolutely no text.",
+      "out": "mascots.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Close-up absurd brass breakfast-room appointment clock with three dials, little empty visitor tray and winding key on elegant wooden cabinet. Whimsical nautical inventor household. No text.",
+      "out": "clock.png"
+    },
+    {
+      "prompt": "Original painted pixel-art 1990s nautical point-and-click adventure, warm amber lamps, teal navy shadows, detailed hand-painted stone and brass, consistent with Monkey Buisness Brindle Quay. No text, no logos, no people. Landscape 1536x1024. Small illustrated maintenance service card on parchment showing a plain brass cleaning cabinet, broom and caretaker cap. Affectionate celebration of overlooked maintenance labour. Blank title and signature strips. No text.",
+      "out": "credit.png"
+    }
+  ]
+}

@@ -2,6 +2,8 @@
 
 ## Status: verified through safe return and completion reload
 
+**Availability update:** Act IV has since been implemented. Choose **Continue to Act IV** after completion. Screenshots below document the earlier capture and may still show its former unavailable boundary; they have not been recaptured for this implementation.
+
 Captured on 6 November 2026 in one fresh browser session, starting at the standard Act III entry page. No debug presets, injected saves or progression edits were used. Direct chapter entry supplied the canonical completed-Act-II inventory; this run does not independently verify importing an earlier save. The Act II playbook verifies the chapter handoff.
 
 Sound was muted using the game control and reduced motion enabled for reproducible screenshots. This run verifies written dialogue and gameplay, not audio quality. All voluntary room changes used **Map**, not neighboring-room icons. The sea voyages use Orin’s voyage confirmations, and the final return includes a scripted walking leg.

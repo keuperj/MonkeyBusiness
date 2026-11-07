@@ -343,6 +343,73 @@
       "items": [
         "tracing"
       ]
+    },
+    {
+      "id": "act4-intro",
+      "label": "Fresh Act IV intro",
+      "act": 4,
+      "room": "quay",
+      "intro": true
+    },
+    {
+      "id": "act4-quay",
+      "label": "Repair Quay",
+      "act": 4,
+      "room": "quay"
+    },
+    {
+      "id": "act4-press",
+      "label": "The Quay Quill",
+      "act": 4,
+      "room": "press"
+    },
+    {
+      "id": "act4-bridge",
+      "label": "Quibble’s Crossing",
+      "act": 4,
+      "room": "bridge"
+    },
+    {
+      "id": "act4-tavern",
+      "label": "The Crooked Compass",
+      "act": 4,
+      "room": "tavern"
+    },
+    {
+      "id": "act4-hall",
+      "label": "Breakfast Hall",
+      "act": 4,
+      "room": "hall"
+    },
+    {
+      "id": "act4-workshop",
+      "label": "Rook’s Workshop",
+      "act": 4,
+      "room": "workshop"
+    },
+    {
+      "id": "act4-landing",
+      "label": "Outer Landing",
+      "act": 4,
+      "room": "landing"
+    },
+    {
+      "id": "act4-inlet",
+      "label": "Blind Inlet",
+      "act": 4,
+      "room": "inlet"
+    },
+    {
+      "id": "act4-office",
+      "label": "Survey Office",
+      "act": 4,
+      "room": "office"
+    },
+    {
+      "id": "act4-station",
+      "label": "Dry Station Chamber",
+      "act": 4,
+      "room": "station"
     }
   ]
 }
