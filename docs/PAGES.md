@@ -6,7 +6,20 @@
 
 `docs/index.html` is a standalone, responsive promotional page sharing the README’s logo and three gameplay screenshots. It includes a compact top-left logo with navigation to its right, a decorative serif motto beneath the menu, scene-art feature cards and a 12-second looping GIF trailer. The small `assets/trailer.js` script supplies pause/replay controls; no framework, external fonts or site build step is needed. Publishing this documentation folder does **not** publish a playable game.
 
-Guide links open Markdown on GitHub using `HEAD`, without assuming a default branch name. Images and CSS use relative paths for repository-subdirectory hosting. `docs/.nojekyll` keeps the site as plain HTML/CSS.
+All landing-page installation links open the styled local `install.html` guide. Development and source-document links open Markdown on GitHub using `HEAD`, without assuming a default branch name. Images and CSS use relative paths for repository-subdirectory hosting. `docs/.nojekyll` keeps the site as plain HTML/CSS.
+
+### Installation page
+
+`docs/install.html` shares the landing page's header, transparent logos, footer and stylesheet. It includes the complete installation guide, a contents list, keyboard-scrollable command blocks, Docker instructions, saves and troubleshooting. No JavaScript is required.
+
+The Markdown file `docs/INSTALLATION.md` is the source of truth. After editing that guide or the landing page's shared header/footer, regenerate the committed HTML:
+
+```sh
+python3 scripts/generate-install-page.py
+python3 scripts/generate-install-page.py --check
+```
+
+The generator uses only the Python standard library and handles the Markdown constructs used in this guide; it is not a general-purpose Markdown renderer. Extend it and its tests if new formatting is introduced. GitHub Pages serves the generated file directly—Python is not needed during hosting. The browser tests compare every HTML command block with its Markdown original and check mobile layout and navigation.
 
 ## Preview
 
