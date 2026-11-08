@@ -28,7 +28,7 @@ const s=(id:string,name:string,x:number,y:number,look:string):Spot=>({id,name,x,
 export function actors5(state:State5):Record<string,Room5>{const late=state.flags.published;return {MARA:late?'tavern':'station',ROOK:late?'workshop':'landing',QUIBBLE:late?'bridge':'inlet','FINE PRINT':late?'bridge':'quay',PIP:'press',ORIN:state.boat,BRAM:state.flags.admitted?'bypass':'gallery',VANE:state.flags.review?'bypass':'command'};}
 export function spots5(state:State5):Spot[]{
  const room=state.room;const base=room in objects4?objects4[room as keyof typeof objects4]:room in spots3?spots3[room as keyof typeof spots3]:[];
- const result=base.filter(x=>!x.person&&!['link','handle','tracing','key'].includes(x.id)).map(x=>({...x}));
+ const result=base.filter(x=>!x.person&&!['link','handle','tracing','key'].includes(x.id)&&!(room==='recorder'&&x.id==='recess')&&!(x.id==='boat'&&room!==state.boat)).map(x=>({...x}));
  const add=(id:Doc5,name:string,x:number,y:number)=>result.push(s(id,name,x,y,documents5[id]));
  if(room==='inlet'){add('pilot','Current pilot notice',300,400);add('transit','Fixed-transit report',650,430);add('clearance','Second Opinion clearance card',1000,500);}
  if(room==='gallery')add('procedure','Dry changeover provision',450,460);
