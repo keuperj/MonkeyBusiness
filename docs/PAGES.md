@@ -4,7 +4,7 @@
 
 ## Prepared site
 
-`docs/index.html` is a standalone, responsive promotional page sharing the README’s logo and three gameplay screenshots. It includes a left-hand illustrated navigation panel, scene-art feature cards and a 12-second looping GIF trailer. The small `assets/trailer.js` script supplies pause/replay controls; no framework, external fonts or site build step is needed. Publishing this documentation folder does **not** publish a playable game.
+`docs/index.html` is a standalone, responsive promotional page sharing the README’s logo and three gameplay screenshots. It includes a compact top-left logo with navigation to its right, a decorative serif motto beneath the menu, scene-art feature cards and a 12-second looping GIF trailer. The small `assets/trailer.js` script supplies pause/replay controls; no framework, external fonts or site build step is needed. Publishing this documentation folder does **not** publish a playable game.
 
 Guide links open Markdown on GitHub using `HEAD`, without assuming a default branch name. Images and CSS use relative paths for repository-subdirectory hosting. `docs/.nojekyll` keeps the site as plain HTML/CSS.
 
@@ -39,9 +39,9 @@ No repository setting has been changed locally. If Pages already serves a playab
 | Brass / parchment | `--brass: #e7bd70`, `--parchment: #f3e3c2` |
 | Teal / ink / rope | `--teal: #23545a`, `--ink: #302419`, `--rope: #967343` |
 | Typography | Georgia/system serif headings; system sans-serif body |
-| Components | `.button`, `.card`, `.seal`, `.eyebrow`, `.gallery`, `.invitation` |
+| Components | `.masthead`, `.masthead-motto`, `.button`, `.card`, `.eyebrow`, `.gallery`, `.invitation` |
 
-Brass borders, dark harbour colors and parchment cards echo the game without placing prose over busy artwork. The page has a skip link, semantic sections, visible keyboard focus, image alternatives, narrow-screen layout and reduced-motion handling. GitHub’s README renderer does not use this custom CSS.
+Restrained brass borders, dark harbour panels, parchment-colored lettering and illustrated cards echo the game without placing prose over busy artwork. A shared `--content-width: 960px` track aligns the trailer and screenshot edges; the logo is capped at 140px and shrinks on narrow screens. The motto uses an italic Palatino/Georgia serif stack with a brass flourish. The page has a skip link, semantic sections, visible keyboard focus, image alternatives, narrow-screen layout and reduced-motion handling. GitHub’s README renderer does not use this custom CSS.
 
 The logo derivative does not replace the original game asset; existing provenance applies. Keep promotional images honest: use the opt-in screenshot test in the development guide rather than presenting mockups as gameplay.
 
@@ -55,7 +55,7 @@ python scripts/generate-site-art.py
 
 Requires Pillow, already used by the repository’s map-composition workflow. Set `SITE_FONT` to an installed TrueType serif font if the default Linux DejaVu Serif path is unavailable. The script crops navigation icons from the shipped pirate UI atlas, derives feature art from the promotional screenshots, and builds `docs/assets/trailer.gif` and `trailer-poster.jpg`. Regenerate the promotional screenshots first if gameplay art changes. Crops are based on their 1440px capture layout.
 
-The trailer is a stylized montage of actual game captures with camera moves, titles and crossfades—not a live gameplay recording. The GIF loops; **Pause trailer** replaces it with a still, and **Replay trailer** restarts it. Reduced-motion users receive the still through a `picture` media source, including without JavaScript. The sidebar stacks above the content on narrow screens. Decorative icons keep visible text labels for accessibility.
+The trailer is a stylized montage of actual game captures with camera moves, titles and crossfades—not a live gameplay recording. The GIF loops; **Pause trailer** replaces it with a still, and **Replay trailer** restarts it. Reduced-motion users receive the still through a `picture` media source, including without JavaScript. Navigation wraps to the right of the smaller logo on narrow screens, and the motto remains visible beneath it. Decorative icons keep visible text labels for accessibility.
 
 ### Checks
 

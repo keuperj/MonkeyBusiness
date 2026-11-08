@@ -10,7 +10,7 @@ test('landing documentation links and images resolve locally',()=>{
  }
 });
 
-for(const width of [1440,390])test(`Pages landing at ${width}px: images, navigation and no overflow`,async({page})=>{
+for(const width of [1440,1024,768,390,320])test(`Pages landing at ${width}px: images, navigation and no overflow`,async({page})=>{
  await page.setViewportSize({width,height:1000});await page.emulateMedia({reducedMotion:'reduce'});
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/docs/index.html');
@@ -23,16 +23,25 @@ for(const width of [1440,390])test(`Pages landing at ${width}px: images, navigat
  }
  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
  expect(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');
- expect(await page.locator('.card').first().evaluate(el=>getComputedStyle(el).color)).toBe('rgb(48, 36, 25)');
+  expect(await page.locator('.card').first().evaluate(el=>getComputedStyle(el).color)).toBe('rgb(243, 227, 194)');
   expect(await page.locator('#trailer-image').evaluate((el:HTMLImageElement)=>el.currentSrc)).toContain('trailer-poster.jpg');
   await expect(page.locator('#trailer-toggle')).toBeHidden();
-  if(width===1440){
-   const menu=(await page.locator('.masthead').boundingBox())!;
-   const main=(await page.locator('main').boundingBox())!;
-   expect(menu.x+menu.width).toBeLessThanOrEqual(main.x);
-  }
+  const logo=(await page.locator('.brand').boundingBox())!;
+  const menu=(await page.getByRole('navigation',{name:'Main navigation'}).boundingBox())!;
+  const motto=(await page.locator('.masthead-motto').boundingBox())!;
+  expect(logo.width).toBeLessThanOrEqual(140);
+  expect(logo.x+logo.width).toBeLessThanOrEqual(menu.x);
+  expect(motto.y).toBeGreaterThanOrEqual(menu.y+menu.height);
+  await expect(page.locator('.masthead-motto')).toContainText('*The parrot disagrees.');
+  const trailer=(await page.locator('.trailer').boundingBox())!;
+  const screenshot=(await page.locator('.gallery figure').first().boundingBox())!;
+  expect(trailer.width).toBeLessThanOrEqual(960);
+  expect(trailer.width).toBeCloseTo(screenshot.width,0);
+  expect(trailer.x).toBeCloseTo(screenshot.x,0);
  await page.getByRole('link',{name:'Screenshots',exact:true}).click();await expect(page).toHaveURL(/#gallery$/);
  await page.screenshot({path:`test-results/pages-${width}.png`,fullPage:true});
+  await page.evaluate(()=>window.scrollTo(0,0));
+  await page.screenshot({path:`test-results/pages-header-${width}.png`});
  expect(errors).toEqual([]);
 });
 
