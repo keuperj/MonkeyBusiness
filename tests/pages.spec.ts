@@ -22,6 +22,18 @@ for(const width of [1440,1024,768,390,320])test(`Pages landing at ${width}px: im
   expect(await img.getAttribute('alt')).not.toBeNull();
  }
  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+  const status=page.getByRole('meter',{name:'Development status'});
+  await expect(status).toHaveAttribute('aria-valuenow','7');
+  await expect(status).toHaveAttribute('aria-valuemin','1');
+  await expect(status).toHaveAttribute('aria-valuemax','10');
+  await expect(status).toHaveAttribute('aria-valuetext','7 out of 10 — Public beta');
+  await expect(status.locator('span')).toHaveCount(10);
+  await expect(status.locator('.current')).toHaveText('7');
+  expect(await status.locator('.current').evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(244, 213, 74)');
+  expect(await status.locator('span').first().evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(236, 104, 104)');
+  expect(await status.locator('span').last().evaluate(el=>getComputedStyle(el).backgroundColor)).toBe('rgb(94, 201, 130)');
+  expect(await page.locator('.release-status').evaluate(el=>el.previousElementSibling?.textContent)).toBe('Five acts. Yours to explore. Play locally—no account or API key required.');
+  await page.locator('.release-status').screenshot({path:`test-results/pages-status-${width}.png`});
  expect(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto');
   expect(await page.locator('.card').first().evaluate(el=>getComputedStyle(el).color)).toBe('rgb(243, 227, 194)');
   expect(await page.locator('#trailer-image').evaluate((el:HTMLImageElement)=>el.currentSrc)).toContain('trailer-poster.jpg');
