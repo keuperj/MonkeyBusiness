@@ -8,16 +8,32 @@
   <title>Monkey Buisness — Welcome to Brindle Quay</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/trailer.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the adventure</a>
   <header class="masthead">
-    <a class="wordmark" href="#">Monkey Buisness</a>
-    <nav aria-label="Main navigation"><a href="#aboard">The adventure</a><a href="#gallery">Screenshots</a><a href="https://github.com/keuperj/MonkeyBusiness">GitHub</a></nav>
+    <a class="brand" href="#main"><img src="assets/game-logo.jpg" width="1000" height="667" alt="Monkey Buisness — home"></a>
+    <p class="eyebrow">Welcome to Brindle Quay</p>
+    <nav aria-label="Main navigation">
+      <a href="#aboard"><img src="assets/icon-compass.png" width="48" height="48" alt="">The adventure</a>
+      <a href="#gallery"><img src="assets/icon-map.png" width="48" height="48" alt="">Screenshots</a>
+      <a href="https://github.com/keuperj/MonkeyBusiness/blob/HEAD/docs/INSTALLATION.md"><img src="assets/icon-chest.png" width="48" height="48" alt="">Install &amp; play</a>
+      <a href="https://github.com/keuperj/MonkeyBusiness/blob/HEAD/docs/DEVELOPMENT.md"><img src="assets/icon-tools.png" width="48" height="48" alt="">Development</a>
+      <a href="https://github.com/keuperj/MonkeyBusiness"><img src="assets/icon-notebook.png" width="48" height="48" alt="">GitHub</a>
+    </nav>
+    <p class="sidebar-note">A little wit. A reliable notebook.<br>Absolutely no fine print.*</p>
+    <small class="sidebar-note">*The parrot disagrees.</small>
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="title">
-      <img class="game-logo" src="assets/game-logo.jpg" width="1000" height="667" alt="Monkey Buisness: a monkey with a compass beside a brass-lettered harbour sign">
+      <figure class="trailer">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/trailer-poster.jpg">
+          <img id="trailer-image" src="assets/trailer.gif" width="768" height="432" alt="Trailer montage: explore the harbour map, cross swords with Quibble, and unravel Rook’s machinery puzzle.">
+        </picture>
+        <figcaption><span>From the harbour, with mischief · Animated game-capture montage</span><button id="trailer-toggle" type="button">Pause trailer</button></figcaption>
+      </figure>
       <p class="eyebrow">An original point-and-click adventure · Five playable acts</p>
       <h1 id="title">A little wit.<br>A lot of <em>monkey business.</em></h1>
       <p class="lede">Welcome to Brindle Quay. The harbour is beautiful, the paperwork is suspicious, and someone has been taking liberties with the tide.</p>
@@ -29,9 +45,9 @@
       <h2 id="aboard-title">The sea has a story.<br>The company has a different one.</h2>
       <p>Join Nell for a job at The Crooked Compass—and stay for a harbour-sized mystery. Explore painted rooms, question an eccentric crew, and work out what the evidence really says.</p>
       <div class="cards">
-        <article class="card"><span class="seal" aria-hidden="true">I</span><h3>Explore</h3><p>Follow the illustrated map from lantern-lit taverns to hidden inlets and improbable machinery.</p></article>
-        <article class="card"><span class="seal" aria-hidden="true">II</span><h3>Outwit</h3><p>Cross swords with Captain Quibble. Cross words with his parrot. Try not to sign anything.</p></article>
-        <article class="card"><span class="seal" aria-hidden="true">III</span><h3>Unravel</h3><p>Combine items, untangle mechanisms and build your case through five acts of nautical nonsense.</p></article>
+        <article class="card"><img class="feature-art" src="assets/feature-explore.jpg" width="640" height="400" loading="lazy" alt="The painted harbour and its winding lanes"><h3>Explore</h3><p>Follow the illustrated map from lantern-lit taverns to hidden inlets and improbable machinery.</p></article>
+        <article class="card"><img class="feature-art" src="assets/feature-outwit.jpg" width="640" height="400" loading="lazy" alt="Nell faces Quibble across crossed blades"><h3>Outwit</h3><p>Cross swords with Captain Quibble. Cross words with his parrot. Try not to sign anything.</p></article>
+        <article class="card"><img class="feature-art" src="assets/feature-unravel.jpg" width="640" height="400" loading="lazy" alt="Brass machinery inside Rook House"><h3>Unravel</h3><p>Combine items, untangle mechanisms and build your case through five acts of nautical nonsense.</p></article>
       </div>
     </section>
     <section class="section" id="gallery" aria-labelledby="gallery-title">
