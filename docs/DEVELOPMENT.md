@@ -32,6 +32,99 @@ git diff --check
 
 Tests can write screenshots and reports under `test-results/`; subsequent runs may clear them. Preserve audit captures before another suite. Full playbook tests may update tracked walkthrough material: review the working tree before committing.
 
+## Docker development/testing image with HTTPS
+
+The separate `Dockerfile.dev` extends the Ubuntu-based game image with OpenSSL and a startup script that creates a self-signed certificate **inside the running container**, not during image construction. It serves a built snapshot with debug presets enabled; it is **not** a Vite hot-reload environment. Rebuild after editing source, or use `npm run dev` for live development.
+
+### Build both stages
+
+From the repository root, with Docker running:
+
+```sh
+docker build --pull --build-arg DEBUG_ENABLED=true -t monkey-business:dev-base .
+docker build -f Dockerfile.dev -t monkey-business:dev .
+```
+
+`Dockerfile.dev` defaults to the local `monkey-business:dev-base` image. To use a different tag, pass `--build-arg GAME_IMAGE=your-tag`. Debug availability is determined by that base image; using the production base leaves it disabled. No Node.js or OpenSSL installation is needed on the host.
+
+### Configure host address, port and certificate identity
+
+These are separate settings:
+
+| Setting | Meaning |
+| --- | --- |
+| `BIND_IP` in the host shell | Local host interface to which Docker publishes the port. Use `127.0.0.1` for local access, a host-owned LAN/public IPv4 address for a specific interface, or `0.0.0.0` for all host IPv4 interfaces. |
+| `PUBLIC_PORT` in the host shell | Host TCP port, for example 8443 or 9443. The internal HTTPS port stays 8443. |
+| `TLS_SAN` container environment | Certificate subject alternative names for the actual hostname/IP typed in the browser. Use `DNS:name` and/or `IP:address`, comma-separated. Do not include a URL scheme or port. |
+
+Local-only example:
+
+```sh
+BIND_IP=127.0.0.1
+PUBLIC_PORT=8443
+TLS_SAN='DNS:localhost,IP:127.0.0.1'
+docker volume create monkey-business-dev-certs
+docker run -d --name monkey-business-dev \
+  --restart unless-stopped \
+  --read-only --tmpfs /tmp:rw,noexec,nosuid,size=32m \
+  --cap-drop ALL --security-opt no-new-privileges:true \
+  -p "${BIND_IP}:${PUBLIC_PORT}:8443" \
+  -e "TLS_SAN=${TLS_SAN}" \
+  -v monkey-business-dev-certs:/certs \
+  monkey-business:dev
+```
+
+Visit `https://localhost:8443/` for those values. For a remote test, set `BIND_IP` to an interface on your server (or `0.0.0.0`), choose `PUBLIC_PORT`, and set `TLS_SAN` to the real address testers will use **before** running the command. For example, a DNS name belongs in `DNS:game-test.example.com`, whereas an IP literal belongs in `IP:192.168.1.50`; replace these examples with your actual addresses. A public IP supplied by NAT may not be an interface owned by the host: bind a local interface and configure router forwarding separately. Binding a port does not configure DNS, firewalls or NAT. An existing container must be recreated to change its published address, port or environment.
+
+**Security:** debug presets and game assets are accessible to anyone who can reach this endpoint; there is no authentication. Prefer local/LAN-only access or restrict firewall rules to testers. Docker-published ports can bypass expected host firewall paths; review the Docker firewall documentation before public exposure. Never publish this development setup as the public production service.
+
+### Certificate trust, persistence and renewal
+
+The entrypoint generates an RSA-2048, SHA-256 certificate valid for 30 days, with the configured SANs. Private keys are created at runtime with restrictive permissions and are never baked into an image. The named volume keeps the certificate/key across container replacements. Do not commit, publish or share the private key. If using a bind mount instead, its directory must be writable by UID/GID 10001; the named-volume example handles initial ownership automatically.
+
+**Browsers do not automatically trust self-signed certificates.** A warning is expected. Clicking through a warning may still leave service workers unavailable, so the game's chapter-loading flow can fail. For full testing, verify the certificate fingerprint and explicitly trust the certificate in the test browser/OS using that platform's certificate-management procedure. Do not disable certificate checking globally.
+
+```sh
+docker logs --tail 100 monkey-business-dev
+docker exec monkey-business-dev openssl x509 -in /certs/server.crt \
+  -noout -fingerprint -sha256 -dates -ext subjectAltName
+docker cp monkey-business-dev:/certs/server.crt ./monkey-business-dev.crt
+```
+
+Only the public certificate is exported. Keep it outside version control and remove its trust entry when testing ends. The certificate is reused while its SANs match and it has more than one day left; a startup regenerates it when those conditions fail. A long-running container does not renew automatically: restart before expiry, and re-export/re-trust the new certificate after rotation. Changing SANs also requires trusting the newly generated certificate. For ordinary public hosting, use a certificate from a trusted CA instead.
+
+The HTTPS health check uses `curl --insecure` **only inside the container** to test availability with its self-signed certificate; a healthy result does not prove that a browser trusts it.
+
+### Updates and cleanup
+
+Rebuild both images after changes, then stop/remove/recreate `monkey-business-dev` using the same volume and desired port mapping. The volume preserves certificate identity when SANs and validity still match. Browser saves remain browser-local and tied to the origin.
+
+```sh
+docker stop monkey-business-dev
+docker rm monkey-business-dev
+# Optional: permanently discard this development certificate and private key.
+docker volume rm monkey-business-dev-certs
+```
+
+The runtime serves HTTPS only on 8443; the HTTP port metadata inherited from the base image does not start an HTTP listener. Source, npm dependencies and developer secrets are not served. The root `.dockerignore` excludes `.env*`, private-key/certificate files, local build output, walkthroughs and test captures from the build context. Release and development images are built for the active Docker platform; publishing multi-architecture images is a separate release task.
+
+After building the production and development images, run the opt-in smoke test:
+
+```sh
+python3 scripts/test-docker.py monkey-business:local monkey-business:dev
+```
+
+It checks all act pages, an asset, HTTP/HTTPS health checks, non-root execution, debug settings, certificate SANs, private-key permissions, persistence and rotation. It creates temporary loopback-bound containers and a certificate volume and cleans them up afterwards. It does not configure browser trust or prove public network reachability.
+
+References:
+
+```text
+https://docs.docker.com/engine/network/port-publishing/
+https://docs.docker.com/engine/network/packet-filtering-firewalls/
+https://docs.docker.com/build/building/multi-stage/
+https://docs.openssl.org/master/man1/openssl-req/
+```
+
 ## Architecture
 
 | Area | Files / purpose |

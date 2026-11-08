@@ -40,195 +40,57 @@ npm run build -- --base=/MonkeyBusiness/
 
 This is for a **playable game deployment**, not the separate promotional Pages site described in [PAGES.md](PAGES.md). Test chapter transitions, asset downloads and reloads on the actual deployment path before sharing it.
 
-## Run permanently on Linux with systemd
+## Run with Docker (no local Node.js installation)
 
-This example serves the **built game**, starts automatically at boot and restarts after a server failure. It uses a dedicated, unprivileged Nginx process managed by `monkey-business.service`. Node.js is needed for building, not for serving the finished game. Do not run `npm run dev` or `npm run preview` as your production service.
+Install Docker Engine or Docker Desktop and Git first. The repository includes an Ubuntu 24.04-based multi-stage `Dockerfile`: it obtains the Node.js 22 toolchain, installs locked npm dependencies, builds the game, then copies the finished files into a fresh Ubuntu image with Nginx. Build tools are not retained in the runtime image. The initial build needs Internet access; artwork and audio are already in the repository, so no generation API credentials are needed.
 
-The commands below assume a Debian/Ubuntu-style system with systemd, administrator access, **Nginx 1.19.5 or newer** at `/usr/sbin/nginx`, and MIME definitions at `/etc/nginx/mime.types`. Check with `nginx -v`: the unit uses `-e stderr`, introduced in 1.19.5, to avoid privileged startup-log paths. Use a supported distribution package meeting this requirement; older packages will reject that option. Other distributions may use different package commands and paths. The game is served at the site root, initially on **127.0.0.1:8080**; choose another unused port if necessary. This is separate from the promotional Pages site.
-
-### 1. Build and copy only the production files
-
-In your existing repository checkout, as your normal user:
+### Build and start
 
 ```sh
-npm ci
-npm run build -- --base=/
+git clone https://github.com/keuperj/MonkeyBusiness.git
+cd MonkeyBusiness
+docker build --pull -t monkey-business:local .
+docker run -d --name monkey-business \
+  --restart unless-stopped \
+  --read-only --tmpfs /tmp:rw,noexec,nosuid,size=32m \
+  --cap-drop ALL --security-opt no-new-privileges:true \
+  -p 127.0.0.1:8080:8080 \
+  monkey-business:local
 ```
 
-For a public release, consider disabling debug starts **before building**; see the development guide’s debug switch section. On the host that will serve the game, install the web server and create a service account:
+Open `http://127.0.0.1:8080/` on the Docker host. To use another local port, change the mapping to, for example, `127.0.0.1:9090:8080`; keep the final container port at 8080. The image serves the game at the URL root, not under a subdirectory. It runs as non-root UID/GID 10001 and disables debug presets by default **inside the build**, without modifying your checkout.
+
+Docker must be running. The restart policy restarts the container after Docker restarts unless you explicitly stopped it; configure Docker itself to start with your computer if required. No separate game systemd service is needed. The container health check reports HTTP availability; an unhealthy status alone does not automatically restart a still-running process.
+
+### Public hosting
+
+The command above deliberately binds to localhost only. For other players, put a trusted HTTPS reverse proxy in front of the container and forward the domain root to this backend. Do not expose plain HTTP on a public address: chapter caching/service workers need a secure browser context (localhost is the development exception).
+
+A proxy running directly on the same host can use `http://127.0.0.1:8080`. A proxy in another container must reach the game over a shared Docker network; its own localhost is not the game container. Configure DNS, certificates and firewall rules for your hosting environment separately.
+
+For development-only remote HTTPS access with a self-signed certificate and configurable host IP/port, see **Docker development/testing image with HTTPS** in [the development guide](DEVELOPMENT.md). Self-signed certificates are not a substitute for trusted public-hosting certificates.
+
+### Status, logs and updates
 
 ```sh
-sudo apt-get update
-sudo apt-get install nginx
-sudo useradd --system --user-group --no-create-home \
-  --home-dir /nonexistent --shell /usr/sbin/nologin monkey-business
-sudo install -d -o root -g root -m 0755 /srv/monkey-business/site
-sudo cp -R dist/. /srv/monkey-business/site/
-sudo chown -R root:root /srv/monkey-business/site
-sudo find /srv/monkey-business/site -type d -exec chmod 0755 {} +
-sudo find /srv/monkey-business/site -type f -exec chmod 0644 {} +
+docker ps --filter name=monkey-business
+docker logs --tail 100 monkey-business
+docker inspect --format '{{.State.Health.Status}}' monkey-business
+docker stop monkey-business
+docker start monkey-business
 ```
 
-Create the account only once. Run the copy command from the checkout containing `dist/` (or copy an equivalent build artifact from your build machine). Do not copy `.env`, the repository, or `node_modules` into the served directory. Files are root-owned and readable, but not writable, by the service account. Installing Nginx may also start the distribution’s default `nginx.service` on port 80; this example runs independently on port 8080. Do not disable an existing Nginx service used by other sites.
-
-### 2. Configure the dedicated static server
-
-Create `/etc/monkey-business-nginx.conf`:
+To update, select the desired repository revision (for example, `git pull --ff-only` on a clean tracking branch), rebuild, then replace the container:
 
 ```sh
-sudo tee /etc/monkey-business-nginx.conf > /dev/null <<'EOF'
-worker_processes 1;
-pid /run/monkey-business/nginx.pid;
-error_log stderr warn;
-
-events {
-    worker_connections 512;
-}
-
-http {
-    include /etc/nginx/mime.types;
-    default_type application/octet-stream;
-    access_log /dev/stdout;
-    sendfile on;
-    server_tokens off;
-    client_body_temp_path /run/monkey-business/client_temp;
-    proxy_temp_path /run/monkey-business/proxy_temp;
-    fastcgi_temp_path /run/monkey-business/fastcgi_temp;
-    uwsgi_temp_path /run/monkey-business/uwsgi_temp;
-    scgi_temp_path /run/monkey-business/scgi_temp;
-
-    server {
-        listen 127.0.0.1:8080;
-        server_name localhost;
-        root /srv/monkey-business/site;
-        index index.html;
-
-        # Revalidate HTML, manifests and service-worker files after updates.
-        add_header Cache-Control "no-cache" always;
-        add_header X-Content-Type-Options "nosniff" always;
-
-        location / {
-            try_files $uri $uri/ =404;
-        }
-
-        location ~ /\. {
-            deny all;
-        }
-    }
-}
-EOF
+docker build --pull -t monkey-business:local .
+docker stop monkey-business
+docker rm monkey-business
 ```
 
-This is a complete, independent Nginx configuration, not a snippet to paste into `/etc/nginx/nginx.conf`. It serves the real HTML entry points, including `/act2.html` through `/act5.html`; missing assets return 404 rather than an HTML fallback.
+Run the same `docker run` command above to start the replacement. Build before stopping the old container so a build failure does not interrupt play. `--pull` checks base images; use `--no-cache` as well when intentionally refreshing cached OS-package installation layers. Keep a version-tagged older image if you need rollback. Replacements briefly interrupt requests; verify chapter downloads and act transitions afterwards.
 
-### 3. Create and enable the service
-
-Create `/etc/systemd/system/monkey-business.service`:
-
-```sh
-sudo tee /etc/systemd/system/monkey-business.service > /dev/null <<'EOF'
-[Unit]
-Description=Monkey Buisness static game server
-After=network.target
-
-[Service]
-Type=simple
-User=monkey-business
-Group=monkey-business
-RuntimeDirectory=monkey-business
-RuntimeDirectoryMode=0750
-ExecStartPre=/usr/sbin/nginx -t -q -e stderr -p /run/monkey-business/ -c /etc/monkey-business-nginx.conf
-ExecStart=/usr/sbin/nginx -e stderr -p /run/monkey-business/ -c /etc/monkey-business-nginx.conf -g "daemon off;"
-Restart=on-failure
-RestartSec=5s
-KillSignal=SIGQUIT
-TimeoutStopSec=30s
-NoNewPrivileges=true
-PrivateTmp=true
-ProtectSystem=strict
-ProtectHome=true
-ReadWritePaths=/run/monkey-business
-StandardOutput=journal
-StandardError=journal
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
-sudo systemd-analyze verify /etc/systemd/system/monkey-business.service
-sudo systemctl daemon-reload
-sudo systemctl enable --now monkey-business.service
-sudo systemctl status monkey-business.service --no-pager
-curl -I http://127.0.0.1:8080/
-```
-
-Systemd creates the writable runtime directory, runs the configuration check as the service account, and keeps Nginx in the foreground. The served files and system configuration remain read-only to the process. `enable --now` both starts the service immediately and enables startup at subsequent boots; it does not require a terminal to remain open.
-
-Open `http://127.0.0.1:8080/` **on the same machine**. After a reboot, check `systemctl is-active monkey-business.service` and `systemctl is-enabled monkey-business.service`.
-
-### 4. Remote access requires HTTPS
-
-Do not simply expose port 8080 over HTTP for other players: the game’s service-worker/cache flow requires a secure context, with localhost as the development exception. Keep the backend bound to loopback and have an HTTPS reverse proxy on the same host forward your game domain’s root path to `http://127.0.0.1:8080`.
-
-For example, in an **existing, correctly configured TLS Nginx server block** for your domain, the proxy location is:
-
-```nginx
-location / {
-    proxy_pass http://127.0.0.1:8080;
-    proxy_set_header Host $host;
-    proxy_set_header X-Forwarded-Proto $scheme;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-}
-```
-
-This location is not a complete TLS setup: configure DNS, a valid certificate, HTTPS listening and firewall access for your host separately. Keep port 8080 private. If the TLS proxy is the distribution’s Nginx instance, validate with `sudo nginx -t` before `sudo systemctl reload nginx`. Check the game’s chapter downloads, audio, saves and act transitions through the final HTTPS address. Hosting below a URL prefix requires a matching build base and proxy mapping; the example above intentionally uses the domain root.
-
-### Logs, updates and removal
-
-```sh
-# Recent logs, or follow new messages (Ctrl+C stops following, not the server).
-sudo journalctl -u monkey-business.service -n 100 --no-pager
-sudo journalctl -u monkey-business.service -f
-
-# Stop or restart explicitly.
-sudo systemctl stop monkey-business.service
-sudo systemctl restart monkey-business.service
-```
-
-For an update, build a fresh `dist/` as your normal user first. Then schedule a brief maintenance window, stop the service, copy the new build and restart:
-
-```sh
-sudo systemctl stop monkey-business.service
-sudo cp -R dist/. /srv/monkey-business/site/
-sudo chown -R root:root /srv/monkey-business/site
-sudo find /srv/monkey-business/site -type d -exec chmod 0755 {} +
-sudo find /srv/monkey-business/site -type f -exec chmod 0644 {} +
-sudo systemctl start monkey-business.service
-curl -I http://127.0.0.1:8080/
-```
-
-This conservative copy retains old files, including hashed assets that an open browser tab may still request. It does not remove obsolete files; prune them separately only after reviewing what is safe to remove. Keep a backup of the previous build if rollback is needed. Browser saves remain client-side; changing the site origin will make existing saves unavailable at the new address.
-
-After changing the unit file, run `sudo systemctl daemon-reload` and restart the service. After changing its Nginx configuration, restart it; `ExecStartPre` validates the configuration before startup. If repeated failures hit systemd’s start limit, fix the error shown in the journal, then run `sudo systemctl reset-failed monkey-business.service` followed by `sudo systemctl start monkey-business.service`.
-
-To remove automatic startup and the custom service:
-
-```sh
-sudo systemctl disable --now monkey-business.service
-sudo rm /etc/systemd/system/monkey-business.service
-sudo systemctl daemon-reload
-```
-
-The served files, service account and `/etc/monkey-business-nginx.conf` are intentionally retained; remove them separately only if no longer needed. Remove any dedicated proxy route as well. Do not uninstall or stop shared Nginx infrastructure used by other sites.
-
-Reference documentation:
-
-```text
-https://vite.dev/guide/static-deploy
-https://nginx.org/en/docs/switches.html
-https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html
-https://www.freedesktop.org/software/systemd/man/latest/systemd.exec.html
-```
+Saves stay in each player's browser, not in a Docker volume. Keeping the same browser and site origin preserves access to those saves; changing scheme, hostname or port changes the origin. To uninstall, stop and remove the container, then optionally remove its image with `docker image rm monkey-business:local`.
 
 ## Saves, sound & controls
 

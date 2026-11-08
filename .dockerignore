@@ -1,0 +1,13 @@
+.git
+.env
+.env.*
+node_modules
+dist
+test-results
+playwright-report
+playbook
+docs/assets
+**/*.key
+**/*.pem
+**/*.crt
+*.log
