@@ -1,0 +1,67 @@
+:root {
+  color-scheme: dark;
+  --harbour: #102c30;
+  --deep-water: #08191d;
+  --teal: #23545a;
+  --brass: #e7bd70;
+  --parchment: #f3e3c2;
+  --ink: #302419;
+  --muted: #c7c5b4;
+  --rope: #967343;
+  --radius: .65rem;
+  --display: Georgia, 'Times New Roman', serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: radial-gradient(ellipse at top, var(--teal), transparent 48rem), var(--deep-water); color: var(--parchment); font: 1.05rem/1.7 system-ui, sans-serif; }
+a { color: var(--brass); text-underline-offset: .25em; }
+a:hover { color: #fff0cc; }
+a:focus-visible { outline: 3px solid var(--brass); outline-offset: 5px; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, .wordmark { font-family: var(--display); line-height: 1.15; }
+h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); margin: 1rem 0; }
+h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin: .5rem 0 1.5rem; }
+h3 { font-size: 1.7rem; }
+em { color: var(--brass); }
+p { max-width: 66ch; }
+.skip-link { position: absolute; top: -8rem; left: 1rem; padding: .75rem; background: var(--deep-water); z-index: 10; }
+.skip-link:focus { top: 1rem; }
+.masthead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; max-width: 1200px; margin: auto; padding: 1.25rem; border-bottom: 1px solid var(--rope); }
+.wordmark { font-size: 1.4rem; color: var(--brass); font-weight: bold; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+nav a { display: inline-block; padding: .5rem 0; }
+.hero { text-align: center; padding: 2.5rem 1.25rem 4rem; }
+.hero p, .hero .game-logo { margin-left: auto; margin-right: auto; }
+.game-logo { width: min(100%, 680px); border: 1px solid var(--rope); border-radius: var(--radius); box-shadow: 0 1.5rem 4rem #0007; margin-bottom: 2rem; }
+.eyebrow { color: var(--brass); text-transform: uppercase; letter-spacing: .13em; font-size: .8rem; font-weight: 700; }
+.lede { font-size: 1.25rem; max-width: 55ch; }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 2rem 0 1rem; }
+.button { display: inline-block; padding: .8rem 1.5rem; border: 2px solid var(--brass); border-radius: .3rem; background: linear-gradient(#f1d29a, #d5a75e); color: var(--ink); font-weight: 750; text-decoration: none; box-shadow: 0 4px 0 #563d24; }
+.button:hover { background: #ffe5ad; color: var(--ink); }
+.button.secondary { background: var(--harbour); color: var(--parchment); }
+.button.secondary:hover { background: var(--teal); }
+.small { font-size: .9rem; color: var(--muted); }
+.section { max-width: 1120px; margin: auto; padding: 4rem 1.25rem; border-top: 3px double var(--rope); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.card { padding: 1.75rem; border: 1px solid var(--rope); border-radius: var(--radius); background: linear-gradient(135deg, #f3e3c2, #dbc399); color: var(--ink); box-shadow: 0 .5rem 1.5rem #0003; }
+.card h3 { margin: 1rem 0; }
+.seal { display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 2px solid #72512d; border-radius: 50%; font-family: var(--display); font-weight: bold; }
+.gallery { display: grid; gap: 2rem; }
+figure { margin: 0; overflow: hidden; border: 1px solid var(--rope); border-radius: var(--radius); background: var(--harbour); }
+figure a { display: block; }
+figure a:focus-visible { outline-offset: -5px; }
+figure img { width: 100%; }
+figcaption { padding: 1rem 1.5rem; }
+figcaption strong { color: var(--brass); }
+.invitation { text-align: center; }
+.invitation p { margin-left: auto; margin-right: auto; }
+footer { text-align: center; padding: 3rem 1.25rem; background: #061316; border-top: 1px solid var(--rope); }
+footer p { margin-left: auto; margin-right: auto; }
+footer a { display: inline-block; padding: .35rem 0; }
+@media (max-width: 700px) {
+  .cards { grid-template-columns: 1fr; }
+  .masthead { justify-content: center; }
+  .hero, .section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .actions { flex-direction: column; align-items: stretch; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
