@@ -36,16 +36,43 @@ Tests can write screenshots and reports under `test-results/`; subsequent runs m
 
 The separate `Dockerfile.dev` extends the Ubuntu-based game image with OpenSSL and a startup script that creates a self-signed certificate **inside the running container**, not during image construction. It serves a built snapshot with debug presets enabled; it is **not** a Vite hot-reload environment. Rebuild after editing source, or use `npm run dev` for live development.
 
-### Build both stages
+### Required dependency: build the local base image first
 
-From the repository root, with Docker running:
+**`Dockerfile.dev` is not standalone.** Its `FROM ${GAME_IMAGE}` instruction defaults to `monkey-business:dev-base`, a local image created by the main `Dockerfile`. That base image is not an official image published on Docker Hub. Both builds must use the same Docker engine/context.
+
+From the repository root, with Docker running, execute these steps in order. Do not continue if the first build fails:
 
 ```sh
+# 1. Build the required local base with debug presets enabled.
 docker build --pull --build-arg DEBUG_ENABLED=true -t monkey-business:dev-base .
+
+# 2. Confirm this Docker engine can see the base image.
+docker image inspect monkey-business:dev-base
+
+# 3. Add HTTPS and runtime self-signed certificate generation.
 docker build -f Dockerfile.dev -t monkey-business:dev .
 ```
 
 `Dockerfile.dev` defaults to the local `monkey-business:dev-base` image. To use a different tag, pass `--build-arg GAME_IMAGE=your-tag`. Debug availability is determined by that base image; using the production base leaves it disabled. No Node.js or OpenSSL installation is needed on the host.
+
+If your Docker installation requires `sudo`, use it consistently for both builds and the check:
+
+```sh
+sudo docker build --pull --build-arg DEBUG_ENABLED=true -t monkey-business:dev-base .
+sudo docker image inspect monkey-business:dev-base
+sudo docker build -f Dockerfile.dev -t monkey-business:dev .
+```
+
+Use the same approach for the run, volume, log and cleanup commands below. Do not mix a regular user's rootless Docker engine with the system engine reached through `sudo`.
+
+#### Troubleshooting: pull access denied for `monkey-business:dev-base`
+
+If the second build reports `load metadata for docker.io/library/monkey-business:dev-base`, followed by `pull access denied` or `insufficient_scope`, the builder cannot find the required local base and is attempting to fetch it from Docker Hub. **Logging in to Docker Hub is not the fix for this local dependency.**
+
+1. Run the first build above and confirm it completes successfully with the exact tag `monkey-business:dev-base`.
+2. Run `docker image inspect monkey-business:dev-base` using the same privileges as the failing build (`sudo docker image inspect ...` if applicable).
+3. If you built the image elsewhere, compare `docker context show` and `sudo docker context show`; rebuild the base in the engine used for the development build.
+4. Rerun the `Dockerfile.dev` build. After source changes, rebuild the base first, then the development image again.
 
 ### Configure host address, port and certificate identity
 
