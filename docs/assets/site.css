@@ -31,7 +31,7 @@ p { max-width: 66ch; }
 
 /* Compact horizontal brand bar, with a separate engraved-style motto. */
 .masthead { width: min(1200px, calc(100% - 2 * var(--gutter))); margin: 0 auto; display: grid; grid-template-columns: 140px minmax(0, 1fr); align-items: center; column-gap: 40px; padding-top: 18px; }
-.brand { display: block; width: 140px; border-radius: 4px; overflow: hidden; box-shadow: 0 5px 20px #0004; }
+.brand { display: block; width: 140px; }
 .masthead nav { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 8px 22px; }
 .masthead nav a { display: inline-flex; align-items: center; gap: 7px; min-height: 48px; color: var(--parchment); font-size: .85rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; }
 .masthead nav a:hover { color: var(--brass); border-bottom-color: var(--rope); }
@@ -44,7 +44,7 @@ p { max-width: 66ch; }
 /* One shared content track keeps the trailer and gallery edges aligned. */
 .hero, .section { width: min(var(--content-width), calc(100% - 2 * var(--gutter))); margin-inline: auto; }
 .hero { text-align: center; padding: 54px 0 64px; }
-.hero-heading { max-width: 800px; margin: 0 auto 32px; }
+.hero-heading { max-width: 800px; margin: 40px auto 0; }
 .hero p { margin-inline: auto; }
 .eyebrow { color: var(--brass); text-transform: uppercase; letter-spacing: .18em; font-size: .7rem; font-weight: 700; }
 .lede { max-width: 57ch; color: #d1d9d4; font-size: 1.1rem; }
@@ -79,6 +79,7 @@ figcaption strong { color: var(--brass); font-weight: 600; }
 .invitation p { margin-inline: auto; }
 footer { text-align: center; padding: 36px var(--gutter); border-top: 1px solid #96734344; background: #061215; }
 footer p { margin-inline: auto; }
+.footer-logo { width: min(360px, 100%); height: auto; margin: 0 auto 24px; }
 .wordmark { color: var(--brass); font-size: 1.4rem; }
 footer a { display: inline-block; padding: 8px 4px; font-size: .85rem; }
 @media (max-width: 850px) {

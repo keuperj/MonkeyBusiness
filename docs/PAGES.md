@@ -31,7 +31,7 @@ No repository setting has been changed locally. If Pages already serves a playab
 
 | Element | Source / purpose |
 | --- | --- |
-| Logo | `docs/assets/game-logo.jpg`: resized from `public/assets/game-logo.png`, retaining original spelling |
+| Logos | `docs/assets/game-logo-transparent.png`: 900×600 alpha-preserving derivative of `public/assets/game-logo.png`, used in the header and footer. The JPEG remains available for README/trailer use. Original spelling retained. |
 | Favicon | `docs/assets/favicon.svg`: original compass motif in the site palette |
 | Theme | `docs/assets/site.css`, separate from gameplay CSS |
 | Screenshots | `docs/assets/screenshots/{map,sword-fight,puzzle}.jpg` |
@@ -43,7 +43,7 @@ No repository setting has been changed locally. If Pages already serves a playab
 
 Restrained brass borders, dark harbour panels, parchment-colored lettering and illustrated cards echo the game without placing prose over busy artwork. A shared `--content-width: 960px` track aligns the trailer and screenshot edges; the logo is capped at 140px and shrinks on narrow screens. The motto uses an italic Palatino/Georgia serif stack with a brass flourish. The page has a skip link, semantic sections, visible keyboard focus, image alternatives, narrow-screen layout and reduced-motion handling. GitHub’s README renderer does not use this custom CSS.
 
-The logo derivative does not replace the original game asset; existing provenance applies. Keep promotional images honest: use the opt-in screenshot test in the development guide rather than presenting mockups as gameplay.
+The transparent header logo sits directly on the page background without a rectangular shadow. A larger, centered version (up to 360px wide) opens the footer. The trailer appears before the welcome heading and keeps the same width as the screenshots below. The logo derivatives do not replace the original game asset; existing provenance applies. Keep promotional images honest: use the opt-in screenshot test in the development guide rather than presenting mockups as gameplay.
 
 ## Validate
 

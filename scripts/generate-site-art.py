@@ -12,6 +12,9 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'docs/assets'
 ART = ROOT / 'public/assets'
+# Preserve the original alpha channel for logos placed directly on site backgrounds.
+logo = Image.open(ART / 'game-logo.png').convert('RGBA')
+logo.resize((900, 600), Image.Resampling.LANCZOS).save(OUT / 'game-logo-transparent.png', optimize=True)
 SIZE = (768, 432)
 FONT = os.environ.get('SITE_FONT', '/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf')
 font = ImageFont.truetype(FONT, 30)

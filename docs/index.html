@@ -13,7 +13,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to the adventure</a>
   <header class="masthead">
-    <a class="brand" href="#main"><img src="assets/game-logo.jpg" width="1000" height="667" alt="Monkey Buisness — home"></a>
+    <a class="brand" href="#main"><img src="assets/game-logo-transparent.png" width="900" height="600" alt="Monkey Buisness — home"></a>
     <nav aria-label="Main navigation">
       <a href="#aboard"><img src="assets/icon-compass.png" width="48" height="48" alt="">The adventure</a>
       <a href="#gallery"><img src="assets/icon-map.png" width="48" height="48" alt="">Screenshots</a>
@@ -28,11 +28,6 @@
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="title">
-      <div class="hero-heading">
-        <p class="eyebrow">Welcome to Brindle Quay · Five playable acts</p>
-        <h1 id="title">A little wit. <em>A lot of monkey business.</em></h1>
-        <p class="lede">A painted harbour. A suspicious tide. An original point-and-click adventure where the sharpest weapon is a good question.</p>
-      </div>
       <figure class="trailer">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcset="assets/trailer-poster.jpg">
@@ -40,6 +35,11 @@
         </picture>
         <figcaption><span>From the harbour, with mischief · Animated game-capture montage</span><button id="trailer-toggle" type="button">Pause trailer</button></figcaption>
       </figure>
+      <div class="hero-heading">
+        <p class="eyebrow">Welcome to Brindle Quay · Five playable acts</p>
+        <h1 id="title">A little wit. <em>A lot of monkey business.</em></h1>
+        <p class="lede">A painted harbour. A suspicious tide. An original point-and-click adventure where the sharpest weapon is a good question.</p>
+      </div>
       <div class="actions"><a class="button" href="https://github.com/keuperj/MonkeyBusiness/blob/HEAD/docs/INSTALLATION.md">Install &amp; play</a><a class="button secondary" href="#gallery">Take a look aboard</a></div>
       <p class="small">Five acts. Yours to explore. Play locally—no account or API key required.</p>
     </section>
@@ -72,7 +72,7 @@
     </section>
   </main>
   <footer>
-    <p class="wordmark">Monkey Buisness</p>
+    <img class="footer-logo" src="assets/game-logo-transparent.png" width="900" height="600" loading="lazy" alt="Monkey Buisness">
     <p>An original open-source adventure. Not affiliated with Monkey Island.</p>
     <p><a href="https://github.com/keuperj/MonkeyBusiness">Source on GitHub</a> · <a href="https://github.com/keuperj/MonkeyBusiness/issues">Report an issue</a> · <a href="https://github.com/keuperj/MonkeyBusiness/blob/HEAD/ASSETS.md">Asset provenance</a> · <a href="https://github.com/keuperj/MonkeyBusiness/blob/HEAD/LICENSE">GPL v3</a></p>
     <p class="small">Includes generated artwork and voice/audio assets. Made with Phaser, TypeScript and Vite.</p>
