@@ -19,6 +19,19 @@ async function launch(page:import('@playwright/test').Page,act:number,id:string)
  await page.goto('/');await page.locator('#splash-enter').click();await page.locator('#debug-start summary').click();await page.locator('#debug-act').selectOption(String(act));await page.locator('#debug-room').selectOption(id);await page.locator('#debug-launch').click();
 }
 test.beforeEach(async({page})=>{await page.emulateMedia({reducedMotion:'reduce'});await page.addInitScript(()=>sessionStorage.setItem('monkey-buisness-sound','false'));});
+test('disabled debug menu stays hidden and reappears after enabling and reloading',async({page})=>{
+ let enabled=false;
+ await page.route('**/debug-start.json',route=>route.fulfill({json:{enabled,presets:config.presets}}));
+ await page.goto('/');await page.locator('#splash-enter').click();
+ await expect(page.locator('#start-game')).toBeEnabled();
+ await expect(page.locator('#debug-start')).toBeHidden();
+ await expect(page.locator('#load-game')).toBeVisible();
+ enabled=true;
+ await page.reload();await page.locator('#splash-enter').click();
+ await expect(page.locator('#debug-start')).toBeVisible();
+ await page.locator('#debug-start summary').click();
+ await expect(page.locator('#debug-launch')).toBeVisible();
+});
 for(const act of [1,2,3])test(`debug menu starts Act ${act} intro instead of resuming`,async({page})=>{
  test.setTimeout(120000);
  await page.addInitScript(({auto,manual})=>{localStorage.setItem(auto,'old autosave');localStorage.setItem(manual,'manual sentinel');},{auto:act===1?'monkey-buisness-act1-auto':`monkey-buisness-act${act}-auto`,manual:act===1?'monkey-buisness-act1-save':`monkey-buisness-act${act}-save`});

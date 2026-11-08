@@ -48,6 +48,27 @@ Tests can write screenshots and reports under `test-results/`; subsequent runs m
 
 Use the start menu's **Debug start** selector for targeted development. Debug presets are test progression, not a substitute for a normal-controls playthrough.
 
+## Enable or disable start-page debug entries
+
+Edit the top-level `enabled` field in `public/debug-start.json`:
+
+- `"enabled": false` — hides **Debug · choose act and room** from the game’s start menu and disables direct `?debug=...` preset launches across all acts.
+- `"enabled": true` — shows the selector and enables the configured presets again.
+
+Change only this boolean; keep the existing `presets` array intact. Use the JSON booleans `true` / `false`, not quoted strings. The repository currently enables debug starts for development.
+
+**Local development:** save the file and reload the page. The configuration is fetched at runtime with `cache: 'no-store'`; restarting Vite is not required. An already-open menu must be reloaded to pick up the change.
+
+**Published game:** set `enabled` to `false` before running `npm run build`, then deploy the updated `dist/` output. The deployed configuration is `dist/debug-start.json`; changing the source file alone does not update an existing deployment. This option affects the game’s start menu, not the separate promotional `docs/index.html` page.
+
+Disabling debug starts does not delete saves or remove normal **Start game**, **Load game**, or progress-based **Continue Act** buttons. Launching an enabled debug preset replaces that act’s autosave while keeping manual saves. The switch is a presentation/development setting, not a security boundary or a way to restrict access to shipped game content.
+
+Re-enable debug starts before running tests or screenshot captures that use presets, including geometry/hotspot audits and promotional captures. Focused checks for the switch:
+
+```sh
+npx playwright test tests/debug-start.spec.ts tests/act2.spec.ts -g "disabled"
+```
+
 ## Changing rooms or puzzles
 
 1. Read the relevant act's room plan and implementation notes in this directory.
